@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const guides = (await getCollection('guides', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+const categories = [...new Set(guides.map((g) => g.data.category))];
+---
+<BaseLayout title="新手教学｜无畏契约资料站" description="无畏契约新手教学：入门、机制、经济、术语">
+  <main class="container section">
+    <div class="label-cut">Guides</div>
+    <h1>新手教学</h1>
+    {categories.map((cat) => (
+      <section class="role-group">
+        <h2>{cat}</h2>
+        <ul class="guide-list">
+          {guides.filter((g) => g.data.category === cat).map((g) => (
+            <li class="card-cut guide-item">
+              <a class="guide-item__title" href={`/guides/${g.id}/`}>{g.data.title}</a>
+              <p class="guide-item__excerpt">{g.data.excerpt}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </main>
+</BaseLayout>
+
+<style>
+  .guide-list { list-style: none; display: grid; gap: 0.75rem; }
+  .guide-item { padding: 1rem 1.2rem; }
+  .guide-item__title { font-weight: 800; }
+  .guide-item__title:hover { color: var(--val-red); }
+  .guide-item__excerpt { color: var(--val-gray); font-size: 0.85rem; margin-top: 0.25rem; }
+</style>
