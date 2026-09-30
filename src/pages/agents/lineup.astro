@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import agentsData from '../../data/agents.json';
+
+const lineAgents = agentsData.agents.map((a) => ({
+  id: a.id,
+  zhName: a.zh.name,
+  enName: a.en.name,
+  role: a.zh.role,
+  displayIcon: a.displayIcon,
+}));
+---
+<BaseLayout title="阵容推荐｜无畏契约资料站" description="角色平衡规则生成 5 人阵容：决斗、先锋、控场、哨卫各司其职">
+  <main class="container section">
+    <div class="label-cut">Lineup</div>
+    <h1>阵容推荐</h1>
+    <p class="page-sub">按四大定位各选一名、第五席再补一名决斗者，生成平衡阵容</p>
+    <div class="lineup__actions">
+      <button class="btn btn-primary" id="roll">生成阵容</button>
+      <button class="btn btn-ghost" id="reroll" style="display:none">再来一组</button>
+    </div>
+    <div class="grid lineup-grid" id="result">
+      <p class="page-sub">点击「生成阵容」开始</p>
+    </div>
+    <p class="data-meta">推荐为角色平衡的通用组合，具体选人请结合队友熟练度与地图特点</p>
+  </main>
+</BaseLayout>
+
+<script>
+  import { buildLineup, type LineupAgent } from '../../utils/lineup';
+
+  const all = lineAgents as unknown as LineupAgent[];
+  const result = document.getElementById('result') as HTMLElement;
+  const roll = document.getElementById('roll') as HTMLButtonElement;
+  const reroll = document.getElementById('reroll') as HTMLButtonElement;
+
+  function render() {
+    const lineup = buildLineup(all);
+    result.innerHTML = lineup.map((a) => `
+      <a class="card-cut lineup-card" href="/agents/${a.id}/">
+        <img src="${a.displayIcon}" alt="${a.zhName}" loading="lazy" onerror="this.src='/favicon.svg'" />
+        <div class="lineup-card__name">${a.zhName}</div>
+        <div class="lineup-card__role">${a.role} · ${a.enName}</div>
+      </a>
+    `).join('');
+    reroll.style.display = '';
+  }
+
+  roll.addEventListener('click', render);
+  reroll.addEventListener('click', render);
+</script>
+
+<style>
+  .lineup__actions { display: flex; gap: 0.9rem; margin: 1.2rem 0 1.6rem; }
+  .lineup-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .lineup-card { display: block; padding: 1rem; text-align: center; }
+  .lineup-card:hover { box-shadow: inset 0 0 0 1px var(--val-red); }
+  .lineup-card img { width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 0.5rem; }
+  .lineup-card__name { font-weight: 800; }
+  .lineup-card__role { font-size: 0.75rem; color: var(--val-gray); }
+</style>
