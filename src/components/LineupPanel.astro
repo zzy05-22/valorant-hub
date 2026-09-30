@@ -115,15 +115,16 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
   .lineup__map { position: relative; }
   .lineup__map img { width: 100%; display: block; }
   .lineup__marks { position: absolute; inset: 0; pointer-events: none; }
-  .lineup__mark {
+  /* 动态注入元素（innerHTML）：Astro scoped 样式不命中运行时 DOM，必须 :global */
+  :global(.lineup__mark) {
     position: absolute; width: 10px; height: 10px; border-radius: 50%;
     background: var(--val-red); box-shadow: 0 0 0 2px rgba(236,232,225,.8), 0 0 8px rgba(255,70,85,.8);
     transform: translate(-50%, -50%);
   }
   .lineup__list { list-style: none; display: grid; gap: 0.6rem; }
-  .lineup__item { padding: 0.6rem 0.8rem; box-shadow: inset 0 0 0 1px var(--val-line); background: rgba(236,232,225,.04); }
-  .lineup__item strong { display: block; font-size: 0.9rem; }
-  .lineup__meta { color: var(--val-red); font-size: 0.72rem; font-weight: 700; }
-  .lineup__item p { color: var(--val-gray); font-size: 0.82rem; margin-top: 0.25rem; }
+  :global(.lineup__item) { padding: 0.6rem 0.8rem; box-shadow: inset 0 0 0 1px var(--val-line); background: rgba(236,232,225,.04); }
+  :global(.lineup__item strong) { display: block; font-size: 0.9rem; }
+  :global(.lineup__meta) { color: var(--val-red); font-size: 0.72rem; font-weight: 700; }
+  :global(.lineup__item p) { color: var(--val-gray); font-size: 0.82rem; margin-top: 0.25rem; }
   @media (max-width: 768px) { .lineup__stage { grid-template-columns: 1fr; } }
 </style>
