@@ -98,3 +98,11 @@ test('数据榜详情页可访问', async ({ page }) => {
   await page.goto('/esports/stats/');
   await expect(page.getByRole('heading', { name: '冠军赛数据榜' })).toBeVisible();
 });
+
+test('导航内嵌搜索框跳转并出结果', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('.nav__search input').fill('捷风');
+  await page.locator('.nav__search input').press('Enter');
+  await expect(page).toHaveURL(/\/search\/\?q=/);
+  await expect(page.locator('.search-result__title').first()).toContainText('捷风');
+});
