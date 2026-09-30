@@ -35,4 +35,14 @@ const patchNotes = defineCollection({
   }),
 });
 
-export const collections = { guides, esports, patchNotes };
+const mapGuides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/map-guides' }),
+  schema: z.object({
+    mapId: z.string(),
+    title: z.string(),
+    publishDate: z.coerce.date(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { guides, esports, patchNotes, mapGuides };
