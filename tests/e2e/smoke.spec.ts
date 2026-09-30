@@ -79,3 +79,10 @@ test('特工详情页含道具点位面板', async ({ page }) => {
   await page.locator('.chip-btn').first().click();
   await expect(page.locator('.lineup__item').first()).toBeVisible();
 });
+
+test('标注工具页：选图并点击生成坐标', async ({ page }) => {
+  await page.goto('/lineup-tool/');
+  await expect(page.getByRole('heading', { name: '点位标注工具' })).toBeVisible();
+  await page.locator('#tactic-map').click({ position: { x: 200, y: 150 } });
+  await expect(page.locator('#coord-hint')).toContainText('x=');
+});
