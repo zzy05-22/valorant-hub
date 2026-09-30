@@ -43,7 +43,7 @@ test('版本资讯列表 → 文章详情', async ({ page }) => {
 
 test('电竞资讯列表可访问', async ({ page }) => {
   await page.goto('/esports/');
-  await expect(page.getByRole('heading', { name: '电竞资讯' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '资讯中心' })).toBeVisible();
   await expect(page.locator('.note-item__title').first()).toBeVisible();
 });
 

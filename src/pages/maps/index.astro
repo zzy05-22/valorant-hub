@@ -2,16 +2,36 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MapCard from '../../components/MapCard.astro';
 import mapsData from '../../data/maps.json';
+import { getCollection } from 'astro:content';
 
 const maps = mapsData.maps;
+
+// 标准竞技图 = 有攻略内容的地图（mapGuides 覆盖），其余归其他模式
+const guideMapIds = new Set(
+  (await getCollection('mapGuides', ({ data }) => !data.draft)).map((g) => g.data.mapId),
+);
+const standardMaps = maps.filter((m) => guideMapIds.has(m.id));
+const otherMaps = maps.filter((m) => !guideMapIds.has(m.id));
 ---
 <BaseLayout title="地图库｜无畏契约资料站" description="无畏契约全部地图：官方战术图、背景设定、坐标信息">
   <main class="container section">
     <div class="label-cut">Maps</div>
     <h1>地图库</h1>
-    <p class="page-sub">{maps.length} 张地图 · 数据版本 {mapsData.version}</p>
-    <div class="grid">
-      {maps.map((m) => <MapCard map={m} />)}
-    </div>
+    <p class="page-sub">{maps.length} 张地图 · 标准竞技图 {standardMaps.length} 张 · 数据版本 {mapsData.version}</p>
+    <section class="role-group">
+      <h2>标准竞技地图</h2>
+      <div class="grid">
+        {standardMaps.map((m) => <MapCard map={m} />)}
+      </div>
+    </section>
+    {otherMaps.length > 0 && (
+      <section class="role-group">
+        <h2>其他模式地图</h2>
+        <p class="page-sub">TDM / 斗牛 / 训练场，供模式练习参考</p>
+        <div class="grid">
+          {otherMaps.map((m) => <MapCard map={m} />)}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

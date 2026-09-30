@@ -5,8 +5,16 @@ import agentsData from '../data/agents.json';
 import mapsData from '../data/maps.json';
 import { getCollection } from 'astro:content';
 
-const featuredAgents = agentsData.agents.slice(0, 6);
-const featuredMaps = mapsData.maps.slice(0, 4);
+// 角色多样化推荐：决斗 2 + 先锋 2 + 控场 1 + 哨卫 1（zh.role 实测值）
+const rolePool = new Map<string, typeof agentsData.agents>();
+for (const a of agentsData.agents) {
+  if (!rolePool.has(a.zh.role)) rolePool.set(a.zh.role, []);
+  rolePool.get(a.zh.role)!.push(a);
+}
+const QUOTA: Record<string, number> = { 决斗: 2, 先锋: 2, 控场: 1, 哨卫: 1 };
+const featuredAgents = Object.entries(QUOTA).flatMap(([role, n]) => (rolePool.get(role) ?? []).slice(0, n));
+// 地图速览：只展示有战术图的已上线地图（前 4 张均为标准竞技图）
+const featuredMaps = mapsData.maps.filter((m) => m.displayIcon).slice(0, 4);
 const guides = (await getCollection('guides', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
   .slice(0, 3);
