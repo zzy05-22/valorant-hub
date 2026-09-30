@@ -86,3 +86,15 @@ test('标注工具页：选图并点击生成坐标', async ({ page }) => {
   await page.locator('#tactic-map').click({ position: { x: 200, y: 150 } });
   await expect(page.locator('#coord-hint')).toContainText('x=');
 });
+
+test('首页数据榜板块齐全', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: '选手数据榜' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '武器威力榜' })).toBeVisible();
+  await expect(page.locator('.board6__row').first()).toBeVisible();
+});
+
+test('数据榜详情页可访问', async ({ page }) => {
+  await page.goto('/esports/stats/');
+  await expect(page.getByRole('heading', { name: '冠军赛数据榜' })).toBeVisible();
+});
