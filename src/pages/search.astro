@@ -21,14 +21,14 @@ const entities: SearchEntity[] = [
   ...esports.map((p) => ({ type: '电竞资讯', title: p.data.title, sub: p.data.type, url: `/esports/${p.id}/` })),
 ];
 ---
-<BaseLayout title="全站搜索｜无畏契约资料站" description="搜索特工、武器、地图与攻略文章">
+<BaseLayout title="全站搜索｜无畏契约资料站" description="搜索特工、准星、地图与攻略文章">
   <PageHero label="Search" title="全站搜索" subtitle={`${entities.length} 个条目 · 支持中文名与英文名`} />
   <main class="container section">
     <input
       id="q"
       class="search-input"
       type="search"
-      placeholder="搜索特工、武器、地图、攻略…"
+      placeholder="搜索特工、准星、地图、攻略…"
       autocomplete="off"
     />
     <ul class="search-list" id="result">

@@ -52,7 +52,7 @@ const esportsPosts = (await getCollection('esports', ({ data }) => !data.draft))
 const liveEvent = (await getCollection('esports', ({ data }) => !data.draft && data.type === '赛程'))[0] ?? null;
 const liveStats = esportsStats.players[0];
 ---
-<BaseLayout title="无畏契约中文资料站｜特工 · 武器 · 教学" description="无畏契约中文资料站：特工图鉴、武器数据、新手教学，数据跟随版本自动更新">
+<BaseLayout title="无畏契约中文资料站｜特工 · 准星 · 教学" description="无畏契约中文资料站：特工图鉴、准星代码、新手教学，数据跟随版本自动更新">
   <main style="position:relative">
     <div class="noise-layer"></div>
 
@@ -66,7 +66,7 @@ const liveStats = esportsStats.players[0];
       <div class="hero6__content">
         <span class="hero6__badge badge-live">● EP.13 · 数据已同步</span>
         <h1>在这里，<br /><span class="text-shimmer">精准即是艺术</span></h1>
-        <p class="hero6__sub">特工图鉴 · 武器对比 · 道具点位 · 版本资讯 —— 中文玩家的一站式数据库</p>
+        <p class="hero6__sub">特工图鉴 · 准星代码 · 道具点位 · 版本资讯 —— 中文玩家的一站式数据库</p>
         <div class="hero6__cta">
           <a class="btn btn-primary" href="/agents/">浏览特工 →</a>
           <a class="btn btn-ghost" href="/guides/">新手教学</a>

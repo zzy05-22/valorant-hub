@@ -49,7 +49,7 @@ test('阵容推荐：生成 5 人平衡阵容', async ({ page }) => {
 
 test('全站搜索：输入关键词出结果', async ({ page }) => {
   await page.goto('/search/');
-  await page.getByPlaceholder('搜索特工、武器、地图、攻略…').fill('捷风');
+  await page.getByPlaceholder('搜索特工、准星、地图、攻略…').fill('捷风');
   await expect(page.locator('.search-result__title').first()).toContainText('捷风');
 });
 
