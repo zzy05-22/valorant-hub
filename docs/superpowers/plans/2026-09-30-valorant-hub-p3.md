@@ -597,7 +597,7 @@ git commit -m "feat(p3): 地图/特工详情页集成点位面板（双向入口
 ---
 title: 13.06 版本导读：新大厅、特工精通系统与全新步枪悍狼
 patchVersion: "13.06"
-excerpt: 年度大版本：客户端重做、Performance Score、Agent Mastery、Gauntlet: Glitched 模式与 2900 价位新步枪 Warden。
+excerpt: "年度大版本：客户端重做、Performance Score、Agent Mastery、Gauntlet: Glitched 模式与 2900 价位新步枪 Warden。"
 source: https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-06/
 publishDate: 2026-09-30
 ---
