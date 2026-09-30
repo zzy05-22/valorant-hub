@@ -521,7 +521,8 @@ describe('fetchJson', () => {
   });
 
   it('超过重试上限后抛错', async () => {
-    mockFetchSequence([new Error('always down')]);
+    // retries: 2 意味着共发起 3 次 fetch，mock 需提供 3 个失败响应（避免 mock 耗尽返回 undefined）
+    mockFetchSequence([new Error('always down'), new Error('always down'), new Error('always down')]);
     await expect(
       fetchJson('/demo', { retries: 2, backoffMs: 1 }),
     ).rejects.toThrow('always down');
