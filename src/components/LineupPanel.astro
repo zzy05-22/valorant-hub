@@ -45,11 +45,10 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
     <div class="lineup__stage">
       <div class="lineup__map">
         <img id="lineup-map" src={maps[initialMapId].icon} alt="" onerror="this.src='/favicon.svg'" />
-        <div class="lineup__marks" id="lineup-marks"></div>
       </div>
       <ul class="lineup__list" id="lineup-list"></ul>
     </div>
-    <p class="data-meta">点位为社区整理示意，位置以游戏内实测为准</p>
+    <p class="data-meta">点位由社区整理，站位细节以游戏内实测为准 · 图上精确标注可用<a href="/lineup-tool/">点位标注工具</a></p>
     <script type="application/json" id="lineup-data" set:html={JSON.stringify({ mode, focusId, maps, agents, spots, initialMapId, initialAgentId })} />
   </div>
 ) : (
@@ -68,7 +67,6 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
       spots: LineupSpot[]; initialMapId: string; initialAgentId: string;
     };
     const mapImg = document.getElementById('lineup-map') as HTMLImageElement;
-    const marks = document.getElementById('lineup-marks') as HTMLElement;
     const list = document.getElementById('lineup-list') as HTMLElement;
     const btns = document.querySelectorAll<HTMLButtonElement>('#picker .chip-btn');
 
@@ -81,9 +79,6 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
     function render() {
       mapImg.src = data.maps[curMap()].icon;
       const visible = filterSpots(data.spots, curMap(), curAgent());
-      marks.innerHTML = visible.map((s, i) => `
-        <span class="lineup__mark" style="left:${s.x}%;top:${s.y}%" data-i="${i}" title="${s.label}"></span>
-      `).join('');
       list.innerHTML = visible.map((s) => `
         <li class="lineup__item">
           <strong>${s.label}</strong>
@@ -114,13 +109,6 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
   .lineup__stage { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(240px, 1fr); gap: 1rem; align-items: start; }
   .lineup__map { position: relative; }
   .lineup__map img { width: 100%; display: block; }
-  .lineup__marks { position: absolute; inset: 0; pointer-events: none; }
-  /* 动态注入元素（innerHTML）：Astro scoped 样式不命中运行时 DOM，必须 :global */
-  :global(.lineup__mark) {
-    position: absolute; width: 10px; height: 10px; border-radius: 50%;
-    background: var(--val-red); box-shadow: 0 0 0 2px rgba(236,232,225,.8), 0 0 8px rgba(255,70,85,.8);
-    transform: translate(-50%, -50%);
-  }
   .lineup__list { list-style: none; display: grid; gap: 0.6rem; }
   :global(.lineup__item) { padding: 0.6rem 0.8rem; box-shadow: inset 0 0 0 1px var(--val-line); background: rgba(236,232,225,.04); }
   :global(.lineup__item strong) { display: block; font-size: 0.9rem; }

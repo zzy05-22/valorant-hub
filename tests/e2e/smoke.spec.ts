@@ -70,12 +70,12 @@ test('全站搜索：输入关键词出结果', async ({ page }) => {
 test('地图点位面板：选特工显示点位标记', async ({ page }) => {
   await page.goto('/maps/ascent/');
   await page.locator('.chip-btn').first().click();
-  await expect(page.locator('.lineup__mark').first()).toBeVisible();
+  await expect(page.locator('.lineup__item').first()).toBeVisible();
 });
 
 test('特工详情页含道具点位面板', async ({ page }) => {
   await page.goto('/agents/sage/');
   await expect(page.getByRole('heading', { name: '道具点位' })).toBeVisible();
   await page.locator('.chip-btn').first().click();
-  await expect(page.locator('.lineup__mark').first()).toBeVisible();
+  await expect(page.locator('.lineup__item').first()).toBeVisible();
 });
