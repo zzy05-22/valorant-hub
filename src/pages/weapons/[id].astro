@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import weaponsData from '../../data/weapons.json';
+
+export function getStaticPaths() {
+  return weaponsData.weapons.map((weapon) => ({
+    params: { id: weapon.id },
+    props: { weapon },
+  }));
+}
+const { weapon } = Astro.props;
+const name = weapon.zh.name !== weapon.en.name
+  ? `${weapon.zh.name} ${weapon.en.name}`
+  : weapon.en.name;
+const PEN_LABEL: Record<string, string> = { Low: '低', Medium: '中', High: '高' };
+const pen = PEN_LABEL[weapon.stats.wallPenetration] ?? weapon.stats.wallPenetration;
+const price = weapon.credits > 0 ? `${weapon.credits} 信用点` : '默认装备';
+---
+<BaseLayout title={`${name}｜无畏契约资料站`} description={`${name}：射速 ${weapon.stats.fireRate}，${price}。伤害分段、穿透与弹匣数据。`}>
+  <main class="container section">
+    <a class="back" href="/weapons/">← 返回武器库</a>
+    <div class="label-cut">{weapon.zh.category || weapon.en.category || '武器'}</div>
+    <h1>{name}</h1>
+    <p class="page-sub">{price}</p>
+    <img class="w-img" src={weapon.displayIcon} alt={name} onerror="this.src='/favicon.svg'" />
+    <h2>基础参数</h2>
+    <table>
+      <tbody>
+        <tr><th>射速</th><td>{weapon.stats.fireRate} 发/秒</td></tr>
+        <tr><th>弹匣容量</th><td>{weapon.stats.magazineSize}</td></tr>
+        <tr><th>墙体穿透</th><td>{pen}</td></tr>
+      </tbody>
+    </table>
+    {weapon.damageRanges.length > 0 && (
+      <>
+        <h2>伤害分段</h2>
+        <table>
+          <thead>
+            <tr><th>射程</th><th>爆头</th><th>躯干</th><th>腿部</th></tr>
+          </thead>
+          <tbody>
+            {weapon.damageRanges.map((r) => (
+              <tr>
+                <td>{r.rangeStartMeters}–{r.rangeEndMeters}m</td>
+                <td>{r.headDamage}</td>
+                <td>{r.bodyDamage}</td>
+                <td>{r.legDamage}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    )}
+    <p class="data-meta">数据版本 {weaponsData.version} · 伤害为无甲数值，实际受护甲与距离衰减影响</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .w-img { height: 120px; object-fit: contain; margin: 1.2rem 0; }
+</style>
