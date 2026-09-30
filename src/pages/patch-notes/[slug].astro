@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const notes = await getCollection('patchNotes', ({ data }) => !data.draft);
+  return notes.map((note) => ({ params: { slug: note.id }, props: { note } }));
+}
+const { note } = Astro.props;
+const { Content } = await render(note);
+---
+<BaseLayout title={`${note.data.title}｜无畏契约资料站`} description={note.data.excerpt}>
+  <main class="container section">
+    <a class="back" href="/patch-notes/">← 返回版本资讯</a>
+    <div class="label-cut">{note.data.patchVersion !== '通用' ? `版本 ${note.data.patchVersion}` : '版本导读'}</div>
+    <h1>{note.data.title}</h1>
+    <p class="data-meta" style="margin-top:0.3rem">{note.data.publishDate.toLocaleDateString('zh-CN')}</p>
+    <article class="prose"><Content /></article>
+  </main>
+</BaseLayout>
