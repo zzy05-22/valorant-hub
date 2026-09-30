@@ -24,7 +24,7 @@
 - **素材已核实**（2026-09-30 抓取）：官方 13.06 公告全文已取得（对应站内数据版本 13.06.00.5590001——注意官方玩家版本号与 valorant-api 内部号一致，13.06 为 2026 年年度大版本）；VCT 2026 赛程与赛果已核实（上海冠军赛 9.24-10.18 进行中）
 - **岛屿技术（P2 定稿，勿改）**：数据用 `<script type="application/json" id="xxx" set:html={JSON.stringify(data)} />` 注入（script 内容是 raw text，`{}` 表达式不求值，必须 set:html）；行为脚本用打包 `<script>`（可 import TS 模块），运行时 `JSON.parse` 读数据。**打包 script 与 frontmatter 变量引用互斥**
 - **点位坐标诚实原则**：x/y 为战术图上的百分比示意位置（0-100），由社区整理估算，页面固定展示"点位为社区整理示意，位置以游戏内实测为准"；新图（corrode/summit）的 note 追加校准声明
-- **agentId 必须与 `src/data/agents.json` 的 slug 一致**（sage/sova/brimstone/omen/cypher/viper/killjoy/kayo/breach/jett）；ability 枚举与 SkillPanel 一致（C/Q/E/X/被动）
+- **agentId 必须与 `src/data/agents.json` 的 slug 一致**（sage/sova/brimstone/omen/cypher/viper/killjoy/kay-o/breach/jett）；ability 枚举与 SkillPanel 一致（C/Q/E/X/被动）
 - **单测计数**：P2 后为 45；P3 新增 lineups 纯函数 3 用例，全量目标 **48**
 - **E2E 计数**：10 + 2 = **12**；**页面数不变 94**（点位集成在既有详情页内，无新路由）
 - **产物是压缩 HTML**：验证一律用 `grep -o | wc -l`
@@ -282,7 +282,7 @@ const lineups = defineCollection({
   "spots": [
     { "agentId": "breach", "ability": "Q", "label": "A 主道闪光", "x": 22, "y": 45, "side": "进攻", "note": "A 主道纵深闪，配合双边 3-2 分推。" },
     { "agentId": "breach", "ability": "Q", "label": "B 连接闪光", "x": 78, "y": 45, "side": "进攻", "note": "B 连接位闪，掩护另一侧夹击。" },
-    { "agentId": "kayo", "ability": "E", "label": "中路压制刀", "x": 50, "y": 42, "side": "进攻", "note": "中路零点压制守方技能，为包围战术扫清道具。" },
+    { "agentId": "kay-o", "ability": "E", "label": "中路压制刀", "x": 50, "y": 42, "side": "进攻", "note": "中路零点压制守方技能，为包围战术扫清道具。" },
     { "agentId": "viper", "ability": "E", "label": "A 包点毒墙", "x": 26, "y": 50, "side": "进攻", "note": "毒墙切分 A 包点，下包后毒墙守包。" }
   ]
 }
@@ -294,7 +294,7 @@ const lineups = defineCollection({
 {
   "mapId": "sunset",
   "spots": [
-    { "agentId": "kayo", "ability": "E", "label": "中门压制刀", "x": 50, "y": 38, "side": "进攻", "note": "中门压制防守技能，打开双向夹击窗口。" },
+    { "agentId": "kay-o", "ability": "E", "label": "中门压制刀", "x": 50, "y": 38, "side": "进攻", "note": "中门压制防守技能，打开双向夹击窗口。" },
     { "agentId": "viper", "ability": "E", "label": "B 主道毒墙", "x": 74, "y": 48, "side": "进攻", "note": "B 贴脸结构毒墙开路，配合决斗者近点。" },
     { "agentId": "sage", "ability": "Q", "label": "A 主道封口墙", "x": 24, "y": 46, "side": "防守", "note": "A 主道口立墙，前排压制后撤打二波。" },
     { "agentId": "omen", "ability": "E", "label": "中门烟", "x": 52, "y": 35, "side": "防守", "note": "中门封烟防快攻，保住回防视野。" }

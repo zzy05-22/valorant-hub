@@ -3,7 +3,7 @@
   "spots": [
     { "agentId": "breach", "ability": "Q", "label": "A 主道闪光", "x": 22, "y": 45, "side": "进攻", "note": "A 主道纵深闪，配合双边 3-2 分推。" },
     { "agentId": "breach", "ability": "Q", "label": "B 连接闪光", "x": 78, "y": 45, "side": "进攻", "note": "B 连接位闪，掩护另一侧夹击。" },
-    { "agentId": "kayo", "ability": "E", "label": "中路压制刀", "x": 50, "y": 42, "side": "进攻", "note": "中路零点压制守方技能，为包围战术扫清道具。" },
+    { "agentId": "kay-o", "ability": "E", "label": "中路压制刀", "x": 50, "y": 42, "side": "进攻", "note": "中路零点压制守方技能，为包围战术扫清道具。" },
     { "agentId": "viper", "ability": "E", "label": "A 包点毒墙", "x": 26, "y": 50, "side": "进攻", "note": "毒墙切分 A 包点，下包后毒墙守包。" }
   ]
 }
