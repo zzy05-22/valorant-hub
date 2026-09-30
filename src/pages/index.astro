@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import AgentCard from '../components/AgentCard.astro';
 import agentsData from '../data/agents.json';
+import weaponsData from '../data/weapons.json';
 import mapsData from '../data/maps.json';
 import { getCollection } from 'astro:content';
+import { rankWeaponDamage, roleDistribution, lineupContributors } from '../utils/stats';
 
-// 角色多样化推荐：决斗 2 + 先锋 2 + 控场 1 + 哨卫 1（zh.role 实测值）
+// —— hero 与板块数据 ——
 const rolePool = new Map<string, typeof agentsData.agents>();
 for (const a of agentsData.agents) {
   if (!rolePool.has(a.zh.role)) rolePool.set(a.zh.role, []);
@@ -13,112 +14,327 @@ for (const a of agentsData.agents) {
 }
 const QUOTA: Record<string, number> = { 决斗: 2, 先锋: 2, 控场: 1, 哨卫: 1 };
 const featuredAgents = Object.entries(QUOTA).flatMap(([role, n]) => (rolePool.get(role) ?? []).slice(0, n));
-// 地图速览：只展示有战术图的已上线地图（前 4 张均为标准竞技图）
 const featuredMaps = mapsData.maps.filter((m) => m.displayIcon).slice(0, 4);
+const heroAgent = agentsData.agents.find((a) => a.id === 'jett');
+const heroPortrait = heroAgent?.fullPortrait || '';
+
+const ROLE_COLOR: Record<string, string> = { 决斗: '#FF4655', 先锋: '#00E5B0', 控场: '#7ee787', 哨卫: '#a78bfa' };
+
+// —— 数据板块 ——
+const topWeapons = rankWeaponDamage(weaponsData.weapons as never).slice(0, 6);
+const maxHead = topWeapons[0]?.headDamage ?? 1;
+const roleDist = roleDistribution(agentsData.agents as never);
+let acc = 0;
+const ringStops = roleDist.map((r) => {
+  const start = acc; acc += r.pct;
+  return `${ROLE_COLOR[r.role] ?? '#888'} ${start.toFixed(1)}% ${acc.toFixed(1)}%`;
+}).join(', ');
+
+const allSpots = (await getCollection('lineups')).flatMap(
+  (entry) => entry.data.spots.map((s) => ({ mapId: entry.data.mapId, agentId: s.agentId })),
+);
+const topContributors = lineupContributors(allSpots).slice(0, 5).map((c) => ({
+  ...c,
+  agent: agentsData.agents.find((a) => a.id === c.agentId)!,
+}));
+const maxContrib = topContributors[0]?.count ?? 1;
+
+// —— 电竞数据（vlr.gg）——
+import esportsStats from '../data/esports-stats.json';
+const topPlayers = esportsStats.players.slice(0, 5);
+
+// —— 内容 ——
 const guides = (await getCollection('guides', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 3);
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()).slice(0, 3);
 const patchNotes = (await getCollection('patchNotes', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 2);
-const esports = (await getCollection('esports', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 2);
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()).slice(0, 2);
+const esportsPosts = (await getCollection('esports', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()).slice(0, 2);
+const liveEvent = (await getCollection('esports', ({ data }) => !data.draft && data.type === '赛程'))[0] ?? null;
+const liveStats = esportsStats.players[0];
 ---
 <BaseLayout title="无畏契约中文资料站｜特工 · 武器 · 教学" description="无畏契约中文资料站：特工图鉴、武器数据、新手教学，数据跟随版本自动更新">
-  <main>
-    <section class="hero container">
-      <div class="label-cut">Defy the Limits · 无畏契约</div>
-      <h1>在这里，<span class="hl">精准</span>即是艺术</h1>
-      <p class="subtitle">特工图鉴 · 武器参数 · 新手教学</p>
-      <div class="hero__cta">
-        <a class="btn btn-primary" href="/agents/">浏览特工</a>
-        <a class="btn btn-ghost" href="/guides/">新手教学</a>
+  <main style="position:relative">
+    <div class="noise-layer"></div>
+
+    <!-- ① HERO：A3 立绘版 -->
+    <section class="hero6">
+      <div class="hero6__glow1"></div>
+      <div class="hero6__glow2"></div>
+      <div class="hero6__slant"></div>
+      <div class="hero6__watermark">PRECISION</div>
+      {heroPortrait && <img class="hero6__portrait" src={heroPortrait} alt="" onerror="this.style.display='none'" />}
+      <div class="hero6__content">
+        <span class="hero6__badge badge-live">● EP.13 · 数据已同步</span>
+        <h1>在这里，<br /><span class="text-shimmer">精准即是艺术</span></h1>
+        <p class="hero6__sub">特工图鉴 · 武器对比 · 道具点位 · 版本资讯 —— 中文玩家的一站式数据库</p>
+        <div class="hero6__cta">
+          <a class="btn btn-primary" href="/agents/">浏览特工 →</a>
+          <a class="btn btn-ghost" href="/guides/">新手教学</a>
+        </div>
+      </div>
+      <div class="hero6__badges">
+        <div class="card-cut hero6__stat floaty"><b style="color:#00E5B0">29</b><span>特工 AGENTS</span></div>
+        <div class="card-cut hero6__stat floaty" style="animation-delay:1s"><b style="color:#FF4655">21</b><span>武器 WEAPONS</span></div>
+        <div class="card-cut hero6__stat floaty" style="animation-delay:2s"><b style="color:#ffd166">104</b><span>点位 LINEUPS</span></div>
       </div>
     </section>
-    <section class="container section-block">
-      <h2>热门特工</h2>
-      <div class="grid">
-        {featuredAgents.map((a) => <AgentCard agent={a} />)}
-      </div>
-      <p class="more"><a href="/agents/">查看全部特工 →</a></p>
-    </section>
-    <section class="container section-block section-alt">
-      <h2>最新教学</h2>
-      <ul class="guide-list">
-        {guides.map((g) => (
-          <li class="card-cut guide-item">
-            <a class="guide-item__title" href={`/guides/${g.id}/`}>{g.data.title}</a>
-            <p class="guide-item__excerpt">{g.data.excerpt}</p>
-          </li>
-        ))}
-      </ul>
-      <p class="more"><a href="/guides/">全部教学 →</a></p>
-    </section>
-    <section class="container section-block">
-      <h2>地图速览</h2>
-      <div class="grid grid--wide">
-        {featuredMaps.map((m) => (
-          <a class="card-cut map-tease" href={`/maps/${m.id}/`}>
-            <img src={m.splash || m.displayIcon} alt={m.zh.name} loading="lazy" onerror="this.src='/favicon.svg'" />
-            <span class="map-tease__name">{m.zh.name}</span>
-          </a>
-        ))}
-      </div>
-      <p class="more"><a href="/maps/">全部地图 →</a></p>
-    </section>
-    <section class="container section-block section-alt">
-      <h2>最新资讯</h2>
-      <ul class="note-list">
-        {patchNotes.map((n) => (
-          <li class="card-cut note-item">
-            <a class="note-item__title" href={`/patch-notes/${n.id}/`}>{n.data.title}</a>
-            <p class="note-item__meta">版本 {n.data.patchVersion}</p>
-          </li>
-        ))}
-        {esports.map((p) => (
-          <li class="card-cut note-item">
-            <a class="note-item__title" href={`/esports/${p.id}/`}>{p.data.title}</a>
-            <p class="note-item__meta">{p.data.type}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
+
+    <div class="container">
+      <!-- ② 数据速览条 -->
+      <section class="quick6">
+        <div class="card-cut quick6__item"><span style="width:8px;height:8px;border-radius:50%;background:#FF4655;box-shadow:0 0 10px #FF4655"></span><b>29</b><span>特工</span></div>
+        <div class="card-cut quick6__item"><span style="width:8px;height:8px;border-radius:50%;background:#00E5B0;box-shadow:0 0 10px #00E5B0"></span><b>13</b><span>竞技地图</span></div>
+        <div class="card-cut quick6__item"><span style="width:8px;height:8px;border-radius:50%;background:#ffd166;box-shadow:0 0 10px #ffd166"></span><b>104</b><span>道具点位</span></div>
+        <div class="card-cut quick6__item"><span style="width:8px;height:8px;border-radius:50%;background:#a78bfa;box-shadow:0 0 10px #a78bfa"></span><b>13.06</b><span>数据版本</span></div>
+      </section>
+
+      <!-- ③ 版本横幅（扫光） -->
+      {patchNotes[0] && (
+        <section class="banner6 card-cut">
+          <div class="banner6__scan"></div>
+          <div class="banner6__patch">13.06<span>PATCH</span></div>
+          <div class="banner6__body">
+            <div class="banner6__tags"><span class="tag6 tag6--red">NEW 版本导读</span><span class="banner6__date">{patchNotes[0].data.publishDate.toLocaleDateString('zh-CN')}</span></div>
+            <a class="banner6__title" href={`/patch-notes/${patchNotes[0].id}/`}>{patchNotes[0].data.title}</a>
+          </div>
+          <a class="banner6__more" href={`/patch-notes/${patchNotes[0].id}/`}>阅读 →</a>
+        </section>
+      )}
+
+      <!-- ④ 特工精选（角色主题色） -->
+      <section class="block6">
+        <header class="block6__head"><h2>特工精选</h2><span class="block6__en">FEATURED</span><a class="block6__more" href="/agents/">全部 29 位 →</a></header>
+        <div class="block6__grid">
+          {featuredAgents.map((a) => (
+            <a class="card-cut card-lift agent6" href={`/agents/${a.id}/`}>
+              <div class="agent6__stripe" style={`background:linear-gradient(90deg,${ROLE_COLOR[a.zh.role] ?? '#888'},transparent)`}></div>
+              <img src={a.displayIcon} alt={a.zh.name} loading="lazy" onerror="this.src='/favicon.svg'" />
+              <div class="agent6__info">
+                <b>{a.zh.name} <span>{a.en.name}</span></b>
+                <span class="agent6__role" style={`color:${ROLE_COLOR[a.zh.role] ?? '#888'}`}>{a.zh.role} · {a.en.role}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- ⑤ 选手数据榜 TOP5（vlr.gg） -->
+      <section class="block6">
+        <header class="block6__head"><h2>选手数据榜</h2><span class="block6__en">PLAYER RATING · TOP 5</span><a class="block6__more" href="/esports/stats/">完整榜单 →</a></header>
+        {topPlayers.length ? (
+          <div class="card-cut board6">
+            {topPlayers.map((p, i) => (
+              <div class="board6__row">
+                <span class={`board6__rank${i === 0 ? ' board6__rank--top' : ''}`}>{i + 1}</span>
+                <div class="board6__main">
+                  <div class="board6__label"><b>{p.name}</b><span class="board6__team">{p.team}</span></div>
+                  <div class="stat-track"><div class="stat-bar bar-anim" style={`width:${Math.min(100, Math.round((p.rating / (topPlayers[0].rating || 1)) * 100))}%;background:linear-gradient(90deg,#FF4655,#ff8a5c)`}></div></div>
+                </div>
+                <div class="board6__value"><b>{p.rating}</b><span>Rating</span></div>
+              </div>
+            ))}
+            <div class="board6__foot">数据来源 vlr.gg · 每日自动更新 · 点击右上角查看完整榜单</div>
+          </div>
+        ) : (
+          <div class="card-cut board6 board6--empty">电竞数据整理中，稍后更新</div>
+        )}
+      </section>
+
+      <!-- ⑥ 武器威力榜 TOP6 -->
+      <section class="block6">
+        <header class="block6__head"><h2>武器威力榜</h2><span class="block6__en">HEADSHOT DAMAGE · TOP 6</span><a class="block6__more" href="/weapons/">武器库 →</a></header>
+        <div class="card-cut board6">
+          {topWeapons.map((w, i) => (
+            <div class="board6__row">
+              <span class={`board6__rank${i === 0 ? ' board6__rank--top' : ''}`}>{i + 1}</span>
+              <div class="board6__main">
+                <div class="board6__label"><b>{w.name}</b>{w.isNew && <span class="tag6 tag6--teal">NEW</span>}</div>
+                <div class="stat-track"><div class="stat-bar bar-anim" style={`width:${Math.round((w.headDamage / maxHead) * 100)}%;background:linear-gradient(90deg,#FF4655,#ff8a5c);animation-delay:${i * 0.08}s`}></div></div>
+              </div>
+              <div class="board6__value"><b style={w.isNew ? 'color:#00E5B0' : ''}>{w.headDamage}</b><span>爆头伤害</span></div>
+            </div>
+          ))}
+          <div class="board6__foot">近距段爆头伤害（官方数据）· 每日同步自动更新</div>
+        </div>
+      </section>
+
+      <!-- ⑦ 数据一览：定位环形图 + 点位贡献榜 -->
+      <section class="block6 grid-2">
+        <div>
+          <header class="block6__head"><h2>特工定位分布</h2></header>
+          <div class="card-cut dist6">
+            <div class="dist6__ring" style={`background:${`conic-gradient(${ringStops})`}`}>
+              <div class="dist6__core"><b>29</b><span>特工</span></div>
+            </div>
+            <div class="dist6__legend">
+              {roleDist.map((r) => (
+                <div><span style={`background:${ROLE_COLOR[r.role] ?? '#888'};box-shadow:0 0 8px ${ROLE_COLOR[r.role] ?? '#888'}`}></span><b>{r.role}</b><i>{r.count} 人</i><i>{r.pct}%</i></div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div>
+          <header class="block6__head"><h2>点位收录榜</h2><span class="block6__en">LINEUP TOP 5</span></header>
+          <div class="card-cut board6">
+            {topContributors.map((c, i) => (
+              <div class="board6__row">
+                <img src={c.agent.displayIcon} alt={c.agent.zh.name} loading="lazy" onerror="this.src='/favicon.svg'" style={`width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid ${i === 0 ? '#FF4655' : 'rgba(236,232,225,.2)'}`} />
+                <div class="board6__main">
+                  <div class="board6__label"><b>{c.agent.zh.name} {c.agent.en.name}</b></div>
+                  <div class="stat-track"><div class="stat-bar bar-anim" style={`width:${Math.round((c.count / maxContrib) * 100)}%;background:linear-gradient(90deg,${i === 0 ? '#FF4655,#ff8a5c' : 'rgba(0,229,176,.7)'});animation-delay:${i * 0.1}s`}></div></div>
+                </div>
+                <div class="board6__value"><b>{c.count}</b><span>{c.maps} 图覆盖</span></div>
+              </div>
+            ))}
+            <div class="board6__foot">站内点位库实时统计 · 用<a href="/lineup-tool/">标注工具</a>贡献点位上榜</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑧ 赛事横幅 -->
+      {liveEvent && (
+        <section class="live6 card-cut">
+          <div class="live6__logo">SH</div>
+          <div class="live6__body">
+            <div><span class="tag6 tag6--red badge-live">● LIVE</span><span class="live6__meta">9.24 - 10.18 · 上海</span></div>
+            <a class="live6__title" href={`/esports/${liveEvent.id}/`}>{liveEvent.data.title}</a>
+          </div>
+          <a class="live6__more" href={`/esports/${liveEvent.id}/`}>观赛指南 →</a>
+        </section>
+      )}
+
+      <!-- ⑨ 最新资讯 -->
+      <section class="block6">
+        <header class="block6__head"><h2>最新资讯</h2><a class="block6__more" href="/esports/">资讯中心 →</a></header>
+        <div class="news6">
+          {[...patchNotes, ...esportsPosts].sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()).slice(0, 4).map((n) => (
+            <a class="card-cut news6__card" href={`/${'patchVersion' in n.data ? 'patch-notes' : 'esports'}/${n.id}/`}>
+              <div class="news6__thumb"></div>
+              <div class="news6__body"><b>{n.data.title}</b><span>{n.data.publishDate.toLocaleDateString('zh-CN')}</span></div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- ⑩ 地图速览（保留） -->
+      <section class="block6">
+        <header class="block6__head"><h2>地图速览</h2><a class="block6__more" href="/maps/">全部地图 →</a></header>
+        <div class="block6__grid block6__grid--wide">
+          {featuredMaps.map((m) => (
+            <a class="card-cut card-lift map6" href={`/maps/${m.id}/`}>
+              <img src={m.splash || m.displayIcon} alt={m.zh.name} loading="lazy" onerror="this.src='/favicon.svg'" />
+              <span class="map6__name">{m.zh.name}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
   </main>
 </BaseLayout>
 
 <style>
-  .hero { padding: 5rem 1.5rem 3.5rem; max-width: 1080px; position: relative; overflow: hidden; }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0; right: -10%;
-    width: 34%;
-    background:
-      linear-gradient(115deg, transparent 0%, rgba(255, 70, 85, 0.07) 45%, rgba(255, 70, 85, 0.07) 55%, transparent 100%),
-      repeating-linear-gradient(0deg, transparent 0 22px, rgba(236, 232, 225, 0.025) 22px 23px);
-    transform: skewX(-8deg);
-    pointer-events: none;
-  }
-  .hero h1 { max-width: 12em; }
-  .hl { color: var(--val-red); }
-  .hero__cta { display: flex; gap: 0.9rem; margin-top: 1.6rem; }
-  .section-block { padding-bottom: 3rem; }
-  .more { margin-top: 1rem; font-weight: 700; font-size: 0.85rem; }
-  .more a { color: var(--val-gray); }
-  .more a:hover { color: var(--val-red); }
-  .guide-list { list-style: none; display: grid; gap: 0.75rem; }
-  .guide-item { padding: 1rem 1.2rem; }
-  .guide-item__title { font-weight: 800; }
-  .guide-item__title:hover { color: var(--val-red); }
-  .guide-item__excerpt { color: var(--val-gray); font-size: 0.85rem; margin-top: 0.25rem; }
-  .grid--wide { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-  .map-tease { position: relative; overflow: hidden; }
-  .map-tease img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
-  .map-tease__name { position: absolute; left: 0.8rem; bottom: 0.6rem; font-weight: 800; text-shadow: 0 1px 4px rgba(0,0,0,.9); }
-  .note-list { list-style: none; display: grid; gap: 0.75rem; }
-  .note-item { padding: 1rem 1.2rem; }
-  .note-item__title { font-weight: 800; }
-  .note-item__title:hover { color: var(--val-red); }
-  .note-item__meta { color: var(--val-red); font-size: 0.75rem; margin-top: 0.25rem; }
+  .hero6 { position: relative; height: 460px; overflow: hidden; display: flex; align-items: center; }
+  .hero6__glow1 { position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(255,70,85,.3), transparent 70%); top: -120px; left: -80px; filter: blur(45px); animation: drift1 7s ease-in-out infinite; }
+  .hero6__glow2 { position: absolute; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(0,229,176,.18), transparent 70%); bottom: -80px; right: 24%; filter: blur(42px); animation: drift2 9s ease-in-out infinite; }
+  .hero6__slant { position: absolute; top: 0; bottom: 0; right: 30%; width: 2px; background: linear-gradient(rgba(255,70,85,0), rgba(255,70,85,.5), rgba(255,70,85,0)); transform: skewX(-14deg); }
+  .hero6__watermark { position: absolute; right: 26%; bottom: 20px; font-size: 110px; font-weight: 900; font-style: italic; color: rgba(236,232,225,.045); letter-spacing: -6px; }
+  .hero6__portrait { position: absolute; right: 0; bottom: -20px; height: 108%; filter: drop-shadow(0 0 44px rgba(255,70,85,.26)); z-index: 2; }
+  .hero6__content { position: relative; z-index: 3; padding: 0 1.5rem; max-width: 720px; margin: 0 auto; width: 100%; }
+  .hero6__badge { display: inline-block; background: rgba(255,70,85,.16); border: 1px solid rgba(255,70,85,.45); border-radius: 6px; padding: 3px 9px; color: #FF4655; font-size: .7rem; font-weight: 800; letter-spacing: 2px; }
+  .hero6 h1 { color: var(--val-cream); font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 900; line-height: 1.05; margin-top: .8rem; }
+  .hero6__sub { color: var(--val-gray); font-size: .85rem; margin-top: .6rem; letter-spacing: 1px; }
+  .hero6__cta { display: flex; gap: .8rem; margin-top: 1.2rem; }
+  .hero6__badges { position: absolute; right: 1rem; top: 1rem; z-index: 3; display: flex; flex-direction: column; gap: .5rem; }
+  .hero6__stat { border-radius: 12px; padding: .5rem .8rem; text-align: right; }
+  .hero6__stat b { display: block; font-size: 1.1rem; }
+  .hero6__stat span { color: var(--val-gray); font-size: .6rem; letter-spacing: 1px; }
+  @media (max-width: 768px) { .hero6__badges { display: none; } .hero6__watermark { display: none; } .hero6 { height: 380px; } }
+
+  .quick6 { display: flex; gap: .8rem; margin: 1rem auto; }
+  .quick6__item { flex: 1; display: flex; align-items: center; gap: .6rem; padding: .7rem .9rem; border-radius: 14px; }
+  .quick6__item b { font-size: 1.1rem; color: var(--val-cream); }
+  .quick6__item span:last-child { color: var(--val-gray); font-size: .72rem; }
+  @media (max-width: 768px) { .quick6 { flex-wrap: wrap; } .quick6__item { flex: 1 1 40%; } }
+
+  .banner6 { position: relative; overflow: hidden; border-radius: 18px; padding: 1rem 1.2rem; display: flex; gap: 1rem; align-items: center; margin: 1rem auto; }
+  .banner6__scan { position: absolute; top: 0; bottom: 0; left: 0; width: 60px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.06), transparent); animation: scan-line 3.4s ease-in-out infinite; pointer-events: none; }
+  .banner6__patch { width: 92px; height: 72px; border-radius: 12px; background: linear-gradient(135deg, #FF4655, #ff97a6, #7a6bff); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; box-shadow: 0 8px 22px rgba(255,70,85,.35); }
+  .banner6__patch b { font-size: 1.3rem; font-weight: 900; font-style: italic; }
+  .banner6__patch span { font-size: .5rem; letter-spacing: 2px; opacity: .85; }
+  .banner6__tags { display: flex; gap: .5rem; align-items: center; }
+  .banner6__date { color: var(--val-gray); font-size: .7rem; }
+  .banner6__title { display: block; color: var(--val-cream); font-weight: 800; font-size: 1.05rem; margin-top: .4rem; }
+  .banner6__title:hover { color: var(--val-red); }
+  .banner6__more { margin-left: auto; color: var(--val-red); font-weight: 800; font-size: .8rem; white-space: nowrap; }
+
+  .block6 { margin: 1.6rem auto; position: relative; z-index: 2; }
+  .block6__head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .block6__head h2 { font-size: 1.1rem; }
+  .block6__en { color: rgba(236,232,225,.35); font-size: .68rem; letter-spacing: 2px; font-weight: 700; }
+  .block6__more { margin-left: auto; color: var(--val-red); font-size: .75rem; font-weight: 700; }
+  .block6__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+  .block6__grid--wide { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 768px) { .block6__grid { grid-template-columns: repeat(2, 1fr); } .block6__grid--wide { grid-template-columns: repeat(2, 1fr); } }
+
+  .agent6 { display: block; border-radius: 16px; overflow: hidden; position: relative; }
+  .agent6__stripe { height: 3px; }
+  .agent6 img { width: 100%; aspect-ratio: 1.1; object-fit: cover; transition: transform .25s ease; }
+  .agent6:hover img { transform: scale(1.05); }
+  .agent6__info { padding: .6rem .8rem; }
+  .agent6__info b { display: block; color: var(--val-cream); font-size: .95rem; }
+  .agent6__info b span { color: rgba(236,232,225,.35); font-size: .7rem; }
+  .agent6__role { font-size: .7rem; font-weight: 700; }
+
+  .board6 { border-radius: 16px; padding: 1rem 1.1rem; }
+  .board6__row { display: flex; align-items: center; gap: .7rem; padding: .45rem 0; }
+  .board6__rank { width: 24px; height: 24px; border-radius: 7px; background: rgba(236,232,225,.08); color: rgba(236,232,225,.7); font-size: .7rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .board6__rank--top { background: linear-gradient(135deg, #FF4655, #ff97a6); color: #fff; }
+  .board6__main { flex: 1; }
+  .board6__label { display: flex; gap: .4rem; align-items: center; margin-bottom: .25rem; }
+  .board6__label b { color: var(--val-cream); font-size: .8rem; }
+  .board6__team { background: rgba(0,229,176,.12); color: #00E5B0; font-size: .6rem; font-weight: 800; padding: 1px 5px; border-radius: 3px; }
+  .board6__value { text-align: right; flex-shrink: 0; }
+  .board6__value b { display: block; color: var(--val-cream); font-size: .95rem; }
+  .board6__value span { color: var(--val-gray); font-size: .6rem; }
+  .board6__foot { color: rgba(236,232,225,.3); font-size: .68rem; margin-top: .6rem; text-align: right; }
+  .board6--empty { color: var(--val-gray); text-align: center; padding: 2rem; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+  .dist6 { border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: center; }
+  .dist6__ring { width: 130px; height: 130px; border-radius: 50%; position: relative; flex-shrink: 0; }
+  .dist6__core { position: absolute; inset: 16px; border-radius: 50%; background: #101a26; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .dist6__core b { color: var(--val-cream); font-size: 1.5rem; }
+  .dist6__core span { color: var(--val-gray); font-size: .55rem; letter-spacing: 2px; }
+  .dist6__legend { flex: 1; display: flex; flex-direction: column; gap: .5rem; }
+  .dist6__legend div { display: flex; align-items: center; gap: .5rem; }
+  .dist6__legend span { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+  .dist6__legend b { color: var(--val-cream); font-size: .8rem; flex: 1; }
+  .dist6__legend i { color: var(--val-gray); font-style: normal; font-size: .7rem; width: 3.2em; text-align: right; }
+
+  .tag6 { color: #fff; font-size: .6rem; font-weight: 800; padding: 2px 6px; border-radius: 4px; letter-spacing: 1px; }
+  .tag6--red { background: #FF4655; }
+  .tag6--teal { background: #00E5B0; color: #0F1923; }
+
+  .live6 { border-radius: 16px; padding: .9rem 1.1rem; display: flex; align-items: center; gap: 1rem; margin: 1.4rem auto; }
+  .live6__logo { width: 58px; height: 44px; border-radius: 11px; background: linear-gradient(135deg, #FF4655, #7a6bff); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: .9rem; }
+  .live6__body { flex: 1; }
+  .live6__meta { color: var(--val-gray); font-size: .7rem; margin-left: .5rem; }
+  .live6__title { display: block; color: var(--val-cream); font-weight: 800; font-size: .95rem; margin-top: .3rem; }
+  .live6__title:hover { color: var(--val-red); }
+  .live6__more { color: var(--val-red); font-weight: 800; font-size: .75rem; white-space: nowrap; }
+
+  .news6 { display: grid; grid-template-columns: 1.4fr 1fr; gap: .8rem; }
+  @media (max-width: 768px) { .news6 { grid-template-columns: 1fr; } }
+  .news6__card { border-radius: 16px; overflow: hidden; }
+  .news6__thumb { height: 84px; background: linear-gradient(135deg, rgba(255,70,85,.35), rgba(122,107,255,.25) 60%, rgba(0,229,176,.2)), repeating-linear-gradient(45deg, rgba(236,232,225,.05) 0 8px, transparent 8px 16px); }
+  .news6__body { padding: .8rem .9rem; }
+  .news6__body b { display: block; color: var(--val-cream); font-size: .85rem; line-height: 1.4; }
+  .news6__body span { color: var(--val-gray); font-size: .65rem; margin-top: .3rem; display: block; }
+
+  .map6 { display: block; border-radius: 14px; overflow: hidden; position: relative; }
+  .map6 img { width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform .25s ease; }
+  .map6:hover img { transform: scale(1.05); }
+  .map6__name { position: absolute; left: .8rem; bottom: .6rem; color: var(--val-cream); font-weight: 800; text-shadow: 0 1px 4px rgba(0,0,0,.9); }
 </style>
