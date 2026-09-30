@@ -61,4 +61,14 @@ const lineups = defineCollection({
   }),
 });
 
-export const collections = { guides, esports, patchNotes, mapGuides, lineups };
+const crosshairs = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/crosshairs' }),
+  schema: z.object({
+    name: z.string(),
+    code: z.string(),
+    tags: z.array(z.string()),
+    note: z.string(),
+  }),
+});
+
+export const collections = { guides, esports, patchNotes, mapGuides, lineups, crosshairs };

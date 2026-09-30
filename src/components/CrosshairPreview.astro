@@ -1,0 +1,40 @@
+---
+// 准星 SVG 预览：服务端解析代码渲染，零客户端 JS
+import { parseCrosshairCode } from '../utils/crosshair';
+
+interface Props {
+  code: string;
+  size?: number;
+}
+const { code, size = 64 } = Astro.props;
+const r = parseCrosshairCode(code);
+
+// 64×64 视窗缩放：游戏内长度 1-10 映射 ×2.2，粗细 1-6 映射 ×1.6
+const S = { len: r.inner.length * 2.2, th: r.inner.thickness * 1.6, gap: r.inner.gap * 2.2 };
+const C = 32;
+const outlineW = r.outline.enabled ? Math.max(1, r.outline.thickness) : 0;
+const innerOpacity = r.inner.opacity * r.opacity;
+---
+<svg viewBox="0 0 64 64" width={size} height={size} role="img" aria-label="准星预览" style="display:block">
+  {r.inner.enabled && r.inner.length > 0 && (
+    <g>
+      {outlineW > 0 && (
+        <g fill="rgba(0,0,0,.85)">
+          <rect x={C - S.th / 2 - outlineW} y={C - S.gap - S.len - outlineW} width={S.th + outlineW * 2} height={S.len + outlineW * 2} />
+          <rect x={C - S.th / 2 - outlineW} y={C + S.gap - outlineW} width={S.th + outlineW * 2} height={S.len + outlineW * 2} />
+          <rect x={C - S.gap - S.len - outlineW} y={C - S.th / 2 - outlineW} width={S.len + outlineW * 2} height={S.th + outlineW * 2} />
+          <rect x={C + S.gap - outlineW} y={C - S.th / 2 - outlineW} width={S.len + outlineW * 2} height={S.th + outlineW * 2} />
+        </g>
+      )}
+      <g fill={r.color} opacity={innerOpacity}>
+        <rect x={C - S.th / 2} y={C - S.gap - S.len} width={S.th} height={S.len} />
+        <rect x={C - S.th / 2} y={C + S.gap} width={S.th} height={S.len} />
+        <rect x={C - S.gap - S.len} y={C - S.th / 2} width={S.len} height={S.th} />
+        <rect x={C + S.gap} y={C - S.th / 2} width={S.len} height={S.th} />
+      </g>
+    </g>
+  )}
+  {r.dot.enabled && (
+    <circle cx={C} cy={C} r={Math.max(0.8, r.dot.size * 0.7)} fill={r.color} opacity={r.opacity} />
+  )}
+</svg>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CrosshairPreview from '../../components/CrosshairPreview.astro';
+import { getCollection } from 'astro:content';
+
+const crosshairs = await getCollection('crosshairs');
+---
+<BaseLayout title="准星库｜无畏契约资料站" description="热门准星代码合集：SVG 实时预览、一键复制，游戏内导入即用">
+  <PageHero label="Crosshairs" title="准星库" subtitle={`${crosshairs.length} 个准星 · 预览为近似渲染 · 以游戏内导入效果为准`} />
+  <main class="container section">
+    <section class="role-group">
+      <h2>导入方法</h2>
+      <p class="xh-howto">
+        游戏内 <b>设置 → 十字准星 → 准星配置</b> → 点击 <b>导入配置代码</b> → 粘贴本页任意准星的代码 → 确定。想分享自己的准星？同样页面点击<b>复制配置代码</b>。
+      </p>
+    </section>
+    <section class="role-group">
+      <h2>全部准星</h2>
+      <div class="xh-grid">
+        {crosshairs.map((c) => (
+          <div class="card-cut xh-card">
+            <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
+            <div class="xh-card__info">
+              <b>{c.data.name}</b>
+              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}</div>
+              <p>{c.data.note}</p>
+            </div>
+            <div class="xh-card__code">
+              <code>{c.data.code}</code>
+              <button type="button" class="btn btn-primary xh-copy" data-code={c.data.code}>复制代码</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    <p class="data-meta">准星由社区整理；预览为参数近似渲染，实际以游戏内效果为准。想上架你的准星？在 src/content/crosshairs/ 加一个 JSON 即可。</p>
+  </main>
+</BaseLayout>
+
+<script>
+  // 复制按钮（纯增强：无 JS 时页面完整，仅复制不可用）
+  const btns = document.querySelectorAll<HTMLButtonElement>('.xh-copy');
+  btns.forEach((b) => {
+    b.addEventListener('click', async () => {
+      const code = b.dataset.code ?? '';
+      try {
+        await navigator.clipboard.writeText(code);
+        b.textContent = '已复制 ✓';
+      } catch {
+        // clipboard 不可用时退化为选中代码文本
+        const codeEl = b.parentElement?.querySelector('code');
+        if (codeEl) {
+          const range = document.createRange();
+          range.selectNodeContents(codeEl);
+          const sel = getSelection();
+          sel?.removeAllRanges();
+          sel?.addRange(range);
+          b.textContent = '已选中，Ctrl+C 复制';
+        }
+      }
+      setTimeout(() => { b.textContent = '复制代码'; }, 1500);
+    });
+  });
+</script>
+
+<style>
+  .xh-howto { color: var(--val-gray); max-width: 46em; font-size: 0.9rem; line-height: 1.8; }
+  .xh-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 768px) { .xh-grid { grid-template-columns: 1fr; } }
+  .xh-card { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .xh-card__preview { background: rgba(236, 232, 225, 0.04); border-radius: 12px; padding: 0.8rem; display: flex; align-items: center; justify-content: center; }
+  .xh-card__info b { color: var(--val-cream); font-size: 1rem; }
+  .xh-card__tags { display: flex; gap: 0.4rem; margin: 0.35rem 0; flex-wrap: wrap; }
+  .xh-card__tags span { background: rgba(255, 70, 85, 0.12); color: var(--val-red); font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
+  .xh-card__info p { color: var(--val-gray); font-size: 0.82rem; line-height: 1.6; }
+  .xh-card__code { display: flex; align-items: center; gap: 0.6rem; }
+  .xh-card__code code { flex: 1; font-family: ui-monospace, monospace; font-size: 0.68rem; color: var(--val-gray); background: rgba(236, 232, 225, 0.04); padding: 0.5rem 0.6rem; overflow-x: auto; white-space: nowrap; }
+  .xh-copy { font-size: 0.72rem; padding: 0.5rem 0.9rem; white-space: nowrap; }
+</style>
