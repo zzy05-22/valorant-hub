@@ -1,0 +1,465 @@
+{
+  "syncedAt": "2026-09-30T04:59:07.031Z",
+  "version": "13.06.00.5590001",
+  "maps": [
+    {
+      "id": "gauntlet",
+      "uuid": "dd3a1cd9-41b1-50ea-3bd6-a7bb3c5978bd",
+      "zh": {
+        "name": "Gauntlet",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Gauntlet",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/dd3a1cd9-41b1-50ea-3bd6-a7bb3c5978bd/splash.png"
+    },
+    {
+      "id": "ascent",
+      "uuid": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+      "zh": {
+        "name": "亚海悬城",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Ascent",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "45°26'BF'N,12°20'Q'E",
+      "displayIcon": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png"
+    },
+    {
+      "id": "split",
+      "uuid": "d960549e-485c-e861-8d71-aa9d1aed12a2",
+      "zh": {
+        "name": "霓虹町",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Split",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "35°41'CD'N,139°41'WX'E",
+      "displayIcon": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png"
+    },
+    {
+      "id": "fracture",
+      "uuid": "b529448b-4d60-346e-e89e-00a4c527a405",
+      "zh": {
+        "name": "裂变峡谷",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Fracture",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "35°48'BI\"N 106°08'YQ\"W",
+      "displayIcon": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/splash.png"
+    },
+    {
+      "id": "bind",
+      "uuid": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+      "zh": {
+        "name": "源工重镇",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Bind",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "34°2'A'N,6°51'Z'W",
+      "displayIcon": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/splash.png"
+    },
+    {
+      "id": "skirmish-a",
+      "uuid": "a9009649-421f-d5d5-f80c-0cbe02c125bb",
+      "zh": {
+        "name": "斗牛 1",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Skirmish A",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/a9009649-421f-d5d5-f80c-0cbe02c125bb/splash.png"
+    },
+    {
+      "id": "skirmish-b",
+      "uuid": "a38a3f9a-4042-844c-8970-a3ac2f7ce93d",
+      "zh": {
+        "name": "斗牛 2",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Skirmish B",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/a38a3f9a-4042-844c-8970-a3ac2f7ce93d/splash.png"
+    },
+    {
+      "id": "skirmish-c",
+      "uuid": "a264de0f-4a04-9c78-c97a-a6b192ce6e86",
+      "zh": {
+        "name": "斗牛 3",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Skirmish C",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/a264de0f-4a04-9c78-c97a-a6b192ce6e86/splash.png"
+    },
+    {
+      "id": "skirmish-e",
+      "uuid": "4490f1d6-4818-bf5f-9b3a-9c9a8dbb52ed",
+      "zh": {
+        "name": "斗牛 5",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Skirmish E",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/4490f1d6-4818-bf5f-9b3a-9c9a8dbb52ed/splash.png"
+    },
+    {
+      "id": "skirmish-d",
+      "uuid": "1c7555fc-4bc6-3b98-9674-789d47ef6c50",
+      "zh": {
+        "name": "斗牛 4",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Skirmish D",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/1c7555fc-4bc6-3b98-9674-789d47ef6c50/splash.png"
+    },
+    {
+      "id": "breeze",
+      "uuid": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+      "zh": {
+        "name": "微风岛屿",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Breeze",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "26°11'AG\"N 71°10'WY\"W",
+      "displayIcon": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/splash.png"
+    },
+    {
+      "id": "district",
+      "uuid": "690b3ed2-4dff-945b-8223-6da834e30d24",
+      "zh": {
+        "name": "商街",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "District",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "https://media.valorant-api.com/maps/690b3ed2-4dff-945b-8223-6da834e30d24/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/690b3ed2-4dff-945b-8223-6da834e30d24/splash.png"
+    },
+    {
+      "id": "kasbah",
+      "uuid": "12452a9d-48c3-0b02-e7eb-0381c3520404",
+      "zh": {
+        "name": "古城",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Kasbah",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "https://media.valorant-api.com/maps/12452a9d-48c3-0b02-e7eb-0381c3520404/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/12452a9d-48c3-0b02-e7eb-0381c3520404/splash.png"
+    },
+    {
+      "id": "drift",
+      "uuid": "2c09d728-42d5-30d8-43dc-96a05cc7ee9d",
+      "zh": {
+        "name": "渔市",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Drift",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "https://media.valorant-api.com/maps/2c09d728-42d5-30d8-43dc-96a05cc7ee9d/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/2c09d728-42d5-30d8-43dc-96a05cc7ee9d/splash.png"
+    },
+    {
+      "id": "glitch",
+      "uuid": "d6336a5a-428f-c591-98db-c8a291159134",
+      "zh": {
+        "name": "乱次元",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Glitch",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "https://media.valorant-api.com/maps/d6336a5a-428f-c591-98db-c8a291159134/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/d6336a5a-428f-c591-98db-c8a291159134/splash.png"
+    },
+    {
+      "id": "piazza",
+      "uuid": "de28aa9b-4cbe-1003-320e-6cb3ec309557",
+      "zh": {
+        "name": "小镇",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Piazza",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "https://media.valorant-api.com/maps/de28aa9b-4cbe-1003-320e-6cb3ec309557/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/de28aa9b-4cbe-1003-320e-6cb3ec309557/splash.png"
+    },
+    {
+      "id": "abyss",
+      "uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+      "zh": {
+        "name": "幽邃地窟",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Abyss",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "70° 50' AJ\" N, 9° 00' VX\" W",
+      "displayIcon": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/splash.png"
+    },
+    {
+      "id": "lotus",
+      "uuid": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9",
+      "zh": {
+        "name": "莲华古城",
+        "description": "",
+        "tacticalDescription": "A/B/C部署区"
+      },
+      "en": {
+        "name": "Lotus",
+        "description": "",
+        "tacticalDescription": "A/B/C Sites"
+      },
+      "coordinates": "14°07'AD.4\"N8 74°53'XY\"E8",
+      "displayIcon": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/splash.png"
+    },
+    {
+      "id": "sunset",
+      "uuid": "92584fbe-486a-b1b2-9faa-39b0f486b498",
+      "zh": {
+        "name": "日落之城",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Sunset",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "34° 2′ C″ N, 118° 12′ YT″ W",
+      "displayIcon": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/splash.png"
+    },
+    {
+      "id": "basic-training",
+      "uuid": "1f10dab3-4294-3827-fa35-c2aa00213cf3",
+      "zh": {
+        "name": "基础训练",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "Basic Training",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/1f10dab3-4294-3827-fa35-c2aa00213cf3/splash.png"
+    },
+    {
+      "id": "pearl",
+      "uuid": "fd267378-4d1d-484f-ff52-77821ed10dc2",
+      "zh": {
+        "name": "深海明珠",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Pearl",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "38°42'ED\"N8 9°08'XS\"W8",
+      "displayIcon": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/splash.png"
+    },
+    {
+      "id": "summit",
+      "uuid": "756da597-416b-c0f2-f47b-afbdf28670bc",
+      "zh": {
+        "name": "天枢云阙",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Summit",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "北纬29°18'FC\"，东经110°25'ZQ\"",
+      "displayIcon": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/splash.png"
+    },
+    {
+      "id": "icebox",
+      "uuid": "e2ad5c54-4114-a870-9641-8ea21279579a",
+      "zh": {
+        "name": "森寒冬港",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Icebox",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "76°44' A\"N 149°30' Z\"E",
+      "displayIcon": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/splash.png"
+    },
+    {
+      "id": "the-range",
+      "uuid": "ee613ee9-28b7-4beb-9666-08db13bb2244",
+      "zh": {
+        "name": "靶场",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "The Range",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "45°26'FF'N,12°20'Q'E",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/ee613ee9-28b7-4beb-9666-08db13bb2244/splash.png"
+    },
+    {
+      "id": "the-range",
+      "uuid": "5914d1e0-40c4-cfdd-6b88-eba06347686c",
+      "zh": {
+        "name": "靶场",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "en": {
+        "name": "The Range",
+        "description": "",
+        "tacticalDescription": ""
+      },
+      "coordinates": "45°26'FF'N,12°20'Q'E",
+      "displayIcon": "",
+      "splash": "https://media.valorant-api.com/maps/5914d1e0-40c4-cfdd-6b88-eba06347686c/splash.png"
+    },
+    {
+      "id": "corrode",
+      "uuid": "1c18ab1f-420d-0d8b-71d0-77ad3c439115",
+      "zh": {
+        "name": "盐海矿镇",
+        "description": "",
+        "tacticalDescription": "A/B部署区"
+      },
+      "en": {
+        "name": "Corrode",
+        "description": "",
+        "tacticalDescription": "A/B Sites"
+      },
+      "coordinates": "48° 38' FH\" N8, 1° 33' YV\" W8",
+      "displayIcon": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/splash.png"
+    },
+    {
+      "id": "haven",
+      "uuid": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+      "zh": {
+        "name": "隐世修所",
+        "description": "",
+        "tacticalDescription": "A/B/C部署区"
+      },
+      "en": {
+        "name": "Haven",
+        "description": "",
+        "tacticalDescription": "A/B/C Sites"
+      },
+      "coordinates": "27°28'A'N,89°38'WZ'E",
+      "displayIcon": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/displayicon.png",
+      "splash": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/splash.png"
+    }
+  ]
+}

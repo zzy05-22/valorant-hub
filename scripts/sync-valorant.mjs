@@ -3,9 +3,9 @@
 // 失败策略：校验不通过或网络失败 → 保留旧数据，退出码 1
 import { mkdir, writeFile, rename } from 'node:fs/promises';
 import path from 'node:path';
-import { fetchAgents, fetchWeapons, fetchVersion } from './lib/api.mjs';
-import { transformAgents, transformWeapons } from './lib/transform.mjs';
-import { validateAgents, validateWeapons } from './lib/validate.mjs';
+import { fetchAgents, fetchWeapons, fetchMaps, fetchVersion } from './lib/api.mjs';
+import { transformAgents, transformWeapons, transformMaps } from './lib/transform.mjs';
+import { validateAgents, validateWeapons, validateMaps } from './lib/validate.mjs';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 
@@ -18,11 +18,13 @@ async function atomicWrite(file, data) {
 
 async function main() {
   console.log('[sync] 拉取 valorant-api.com …');
-  const [agentsZh, agentsEn, weaponsZh, weaponsEn, versionRaw] = await Promise.all([
+  const [agentsZh, agentsEn, weaponsZh, weaponsEn, mapsZh, mapsEn, versionRaw] = await Promise.all([
     fetchAgents('zh-CN'),
     fetchAgents('en-US'),
     fetchWeapons('zh-CN'),
     fetchWeapons('en-US'),
+    fetchMaps('zh-CN'),
+    fetchMaps('en-US'),
     fetchVersion(),
   ]);
 
@@ -30,6 +32,9 @@ async function main() {
   const weapons = transformWeapons(weaponsZh, weaponsEn);
   validateAgents(agents);
   validateWeapons(weapons);
+
+  const maps = transformMaps(mapsZh, mapsEn);
+  validateMaps(maps);
 
   const syncedAt = new Date().toISOString();
   // 偏差修正：valorant-api.com /v1/version 实际返回的版本号字段为 version（如 "13.06.00.5590001"），无 versionNumber；兼容两者
@@ -42,9 +47,10 @@ async function main() {
   await mkdir(DATA_DIR, { recursive: true });
   await atomicWrite(path.join(DATA_DIR, 'agents.json'), { syncedAt, version: version.versionNumber, agents });
   await atomicWrite(path.join(DATA_DIR, 'weapons.json'), { syncedAt, version: version.versionNumber, weapons });
+  await atomicWrite(path.join(DATA_DIR, 'maps.json'), { syncedAt, version: version.versionNumber, maps });
   await atomicWrite(path.join(DATA_DIR, 'version.json'), version);
 
-  console.log(`[sync] 完成：agents=${agents.length} weapons=${weapons.length} version=${version.versionNumber}`);
+  console.log(`[sync] 完成：agents=${agents.length} weapons=${weapons.length} maps=${maps.length} version=${version.versionNumber}`);
 }
 
 main().catch((err) => {
