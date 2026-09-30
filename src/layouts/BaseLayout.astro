@@ -8,7 +8,7 @@ interface Props {
   description?: string;
 }
 const { title, description = '无畏契约中文资料站：特工图鉴、武器数据、新手教学' } = Astro.props;
-const site = Astro.site ?? new URL('https://valorant-hub.vercel.app');
+const site = Astro.site ?? new URL('https://valorant-hub-five.vercel.app');
 const canonical = new URL(Astro.url.pathname, site).href;
 ---
 <!doctype html>

@@ -149,7 +149,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://valorant-hub.vercel.app',
+  site: 'https://valorant-hub-five.vercel.app',
   integrations: [sitemap()],
 });
 ```
@@ -296,7 +296,7 @@ interface Props {
   description?: string;
 }
 const { title, description = '无畏契约中文资料站：特工图鉴、武器数据、新手教学' } = Astro.props;
-const site = Astro.site ?? new URL('https://valorant-hub.vercel.app');
+const site = Astro.site ?? new URL('https://valorant-hub-five.vercel.app');
 const canonical = new URL(Astro.url.pathname, site).href;
 ---
 <!doctype html>
@@ -2168,7 +2168,7 @@ git commit -m "docs: README（开发/部署/数据维护说明）"
 1. 用户在 GitHub 创建空仓库 `valorant-hub`，本地 `git remote add origin <仓库URL> && git push -u origin main`
 2. 观察 GitHub Actions 首次 `verify` workflow 变绿
 3. vercel.com → Import 该仓库 → Deploy（Astro 零配置识别）
-4. 若实际域名 ≠ `valorant-hub.vercel.app`：更新 `astro.config.mjs` 的 `site`、提交推送
+4. 若实际域名 ≠ `valorant-hub-five.vercel.app`：更新 `astro.config.mjs` 的 `site`、提交推送
 5. 线上验证：打开站点首页，走一遍 4 条冒烟路径
 
 Expected: 线上站点可访问，首页到特工详情 ≤ 3 次点击（spec 成功标准 3）
