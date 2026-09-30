@@ -3,6 +3,11 @@ import versionData from '../data/version.json';
 ---
 <footer class="footer">
   <div class="container">
+    <nav class="footer__links">
+      <a href="/patch-notes/">版本资讯</a>
+      <a href="/esports/">电竞资讯</a>
+      <a href="/maps/">地图库</a>
+    </nav>
     <p>数据来源：<a href="https://valorant-api.com" target="_blank" rel="noopener noreferrer">valorant-api.com</a>（Riot 官方数据镜像）</p>
     <p>游戏数据版本：{versionData.versionNumber} · 同步于 {versionData.syncedAt.slice(0, 10)}</p>
     <p>本站与 Riot Games 无关，仅供学习交流。VALORANT © Riot Games, Inc.</p>
@@ -13,4 +18,6 @@ import versionData from '../data/version.json';
   .footer { border-top: 1px solid var(--val-line); padding: 1.5rem 0 2rem; color: var(--val-gray); font-size: 0.75rem; }
   .footer p { margin-top: 0.3rem; }
   .footer a:hover { color: var(--val-red); }
+  .footer__links { display: flex; gap: 1rem; margin-bottom: 0.4rem; font-weight: 700; }
+  .footer__links a:hover { color: var(--val-red); }
 </style>
