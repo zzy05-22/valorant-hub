@@ -1,0 +1,9 @@
+:root {
+  --val-bg: #0F1923;
+  --val-red: #FF4655;
+  --val-red-dark: #BD3944;
+  --val-cream: #ECE8E1;
+  --val-gray: rgba(236, 232, 225, 0.55);
+  --val-line: rgba(236, 232, 225, 0.12);
+  --val-font: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+}
