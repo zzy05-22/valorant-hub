@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { validateAgents, validateWeapons, ValidationError } from '../scripts/lib/validate.mjs';
+import { validateAgents, validateWeapons, validateMaps, ValidationError } from '../scripts/lib/validate.mjs';
 
 const mkAgent = (over: Record<string, unknown> = {}) => ({
   id: 'jett',
@@ -67,5 +67,31 @@ describe('validateWeapons', () => {
       i === 0 ? mkWeapon({ credits: -100 }) : mkWeapon({ id: `w-${i}` }),
     );
     expect(() => validateWeapons(weapons)).toThrow(ValidationError);
+  });
+});
+
+const mkMap = (over: Record<string, unknown> = {}) => ({
+  id: 'ascent', uuid: 'u',
+  zh: { name: '亚海悬城', description: '', tacticalDescription: '' },
+  en: { name: 'Ascent', description: '', tacticalDescription: '' },
+  coordinates: '', displayIcon: '', splash: '',
+  ...over,
+});
+
+describe('validateMaps', () => {
+  it('数量达标且字段完整时通过', () => {
+    const maps = Array.from({ length: 7 }, (_, i) => mkMap({ id: `map-${i}` }));
+    expect(validateMaps(maps)).toBe(true);
+  });
+
+  it('数量不足 7 抛 ValidationError', () => {
+    expect(() => validateMaps(Array.from({ length: 6 }, (_, i) => mkMap({ id: `map-${i}` })))).toThrow(ValidationError);
+  });
+
+  it('关键字段缺失抛 ValidationError', () => {
+    const maps = Array.from({ length: 7 }, (_, i) =>
+      i === 0 ? mkMap({ id: '' }) : mkMap({ id: `map-${i}` }),
+    );
+    expect(() => validateMaps(maps)).toThrow(ValidationError);
   });
 });

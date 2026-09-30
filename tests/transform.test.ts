@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { slugify, transformAgents, transformWeapons } from '../scripts/lib/transform.mjs';
+import { slugify, transformAgents, transformWeapons, transformMaps } from '../scripts/lib/transform.mjs';
 import agentsZh from './fixtures/agents.zh-CN.json';
 import agentsEn from './fixtures/agents.en-US.json';
 import weaponsZh from './fixtures/weapons.zh-CN.json';
 import weaponsEn from './fixtures/weapons.en-US.json';
+import mapsZh from './fixtures/maps.zh-CN.json';
+import mapsEn from './fixtures/maps.en-US.json';
 
 describe('slugify', () => {
   it('英文名转小写 slug', () => {
@@ -71,6 +73,30 @@ describe('transformWeapons', () => {
       expect(typeof w.stats.fireRate).toBe('number');
       expect(typeof w.stats.magazineSize).toBe('number');
       expect(typeof w.stats.wallPenetration).toBe('string');
+    }
+  });
+});
+
+describe('transformMaps', () => {
+  const maps = transformMaps(mapsZh.data, mapsEn.data);
+
+  it('至少合并出 1 张地图', () => {
+    expect(maps.length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('中英字段合并进同一条记录且 id 为英文 slug', () => {
+    for (const m of maps) {
+      expect(m.zh.name).toBeTruthy();
+      expect(m.en.name).toBeTruthy();
+      expect(m.id).toMatch(/^[a-z0-9-]+$/);
+      expect(m.id).toBe(slugify(m.en.name));
+    }
+  });
+
+  it('战术图与坐标字段保留', () => {
+    for (const m of maps) {
+      expect(typeof m.displayIcon).toBe('string');
+      expect(typeof m.coordinates).toBe('string');
     }
   });
 });

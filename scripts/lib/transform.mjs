@@ -76,3 +76,29 @@ export function transformWeapons(zhList, enList) {
       };
     });
 }
+
+export function transformMaps(zhList, enList) {
+  const enByUuid = new Map(enList.map((m) => [m.uuid, m]));
+  return zhList
+    .filter((zh) => enByUuid.has(zh.uuid))
+    .map((zh) => {
+      const en = enByUuid.get(zh.uuid);
+      return {
+        id: slugify(en.displayName),
+        uuid: zh.uuid,
+        zh: {
+          name: zh.displayName ?? '',
+          description: zh.narrativeDescription ?? '',
+          tacticalDescription: zh.tacticalDescription ?? '',
+        },
+        en: {
+          name: en.displayName ?? '',
+          description: en.narrativeDescription ?? '',
+          tacticalDescription: en.tacticalDescription ?? '',
+        },
+        coordinates: zh.coordinates ?? '',
+        displayIcon: zh.displayIcon ?? '',
+        splash: zh.splash ?? '',
+      };
+    });
+}

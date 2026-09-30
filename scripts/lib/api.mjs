@@ -30,3 +30,4 @@ export const fetchAgents = (lang) =>
   fetchJson(`/agents?isPlayableCharacter=true&language=${lang}`);
 export const fetchWeapons = (lang) => fetchJson(`/weapons?language=${lang}`);
 export const fetchVersion = () => fetchJson('/version');
+export const fetchMaps = (lang) => fetchJson(`/maps?language=${lang}`);

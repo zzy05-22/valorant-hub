@@ -31,3 +31,15 @@ export function validateWeapons(weapons) {
   }
   return true;
 }
+
+export function validateMaps(maps) {
+  if (!Array.isArray(maps) || maps.length < 7) {
+    throw new ValidationError(`maps 数量异常：${maps?.length ?? 0}（预期 ≥ 7）`);
+  }
+  for (const m of maps) {
+    if (!m.id || !m.zh?.name || !m.en?.name) {
+      throw new ValidationError(`map 关键字段缺失：${JSON.stringify(m).slice(0, 200)}`);
+    }
+  }
+  return true;
+}
