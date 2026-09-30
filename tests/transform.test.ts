@@ -38,7 +38,7 @@ describe('transformAgents', () => {
   it('技能槽位映射为游戏按键 C/Q/E/X', () => {
     for (const a of agents) {
       for (const ab of a.abilities) {
-        expect(['C', 'Q', 'E', 'X']).toContain(ab.slot);
+        expect(['C', 'Q', 'E', 'X', '被动']).toContain(ab.slot);
         expect(ab.zh.name).toBeTruthy();
         expect(ab.en.name).toBeTruthy();
       }

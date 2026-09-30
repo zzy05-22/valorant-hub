@@ -3,7 +3,7 @@
 //   agent:  { id, uuid, zh{name,description,role}, en{...}, roleIcon, displayIcon, fullPortrait, background, abilities[{slot,key,zh,en,icon}] }
 //   weapon: { id, uuid, zh{name,category}, en{...}, category, credits, displayIcon, stats{fireRate,magazineSize,wallPenetration}, damageRanges[...] }
 
-const SLOT_KEY = { Ability1: 'Q', Ability2: 'E', Grenade: 'C', Ultimate: 'X' };
+const SLOT_KEY = { Ability1: 'Q', Ability2: 'E', Grenade: 'C', Ultimate: 'X', Passive: '被动' };
 
 export function slugify(s) {
   return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

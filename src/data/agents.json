@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-30T03:02:29.319Z",
+  "syncedAt": "2026-09-30T03:10:32.720Z",
   "version": "13.06.00.5590001",
   "agents": [
     {
@@ -793,7 +793,7 @@
           "icon": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ultimate/displayicon.png"
         },
         {
-          "slot": "Passive",
+          "slot": "被动",
           "key": "Passive",
           "zh": {
             "name": "诡秘神射手",
@@ -1166,7 +1166,7 @@
           "icon": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ultimate/displayicon.png"
         },
         {
-          "slot": "Passive",
+          "slot": "被动",
           "key": "Passive",
           "zh": {
             "name": "毒素",
@@ -1251,7 +1251,7 @@
           "icon": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ultimate/displayicon.png"
         },
         {
-          "slot": "Passive",
+          "slot": "被动",
           "key": "Passive",
           "zh": {
             "name": "热度上升",
@@ -1408,7 +1408,7 @@
           "icon": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ultimate/displayicon.png"
         },
         {
-          "slot": "Passive",
+          "slot": "被动",
           "key": "Passive",
           "zh": {
             "name": "星界形态",
@@ -2141,7 +2141,7 @@
           "icon": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ultimate/displayicon.png"
         },
         {
-          "slot": "Passive",
+          "slot": "被动",
           "key": "Passive",
           "zh": {
             "name": "飘移",
