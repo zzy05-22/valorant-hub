@@ -56,7 +56,7 @@ YAGNI 原则：P2 功能不进入本次实现范围，只在架构上预留（�
 
 ## 3. 视觉设计
 
-**方向：官方还原风**（已从 3 个方向中选定，mockup 存档于 `.superpowers/brainstorm/87303-1790735063/visual-style.html`）。
+**方向：官方还原风**（已从 3 个方向中选定，风格对比 mockup 已入库：`docs/superpowers/mockups/visual-style.html`，实现时对照）。
 
 ### 3.1 设计 token
 
@@ -108,6 +108,7 @@ valorant-hub/
 │   ├── content/
 │   │   ├── guides/                # 教学文章 Markdown
 │   │   ├── esports/               # 电竞资讯（初版手工维护）
+│   │   ├── patch-notes/           # 版本资讯（初版手工维护）
 │   │   └── config.ts              # 内容集合定义（zod schema）
 │   ├── pages/                     # 路由（见 2.1 站点地图）
 │   ├── components/                # AgentCard / WeaponCard / SkillPanel / NavBar / Footer…
@@ -126,7 +127,7 @@ valorant-hub/
    - 特工：技能名 / 描述 / 图标 ✅；**技能具体数值**（伤害 / 血量 / 时长）API 不提供 → 初版用官方描述文案，数值表后续作为内容补充
    - 地图：基础信息 + 官方战术图 ✅；**点位攻略**需人工编写（P1）
 4. **SEO 基建**：全站静态生成 + `sitemap.xml` + canonical + Open Graph meta；列表页用静态分页。
-5. **交互预留**：P0 全站零 JS（纯 CSS 筛选用 `:checked` 或导航参数方案）；P2 交互模块以 Astro 岛屿形式局部挂载。
+5. **交互策略（定案）**：P0 全站零 JS——列表筛选用构建期静态方案（按角色 / 类别生成筛选页，纯链接导航）；P2 交互模块以 Astro 岛屿形式局部挂载。
 
 ## 5. 数据模型
 
@@ -171,11 +172,11 @@ frontmatter 由 zod 校验，构建期拦截脏数据。
 - **同步脚本（重点）**：以 fixtures（保存的 API 响应样本）离线测试，断言字段映射、双语合并、数据量下限（特工 ≥ 20、武器 ≥ 15）
 - **关键组件**：AgentCard、WeaponCard 等核心组件渲染断言
 - **E2E 冒烟**：Playwright 验证 4 条核心路径（首页 → 特工列表 → 特工详情 → 武器列表）可访问且核心元素存在
-- **CI**：GitHub Actions push 触发 lint + 测试 + 构建；可选每日定时任务自动 `pnpm sync` 并提交数据更新
+- **CI**：GitHub Actions push 触发 lint + 测试 + 构建；**每日定时任务（cron）自动 `pnpm sync` 并提交数据更新（P0 必选）**——这是成功标准 1"全程无需人工维护"的落点；同步失败不阻塞构建（见 4.2）
 
 ## 8. 部署
 
-- 代码托管 GitHub，自动构建部署至 Vercel 或 Netlify（二选一，构建命令 `astro build`，产物纯静态）
+- 代码托管 GitHub，自动构建部署至 **Vercel（定案）**：Astro 官方推荐托管、免费额度充足、PR 预览部署体验好（构建命令 `astro build`，产物纯静态）
 - 接受国内访问速度波动的现实（已确认）
 - 域名：初版用托管平台默认域名，后续可绑定自定义域名
 
