@@ -1,0 +1,733 @@
+{
+  "syncedAt": "2026-09-30T03:02:29.319Z",
+  "version": "13.06.00.5590001",
+  "weapons": [
+    {
+      "id": "odin",
+      "uuid": "63e6c2b6-4a8e-869c-3d4c-e38355226584",
+      "zh": {
+        "name": "奥丁",
+        "category": "重武器"
+      },
+      "en": {
+        "name": "Odin",
+        "category": "Heavy Weapons"
+      },
+      "category": "Heavy Weapons",
+      "credits": 3200,
+      "displayIcon": "https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png",
+      "stats": {
+        "fireRate": 12,
+        "magazineSize": 100,
+        "wallPenetration": "EWallPenetrationDisplayType::High"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 30,
+          "headDamage": 95,
+          "bodyDamage": 38,
+          "legDamage": 32.3
+        },
+        {
+          "rangeStartMeters": 30,
+          "rangeEndMeters": 50,
+          "headDamage": 77.5,
+          "bodyDamage": 31,
+          "legDamage": 26.35
+        }
+      ]
+    },
+    {
+      "id": "ares",
+      "uuid": "55d8a0f4-4274-ca67-fe2c-06ab45efdf58",
+      "zh": {
+        "name": "战神",
+        "category": "重武器"
+      },
+      "en": {
+        "name": "Ares",
+        "category": "Heavy Weapons"
+      },
+      "category": "Heavy Weapons",
+      "credits": 1600,
+      "displayIcon": "https://media.valorant-api.com/weapons/55d8a0f4-4274-ca67-fe2c-06ab45efdf58/displayicon.png",
+      "stats": {
+        "fireRate": 13,
+        "magazineSize": 50,
+        "wallPenetration": "EWallPenetrationDisplayType::High"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 30,
+          "headDamage": 75,
+          "bodyDamage": 30,
+          "legDamage": 25.5
+        },
+        {
+          "rangeStartMeters": 30,
+          "rangeEndMeters": 50,
+          "headDamage": 70,
+          "bodyDamage": 28,
+          "legDamage": 23.800001
+        }
+      ]
+    },
+    {
+      "id": "vandal",
+      "uuid": "9c82e19d-4575-0200-1a81-3eacf00cf872",
+      "zh": {
+        "name": "狂徒",
+        "category": "突击步枪"
+      },
+      "en": {
+        "name": "Vandal",
+        "category": "Assault Rifles"
+      },
+      "category": "Rifles",
+      "credits": 2900,
+      "displayIcon": "https://media.valorant-api.com/weapons/9c82e19d-4575-0200-1a81-3eacf00cf872/displayicon.png",
+      "stats": {
+        "fireRate": 9.75,
+        "magazineSize": 25,
+        "wallPenetration": "EWallPenetrationDisplayType::Medium"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 50,
+          "headDamage": 160,
+          "bodyDamage": 40,
+          "legDamage": 34
+        }
+      ]
+    },
+    {
+      "id": "warden",
+      "uuid": "8db0a1bf-4a50-832a-4566-faaaa6d250ca",
+      "zh": {
+        "name": "悍狼",
+        "category": "步枪"
+      },
+      "en": {
+        "name": "Warden",
+        "category": "Rifles"
+      },
+      "category": "Rifles",
+      "credits": 2900,
+      "displayIcon": "https://media.valorant-api.com/weapons/8db0a1bf-4a50-832a-4566-faaaa6d250ca/displayicon.png",
+      "stats": {
+        "fireRate": 6.5,
+        "magazineSize": 18,
+        "wallPenetration": "EWallPenetrationDisplayType::Medium"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 50,
+          "headDamage": 200,
+          "bodyDamage": 50,
+          "legDamage": 42
+        }
+      ]
+    },
+    {
+      "id": "bulldog",
+      "uuid": "ae3de142-4d85-2547-dd26-4e90bed35cf7",
+      "zh": {
+        "name": "獠犬",
+        "category": "突击步枪"
+      },
+      "en": {
+        "name": "Bulldog",
+        "category": "Assault Rifles"
+      },
+      "category": "Rifles",
+      "credits": 2050,
+      "displayIcon": "https://media.valorant-api.com/weapons/ae3de142-4d85-2547-dd26-4e90bed35cf7/displayicon.png",
+      "stats": {
+        "fireRate": 10,
+        "magazineSize": 24,
+        "wallPenetration": "EWallPenetrationDisplayType::Medium"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 50,
+          "headDamage": 115.5,
+          "bodyDamage": 35,
+          "legDamage": 29.75
+        }
+      ]
+    },
+    {
+      "id": "phantom",
+      "uuid": "ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a",
+      "zh": {
+        "name": "幻影",
+        "category": "突击步枪"
+      },
+      "en": {
+        "name": "Phantom",
+        "category": "Assault Rifles"
+      },
+      "category": "Rifles",
+      "credits": 2900,
+      "displayIcon": "https://media.valorant-api.com/weapons/ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a/displayicon.png",
+      "stats": {
+        "fireRate": 11,
+        "magazineSize": 30,
+        "wallPenetration": "EWallPenetrationDisplayType::Medium"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 20,
+          "headDamage": 156,
+          "bodyDamage": 39,
+          "legDamage": 33.15
+        },
+        {
+          "rangeStartMeters": 20,
+          "rangeEndMeters": 50,
+          "headDamage": 140,
+          "bodyDamage": 35,
+          "legDamage": 29.75
+        }
+      ]
+    },
+    {
+      "id": "judge",
+      "uuid": "ec845bf4-4f79-ddda-a3da-0db3774b2794",
+      "zh": {
+        "name": "判官",
+        "category": "霰弹枪"
+      },
+      "en": {
+        "name": "Judge",
+        "category": "Shotguns"
+      },
+      "category": "Shotguns",
+      "credits": 1850,
+      "displayIcon": "https://media.valorant-api.com/weapons/ec845bf4-4f79-ddda-a3da-0db3774b2794/displayicon.png",
+      "stats": {
+        "fireRate": 3.5,
+        "magazineSize": 5,
+        "wallPenetration": "EWallPenetrationDisplayType::Low"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 10,
+          "headDamage": 34,
+          "bodyDamage": 17,
+          "legDamage": 14.450001
+        },
+        {
+          "rangeStartMeters": 10,
+          "rangeEndMeters": 15,
+          "headDamage": 20,
+          "bodyDamage": 10,
+          "legDamage": 8.5
+        },
+        {
+          "rangeStartMeters": 15,
+          "rangeEndMeters": 50,
+          "headDamage": 14,
+          "bodyDamage": 7,
+          "legDamage": 5.9500003
+        }
+      ]
+    },
+    {
+      "id": "bucky",
+      "uuid": "910be174-449b-c412-ab22-d0873436b21b",
+      "zh": {
+        "name": "雄鹿",
+        "category": "霰弹枪"
+      },
+      "en": {
+        "name": "Bucky",
+        "category": "Shotguns"
+      },
+      "category": "Shotguns",
+      "credits": 850,
+      "displayIcon": "https://media.valorant-api.com/weapons/910be174-449b-c412-ab22-d0873436b21b/displayicon.png",
+      "stats": {
+        "fireRate": 1.1,
+        "magazineSize": 5,
+        "wallPenetration": "EWallPenetrationDisplayType::Low"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 8,
+          "headDamage": 34,
+          "bodyDamage": 17,
+          "legDamage": 14
+        },
+        {
+          "rangeStartMeters": 8,
+          "rangeEndMeters": 12,
+          "headDamage": 26,
+          "bodyDamage": 13,
+          "legDamage": 11.05
+        },
+        {
+          "rangeStartMeters": 12,
+          "rangeEndMeters": 50,
+          "headDamage": 18,
+          "bodyDamage": 9,
+          "legDamage": 7.65
+        }
+      ]
+    },
+    {
+      "id": "frenzy",
+      "uuid": "44d4e95c-4157-0037-81b2-17841bf2e8e3",
+      "zh": {
+        "name": "狂怒",
+        "category": "佩枪"
+      },
+      "en": {
+        "name": "Frenzy",
+        "category": "Sidearms"
+      },
+      "category": "Pistols",
+      "credits": 450,
+      "displayIcon": "https://media.valorant-api.com/weapons/44d4e95c-4157-0037-81b2-17841bf2e8e3/displayicon.png",
+      "stats": {
+        "fireRate": 10,
+        "magazineSize": 15,
+        "wallPenetration": "EWallPenetrationDisplayType::Low"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 20,
+          "headDamage": 78,
+          "bodyDamage": 26,
+          "legDamage": 22.1
+        },
+        {
+          "rangeStartMeters": 20,
+          "rangeEndMeters": 50,
+          "headDamage": 63,
+          "bodyDamage": 21,
+          "legDamage": 17.85
+        }
+      ]
+    },
+    {
+      "id": "classic",
+      "uuid": "29a0cfab-485b-f5d5-779a-b59f85e204a8",
+      "zh": {
+        "name": "标配",
+        "category": "佩枪"
+      },
+      "en": {
+        "name": "Classic",
+        "category": "Sidearms"
+      },
+      "category": "Pistols",
+      "credits": 0,
+      "displayIcon": "https://media.valorant-api.com/weapons/29a0cfab-485b-f5d5-779a-b59f85e204a8/displayicon.png",
+      "stats": {
+        "fireRate": 6.75,
+        "magazineSize": 12,
+        "wallPenetration": "EWallPenetrationDisplayType::Low"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 30,
+          "headDamage": 78,
+          "bodyDamage": 26,
+          "legDamage": 22.1
+        },
+        {
+          "rangeStartMeters": 30,
+          "rangeEndMeters": 50,
+          "headDamage": 66,
+          "bodyDamage": 22,
+          "legDamage": 18.7
+        }
+      ]
+    },
+    {
+      "id": "bandit",
+      "uuid": "410b2e0b-4ceb-1321-1727-20858f7f3477",
+      "zh": {
+        "name": "追猎",
+        "category": "佩枪"
+      },
+      "en": {
+        "name": "Bandit",
+        "category": "Sidearms"
+      },
+      "category": "Pistols",
+      "credits": 600,
+      "displayIcon": "https://media.valorant-api.com/weapons/410b2e0b-4ceb-1321-1727-20858f7f3477/displayicon.png",
+      "stats": {
+        "fireRate": 5.1,
+        "magazineSize": 8,
+        "wallPenetration": "EWallPenetrationDisplayType::Medium"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 10,
+          "headDamage": 152,
+          "bodyDamage": 39,
+          "legDamage": 33
+        },
+        {
+          "rangeStartMeters": 10,
+          "rangeEndMeters": 30,
+          "headDamage": 128,
+          "bodyDamage": 39,
+          "legDamage": 33
+        },
+        {
+          "rangeStartMeters": 30,
+          "rangeEndMeters": 50,
+          "headDamage": 112,
+          "bodyDamage": 34,
+          "legDamage": 28
+        }
+      ]
+    },
+    {
+      "id": "ghost",
+      "uuid": "1baa85b4-4c70-1284-64bb-6481dfc3bb4e",
+      "zh": {
+        "name": "鬼魅",
+        "category": "佩枪"
+      },
+      "en": {
+        "name": "Ghost",
+        "category": "Sidearms"
+      },
+      "category": "Pistols",
+      "credits": 500,
+      "displayIcon": "https://media.valorant-api.com/weapons/1baa85b4-4c70-1284-64bb-6481dfc3bb4e/displayicon.png",
+      "stats": {
+        "fireRate": 6.75,
+        "magazineSize": 13,
+        "wallPenetration": "EWallPenetrationDisplayType::Medium"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 30,
+          "headDamage": 105,
+          "bodyDamage": 30,
+          "legDamage": 25.5
+        },
+        {
+          "rangeStartMeters": 30,
+          "rangeEndMeters": 50,
+          "headDamage": 87.5,
+          "bodyDamage": 25,
+          "legDamage": 21.25
+        }
+      ]
+    },
+    {
+      "id": "sheriff",
+      "uuid": "e336c6b8-418d-9340-d77f-7a9e4cfe0702",
+      "zh": {
+        "name": "正义",
+        "category": "佩枪"
+      },
+      "en": {
+        "name": "Sheriff",
+        "category": "Sidearms"
+      },
+      "category": "Pistols",
+      "credits": 800,
+      "displayIcon": "https://media.valorant-api.com/weapons/e336c6b8-418d-9340-d77f-7a9e4cfe0702/displayicon.png",
+      "stats": {
+        "fireRate": 4,
+        "magazineSize": 6,
+        "wallPenetration": "EWallPenetrationDisplayType::High"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 30,
+          "headDamage": 159.5,
+          "bodyDamage": 55,
+          "legDamage": 46.75
+        },
+        {
+          "rangeStartMeters": 30,
+          "rangeEndMeters": 50,
+          "headDamage": 145,
+          "bodyDamage": 50,
+          "legDamage": 42.5
+        }
+      ]
+    },
+    {
+      "id": "shorty",
+      "uuid": "42da8ccc-40d5-affc-beec-15aa47b42eda",
+      "zh": {
+        "name": "短炮",
+        "category": "佩枪"
+      },
+      "en": {
+        "name": "Shorty",
+        "category": "Sidearms"
+      },
+      "category": "Pistols",
+      "credits": 300,
+      "displayIcon": "https://media.valorant-api.com/weapons/42da8ccc-40d5-affc-beec-15aa47b42eda/displayicon.png",
+      "stats": {
+        "fireRate": 3,
+        "magazineSize": 2,
+        "wallPenetration": "EWallPenetrationDisplayType::Low"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 7,
+          "headDamage": 22,
+          "bodyDamage": 11,
+          "legDamage": 9.35
+        },
+        {
+          "rangeStartMeters": 7,
+          "rangeEndMeters": 15,
+          "headDamage": 12,
+          "bodyDamage": 6,
+          "legDamage": 5.1
+        },
+        {
+          "rangeStartMeters": 15,
+          "rangeEndMeters": 50,
+          "headDamage": 6,
+          "bodyDamage": 3,
+          "legDamage": 2.5500002
+        }
+      ]
+    },
+    {
+      "id": "operator",
+      "uuid": "a03b24d3-4319-996d-0f8c-94bbfba1dfc7",
+      "zh": {
+        "name": "冥驹",
+        "category": "狙击枪"
+      },
+      "en": {
+        "name": "Operator",
+        "category": "Sniper Rifles"
+      },
+      "category": "Sniper Rifles",
+      "credits": 4700,
+      "displayIcon": "https://media.valorant-api.com/weapons/a03b24d3-4319-996d-0f8c-94bbfba1dfc7/displayicon.png",
+      "stats": {
+        "fireRate": 0.6,
+        "magazineSize": 5,
+        "wallPenetration": "EWallPenetrationDisplayType::High"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 50,
+          "headDamage": 255,
+          "bodyDamage": 150,
+          "legDamage": 120
+        }
+      ]
+    },
+    {
+      "id": "guardian",
+      "uuid": "4ade7faa-4cf1-8376-95ef-39884480959b",
+      "zh": {
+        "name": "戍卫",
+        "category": "突击步枪"
+      },
+      "en": {
+        "name": "Guardian",
+        "category": "Assault Rifles"
+      },
+      "category": "Rifles",
+      "credits": 2250,
+      "displayIcon": "https://media.valorant-api.com/weapons/4ade7faa-4cf1-8376-95ef-39884480959b/displayicon.png",
+      "stats": {
+        "fireRate": 5.25,
+        "magazineSize": 12,
+        "wallPenetration": "EWallPenetrationDisplayType::High"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 50,
+          "headDamage": 195,
+          "bodyDamage": 65,
+          "legDamage": 48.75
+        }
+      ]
+    },
+    {
+      "id": "outlaw",
+      "uuid": "5f0aaf7a-4289-3998-d5ff-eb9a5cf7ef5c",
+      "zh": {
+        "name": "莽侠",
+        "category": "狙击枪"
+      },
+      "en": {
+        "name": "Outlaw",
+        "category": "Sniper Rifles"
+      },
+      "category": "Sniper Rifles",
+      "credits": 2400,
+      "displayIcon": "https://media.valorant-api.com/weapons/5f0aaf7a-4289-3998-d5ff-eb9a5cf7ef5c/displayicon.png",
+      "stats": {
+        "fireRate": 2.75,
+        "magazineSize": 2,
+        "wallPenetration": "EWallPenetrationDisplayType::High"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 50,
+          "headDamage": 238,
+          "bodyDamage": 140,
+          "legDamage": 119
+        }
+      ]
+    },
+    {
+      "id": "marshal",
+      "uuid": "c4883e50-4494-202c-3ec3-6b8a9284f00b",
+      "zh": {
+        "name": "飞将",
+        "category": "狙击枪"
+      },
+      "en": {
+        "name": "Marshal",
+        "category": "Sniper Rifles"
+      },
+      "category": "Sniper Rifles",
+      "credits": 950,
+      "displayIcon": "https://media.valorant-api.com/weapons/c4883e50-4494-202c-3ec3-6b8a9284f00b/displayicon.png",
+      "stats": {
+        "fireRate": 1.5,
+        "magazineSize": 5,
+        "wallPenetration": "EWallPenetrationDisplayType::Medium"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 50,
+          "headDamage": 202,
+          "bodyDamage": 101,
+          "legDamage": 85.850006
+        }
+      ]
+    },
+    {
+      "id": "spectre",
+      "uuid": "462080d1-4035-2937-7c09-27aa2a5c27a7",
+      "zh": {
+        "name": "骇灵",
+        "category": "冲锋枪"
+      },
+      "en": {
+        "name": "Spectre",
+        "category": "SMGs"
+      },
+      "category": "SMGs",
+      "credits": 1600,
+      "displayIcon": "https://media.valorant-api.com/weapons/462080d1-4035-2937-7c09-27aa2a5c27a7/displayicon.png",
+      "stats": {
+        "fireRate": 13.333,
+        "magazineSize": 30,
+        "wallPenetration": "EWallPenetrationDisplayType::Low"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 15,
+          "headDamage": 78,
+          "bodyDamage": 26,
+          "legDamage": 22.1
+        },
+        {
+          "rangeStartMeters": 15,
+          "rangeEndMeters": 30,
+          "headDamage": 66,
+          "bodyDamage": 22,
+          "legDamage": 18.7
+        },
+        {
+          "rangeStartMeters": 30,
+          "rangeEndMeters": 50,
+          "headDamage": 60,
+          "bodyDamage": 20,
+          "legDamage": 17
+        }
+      ]
+    },
+    {
+      "id": "stinger",
+      "uuid": "f7e1b454-4ad4-1063-ec0a-159e56b58941",
+      "zh": {
+        "name": "蜂刺",
+        "category": "冲锋枪"
+      },
+      "en": {
+        "name": "Stinger",
+        "category": "SMGs"
+      },
+      "category": "SMGs",
+      "credits": 1100,
+      "displayIcon": "https://media.valorant-api.com/weapons/f7e1b454-4ad4-1063-ec0a-159e56b58941/displayicon.png",
+      "stats": {
+        "fireRate": 16,
+        "magazineSize": 20,
+        "wallPenetration": "EWallPenetrationDisplayType::Low"
+      },
+      "damageRanges": [
+        {
+          "rangeStartMeters": 0,
+          "rangeEndMeters": 15,
+          "headDamage": 67.5,
+          "bodyDamage": 27,
+          "legDamage": 22.95
+        },
+        {
+          "rangeStartMeters": 15,
+          "rangeEndMeters": 50,
+          "headDamage": 57,
+          "bodyDamage": 23,
+          "legDamage": 19
+        }
+      ]
+    },
+    {
+      "id": "melee",
+      "uuid": "2f59173c-4bed-b6c3-2191-dea9b58be9c7",
+      "zh": {
+        "name": "近战武器",
+        "category": ""
+      },
+      "en": {
+        "name": "Melee",
+        "category": ""
+      },
+      "category": "",
+      "credits": 0,
+      "displayIcon": "https://media.valorant-api.com/weapons/2f59173c-4bed-b6c3-2191-dea9b58be9c7/displayicon.png",
+      "stats": {
+        "fireRate": 0,
+        "magazineSize": 0,
+        "wallPenetration": ""
+      },
+      "damageRanges": []
+    }
+  ]
+}
