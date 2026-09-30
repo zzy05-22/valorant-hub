@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fetchAgents, fetchWeapons, fetchMaps, fetchVersion } from './lib/api.mjs';
 import { transformAgents, transformWeapons, transformMaps } from './lib/transform.mjs';
 import { validateAgents, validateWeapons, validateMaps } from './lib/validate.mjs';
+import { fetchHtml, parsePlayerStats, parseTeamRanking, validateEsportsStats } from './lib/vlr.mjs';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 
@@ -49,6 +50,26 @@ async function main() {
   await atomicWrite(path.join(DATA_DIR, 'weapons.json'), { syncedAt, version: version.versionNumber, weapons });
   await atomicWrite(path.join(DATA_DIR, 'maps.json'), { syncedAt, version: version.versionNumber, maps });
   await atomicWrite(path.join(DATA_DIR, 'version.json'), version);
+
+  // ===== vlr.gg 电竞数据（独立容错：失败不影响游戏数据同步） =====
+  try {
+    console.log('[sync] 拉取 vlr.gg 电竞数据 …');
+    const [statsHtml, rankingHtml] = await Promise.all([
+      fetchHtml('https://www.vlr.gg/stats'),
+      fetchHtml('https://www.vlr.gg/rankings'),
+    ]);
+    const players = parsePlayerStats(statsHtml);
+    const teams = parseTeamRanking(rankingHtml);
+    if (!validateEsportsStats({ players, teams })) {
+      throw new Error(`esports 数据校验失败：players=${players.length} teams=${teams.length}`);
+    }
+    await atomicWrite(path.join(DATA_DIR, 'esports-stats.json'), {
+      syncedAt, source: 'vlr.gg', players, teams,
+    });
+    console.log(`[sync] esports 数据完成：players=${players.length} teams=${teams.length}`);
+  } catch (err) {
+    console.warn('[sync] vlr.gg 抓取失败（保留旧数据）:', err.message);
+  }
 
   console.log(`[sync] 完成：agents=${agents.length} weapons=${weapons.length} maps=${maps.length} version=${version.versionNumber}`);
 }
