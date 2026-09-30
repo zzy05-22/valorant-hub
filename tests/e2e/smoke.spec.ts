@@ -15,12 +15,6 @@ test('特工列表 → 特工详情', async ({ page }) => {
   await expect(page.locator('.skill').first()).toBeVisible();
 });
 
-test('武器列表可访问', async ({ page }) => {
-  await page.goto('/weapons/');
-  await expect(page.getByRole('heading', { name: '武器库' })).toBeVisible();
-  await expect(page.locator('.weapon-card').first()).toBeVisible();
-});
-
 test('教学列表 → 文章详情', async ({ page }) => {
   await page.goto('/guides/');
   await expect(page.getByRole('heading', { name: '新手教学' })).toBeVisible();
@@ -45,14 +39,6 @@ test('电竞资讯列表可访问', async ({ page }) => {
   await page.goto('/esports/');
   await expect(page.getByRole('heading', { name: '资讯中心' })).toBeVisible();
   await expect(page.locator('.note-item__title').first()).toBeVisible();
-});
-
-test('武器对比：勾选武器后出现对比卡', async ({ page }) => {
-  await page.goto('/weapons/compare/');
-  const boxes = page.getByRole('checkbox');
-  await boxes.nth(0).check();
-  await boxes.nth(1).check();
-  await expect(page.locator('.compare-card').first()).toBeVisible();
 });
 
 test('阵容推荐：生成 5 人平衡阵容', async ({ page }) => {
@@ -90,7 +76,7 @@ test('标注工具页：选图并点击生成坐标', async ({ page }) => {
 test('首页数据榜板块齐全', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: '选手数据榜' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: '武器威力榜' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '热门准星' })).toBeVisible();
   await expect(page.locator('.board6__row').first()).toBeVisible();
 });
 
@@ -105,4 +91,12 @@ test('导航内嵌搜索框跳转并出结果', async ({ page }) => {
   await page.locator('.nav__search input').press('Enter');
   await expect(page).toHaveURL(/\/search\/\?q=/);
   await expect(page.locator('.search-result__title').first()).toContainText('捷风');
+});
+
+test('准星库页面与预览复制', async ({ page }) => {
+  await page.goto('/crosshairs/');
+  await expect(page.getByRole('heading', { name: '准星库' })).toBeVisible();
+  await expect(page.locator('svg').first()).toBeVisible();
+  await page.locator('.xh-copy').first().click();
+  await expect(page.locator('.xh-copy').first()).toContainText(/已复制|已选中/);
 });
