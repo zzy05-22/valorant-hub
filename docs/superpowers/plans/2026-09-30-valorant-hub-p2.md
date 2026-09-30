@@ -27,7 +27,7 @@
 - **阵容角色名约定**：`src/data/agents.json` 的 `zh.role` 实测值为「决斗 / 先锋 / 控场 / 哨卫」（API 数据即真相）——`lineup.ts` 的第 5 席优先补决斗逻辑依赖此值，代码中注释说明
 - **对比工具形态（YAGNI 定稿）**：并排对比卡（价格/射速/穿透/弹匣 + 各射程段伤害表），不做图表曲线
 - **攻略范围**：13 张已上线竞技图（ascent/split/bind/haven/breeze/lotus/pearl/fracture/sunset/abyss/icebox/corrode/summit）。Corrode 与 Summit 为较新地图，攻略写结构框架并显式标注"持续打磨"；未上线图（Gauntlet）不写。TDM/斗牛/训练场不写
-- **单测计数**：P1 后为 36；P2 新增 compare 2 + lineup 3 + search 3 = 8，全量目标 **44**
+- **单测计数**：P1 后为 36；P2 新增 compare 3 + lineup 3 + search 3 = 9，全量目标 **45**
 - **E2E 计数**：7 + 3 = **10**；**页面数**：91 + 3（compare/lineup/search）= **94**
 - **产物是压缩 HTML**：验证一律用 `grep -o | wc -l`
 
@@ -1034,7 +1034,7 @@ test('全站搜索：输入关键词出结果', async ({ page }) => {
 - [ ] **Step 2: 全链路验证**
 
 Run: `pnpm lint && pnpm test && pnpm build && pnpm e2e`
-Expected: lint 0 错 0 警、**44 单测全绿**（36+8）、构建 **94 页**（91+3）、**10 条 E2E 全过**
+Expected: lint 0 错 0 警、**45 单测全绿**（36+9）、构建 **94 页**（91+3）、**10 条 E2E 全过**
 
 - [ ] **Step 3: 提交并推送**
 
@@ -1053,4 +1053,4 @@ git push
 1. **Spec 覆盖**：spec 2.2 P2 三项（武器对比/阵容推荐/全站搜索）→ P2-1~6；P1 遗留的地图攻略 → P2-7；交互用 Astro 岛屿（零 JS 站点原则在 P2 按预期局部放开）符合 spec 4.4 第 5 条"构建产物为岛屿可局部挂载"的预留。
 2. **Placeholder 扫描**：无 TBD/TODO；13 篇攻略为全文；新图（corrode/summit）显式标注"持续打磨"为诚实的产品文案而非工程占位。
 3. **类型一致性**：CompareWeapon（toCompareWeapons 产出）与 compare.astro 页面、pickCompareWeapons 参数一致；LineupAgent 与 lineup.astro 的 lineAgents 映射字段一致；SearchEntity 与 search.astro 的六个实体源映射一致；mapGuides schema（mapId/title/publishDate/draft）与 13 篇 frontmatter、[id].astro 的 `g.data.mapId === map.id` 查询一致。
-4. **计数核对**：单测 36+compare 2 用例文件 3+lineup 3+search 3=44（compare.test 含 2 describe 共 3 用例）；E2E 7+3=10；页面 91+3=94（攻略不新增路由）。
+4. **计数核对**：单测 36+compare 3+lineup 3+search 3=45；E2E 7+3=10；页面 91+3=94（攻略不新增路由）。
