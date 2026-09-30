@@ -1373,7 +1373,9 @@ describe('WeaponCard', () => {
     const html = await container.renderToString(WeaponCard, {
       props: { weapon: mkWeapon({ zh: { name: 'Vandal', category: '步枪' } }) },
     });
-    expect((html.match(/Vandal/g) ?? []).length).toBe(1);
+    // img 的 alt 属性也含武器名，须只断言显示文本
+    const shown = html.match(/class="[^"]*weapon-card__name[^"]*"[^>]*>([^<]+)</);
+    expect(shown?.[1]?.trim()).toBe('Vandal');
   });
 
   it('价格显示信用点', async () => {
