@@ -1,0 +1,39 @@
+---
+// 技能卡片：特工详情页技能区块
+interface Props {
+  ability: {
+    slot: string;
+    zh: { name: string; description: string };
+    en: { name: string };
+    icon: string;
+  };
+}
+const { ability } = Astro.props;
+---
+<article class="card-cut skill">
+  <header class="skill__head">
+    <img src={ability.icon} alt="" loading="lazy" onerror="this.style.display='none'" />
+    <div>
+      <h3 class="skill__name">{ability.zh.name} <span class="skill__en">{ability.en.name}</span></h3>
+      <span class="skill__slot">{ability.slot}</span>
+    </div>
+  </header>
+  <p class="skill__desc">{ability.zh.description}</p>
+</article>
+
+<style>
+  .skill { padding: 1rem; }
+  .skill__head { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.6rem; }
+  .skill__head img { width: 40px; height: 40px; object-fit: contain; }
+  .skill__name { font-size: 1rem; margin-bottom: 0.1rem; }
+  .skill__en { color: var(--val-gray); font-size: 0.8rem; font-weight: 400; }
+  .skill__slot {
+    display: inline-block;
+    background: var(--val-red);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.1rem 0.45rem;
+  }
+  .skill__desc { font-size: 0.85rem; color: var(--val-gray); }
+</style>
