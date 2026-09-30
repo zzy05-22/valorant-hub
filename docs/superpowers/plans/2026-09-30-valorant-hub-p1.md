@@ -567,7 +567,7 @@ export const collections = { guides, esports, patchNotes };
 ```markdown
 ---
 title: 站点数据已同步至 13.06 版本
-patchVersion: 13.06
+patchVersion: "13.06"
 excerpt: 本站特工、武器、地图数据已跟随国际服 13.06 版本，每日自动同步。
 source: https://playvalorant.com/en-us/news/game-updates/
 publishDate: 2026-09-30
