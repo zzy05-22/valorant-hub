@@ -86,3 +86,43 @@ main > h2::before, main section > h2::before {
   background: rgba(236, 232, 225, 0.02);
   box-shadow: inset 0 1px 0 var(--val-line), inset 0 -1px 0 var(--val-line);
 }
+
+/* ===== P6 质感系统 ===== */
+@keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(40px,20px) scale(1.15); } }
+@keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1.1); } 50% { transform: translate(-30px,-16px) scale(1); } }
+@keyframes shimmer { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+@keyframes badge-pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255,70,85,.5); } 50% { opacity: .75; box-shadow: 0 0 0 5px rgba(255,70,85,0); } }
+@keyframes bar-grow { from { width: 0; } }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes scan-line { 0% { transform: translateX(-100%); } 100% { transform: translateX(320%); } }
+
+/* 渐变描边卡（重定义 card-cut：双层 background，全站卡片自动升级） */
+.card-cut {
+  background: linear-gradient(rgba(18,28,40,.92), rgba(18,28,40,.92)) padding-box,
+              linear-gradient(140deg, rgba(255,70,85,.45), rgba(236,232,225,.08) 40%, rgba(0,229,176,.35)) border-box;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+/* hover 上浮光晕：仅大卡片（三大卡）使用 */
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.45), 0 0 24px rgba(255,70,85,.14);
+}
+/* 噪点纹理层（叠加容器需 position:relative） */
+.noise-layer {
+  position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22/></filter><rect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%220.035%22/></svg>');
+}
+/* 流光渐变文字 */
+.text-shimmer {
+  background: linear-gradient(92deg, #FF4655 15%, #ffd4a0 38%, #00E5B0 62%, #FF4655 85%);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 4.5s linear infinite;
+}
+.badge-live { animation: badge-pulse 2.2s ease-in-out infinite; }
+.bar-anim { animation: bar-grow 1.1s cubic-bezier(.2,.8,.2,1) backwards; }
+.floaty { animation: floaty 4s ease-in-out infinite; }
+/* 数据榜条形 */
+.stat-track { height: 9px; border-radius: 5px; background: rgba(236,232,225,.08); overflow: hidden; }
+.stat-bar { height: 100%; border-radius: 5px; }

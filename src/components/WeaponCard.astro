@@ -16,7 +16,7 @@ const name = weapon.zh.name !== weapon.en.name
   : weapon.en.name;
 const price = weapon.credits > 0 ? `${weapon.credits} 信用点` : '默认装备';
 ---
-<a class="card-cut weapon-card" href={`/weapons/${weapon.id}/`}>
+<a class="card-cut card-lift weapon-card" href={`/weapons/${weapon.id}/`}>
   <img src={weapon.displayIcon} alt={name} loading="lazy" onerror="this.src='/favicon.svg'" />
   <div class="weapon-card__name">{name}</div>
   <div class="weapon-card__sub">{weapon.zh.category || '其他'}</div>
@@ -25,7 +25,6 @@ const price = weapon.credits > 0 ? `${weapon.credits} 信用点` : '默认装备
 
 <style>
   .weapon-card { display: block; padding: 1rem; text-align: center; }
-  .weapon-card:hover { box-shadow: inset 0 0 0 1px var(--val-red); transform: translateY(-3px); }
   .weapon-card img { height: 80px; object-fit: contain; margin: 0 auto 0.5rem; transition: transform 0.25s ease; }
   .weapon-card:hover img { transform: scale(1.05); }
   .weapon-card__name { font-weight: 800; font-size: 0.95rem; }
