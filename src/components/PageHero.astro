@@ -1,0 +1,44 @@
+---
+// 模块页通用 hero 头区（复用 global.css P6 动画系统）
+interface Props {
+  label: string;
+  title: string;
+  subtitle: string;
+}
+const { label, title, subtitle } = Astro.props;
+---
+<section class="phero">
+  <div class="noise-layer"></div>
+  <div class="phero__glow1"></div>
+  <div class="phero__glow2"></div>
+  <div class="phero__slant"></div>
+  <div class="phero__inner">
+    <div class="label-cut">{label}</div>
+    <h1>{title}</h1>
+    <p class="phero__sub">{subtitle}</p>
+  </div>
+</section>
+
+<style>
+  .phero { position: relative; padding: 3rem 1.5rem 1.8rem; overflow: hidden; }
+  .phero__glow1 {
+    position: absolute; width: 280px; height: 280px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 70, 85, .24), transparent 70%);
+    top: -90px; left: -70px; filter: blur(42px);
+    animation: drift1 7s ease-in-out infinite;
+  }
+  .phero__glow2 {
+    position: absolute; width: 240px; height: 240px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 229, 176, .14), transparent 70%);
+    bottom: -80px; right: 8%; filter: blur(40px);
+    animation: drift2 9s ease-in-out infinite;
+  }
+  .phero__slant {
+    position: absolute; top: 0; bottom: 0; right: 16%; width: 2px;
+    background: linear-gradient(rgba(255,70,85,0), rgba(255,70,85,.35), rgba(255,70,85,0));
+    transform: skewX(-14deg);
+  }
+  .phero__inner { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; }
+  .phero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; }
+  .phero__sub { color: var(--val-gray); font-size: 0.88rem; margin-top: 0.4rem; letter-spacing: 1px; }
+</style>

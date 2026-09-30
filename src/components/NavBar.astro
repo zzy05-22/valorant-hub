@@ -1,14 +1,16 @@
 ---
 const items = [
+  { href: '/', label: '首页' },
   { href: '/agents/', label: '特工' },
   { href: '/weapons/', label: '武器' },
   { href: '/maps/', label: '地图' },
   { href: '/guides/', label: '教学' },
   { href: '/esports/', label: '资讯' },
-  { href: '/search/', label: '搜索' },
 ];
 const path = Astro.url.pathname;
-const isActive = (href: string) => path === href || path.startsWith(href);
+// 首页项特判：根路径才高亮（避免所有页都命中 startsWith）
+const isActive = (href: string) =>
+  href === '/' ? path === '/' : path === href || path.startsWith(href);
 ---
 <header class="nav">
   <div class="container nav__inner">
@@ -18,6 +20,9 @@ const isActive = (href: string) => path === href || path.startsWith(href);
         <a href={i.href} class:list={[{ 'nav__link--active': isActive(i.href) }]}>{i.label}</a>
       ))}
     </nav>
+    <form class="nav__search" action="/search/" method="get">
+      <input type="search" name="q" placeholder="搜索…" aria-label="站内搜索" />
+    </form>
   </div>
 </header>
 
@@ -36,4 +41,23 @@ const isActive = (href: string) => path === href || path.startsWith(href);
   .nav__links { display: flex; gap: 1.25rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; }
   .nav__links a:hover { color: var(--val-red); }
   .nav__links a.nav__link--active { color: var(--val-cream); box-shadow: inset 0 -2px 0 var(--val-red); }
+  .nav__search input {
+    background: rgba(236, 232, 225, 0.07);
+    box-shadow: inset 0 0 0 1px var(--val-line);
+    color: var(--val-cream);
+    font-family: inherit;
+    font-size: 0.75rem;
+    padding: 0.32rem 0.7rem;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    width: 120px;
+    transition: width 0.25s ease, box-shadow 0.25s ease;
+  }
+  .nav__search input:focus { width: 160px; box-shadow: inset 0 0 0 1px var(--val-red); }
+  @media (max-width: 768px) {
+    .nav__links { gap: 0.6rem; font-size: 0.78rem; letter-spacing: 0.05em; }
+    .nav__search input { width: 84px; }
+    .nav__search input:focus { width: 100px; }
+  }
 </style>

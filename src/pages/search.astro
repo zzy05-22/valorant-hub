@@ -71,6 +71,13 @@ const entities: SearchEntity[] = [
   }
 
   input.addEventListener('input', render);
+
+    // 支持 /search/?q=参数 直达搜索（导航内嵌搜索框的跳转目标）
+    const initialQ = new URLSearchParams(window.location.search).get('q');
+    if (initialQ) {
+      input.value = initialQ;
+      render();
+    }
 </script>
 
 <style>
