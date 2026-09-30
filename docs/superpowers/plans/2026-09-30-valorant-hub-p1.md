@@ -24,10 +24,10 @@
 ## 关键背景（给零上下文的执行者）
 
 - **现有数据层**（勿破坏）：`scripts/lib/api.mjs`（fetchJson + 端点封装）、`transform.mjs`（双语合并）、`validate.mjs`（校验）、`sync-valorant.mjs`（CLI + 原子写入）；`src/data/` 已有 agents.json（29）、weapons.json（21）、version.json
-- **maps API**：`GET /v1/maps?language={lang}` → `data[]` 字段：`uuid`、`displayName`（zh-CN 为中文译名，en-US 为英文）、`narrativeDescription`（背景故事）、`tacticalDescription`（战术说明）、`coordinates`（坐标文本，如 "45°26'…"）、`displayIcon`（战术俯视图）、`splash`（背景横图）。约 10-11 张（含训练场 The Range），全部展示不做过滤
+- **maps API**：`GET /v1/maps?language={lang}` → `data[]` 字段：`uuid`、`displayName`（zh-CN 为中文译名，en-US 为英文）、`narrativeDescription`（背景故事）、`tacticalDescription`（战术说明）、`coordinates`（坐标文本，如 "45°26'…"）、`displayIcon`（战术俯视图）、`splash`（背景横图）。实测 27 条（标准竞技图 + TDM 图 + Skirmish/训练场，含两份重复的靶场条目）——全部展示不做过滤；`transformMaps` 按英文 slug 去重（保留首条），去重后 26 条
 - **现有内容集合**：`src/content/config.ts` 已有 `guides` 集合（glob loader + zod schema），P1 新增 `esports` 与 `patch-notes` 两个集合
 - **导航决策（已定）**：NavBar 共 5 项——特工 / 武器 / **地图** / 教学 / **资讯**（"资讯"指向 `/esports/`）。版本资讯 `/patch-notes/` 的入口放 Footer 与首页区块，不进顶部导航（避免移动端拥挤）
-- **单测计数**：P0 为 27；P1 新增 transform maps 3 + validate maps 3 + MapCard 2 = 8，全量目标 **35**
+- **单测计数**：P0 为 27；P1 新增 transform maps 4（含去重用例） + validate maps 3 + MapCard 2 = 9，全量目标 **36**
 - **产物是压缩 HTML**：验证一律用 `grep -o 'xxx' | wc -l`，不用 `grep -c`
 
 ## 文件结构总览（P1 变更）
@@ -112,6 +112,16 @@ describe('transformMaps', () => {
       expect(typeof m.coordinates).toBe('string');
     }
   });
+
+  it('同名不同 uuid 的条目按 slug 去重（避免详情页路径冲突）', () => {
+    const mk = (uuid: string) => ({
+      uuid, displayName: 'Dup Map', narrativeDescription: '', tacticalDescription: '',
+      coordinates: '', displayIcon: '', splash: '',
+    });
+    const result = transformMaps([mk('u1'), mk('u2')], [mk('u1'), mk('u2')]);
+    expect(result.length).toBe(1);
+    expect(result[0].id).toBe('dup-map');
+  });
 });
 ```
 
@@ -169,6 +179,7 @@ export const fetchMaps = (lang) => fetchJson(`/maps?language=${lang}`);
 ```js
 export function transformMaps(zhList, enList) {
   const enByUuid = new Map(enList.map((m) => [m.uuid, m]));
+  const seen = new Set();
   return zhList
     .filter((zh) => enByUuid.has(zh.uuid))
     .map((zh) => {
@@ -190,6 +201,12 @@ export function transformMaps(zhList, enList) {
         displayIcon: zh.displayIcon ?? '',
         splash: zh.splash ?? '',
       };
+    })
+    .filter((m) => {
+      // 去重：上游存在同名条目（如两份靶场 The Range），保留首条，避免详情页路径冲突
+      if (seen.has(m.id)) return false;
+      seen.add(m.id);
+      return true;
     });
 }
 ```
@@ -213,7 +230,7 @@ export function validateMaps(maps) {
 - [ ] **Step 8: 跑测试确认通过**
 
 Run: `pnpm vitest run tests/transform.test.ts tests/validate.test.ts`
-Expected: transform 11 passed（8+3）、validate 10 passed（7+3）
+Expected: transform 12 passed（8+4，含去重用例）、validate 10 passed（7+3）
 
 - [ ] **Step 9: Commit**
 
@@ -287,7 +304,7 @@ import { validateAgents, validateWeapons, validateMaps } from './lib/validate.mj
 - [ ] **Step 2: 运行同步**
 
 Run: `pnpm sync`
-Expected: `[sync] 完成：agents=29 weapons=21 maps=10-11 version=13.06...`；`src/data/maps.json` 出现
+Expected: `[sync] 完成：agents=29 weapons=21 maps=26 version=13.06...`（27 条去重后 26）；`src/data/maps.json` 出现
 
 - [ ] **Step 3: 数据抽查**
 
@@ -297,7 +314,7 @@ Expected: 地图数 + 前三张中英名（如 `11 亚海悬城/Ascent, ...`，z
 - [ ] **Step 4: 全量测试无回归**
 
 Run: `pnpm test`
-Expected: 33 passed（27 + transform 3 + validate 3）
+Expected: 34 passed（27 + transform 4 + validate 3）
 
 - [ ] **Step 5: Commit**
 
@@ -426,7 +443,7 @@ const maps = mapsData.maps;
 - [ ] **Step 2: 构建验证**
 
 Run: `pnpm build && grep -o 'class="card-cut map-card"' dist/maps/index.html | wc -l`
-Expected: 与地图总数一致（10 或 11）
+Expected: 与地图总数一致（26）
 
 - [ ] **Step 3: Commit**
 
@@ -986,7 +1003,7 @@ test('电竞资讯列表可访问', async ({ page }) => {
 - [ ] **Step 2: 全链路验证**
 
 Run: `pnpm lint && pnpm test && pnpm build && pnpm e2e`
-Expected: lint 0 错 0 警、**35 单测全绿**（27+8）、构建成功（58 + 地图/资讯页 ≈ 72+ 页）、**7 条 E2E 全过**
+Expected: lint 0 错 0 警、**36 单测全绿**（27+9）、构建成功（58 + 地图 26 + 资讯 4 ≈ 88 页）、**7 条 E2E 全过**
 
 - [ ] **Step 3: 推送部署**
 
@@ -1013,4 +1030,4 @@ git push
 1. **Spec 覆盖**：spec 2.1 的 /maps、/maps/[id]、/patch-notes、/esports、/esports/[slug] → P1-4/5/7/8；2.2 P1 三模块齐备；导航决策（5 项 + Footer 版本入口）在计划"关键背景"中显式声明理由；点位攻略遵循 spec 风险表"基础信息先行"。
 2. **Placeholder 扫描**：无 TBD/TODO；种子文章 4 篇为全文；地图攻略区块为产品化文案非工程占位。
 3. **类型一致性**：transformMaps 产出字段（id/uuid/zh{name,description,tacticalDescription}/en{...}/coordinates/displayIcon/splash）与 MapCard Props、maps/[id] 页面、validateMaps 断言、MapCard 测试 sampleMap 一致；esports schema（type 枚举含"赛事科普"）与两篇种子文章的 type 值一致；patchNotes schema（patchVersion/source 必填）与两篇种子的 frontmatter 一致。
-4. **计数核对**：单测 27+3(transform maps)+3(validate maps)+2(MapCard)=35；E2E 4+3=7；页面数 58+11(地图)+4(资讯)≈73。
+4. **计数核对**：单测 27+4(transform maps 含去重用例)+3(validate maps)+2(MapCard)=36；E2E 4+3=7；页面数 58+26(地图)+4(资讯)=88。

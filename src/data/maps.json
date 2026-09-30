@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-30T04:59:07.031Z",
+  "syncedAt": "2026-09-30T05:00:57.201Z",
   "version": "13.06.00.5590001",
   "maps": [
     {
@@ -409,23 +409,6 @@
       "coordinates": "45°26'FF'N,12°20'Q'E",
       "displayIcon": "",
       "splash": "https://media.valorant-api.com/maps/ee613ee9-28b7-4beb-9666-08db13bb2244/splash.png"
-    },
-    {
-      "id": "the-range",
-      "uuid": "5914d1e0-40c4-cfdd-6b88-eba06347686c",
-      "zh": {
-        "name": "靶场",
-        "description": "",
-        "tacticalDescription": ""
-      },
-      "en": {
-        "name": "The Range",
-        "description": "",
-        "tacticalDescription": ""
-      },
-      "coordinates": "45°26'FF'N,12°20'Q'E",
-      "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/5914d1e0-40c4-cfdd-6b88-eba06347686c/splash.png"
     },
     {
       "id": "corrode",

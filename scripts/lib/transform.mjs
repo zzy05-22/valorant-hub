@@ -79,6 +79,7 @@ export function transformWeapons(zhList, enList) {
 
 export function transformMaps(zhList, enList) {
   const enByUuid = new Map(enList.map((m) => [m.uuid, m]));
+  const seen = new Set();
   return zhList
     .filter((zh) => enByUuid.has(zh.uuid))
     .map((zh) => {
@@ -100,5 +101,11 @@ export function transformMaps(zhList, enList) {
         displayIcon: zh.displayIcon ?? '',
         splash: zh.splash ?? '',
       };
+    })
+    .filter((m) => {
+      // 去重：上游存在同名条目（如两份靶场 The Range），保留首条，避免详情页路径冲突
+      if (seen.has(m.id)) return false;
+      seen.add(m.id);
+      return true;
     });
 }

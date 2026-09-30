@@ -99,4 +99,14 @@ describe('transformMaps', () => {
       expect(typeof m.coordinates).toBe('string');
     }
   });
+
+  it('同名不同 uuid 的条目按 slug 去重（避免详情页路径冲突）', () => {
+    const mk = (uuid: string) => ({
+      uuid, displayName: 'Dup Map', narrativeDescription: '', tacticalDescription: '',
+      coordinates: '', displayIcon: '', splash: '',
+    });
+    const result = transformMaps([mk('u1'), mk('u2')], [mk('u1'), mk('u2')]);
+    expect(result.length).toBe(1);
+    expect(result[0].id).toBe('dup-map');
+  });
 });
