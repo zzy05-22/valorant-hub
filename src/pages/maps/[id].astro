@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import mapsData from '../../data/maps.json';
+
+export function getStaticPaths() {
+  return mapsData.maps.map((map) => ({ params: { id: map.id }, props: { map } }));
+}
+const { map } = Astro.props;
+const name = map.zh.name !== map.en.name ? `${map.zh.name} ${map.en.name}` : map.en.name;
+const desc = map.zh.description || map.zh.tacticalDescription;
+---
+<BaseLayout
+  title={`${name}｜无畏契约资料站`}
+  description={`${name}：官方战术图与背景设定。${(map.zh.tacticalDescription || '').slice(0, 50)}`}
+>
+  <main class="container section">
+    <a class="back" href="/maps/">← 返回地图库</a>
+    <div class="label-cut">{map.coordinates}</div>
+    <h1>{name}</h1>
+    <img class="m-img" src={map.displayIcon} alt={name} onerror="this.src='/favicon.svg'" />
+    {map.zh.tacticalDescription && <h2>战术要点</h2>}
+    {map.zh.tacticalDescription && <p class="m-text">{map.zh.tacticalDescription}</p>}
+    {map.zh.description && <h2>背景设定</h2>}
+    {map.zh.description && <p class="m-text">{map.zh.description}</p>}
+    <h2>点位攻略</h2>
+    <p class="m-text">社区点位攻略编写中，本页先呈现官方战术图与设定。想抢先用图？记住两条原则：进攻方看包点入口有哪些掩体，防守方看回防路线要几秒。</p>
+    <p class="data-meta">数据版本 {mapsData.version}</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .m-img { width: 100%; max-width: 640px; margin: 1.2rem 0; border: 1px solid var(--val-line); }
+  .m-text { color: var(--val-gray); max-width: 46em; margin-bottom: 1rem; }
+</style>
