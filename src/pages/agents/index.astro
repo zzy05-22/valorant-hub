@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AgentCard from '../../components/AgentCard.astro';
+import agentsData from '../../data/agents.json';
+
+const agents = agentsData.agents;
+
+// 按角色分组（分组顺序跟随数据出现顺序，锚点 id 用序号避免中文转码问题）
+const roleMap = new Map<string, typeof agents>();
+for (const a of agents) {
+  const key = a.zh.role || '其他';
+  if (!roleMap.has(key)) roleMap.set(key, []);
+  roleMap.get(key)!.push(a);
+}
+const groups = [...roleMap.entries()].map(([role, list]) => ({ role, list }));
+---
+<BaseLayout title="特工图鉴｜无畏契约资料站" description="无畏契约全部特工资料：技能、角色定位、中英对照">
+  <main class="container section">
+    <div class="label-cut">Agents</div>
+    <h1>特工图鉴</h1>
+    <p class="page-sub">{agents.length} 位特工 · 数据版本 {agentsData.version}</p>
+    <nav class="role-nav">
+      {groups.map((g, i) => <a href={`#role-${i}`}>{g.role}</a>)}
+    </nav>
+    {groups.map((g, i) => (
+      <section id={`role-${i}`} class="role-group">
+        <h2>{g.role}</h2>
+        <div class="grid">
+          {g.list.map((a) => <AgentCard agent={a} />)}
+        </div>
+      </section>
+    ))}
+  </main>
+</BaseLayout>
