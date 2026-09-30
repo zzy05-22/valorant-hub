@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import { getCollection } from 'astro:content';
 
 const patchNotes = (await getCollection('patchNotes', ({ data }) => !data.draft))
@@ -9,10 +10,8 @@ const posts = (await getCollection('esports', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 ---
 <BaseLayout title="资讯中心｜无畏契约资料站" description="版本公告与赛事资讯：跟随版本更新，覆盖 VCT 赛程">
+  <PageHero label="News" title="资讯中心" subtitle="版本公告 · 赛事科普 · 观赛指南 · 赛程资讯" />
   <main class="container section">
-    <div class="label-cut">News</div>
-    <h1>资讯中心</h1>
-    <p class="page-sub">版本公告 · 赛事科普 · 观赛指南 · 赛程资讯</p>
     <section class="role-group">
       <h2>最新版本公告</h2>
       <ul class="note-list">

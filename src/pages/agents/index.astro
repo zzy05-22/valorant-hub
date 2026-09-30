@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AgentCard from '../../components/AgentCard.astro';
+import PageHero from '../../components/PageHero.astro';
 import agentsData from '../../data/agents.json';
 
 const agents = agentsData.agents;
@@ -15,10 +16,8 @@ for (const a of agents) {
 const groups = [...roleMap.entries()].map(([role, list]) => ({ role, list }));
 ---
 <BaseLayout title="特工图鉴｜无畏契约资料站" description="无畏契约全部特工资料：技能、角色定位、中英对照">
+  <PageHero label="Agents" title="特工图鉴" subtitle={`${agents.length} 位特工 · 数据版本 ${agentsData.version}`} />
   <main class="container section">
-    <div class="label-cut">Agents</div>
-    <h1>特工图鉴</h1>
-    <p class="page-sub">{agents.length} 位特工 · 数据版本 {agentsData.version}</p>
     <nav class="role-nav">
       {groups.map((g, i) => <a href={`#role-${i}`}>{g.role}</a>)}
     </nav>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 import agentsData from '../data/agents.json';
 import weaponsData from '../data/weapons.json';
 import mapsData from '../data/maps.json';
@@ -23,10 +24,8 @@ const entities: SearchEntity[] = [
 ];
 ---
 <BaseLayout title="全站搜索｜无畏契约资料站" description="搜索特工、武器、地图与攻略文章">
+  <PageHero label="Search" title="全站搜索" subtitle={`${entities.length} 个条目 · 支持中文名与英文名`} />
   <main class="container section">
-    <div class="label-cut">Search</div>
-    <h1>全站搜索</h1>
-    <p class="page-sub">{entities.length} 个条目 · 支持中文名与英文名</p>
     <input
       id="q"
       class="search-input"

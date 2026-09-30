@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import WeaponCard from '../../components/WeaponCard.astro';
+import PageHero from '../../components/PageHero.astro';
 import weaponsData from '../../data/weapons.json';
 
 const weapons = weaponsData.weapons;
@@ -15,10 +16,8 @@ for (const w of weapons) {
 const groups = [...catMap.entries()].map(([category, list]) => ({ category, list }));
 ---
 <BaseLayout title="武器库｜无畏契约资料站" description="无畏契约全武器数据：伤害分段、射速、价格、穿透、弹匣">
+  <PageHero label="Weapons" title="武器库" subtitle={`${weapons.length} 件武器 · 伤害分段与价格数据`} />
   <main class="container section">
-    <div class="label-cut">Weapons</div>
-    <h1>武器库</h1>
-    <p class="page-sub">{weapons.length} 件武器 · 数据版本 {weaponsData.version}</p>
     <nav class="role-nav">
       {groups.map((g, i) => <a href={`#cat-${i}`}>{g.category}</a>)}
     </nav>

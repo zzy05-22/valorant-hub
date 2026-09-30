@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MapCard from '../../components/MapCard.astro';
+import PageHero from '../../components/PageHero.astro';
 import mapsData from '../../data/maps.json';
 import { getCollection } from 'astro:content';
 
@@ -14,10 +15,8 @@ const standardMaps = maps.filter((m) => guideMapIds.has(m.id));
 const otherMaps = maps.filter((m) => !guideMapIds.has(m.id));
 ---
 <BaseLayout title="地图库｜无畏契约资料站" description="无畏契约全部地图：官方战术图、背景设定、坐标信息">
+  <PageHero label="Maps" title="地图库" subtitle={`${maps.length} 张地图 · 标准竞技图 ${standardMaps.length} 张`} />
   <main class="container section">
-    <div class="label-cut">Maps</div>
-    <h1>地图库</h1>
-    <p class="page-sub">{maps.length} 张地图 · 标准竞技图 {standardMaps.length} 张 · 数据版本 {mapsData.version}</p>
     <section class="role-group">
       <h2>标准竞技地图</h2>
       <div class="grid">

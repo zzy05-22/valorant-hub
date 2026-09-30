@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import { getCollection } from 'astro:content';
 
 const guides = (await getCollection('guides', ({ data }) => !data.draft))
@@ -7,9 +8,8 @@ const guides = (await getCollection('guides', ({ data }) => !data.draft))
 const categories = [...new Set(guides.map((g) => g.data.category))];
 ---
 <BaseLayout title="新手教学｜无畏契约资料站" description="无畏契约新手教学：入门、机制、经济、术语">
+  <PageHero label="Guides" title="新手教学" subtitle="入门 · 机制 · 经济 · 术语" />
   <main class="container section">
-    <div class="label-cut">Guides</div>
-    <h1>新手教学</h1>
     {categories.map((cat) => (
       <section class="role-group">
         <h2>{cat}</h2>
