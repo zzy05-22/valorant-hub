@@ -1,0 +1,9 @@
+{
+  "mapId": "summit",
+  "spots": [
+    { "agentId": "sage", "ability": "Q", "label": "A 封口墙", "x": 24, "y": 46, "side": "防守", "note": "A 主道立墙拖时间。新图点位持续校准中。" },
+    { "agentId": "brimstone", "ability": "E", "label": "B 主道烟", "x": 74, "y": 48, "side": "进攻", "note": "B 主道封烟掩护推进。新图点位持续校准中。" },
+    { "agentId": "sova", "ability": "E", "label": "中路侦察箭", "x": 50, "y": 36, "side": "进攻", "note": "中路箭先探三线结构再定主攻。新图点位持续校准中。" },
+    { "agentId": "omen", "ability": "E", "label": "中门烟", "x": 50, "y": 32, "side": "防守", "note": "中门封烟保守站位。新图点位持续校准中。" }
+  ]
+}

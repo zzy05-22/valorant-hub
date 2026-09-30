@@ -1,0 +1,9 @@
+{
+  "mapId": "haven",
+  "spots": [
+    { "agentId": "sova", "ability": "E", "label": "C 车库侦察箭", "x": 82, "y": 42, "side": "进攻", "note": "C 车库入口侦察箭，侦测 C 区守位，为最快入口的强攻提供信息。" },
+    { "agentId": "sova", "ability": "Q", "label": "B 中门震荡箭", "x": 52, "y": 38, "side": "进攻", "note": "中路箭压制 B 中门连接位，掩护转点。" },
+    { "agentId": "killjoy", "ability": "E", "label": "C 点炮台位", "x": 86, "y": 50, "side": "防守", "note": "炮台放 C 包点内后点，覆盖车库与 C 长道两条入口，换时间神器。" },
+    { "agentId": "sage", "ability": "Q", "label": "C 车库封口墙", "x": 80, "y": 38, "side": "防守", "note": "车库入口立墙，C 区人手不足时的拖延利器。" }
+  ]
+}

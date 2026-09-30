@@ -1,0 +1,9 @@
+{
+  "mapId": "bind",
+  "spots": [
+    { "agentId": "cypher", "ability": "E", "label": "A 长道绊线", "x": 24, "y": 40, "side": "防守", "note": "A 长道口布绊线，进攻方踩线立刻报点，配合窗口位枪线收过路人。" },
+    { "agentId": "cypher", "ability": "E", "label": "B 传送门绊线", "x": 76, "y": 55, "side": "防守", "note": "B 传送门出口旁布绊线，抓传送落点。" },
+    { "agentId": "brimstone", "ability": "E", "label": "A 长道双烟", "x": 28, "y": 45, "side": "进攻", "note": "烟封 A 长道与窗口，掩护短道近点冲击。" },
+    { "agentId": "viper", "ability": "E", "label": "B 主道毒墙", "x": 72, "y": 48, "side": "进攻", "note": "毒墙切 B 主道视野，配合闪位近点，逼守方退后点。" }
+  ]
+}

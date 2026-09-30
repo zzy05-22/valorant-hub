@@ -45,4 +45,20 @@ const mapGuides = defineCollection({
   }),
 });
 
-export const collections = { guides, esports, patchNotes, mapGuides };
+const lineups = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/lineups' }),
+  schema: z.object({
+    mapId: z.string(),
+    spots: z.array(z.object({
+      agentId: z.string(),
+      ability: z.enum(['C', 'Q', 'E', 'X', '被动']),
+      label: z.string(),
+      x: z.number().min(0).max(100),
+      y: z.number().min(0).max(100),
+      side: z.enum(['进攻', '防守']),
+      note: z.string(),
+    })),
+  }),
+});
+
+export const collections = { guides, esports, patchNotes, mapGuides, lineups };
