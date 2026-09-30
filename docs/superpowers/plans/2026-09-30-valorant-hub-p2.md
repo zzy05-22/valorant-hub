@@ -968,15 +968,15 @@ frontmatter 末尾（`const { map } = Astro.props;` 之后）追加：
 // 查找该地图的攻略（有则渲染全文，无则显示占位说明）
 const allGuides = await getCollection('mapGuides', ({ data }) => !data.draft);
 const guideEntry = allGuides.find((g) => g.data.mapId === map.id) ?? null;
-const guideContent = guideEntry ? (await renderGuide(guideEntry)).Content : null;
+const GuideContent = guideEntry ? (await renderGuide(guideEntry)).Content : null;
 ```
 
 「点位攻略」区块的占位段落替换为条件渲染：
 
 ```astro
     <h2>点位攻略</h2>
-    {guideContent ? (
-      <article class="prose m-guide"><guideContent /></article>
+    {GuideContent ? (
+      <article class="prose m-guide"><GuideContent /></article>
     ) : (
       <p class="m-text">社区点位攻略编写中，本页先呈现官方战术图与设定。想抢先用图？记住两条原则：进攻方看包点入口有哪些掩体，防守方看回防路线要几秒。</p>
     )}
@@ -990,7 +990,7 @@ scoped 样式追加：
 
 - [ ] **Step 16: 构建验证**
 
-Run: `pnpm build && grep -o '攻防思路' dist/maps/ascent/index.html | wc -l && grep -o '社区点位攻略编写中' dist/maps/the-range/index.html | wc -l`
+Run: `pnpm build && grep -o '进攻思路' dist/maps/ascent/index.html | wc -l && grep -o '社区点位攻略编写中' dist/maps/the-range/index.html | wc -l`
 Expected: 攻略页 ≥ 1；无攻略的地图（the-range）保持占位文案 ≥ 1
 
 - [ ] **Step 17: Commit**
