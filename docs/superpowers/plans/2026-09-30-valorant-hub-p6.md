@@ -288,7 +288,7 @@ node -e "
 const fs = require('fs');
 const UA = { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) valorant-hub/1.0 (静态资料站项目)' };
 (async () => {
-  for (const [url, file] of [['https://www.vlr.gg/stats', 'tests/fixtures/vlr-stats.html'], ['https://www.vlr.gg/ranking', 'tests/fixtures/vlr-ranking.html']]) {
+  for (const [url, file] of [['https://www.vlr.gg/stats', 'tests/fixtures/vlr-stats.html'], ['https://www.vlr.gg/rankings', 'tests/fixtures/vlr-ranking.html']]) {
     const r = await fetch(url, { headers: UA });
     const t = await r.text();
     fs.writeFileSync(file, t);
@@ -348,7 +348,9 @@ describe('validateEsportsStats', () => {
 
 ```js
 // vlr.gg 抓取与解析（零依赖：fetch + 正则/字符串切割）
-const UA = { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) valorant-hub/1.0 (静态资料站项目)' };
+// 实测发现（P6-3）：UA 必须纯 ASCII（中文会抛 ByteString 错）；站点有 cookie 门（302 + Set-Cookie: abok=1），
+// fetchHtml 按 RFC 6265 语义维护 cookie 重试（浏览器等价行为）
+const UA = { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) valorant-hub/1.0 (static fan site)' };
 
 export async function fetchHtml(url) {
   const res = await fetch(url, { headers: UA });
@@ -398,7 +400,9 @@ export function parseTeamRanking(html) {
     if (!Number.isFinite(rank)) continue;
     const name = texts.find((t) => t && t.length > 1 && !/^\d+$/.test(t) && !/^(up|down|-)$/i.test(t));
     if (!name) continue;
-    teams.push({ rank, name, region: texts[2] ?? '' });
+    // region 实测从 rank-item-team-country 标记提取（texts[2] 实为评分 2000）
+    const regionMatch = row.match(/rank-item-team-country[^>]*>([\s\S]*?)<\/div>/);
+    teams.push({ rank, name, region: regionMatch ? stripTags(regionMatch[1]) : '' });
     if (teams.length >= 30) break;
   }
   return teams;
@@ -447,7 +451,7 @@ import { fetchHtml, parsePlayerStats, parseTeamRanking, validateEsportsStats } f
     console.log('[sync] 拉取 vlr.gg 电竞数据 …');
     const [statsHtml, rankingHtml] = await Promise.all([
       fetchHtml('https://www.vlr.gg/stats'),
-      fetchHtml('https://www.vlr.gg/ranking'),
+      fetchHtml('https://www.vlr.gg/rankings'),
     ]);
     const players = parsePlayerStats(statsHtml);
     const teams = parseTeamRanking(rankingHtml);
