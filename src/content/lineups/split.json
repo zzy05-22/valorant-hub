@@ -4,6 +4,10 @@
     { "agentId": "sova", "ability": "E", "label": "A 塔侦察箭", "x": 22, "y": 30, "side": "进攻", "note": "侦察 A 塔楼站位，压制守方高低差火力，为 A 主攻清顶部信息。" },
     { "agentId": "sova", "ability": "Q", "label": "排水道震荡箭", "x": 60, "y": 62, "side": "进攻", "note": "排水道转点路线上的震荡箭，掩护绕后夹击。" },
     { "agentId": "omen", "ability": "E", "label": "B 塔烟", "x": 76, "y": 32, "side": "进攻", "note": "烟封 B 塔楼压制位，掩护队友从绳索位上塔。" },
-    { "agentId": "sage", "ability": "Q", "label": "中门隔断墙", "x": 50, "y": 40, "side": "防守", "note": "中门立墙切断中路推进，为中转两翼争取回防时间。" }
+    { "agentId": "sage", "ability": "Q", "label": "中门隔断墙", "x": 50, "y": 40, "side": "防守", "note": "中门立墙切断中路推进，为中转两翼争取回防时间。" },
+    { "agentId": "jett", "ability": "C", "label": "中门烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾封中门视野，掩护中路渗透。" },
+    { "agentId": "raze", "ability": "E", "label": "B 塔榴弹压制", "x": 50, "y": 50, "side": "进攻", "note": "集束榴弹覆盖 B 塔楼区域，压制高低差火力。" },
+    { "agentId": "neon", "ability": "C", "label": "B 主道能量墙", "x": 50, "y": 50, "side": "进攻", "note": "能量墙分隔 B 主道，掩护队友近点与拆分对枪。" },
+    { "agentId": "fade", "ability": "E", "label": "A 区侦察眼", "x": 50, "y": 50, "side": "进攻", "note": "幽灵眼布置 A 区，侦测塔楼与主道守位。" }
   ]
 }

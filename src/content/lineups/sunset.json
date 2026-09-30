@@ -4,6 +4,10 @@
     { "agentId": "kay-o", "ability": "E", "label": "中门压制刀", "x": 50, "y": 38, "side": "进攻", "note": "中门压制防守技能，打开双向夹击窗口。" },
     { "agentId": "viper", "ability": "E", "label": "B 主道毒墙", "x": 74, "y": 48, "side": "进攻", "note": "B 贴脸结构毒墙开路，配合决斗者近点。" },
     { "agentId": "sage", "ability": "Q", "label": "A 主道封口墙", "x": 24, "y": 46, "side": "防守", "note": "A 主道口立墙，前排压制后撤打二波。" },
-    { "agentId": "omen", "ability": "E", "label": "中门烟", "x": 52, "y": 35, "side": "防守", "note": "中门封烟防快攻，保住回防视野。" }
+    { "agentId": "omen", "ability": "E", "label": "中门烟", "x": 52, "y": 35, "side": "防守", "note": "中门封烟防快攻，保住回防视野。" },
+    { "agentId": "jett", "ability": "C", "label": "B 贴脸烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾封 B 近点视野，掩护贴脸快攻。" },
+    { "agentId": "harbor", "ability": "E", "label": "A 主道水墙", "x": 50, "y": 50, "side": "进攻", "note": "水墙压制 A 主道，配合前排冲击。" },
+    { "agentId": "fade", "ability": "E", "label": "市场侦察眼", "x": 50, "y": 50, "side": "进攻", "note": "幽灵眼监视市场转点路线，防回防夹击。" },
+    { "agentId": "deadlock", "ability": "Q", "label": "中门声波感应", "x": 50, "y": 50, "side": "防守", "note": "感应器守中门，失中门即报警并致聋。" }
   ]
 }

@@ -4,6 +4,10 @@
     { "agentId": "omen", "ability": "E", "label": "C 点入口烟", "x": 80, "y": 45, "side": "进攻", "note": "烟封 C 主入口，配合旋转门声东击西。" },
     { "agentId": "omen", "ability": "E", "label": "A 高台烟", "x": 20, "y": 35, "side": "进攻", "note": "A 高台压制位封烟，掩护 A 强攻。" },
     { "agentId": "killjoy", "ability": "E", "label": "B 点炮台位", "x": 52, "y": 50, "side": "防守", "note": "炮台守 B 连接，覆盖双入口。" },
-    { "agentId": "sage", "ability": "Q", "label": "中门隔断墙", "x": 48, "y": 40, "side": "防守", "note": "中门立墙保三点机动支援路线。" }
+    { "agentId": "sage", "ability": "Q", "label": "中门隔断墙", "x": 48, "y": 40, "side": "防守", "note": "中门立墙保三点机动支援路线。" },
+    { "agentId": "jett", "ability": "C", "label": "A 入口烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾封 A 主入口，配合旋转门佯攻。" },
+    { "agentId": "raze", "ability": "E", "label": "B 连接榴弹", "x": 50, "y": 50, "side": "进攻", "note": "榴弹覆盖 B 连接区域，压制多点防守兵力。" },
+    { "agentId": "skye", "ability": "Q", "label": "中门虎式侦察", "x": 50, "y": 50, "side": "进攻", "note": "Trailblazer 穿中门侦察推进路线，配合三点转点。" },
+    { "agentId": "chamber", "ability": "C", "label": "C 入口陷阱", "x": 50, "y": 50, "side": "防守", "note": "Trademark 布置 C 入口，减速下水道路线进攻方。" }
   ]
 }

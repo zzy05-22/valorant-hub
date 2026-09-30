@@ -4,6 +4,10 @@
     { "agentId": "brimstone", "ability": "E", "label": "中门双烟", "x": 50, "y": 32, "side": "进攻", "note": "中门双烟遮蔽中路视野，掩护三向施压的兵力展开。" },
     { "agentId": "brimstone", "ability": "E", "label": "A 箱阵烟", "x": 24, "y": 46, "side": "进攻", "note": "烟封 A 箱阵高地，掩护主道推进。" },
     { "agentId": "sova", "ability": "E", "label": "B 后点侦察箭", "x": 76, "y": 44, "side": "进攻", "note": "B 后点箭侦测守位，为下包选位提供信息。" },
-    { "agentId": "sage", "ability": "Q", "label": "B 封口墙", "x": 72, "y": 52, "side": "防守", "note": "B 主道口立墙拖时间，等中路队友支援。" }
+    { "agentId": "sage", "ability": "Q", "label": "B 封口墙", "x": 72, "y": 52, "side": "防守", "note": "B 主道口立墙拖时间，等中路队友支援。" },
+    { "agentId": "jett", "ability": "C", "label": "中门烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾封中门视野，掩护三向施压兵力展开。" },
+    { "agentId": "neon", "ability": "C", "label": "B 主道能量墙", "x": 50, "y": 50, "side": "进攻", "note": "能量墙掩护 B 主道快速近点。" },
+    { "agentId": "harbor", "ability": "E", "label": "A 主道水墙", "x": 50, "y": 50, "side": "进攻", "note": "水墙切 A 主道纵深，稳步推进控图。" },
+    { "agentId": "fade", "ability": "Q", "label": "中门清道夫", "x": 50, "y": 50, "side": "进攻", "note": "Prowler 沿中门搜索并致盲守位，配合队友抢中。" }
   ]
 }

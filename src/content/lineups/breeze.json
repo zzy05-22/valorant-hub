@@ -4,6 +4,10 @@
     { "agentId": "viper", "ability": "E", "label": "A 主道毒墙", "x": 24, "y": 45, "side": "进攻", "note": "毒墙横切 A 主道开阔地带，压缩对枪距离。" },
     { "agentId": "viper", "ability": "Q", "label": "B 点毒球", "x": 76, "y": 48, "side": "进攻", "note": "B 点后点毒球覆盖包点，配合下包逼守方交道具。" },
     { "agentId": "sova", "ability": "E", "label": "中门侦察箭", "x": 50, "y": 35, "side": "进攻", "note": "中门箭侦测守方前压，开阔地图信息优先。" },
-    { "agentId": "cypher", "ability": "E", "label": "A 洞口绊线", "x": 20, "y": 52, "side": "防守", "note": "A 洞口绊线防快攻，配合平台远点枪线。" }
+    { "agentId": "cypher", "ability": "E", "label": "A 洞口绊线", "x": 20, "y": 52, "side": "防守", "note": "A 洞口绊线防快攻，配合平台远点枪线。" },
+    { "agentId": "jett", "ability": "C", "label": "A 洞口烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾封 A 洞口视野，掩护开阔地推进。" },
+    { "agentId": "harbor", "ability": "E", "label": "中门水墙", "x": 50, "y": 50, "side": "进攻", "note": "水墙覆盖中门开阔区，远距离图的移动掩体。" },
+    { "agentId": "fade", "ability": "E", "label": "B 区侦察眼", "x": 50, "y": 50, "side": "进攻", "note": "幽灵眼监视 B 区，开阔地图信息位价值最高。" },
+    { "agentId": "deadlock", "ability": "Q", "label": "B 入口声波感应", "x": 50, "y": 50, "side": "防守", "note": "声波感应器守 B 入口，捕捉快攻并自动致聋。" }
   ]
 }

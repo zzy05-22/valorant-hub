@@ -4,6 +4,10 @@
     { "agentId": "sage", "ability": "Q", "label": "A 主道封口墙", "x": 20, "y": 45, "side": "防守", "note": "站在 A 平台后立墙封住 A 主道入口，配合平台枪线拖时间，逼进攻方交道具。" },
     { "agentId": "sage", "ability": "E", "label": "B 主道缓速球", "x": 78, "y": 48, "side": "防守", "note": "B 主道入口投缓速球，配合门后队友的交叉火力，把对枪拖进我方节奏。" },
     { "agentId": "sova", "ability": "E", "label": "中门侦察箭", "x": 50, "y": 30, "side": "进攻", "note": "开局射中门侦察箭侦测防守前压，为分推决策提供信息。" },
-    { "agentId": "brimstone", "ability": "E", "label": "B 门封锁烟", "x": 74, "y": 50, "side": "进攻", "note": "烟封 B 门与市场方向视野，掩护近点冲击与下包。" }
+    { "agentId": "brimstone", "ability": "E", "label": "B 门封锁烟", "x": 74, "y": 50, "side": "进攻", "note": "烟封 B 门与市场方向视野，掩护近点冲击与下包。" },
+    { "agentId": "jett", "ability": "C", "label": "B 主道烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾弹封 B 主道视野，掩护近点冲击。" },
+    { "agentId": "raze", "ability": "C", "label": "A 主道 Boom Bot 清点", "x": 50, "y": 50, "side": "进攻", "note": "机器狗沿 A 主道搜索角落守位，清包点前必用信息。" },
+    { "agentId": "harbor", "ability": "E", "label": "A 主道水墙", "x": 50, "y": 50, "side": "进攻", "note": "水墙横切 A 主道，缓慢推进压缩守方对枪空间。" },
+    { "agentId": "fade", "ability": "E", "label": "B 区侦察眼", "x": 50, "y": 50, "side": "进攻", "note": "幽灵眼布置 B 区后方，暴露守位为分推决策提供信息。" }
   ]
 }

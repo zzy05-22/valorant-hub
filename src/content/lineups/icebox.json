@@ -4,6 +4,10 @@
     { "agentId": "viper", "ability": "E", "label": "A 管道毒墙", "x": 26, "y": 42, "side": "进攻", "note": "毒墙切 A 管道层，压制高层火力，掩护底层推进。" },
     { "agentId": "viper", "ability": "E", "label": "B 厨房毒墙", "x": 74, "y": 46, "side": "进攻", "note": "B 厨房窗口方向毒墙，掩护 B 近点。" },
     { "agentId": "sage", "ability": "Q", "label": "B 封口墙", "x": 72, "y": 52, "side": "防守", "note": "B 入口立墙，垂直图回防慢，拖时间是第一优先级。" },
-    { "agentId": "cypher", "ability": "E", "label": "B 绊线", "x": 70, "y": 55, "side": "防守", "note": "B 入口绊线抓近点快攻，配合后点枪线。" }
+    { "agentId": "cypher", "ability": "E", "label": "B 绊线", "x": 70, "y": 55, "side": "防守", "note": "B 入口绊线抓近点快攻，配合后点枪线。" },
+    { "agentId": "jett", "ability": "C", "label": "A 管道烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾封 A 管道层视野，掩护底层推进。" },
+    { "agentId": "raze", "ability": "E", "label": "B 后点榴弹", "x": 50, "y": 50, "side": "进攻", "note": "榴弹覆盖 B 后点守位，垂直图压制火力点。" },
+    { "agentId": "harbor", "ability": "E", "label": "B 厨房水墙", "x": 50, "y": 50, "side": "进攻", "note": "水墙压厨房窗口方向，掩护 B 近点。" },
+    { "agentId": "skye", "ability": "C", "label": "A 主道闪光鸟", "x": 50, "y": 50, "side": "进攻", "note": "闪光鸟致盲 A 塔楼与管道层守位。" }
   ]
 }

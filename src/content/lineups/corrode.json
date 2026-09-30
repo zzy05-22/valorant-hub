@@ -4,6 +4,10 @@
     { "agentId": "sage", "ability": "Q", "label": "A 主道封口墙", "x": 24, "y": 46, "side": "防守", "note": "A 主道立墙拖时间。新图点位持续校准中。" },
     { "agentId": "brimstone", "ability": "E", "label": "B 主道烟", "x": 74, "y": 48, "side": "进攻", "note": "烟封 B 主道薄墙后视野，掩护推进。新图点位持续校准中。" },
     { "agentId": "sova", "ability": "E", "label": "中门侦察箭", "x": 50, "y": 36, "side": "进攻", "note": "中门箭侦测前压，矿区薄墙多、穿点风险高，信息优先。新图点位持续校准中。" },
-    { "agentId": "cypher", "ability": "E", "label": "A 绊线", "x": 26, "y": 52, "side": "防守", "note": "A 入口绊线防快攻，薄墙图注意道具会被穿。新图点位持续校准中。" }
+    { "agentId": "cypher", "ability": "E", "label": "A 绊线", "x": 26, "y": 52, "side": "防守", "note": "A 入口绊线防快攻，薄墙图注意道具会被穿。新图点位持续校准中。" },
+    { "agentId": "jett", "ability": "C", "label": "A 主道烟", "x": 50, "y": 50, "side": "进攻", "note": "烟雾封 A 主道薄墙后视野，掩护推进。" },
+    { "agentId": "neon", "ability": "C", "label": "中路能量墙", "x": 50, "y": 50, "side": "进攻", "note": "能量墙掩护中路推进。新图点位持续校准中。" },
+    { "agentId": "fade", "ability": "E", "label": "B 区侦察眼", "x": 50, "y": 50, "side": "进攻", "note": "幽灵眼侦察 B 区，矿区薄墙多信息优先。新图点位持续校准中。" },
+    { "agentId": "deadlock", "ability": "Q", "label": "A 入口声波感应", "x": 50, "y": 50, "side": "防守", "note": "感应器守 A 入口。新图点位持续校准中。" }
   ]
 }
