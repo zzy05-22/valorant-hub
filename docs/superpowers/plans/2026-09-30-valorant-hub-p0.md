@@ -992,7 +992,8 @@ async function main() {
   const syncedAt = new Date().toISOString();
   const version = {
     syncedAt,
-    versionNumber: versionRaw?.versionNumber ?? '',
+    // 实测：valorant-api.com /v1/version 的版本号字段名为 version（versionNumber 为兼容保留）
+    versionNumber: versionRaw?.versionNumber ?? versionRaw?.version ?? '',
     buildVersion: versionRaw?.buildVersion ?? '',
   };
 
