@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CrosshairPreview from '../components/CrosshairPreview.astro';
 import agentsData from '../data/agents.json';
-import weaponsData from '../data/weapons.json';
 import mapsData from '../data/maps.json';
 import { getCollection } from 'astro:content';
-import { rankWeaponDamage, roleDistribution, lineupContributors } from '../utils/stats';
+import { roleDistribution, lineupContributors } from '../utils/stats';
 
 // —— hero 与板块数据 ——
 const rolePool = new Map<string, typeof agentsData.agents>();
@@ -21,8 +21,7 @@ const heroPortrait = heroAgent?.fullPortrait || '';
 const ROLE_COLOR: Record<string, string> = { 决斗: '#FF4655', 先锋: '#00E5B0', 控场: '#7ee787', 哨卫: '#a78bfa' };
 
 // —— 数据板块 ——
-const topWeapons = rankWeaponDamage(weaponsData.weapons as never).slice(0, 6);
-const maxHead = topWeapons[0]?.headDamage ?? 1;
+const featuredCrosshairs = (await getCollection('crosshairs')).slice(0, 4);
 const roleDist = roleDistribution(agentsData.agents as never);
 let acc = 0;
 const ringStops = roleDist.map((r) => {
@@ -75,7 +74,7 @@ const liveStats = esportsStats.players[0];
       </div>
       <div class="hero6__badges">
         <div class="card-cut hero6__stat floaty"><b style="color:#00E5B0">29</b><span>特工 AGENTS</span></div>
-        <div class="card-cut hero6__stat floaty" style="animation-delay:1s"><b style="color:#FF4655">21</b><span>武器 WEAPONS</span></div>
+        <div class="card-cut hero6__stat floaty" style="animation-delay:1s"><b style="color:#FF4655">10</b><span>准星 CROSSHAIRS</span></div>
         <div class="card-cut hero6__stat floaty" style="animation-delay:2s"><b style="color:#ffd166">104</b><span>点位 LINEUPS</span></div>
       </div>
     </section>
@@ -141,21 +140,19 @@ const liveStats = esportsStats.players[0];
         )}
       </section>
 
-      <!-- ⑥ 武器威力榜 TOP6 -->
+      <!-- ⑥ 热门准星（武器模块删除后的对等板块） -->
       <section class="block6">
-        <header class="block6__head"><h2>武器威力榜</h2><span class="block6__en">HEADSHOT DAMAGE · TOP 6</span><a class="block6__more" href="/weapons/">武器库 →</a></header>
-        <div class="card-cut board6">
-          {topWeapons.map((w, i) => (
-            <div class="board6__row">
-              <span class={`board6__rank${i === 0 ? ' board6__rank--top' : ''}`}>{i + 1}</span>
-              <div class="board6__main">
-                <div class="board6__label"><b>{w.name}</b>{w.isNew && <span class="tag6 tag6--teal">NEW</span>}</div>
-                <div class="stat-track"><div class="stat-bar bar-anim" style={`width:${Math.round((w.headDamage / maxHead) * 100)}%;background:linear-gradient(90deg,#FF4655,#ff8a5c);animation-delay:${i * 0.08}s`}></div></div>
+        <header class="block6__head"><h2>热门准星</h2><span class="block6__en">CROSSHAIRS</span><a class="block6__more" href="/crosshairs/">全部准星 →</a></header>
+        <div class="block6__grid block6__grid--wide">
+          {featuredCrosshairs.map((c) => (
+            <div class="card-cut card-lift" style="display:flex;align-items:center;gap:.8rem;padding:.9rem">
+              <CrosshairPreview code={c.data.code} size={56} />
+              <div>
+                <b style="color:var(--val-cream);font-size:.92rem;display:block">{c.data.name}</b>
+                <span style="color:var(--val-gray);font-size:.72rem">{c.data.tags.join(' · ')}</span>
               </div>
-              <div class="board6__value"><b style={w.isNew ? 'color:#00E5B0' : ''}>{w.headDamage}</b><span>爆头伤害</span></div>
             </div>
           ))}
-          <div class="board6__foot">近距段爆头伤害（官方数据）· 每日同步自动更新</div>
         </div>
       </section>
 

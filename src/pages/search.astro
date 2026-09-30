@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import agentsData from '../data/agents.json';
-import weaponsData from '../data/weapons.json';
 import mapsData from '../data/maps.json';
 import type { SearchEntity } from '../utils/search';
 import { getCollection } from 'astro:content';
@@ -13,11 +12,10 @@ const esports = await getCollection('esports', ({ data }) => !data.draft);
 
 const entities: SearchEntity[] = [
   ...agentsData.agents.map((a) => ({ type: '特工', title: a.zh.name, sub: a.en.name, url: `/agents/${a.id}/` })),
-  ...weaponsData.weapons.map((w) => ({
-    type: '武器', title: w.zh.name !== w.en.name ? `${w.zh.name} ${w.en.name}` : w.en.name,
-    sub: w.zh.category || '其他', url: `/weapons/${w.id}/`,
-  })),
   ...mapsData.maps.map((m) => ({ type: '地图', title: m.zh.name, sub: m.en.name, url: `/maps/${m.id}/` })),
+  ...(await getCollection('crosshairs')).map((c) => ({
+    type: '准星', title: c.data.name, sub: c.data.tags.join(' '), url: '/crosshairs/',
+  })),
   ...guides.map((g) => ({ type: '教学', title: g.data.title, sub: g.data.category, url: `/guides/${g.id}/` })),
   ...patchNotes.map((n) => ({ type: '版本资讯', title: n.data.title, sub: n.data.patchVersion, url: `/patch-notes/${n.id}/` })),
   ...esports.map((p) => ({ type: '电竞资讯', title: p.data.title, sub: p.data.type, url: `/esports/${p.id}/` })),
