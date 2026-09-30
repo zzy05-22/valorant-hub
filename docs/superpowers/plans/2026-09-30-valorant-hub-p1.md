@@ -473,7 +473,6 @@ export function getStaticPaths() {
 }
 const { map } = Astro.props;
 const name = map.zh.name !== map.en.name ? `${map.zh.name} ${map.en.name}` : map.en.name;
-const desc = map.zh.description || map.zh.tacticalDescription;
 ---
 <BaseLayout
   title={`${name}｜无畏契约资料站`}
