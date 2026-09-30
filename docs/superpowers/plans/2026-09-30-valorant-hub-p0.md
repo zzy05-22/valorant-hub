@@ -1238,8 +1238,8 @@ const groups = [...roleMap.entries()].map(([role, list]) => ({ role, list }));
 
 - [ ] **Step 2: 构建验证**
 
-Run: `pnpm build && grep -c "agent-card" dist/agents/index.html`
-Expected: 与特工总数一致（如 `20+`；grep 输出即卡片数）
+Run: `pnpm build && grep -o 'class="card-cut agent-card"' dist/agents/index.html | wc -l`
+Expected: 与特工总数一致（如 `29`；注意产物是压缩 HTML，须用 `grep -o | wc -l` 计匹配次数，`grep -c` 只数行数）
 
 - [ ] **Step 3: 预览抽查**
 
@@ -1487,8 +1487,8 @@ const groups = [...catMap.entries()].map(([category, list]) => ({ category, list
 
 - [ ] **Step 2: 构建验证**
 
-Run: `pnpm build && grep -c "weapon-card" dist/weapons/index.html`
-Expected: 与武器总数一致（如 `15+`）
+Run: `pnpm build && grep -o 'class="card-cut weapon-card"' dist/weapons/index.html | wc -l`
+Expected: 与武器总数一致（如 `21`；用 `grep -o | wc -l` 计匹配次数）
 
 - [ ] **Step 3: Commit**
 
@@ -1701,7 +1701,7 @@ publishDate: 2026-09-27
 
 ## 角色相关
 
-- **决斗者 / 先锋 / 控场者 / 哨卫**：四大特工定位。决斗者开团，先锋突破，控场者封锁视野，哨卫守后。
+- **决斗 / 先锋 / 控场 / 哨卫**：四大特工定位。决斗开团，先锋突破，控场封锁视野，哨卫守后。
 - **IGL**：队内指挥（in-game leader）。
 
 术语没听懂？开一局自定义，边看[特工图鉴](/agents/)边试技能，比背术语快十倍。
@@ -1890,8 +1890,8 @@ const guides = (await getCollection('guides', ({ data }) => !data.draft))
 
 - [ ] **Step 2: 构建验证**
 
-Run: `pnpm build && grep -c "agent-card" dist/index.html`
-Expected: `6`（首页展示 6 位特工）
+Run: `pnpm build && grep -o 'class="card-cut agent-card"' dist/index.html | wc -l`
+Expected: `6`（首页展示 6 位特工；用 `grep -o | wc -l` 计匹配次数）
 
 - [ ] **Step 3: 预览抽查（首页是门面，仔细看）**
 
