@@ -46,3 +46,23 @@ test('电竞资讯列表可访问', async ({ page }) => {
   await expect(page.getByRole('heading', { name: '电竞资讯' })).toBeVisible();
   await expect(page.locator('.note-item__title').first()).toBeVisible();
 });
+
+test('武器对比：勾选武器后出现对比卡', async ({ page }) => {
+  await page.goto('/weapons/compare/');
+  const boxes = page.getByRole('checkbox');
+  await boxes.nth(0).check();
+  await boxes.nth(1).check();
+  await expect(page.locator('.compare-card').first()).toBeVisible();
+});
+
+test('阵容推荐：生成 5 人平衡阵容', async ({ page }) => {
+  await page.goto('/agents/lineup/');
+  await page.getByRole('button', { name: '生成阵容' }).click();
+  await expect(page.locator('.lineup-card')).toHaveCount(5);
+});
+
+test('全站搜索：输入关键词出结果', async ({ page }) => {
+  await page.goto('/search/');
+  await page.getByPlaceholder('搜索特工、武器、地图、攻略…').fill('捷风');
+  await expect(page.locator('.search-result__title').first()).toContainText('捷风');
+});

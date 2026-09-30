@@ -24,12 +24,16 @@ const lineAgents = agentsData.agents.map((a) => ({
     </div>
     <p class="data-meta">推荐为角色平衡的通用组合，具体选人请结合队友熟练度与地图特点</p>
   </main>
+<script type="application/json" id="page-data" set:html={JSON.stringify(lineAgents)} />
 </BaseLayout>
 
 <script>
   import { buildLineup, type LineupAgent } from '../../utils/lineup';
 
-  const all = lineAgents as unknown as LineupAgent[];
+  // 打包 script 不注入 frontmatter 变量：数据经 JSON script 标签传递
+  const all: LineupAgent[] = JSON.parse(
+    (document.getElementById('page-data') as HTMLElement).textContent || '[]',
+  );
   const result = document.getElementById('result') as HTMLElement;
   const roll = document.getElementById('roll') as HTMLButtonElement;
   const reroll = document.getElementById('reroll') as HTMLButtonElement;

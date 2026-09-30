@@ -22,12 +22,16 @@ const compareWeapons = toCompareWeapons(weaponsData.weapons as never);
       <p class="page-sub" id="hint">在上方勾选武器开始对比</p>
     </div>
   </main>
+<script type="application/json" id="page-data" set:html={JSON.stringify(compareWeapons)} />
 </BaseLayout>
 
 <script>
   import { pickCompareWeapons, type CompareWeapon } from '../../utils/compare';
 
-  const all: CompareWeapon[] = compareWeapons as unknown as CompareWeapon[];
+  // 打包 script 不注入 frontmatter 变量：数据经 JSON script 标签传递
+  const all: CompareWeapon[] = JSON.parse(
+    (document.getElementById('page-data') as HTMLElement).textContent || '[]',
+  );
   const chips = document.querySelectorAll<HTMLInputElement>('#chips input');
   const result = document.getElementById('result') as HTMLElement;
 
