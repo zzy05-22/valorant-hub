@@ -662,7 +662,7 @@ describe('transformAgents', () => {
   it('技能槽位映射为游戏按键 C/Q/E/X', () => {
     for (const a of agents) {
       for (const ab of a.abilities) {
-        expect(['C', 'Q', 'E', 'X']).toContain(ab.slot);
+        expect(['C', 'Q', 'E', 'X', '被动']).toContain(ab.slot);
         expect(ab.zh.name).toBeTruthy();
         expect(ab.en.name).toBeTruthy();
       }
@@ -713,7 +713,7 @@ Expected: FAIL —— `Cannot find module '../scripts/lib/transform.mjs'`
 //   agent:  { id, uuid, zh{name,description,role}, en{...}, roleIcon, displayIcon, fullPortrait, background, abilities[{slot,key,zh,en,icon}] }
 //   weapon: { id, uuid, zh{name,category}, en{...}, category, credits, displayIcon, stats{fireRate,magazineSize,wallPenetration}, damageRanges[...] }
 
-const SLOT_KEY = { Ability1: 'Q', Ability2: 'E', Grenade: 'C', Ultimate: 'X' };
+const SLOT_KEY = { Ability1: 'Q', Ability2: 'E', Grenade: 'C', Ultimate: 'X', Passive: '被动' };
 
 export function slugify(s) {
   return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -1322,7 +1322,7 @@ Expected: 输出至少 3 个详情页路径
 - [ ] **Step 3: 预览抽查**
 
 浏览器打开 `http://localhost:4321/agents/jett/`（若 jett 不存在，从列表页任选一个）
-Expected: 大图 + 中英文名 + 4 张技能卡（C/Q/E/X），底部数据版本号
+Expected: 大图 + 中英文名 + 4-5 张技能卡（C/Q/E/X；带被动技能的特工如捷风为 5 张，第 5 张徽章显示「被动」），底部数据版本号
 
 - [ ] **Step 4: Commit**
 
