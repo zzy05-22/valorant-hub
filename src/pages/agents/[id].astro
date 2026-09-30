@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SkillPanel from '../../components/SkillPanel.astro';
+import agentsData from '../../data/agents.json';
+
+export function getStaticPaths() {
+  return agentsData.agents.map((agent) => ({
+    params: { id: agent.id },
+    props: { agent },
+  }));
+}
+const { agent } = Astro.props;
+const portrait = agent.fullPortrait || agent.displayIcon;
+---
+<BaseLayout
+  title={`${agent.zh.name} ${agent.en.name}｜无畏契约资料站`}
+  description={`${agent.zh.name}（${agent.en.name}）：${agent.zh.role}。${agent.zh.description.slice(0, 60)}…`}
+>
+  <main class="container section">
+    <a class="back" href="/agents/">← 返回特工列表</a>
+    <div class="hero">
+      <img class="hero__portrait" src={portrait} alt={agent.zh.name} onerror="this.src='/favicon.svg'" />
+      <div>
+        <div class="label-cut">{agent.zh.role} · {agent.en.role}</div>
+        <h1>{agent.zh.name} <span class="hero__en">{agent.en.name}</span></h1>
+        <p class="hero__desc">{agent.zh.description}</p>
+      </div>
+    </div>
+    <h2>技能</h2>
+    <div class="skills">
+      {agent.abilities.map((ab) => <SkillPanel ability={ab} />)}
+    </div>
+    <p class="data-meta">技能数值暂以官方描述呈现 · 数据版本 {agentsData.version}</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero { display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; }
+  .hero__portrait { width: 280px; max-width: 40vw; object-fit: contain; }
+  .hero__en { color: var(--val-gray); font-size: 0.6em; font-weight: 700; margin-left: 0.3rem; }
+  .hero__desc { color: var(--val-gray); font-size: 0.9rem; margin-top: 0.6rem; max-width: 40em; }
+  .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.9rem; }
+  @media (max-width: 768px) {
+    .hero { flex-direction: column-reverse; text-align: center; }
+  }
+</style>
