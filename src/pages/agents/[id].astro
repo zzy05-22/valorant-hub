@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SkillPanel from '../../components/SkillPanel.astro';
 import agentsData from '../../data/agents.json';
+import LineupPanel from '../../components/LineupPanel.astro';
 
 export function getStaticPaths() {
   return agentsData.agents.map((agent) => ({
@@ -30,6 +31,8 @@ const portrait = agent.fullPortrait || agent.displayIcon;
     <div class="skills">
       {agent.abilities.map((ab) => <SkillPanel ability={ab} />)}
     </div>
+    <h2>道具点位</h2>
+    <LineupPanel mode="agent" focusId={agent.id} />
     <p class="data-meta">技能数值暂以官方描述呈现 · 数据版本 {agentsData.version}</p>
   </main>
 </BaseLayout>

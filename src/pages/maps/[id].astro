@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import mapsData from '../../data/maps.json';
 import { getCollection, render as renderGuide } from 'astro:content';
+import LineupPanel from '../../components/LineupPanel.astro';
 
 export function getStaticPaths() {
   return mapsData.maps.map((map) => ({ params: { id: map.id }, props: { map } }));
@@ -27,11 +28,13 @@ const GuideContent = guideEntry ? (await renderGuide(guideEntry)).Content : null
     {map.zh.tacticalDescription && <p class="m-text">{map.zh.tacticalDescription}</p>}
     {map.zh.description && <h2>背景设定</h2>}
     {map.zh.description && <p class="m-text">{map.zh.description}</p>}
-    <h2>点位攻略</h2>
+    <h2>点位图示</h2>
+    <LineupPanel mode="map" focusId={map.id} />
+    <h2>攻防思路</h2>
     {GuideContent ? (
       <article class="prose m-guide"><GuideContent /></article>
     ) : (
-      <p class="m-text">社区点位攻略编写中，本页先呈现官方战术图与设定。想抢先用图？记住两条原则：进攻方看包点入口有哪些掩体，防守方看回防路线要几秒。</p>
+      <p class="m-text">社区攻防思路编写中，本页先呈现官方战术图与点位图示。</p>
     )}
     <p class="data-meta">数据版本 {mapsData.version}</p>
   </main>
