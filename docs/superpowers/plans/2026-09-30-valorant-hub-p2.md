@@ -22,7 +22,7 @@
 
 ## 关键背景（给零上下文的执行者）
 
-- **岛屿技术（定稿）**：不用 React/Vue。数据传递用 JSON script 标签：`<script type="application/json" id="page-data">{JSON.stringify(data)}</script>`（服务端序列化，Astro 对非 JS 类型 script 原样输出）；行为脚本用打包 `<script>`（支持 import TS 模块），运行时 `JSON.parse` 读数据。**关键约束：打包 script 与 frontmatter 变量引用互斥**——打包后的 script 作用域里没有 frontmatter 变量，也不可用 define:vars（会强制内联导致 import 失效）。纯逻辑提取到 `src/utils/*.ts`（vitest 单测），页面 script 只做 import + DOM 绑定
+- **岛屿技术（定稿）**：不用 React/Vue。数据传递用 JSON script 标签 + **set:html 指令**：`<script type="application/json" id="page-data" set:html={JSON.stringify(data)} />`——注意 Astro 把 script 标签内容视为 raw text，`{}` 模板表达式在 script 内不求值，必须用 set:html 在服务端求值后注入；行为脚本用打包 `<script>`（支持 import TS 模块），运行时 `JSON.parse` 读数据。**关键约束：打包 script 与 frontmatter 变量引用互斥**——打包后的 script 作用域里没有 frontmatter 变量，也不可用 define:vars（会强制内联导致 import 失效）。纯逻辑提取到 `src/utils/*.ts`（vitest 单测），页面 script 只做 import + DOM 绑定
 - **数据瘦身**：注入客户端的数据只保留必要字段（名/角色/图标/数值），不注入全量 JSON
 - **阵容角色名约定**：`src/data/agents.json` 的 `zh.role` 实测值为「决斗 / 先锋 / 控场 / 哨卫」（API 数据即真相）——`lineup.ts` 的第 5 席优先补决斗逻辑依赖此值，代码中注释说明
 - **对比工具形态（YAGNI 定稿）**：并排对比卡（价格/射速/穿透/弹匣 + 各射程段伤害表），不做图表曲线
@@ -219,7 +219,7 @@ const compareWeapons = toCompareWeapons(weaponsData.weapons as never);
       <p class="page-sub" id="hint">在上方勾选武器开始对比</p>
     </div>
   </main>
-<script type="application/json" id="page-data">{JSON.stringify(compareWeapons)}</script>
+<script type="application/json" id="page-data" set:html={JSON.stringify(compareWeapons)} />
 
 <script>
   import { pickCompareWeapons, type CompareWeapon } from '../../utils/compare';
@@ -448,7 +448,7 @@ const lineAgents = agentsData.agents.map((a) => ({
     </div>
     <p class="data-meta">推荐为角色平衡的通用组合，具体选人请结合队友熟练度与地图特点</p>
   </main>
-<script type="application/json" id="page-data">{JSON.stringify(lineAgents)}</script>
+<script type="application/json" id="page-data" set:html={JSON.stringify(lineAgents)} />
 
 <script>
   import { buildLineup, type LineupAgent } from '../../utils/lineup';
@@ -628,7 +628,7 @@ const entities: SearchEntity[] = [
       <li class="page-sub" id="hint">输入关键词开始搜索</li>
     </ul>
   </main>
-<script type="application/json" id="page-data">{JSON.stringify(entities)}</script>
+<script type="application/json" id="page-data" set:html={JSON.stringify(entities)} />
 
 <script>
   import { searchEntities, type SearchEntity } from '../utils/search';
