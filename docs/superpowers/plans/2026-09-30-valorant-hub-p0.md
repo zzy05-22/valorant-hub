@@ -791,7 +791,7 @@ export function transformWeapons(zhList, enList) {
 - [ ] **Step 4: 跑测试确认通过**
 
 Run: `pnpm vitest run tests/transform.test.ts`
-Expected: PASS（9 个用例全绿）
+Expected: PASS（8 个用例全绿：slugify 1 + transformAgents 4 + transformWeapons 3）
 
 - [ ] **Step 5: Commit**
 
@@ -935,7 +935,7 @@ Expected: PASS（7 个用例全绿）
 - [ ] **Step 5: 跑全量测试确认无回归**
 
 Run: `pnpm test`
-Expected: 23 个用例全绿（api 7 + transform 9 + validate 7）
+Expected: 22 个用例全绿（api 7 + transform 8 + validate 7）
 
 - [ ] **Step 6: Commit**
 
@@ -1926,7 +1926,7 @@ Expected: ≥ 1（BaseLayout 的 canonical 标签）
 - [ ] **Step 3: 全量测试无回归**
 
 Run: `pnpm test`
-Expected: 全部通过（api 7 + transform 9 + validate 7 + AgentCard 2 + WeaponCard 3 = 28 用例）
+Expected: 全部通过（api 7 + transform 8 + validate 7 + AgentCard 2 + WeaponCard 3 = 27 用例）
 
 - [ ] **Step 4: Lighthouse 自查（手动，Chrome DevTools → Lighthouse → SEO + Performance）**
 
@@ -2155,7 +2155,7 @@ git commit -m "ci: push 校验与每日自动数据同步（spec P0 必选）"
 - [ ] **Step 2: 最终全量验证**
 
 Run: `pnpm lint && pnpm test && pnpm build && pnpm e2e`
-Expected: 全部通过（lint 0 错、28 单测全绿、构建成功、4 条 E2E 通过）
+Expected: 全部通过（lint 0 错、27 单测全绿、构建成功、4 条 E2E 通过）
 
 - [ ] **Step 3: Commit**
 
