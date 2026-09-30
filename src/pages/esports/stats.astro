@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import esportsStats from '../../data/esports-stats.json';
+
+const players = esportsStats.players.slice(0, 20);
+const teams = esportsStats.teams.slice(0, 10);
+---
+<BaseLayout title="冠军赛数据榜｜无畏契约资料站" description="VCT 选手数据榜与战队排名：Rating、ACS、击杀与战队 TOP 榜，数据来源 vlr.gg 每日更新">
+  <main class="container section" style="position:relative">
+    <div class="noise-layer"></div>
+    <div class="label-cut">Esports Stats</div>
+    <h1>冠军赛数据榜</h1>
+    <p class="page-sub">数据来源 vlr.gg · 每日 11:00 自动更新 · {esportsStats.syncedAt.slice(0, 10)} 同步</p>
+
+    <section class="role-group">
+      <h2>选手榜 TOP 20</h2>
+      {players.length ? (
+        <div class="card-cut tablewrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>选手</th><th>战队</th><th>地图</th><th>Rating</th><th>ACS</th><th>击杀</th><th>死亡</th><th>K:D</th><th>KAST</th><th>ADR</th></tr>
+            </thead>
+            <tbody>
+              {players.map((p, i) => (
+                <tr>
+                  <td class="rank">{i + 1}</td>
+                  <td><b>{p.name}</b></td>
+                  <td class="team">{p.team}</td>
+                  <td>{p.maps}</td>
+                  <td class="hl">{p.rating}</td>
+                  <td>{p.acs}</td>
+                  <td>{p.kills}</td>
+                  <td>{p.deaths}</td>
+                  <td>{p.kd}</td>
+                  <td>{p.kast}</td>
+                  <td>{p.adr}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p class="m-text">电竞数据整理中，稍后更新。</p>
+      )}
+    </section>
+
+    <section class="role-group">
+      <h2>战队排名 TOP 10</h2>
+      {teams.length ? (
+        <div class="card-cut tablewrap">
+          <table>
+            <thead><tr><th>#</th><th>战队</th><th>赛区</th></tr></thead>
+            <tbody>
+              {teams.map((t) => (
+                <tr><td class="rank">{t.rank}</td><td><b>{t.name}</b></td><td class="team">{t.region}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p class="m-text">战队排名整理中，稍后更新。</p>
+      )}
+    </section>
+    <p class="data-meta">数据从 vlr.gg 抓取并每日自动同步，仅供学习交流；数据解释权归 vlr.gg 与赛事官方所有</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .tablewrap { border-radius: 16px; padding: .8rem; overflow-x: auto; position: relative; z-index: 2; }
+  table { min-width: 640px; }
+  .rank { color: var(--val-gray); font-weight: 800; }
+  tr:first-child .rank, td.rank:first-child { color: var(--val-red); }
+  .team { color: #00E5B0; font-size: .78rem; font-weight: 700; }
+  .hl { color: var(--val-red); font-weight: 800; }
+</style>
