@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import agentsData from '../data/agents.json';
+import mapsData from '../data/maps.json';
+
+const maps = mapsData.maps.map((m) => ({
+  id: m.id,
+  name: m.zh.name !== m.en.name ? `${m.zh.name} ${m.en.name}` : m.en.name,
+  icon: m.displayIcon,
+}));
+const agents = agentsData.agents.map((a) => ({
+  id: a.id,
+  name: a.zh.name !== a.en.name ? `${a.zh.name} ${a.en.name}` : a.en.name,
+}));
+const firstIconed = maps.find((m) => m.icon)?.icon || '/favicon.svg';
+---
+<BaseLayout title="点位标注工具｜无畏契约资料站" description="点击战术图生成点位坐标与 JSON 数据，用于补充站点道具点位">
+  <main class="container section">
+    <div class="label-cut">Lineup Tool</div>
+    <h1>点位标注工具</h1>
+    <p class="page-sub">选地图 → 点击战术图上的点位位置 → 填写信息 → 复制 JSON 粘贴到 src/content/lineups/ 对应地图文件 → commit 推送上站</p>
+    <div class="chips" id="map-picker">
+      {maps.map((m) => (
+        <button class="chip-btn" data-id={m.id} data-icon={m.icon}>{m.name}</button>
+      ))}
+    </div>
+    <div class="tool-grid">
+      <div class="stage">
+        <img id="tactic-map" src={firstIconed} alt="战术图" />
+        <span id="preview-dot"></span>
+        <p class="page-sub" id="coord-hint">在图上点击任意位置开始标注</p>
+      </div>
+      <div class="form">
+        <label class="f-row">特工
+          <select id="f-agent">{agents.map((a) => <option value={a.id}>{a.name}</option>)}</select>
+        </label>
+        <label class="f-row">技能
+          <select id="f-ability">
+            <option value="C">C 技能</option>
+            <option value="Q">Q 技能</option>
+            <option value="E">E 技能</option>
+            <option value="X">大招 X</option>
+            <option value="被动">被动</option>
+          </select>
+        </label>
+        <label class="f-row">阵营
+          <select id="f-side">
+            <option value="进攻">进攻</option>
+            <option value="防守">防守</option>
+          </select>
+        </label>
+        <label class="f-row">点位名称
+          <input id="f-label" type="text" placeholder="如：A 主道封口墙" />
+        </label>
+        <label class="f-row">用法说明
+          <textarea id="f-note" rows="3" placeholder="站位、时机、配合…"></textarea>
+        </label>
+        <button type="button" class="btn btn-primary" id="gen">生成 JSON</button>
+        <textarea id="output" rows="5" readonly placeholder="生成的 JSON 会出现在这里"></textarea>
+        <button type="button" class="btn btn-ghost" id="copy">复制</button>
+      </div>
+    </div>
+    <p class="data-meta">坐标为图上百分比位置（保留一位小数）；骨架点位的 x/y 为占位值，标注后替换即可</p>
+    <script type="application/json" id="tool-data" set:html={JSON.stringify({ maps })} />
+  </main>
+</BaseLayout>
+
+<script>
+  const dataEl = document.getElementById('tool-data');
+  if (dataEl) {
+    const { maps } = JSON.parse(dataEl.textContent || '{}') as {
+      maps: Array<{ id: string; name: string; icon: string }>;
+    };
+    const mapImg = document.getElementById('tactic-map') as HTMLImageElement;
+    const dot = document.getElementById('preview-dot') as HTMLElement;
+    const hint = document.getElementById('coord-hint') as HTMLElement;
+    const btns = document.querySelectorAll<HTMLButtonElement>('#map-picker .chip-btn');
+    let x = 50;
+    let y = 50;
+
+    function selectMap(id: string) {
+      const m = maps.find((mm) => mm.id === id);
+      if (m?.icon) mapImg.src = m.icon;
+      dot.style.display = 'none';
+      hint.textContent = '在图上点击任意位置开始标注';
+      btns.forEach((b) => b.classList.toggle('chip-btn--active', b.dataset.id === id));
+    }
+    btns.forEach((b) => b.addEventListener('click', () => selectMap(b.dataset.id || '')));
+    btns[0]?.click();
+
+    mapImg.addEventListener('click', (e) => {
+      const rect = mapImg.getBoundingClientRect();
+      x = Math.round(((e.clientX - rect.left) / rect.width) * 1000) / 10;
+      y = Math.round(((e.clientY - rect.top) / rect.height) * 1000) / 10;
+      dot.style.display = '';
+      dot.style.left = `${x}%`;
+      dot.style.top = `${y}%`;
+      hint.textContent = `当前坐标：x=${x}, y=${y}`;
+    });
+
+    const agentSel = document.getElementById('f-agent') as HTMLSelectElement;
+    const abilitySel = document.getElementById('f-ability') as HTMLSelectElement;
+    const sideSel = document.getElementById('f-side') as HTMLSelectElement;
+    const labelInput = document.getElementById('f-label') as HTMLInputElement;
+    const noteInput = document.getElementById('f-note') as HTMLTextAreaElement;
+    const output = document.getElementById('output') as HTMLTextAreaElement;
+    const copyBtn = document.getElementById('copy') as HTMLButtonElement;
+
+    document.getElementById('gen')!.addEventListener('click', () => {
+      const spot = {
+        agentId: agentSel.value,
+        ability: abilitySel.value,
+        label: labelInput.value || '待命名点位',
+        x,
+        y,
+        side: sideSel.value,
+        note: noteInput.value || '待补充说明',
+      };
+      output.value = JSON.stringify(spot);
+      output.select();
+    });
+
+    copyBtn.addEventListener('click', async () => {
+      await navigator.clipboard.writeText(output.value);
+      copyBtn.textContent = '已复制';
+      setTimeout(() => { copyBtn.textContent = '复制'; }, 1200);
+    });
+  }
+</script>
+
+<style>
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1rem 0 1.2rem; }
+  .chip-btn {
+    background: rgba(236, 232, 225, 0.06); color: var(--val-cream);
+    font-family: inherit; font-size: 0.72rem; font-weight: 700; cursor: pointer;
+    padding: 0.3rem 0.6rem; box-shadow: inset 0 0 0 1px var(--val-line);
+    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+  }
+  .chip-btn:hover { box-shadow: inset 0 0 0 1px var(--val-red); }
+  .chip-btn--active { background: var(--val-red); color: #fff; }
+  .tool-grid { display: grid; grid-template-columns: minmax(300px, 1fr) minmax(280px, 1fr); gap: 1.5rem; align-items: start; }
+  .stage { position: relative; }
+  .stage img { width: 100%; display: block; cursor: crosshair; box-shadow: inset 0 0 0 1px var(--val-line); }
+  .stage .page-sub { margin-top: 0.5rem; }
+  .stage span {
+    position: absolute; width: 12px; height: 12px; border-radius: 50%;
+    background: var(--val-red); box-shadow: 0 0 0 2px rgba(236,232,225,.8), 0 0 10px rgba(255,70,85,.9);
+    transform: translate(-50%, -50%); display: none; pointer-events: none;
+  }
+  .form { display: grid; gap: 0.75rem; }
+  .f-row { display: grid; gap: 0.25rem; font-size: 0.8rem; color: var(--val-gray); font-weight: 700; }
+  .f-row select, .f-row input, .f-row textarea {
+    background: rgba(236, 232, 225, 0.06); color: var(--val-cream);
+    font-family: inherit; font-size: 0.85rem; padding: 0.5rem 0.6rem;
+    box-shadow: inset 0 0 0 1px var(--val-line); outline: none; border: none;
+  }
+  .f-row select:focus, .f-row input:focus, .f-row textarea:focus { box-shadow: inset 0 0 0 1px var(--val-red); }
+  .form textarea {
+    background: rgba(236, 232, 225, 0.04); color: var(--val-cream);
+    font-family: ui-monospace, monospace; font-size: 0.78rem; padding: 0.6rem;
+    box-shadow: inset 0 0 0 1px var(--val-line); border: none; outline: none; width: 100%;
+  }
+  @media (max-width: 768px) { .tool-grid { grid-template-columns: 1fr; } }
+</style>
