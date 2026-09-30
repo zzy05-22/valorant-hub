@@ -19,8 +19,9 @@ const { map } = Astro.props;
 
 <style>
   .map-card { display: block; padding: 1rem; text-align: center; }
-  .map-card:hover { box-shadow: inset 0 0 0 1px var(--val-red); }
-  .map-card img { width: 100%; aspect-ratio: 1 / 0.625; object-fit: cover; margin-bottom: 0.5rem; }
+  .map-card:hover { box-shadow: inset 0 0 0 1px var(--val-red); transform: translateY(-3px); }
+  .map-card img { width: 100%; aspect-ratio: 1 / 0.625; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.25s ease; }
+  .map-card:hover img { transform: scale(1.05); }
   .map-card__name { font-weight: 800; }
   .map-card__sub { font-size: 0.75rem; color: var(--val-gray); }
 </style>

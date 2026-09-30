@@ -64,3 +64,25 @@ h2 { font-size: 1.3rem; margin-bottom: 0.75rem; }
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 0.5rem; }
 th, td { text-align: left; padding: 0.55rem 0.75rem; box-shadow: inset 0 -1px 0 var(--val-line); }
 th { color: var(--val-gray); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; }
+
+/* ===== P5 视觉质感系统 ===== */
+/* 区块标题装饰：红色菱形（排除 article 内标题避免对比卡重复装饰） */
+main > h2::before, main section > h2::before {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--val-red);
+  transform: rotate(45deg);
+  margin-right: 0.55rem;
+  vertical-align: 1px;
+}
+/* 卡片动效基础（配合各卡片 hover 描边升级） */
+.card-cut { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+/* 按钮反馈 */
+.btn { transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease; }
+.btn:hover { transform: translateY(-1px); }
+/* 区块交替底色（首页隔行区块使用） */
+.section-alt {
+  background: rgba(236, 232, 225, 0.02);
+  box-shadow: inset 0 1px 0 var(--val-line), inset 0 -1px 0 var(--val-line);
+}

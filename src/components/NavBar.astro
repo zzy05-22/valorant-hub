@@ -7,12 +7,16 @@ const items = [
   { href: '/esports/', label: '资讯' },
   { href: '/search/', label: '搜索' },
 ];
+const path = Astro.url.pathname;
+const isActive = (href: string) => path === href || path.startsWith(href);
 ---
 <header class="nav">
   <div class="container nav__inner">
     <a class="nav__logo" href="/">VALORANT <span>资料站</span></a>
     <nav class="nav__links">
-      {items.map((i) => <a href={i.href}>{i.label}</a>)}
+      {items.map((i) => (
+        <a href={i.href} class:list={[{ 'nav__link--active': isActive(i.href) }]}>{i.label}</a>
+      ))}
     </nav>
   </div>
 </header>
@@ -31,4 +35,5 @@ const items = [
   .nav__logo span { color: var(--val-cream); font-weight: 700; font-size: 0.85rem; margin-left: 0.2rem; }
   .nav__links { display: flex; gap: 1.25rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; }
   .nav__links a:hover { color: var(--val-red); }
+  .nav__links a.nav__link--active { color: var(--val-cream); box-shadow: inset 0 -2px 0 var(--val-red); }
 </style>
