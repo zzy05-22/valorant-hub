@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import agentsData from '../data/agents.json';
+import weaponsData from '../data/weapons.json';
+import mapsData from '../data/maps.json';
+import type { SearchEntity } from '../utils/search';
+import { getCollection } from 'astro:content';
+
+const guides = await getCollection('guides', ({ data }) => !data.draft);
+const patchNotes = await getCollection('patchNotes', ({ data }) => !data.draft);
+const esports = await getCollection('esports', ({ data }) => !data.draft);
+
+const entities: SearchEntity[] = [
+  ...agentsData.agents.map((a) => ({ type: '特工', title: a.zh.name, sub: a.en.name, url: `/agents/${a.id}/` })),
+  ...weaponsData.weapons.map((w) => ({
+    type: '武器', title: w.zh.name !== w.en.name ? `${w.zh.name} ${w.en.name}` : w.en.name,
+    sub: w.zh.category || '其他', url: `/weapons/${w.id}/`,
+  })),
+  ...mapsData.maps.map((m) => ({ type: '地图', title: m.zh.name, sub: m.en.name, url: `/maps/${m.id}/` })),
+  ...guides.map((g) => ({ type: '教学', title: g.data.title, sub: g.data.category, url: `/guides/${g.id}/` })),
+  ...patchNotes.map((n) => ({ type: '版本资讯', title: n.data.title, sub: n.data.patchVersion, url: `/patch-notes/${n.id}/` })),
+  ...esports.map((p) => ({ type: '电竞资讯', title: p.data.title, sub: p.data.type, url: `/esports/${p.id}/` })),
+];
+---
+<BaseLayout title="全站搜索｜无畏契约资料站" description="搜索特工、武器、地图与攻略文章">
+  <main class="container section">
+    <div class="label-cut">Search</div>
+    <h1>全站搜索</h1>
+    <p class="page-sub">{entities.length} 个条目 · 支持中文名与英文名</p>
+    <input
+      id="q"
+      class="search-input"
+      type="search"
+      placeholder="搜索特工、武器、地图、攻略…"
+      autocomplete="off"
+    />
+    <ul class="search-list" id="result">
+      <li class="page-sub" id="hint">输入关键词开始搜索</li>
+    </ul>
+  </main>
+</BaseLayout>
+
+<script>
+  import { searchEntities, type SearchEntity } from '../utils/search';
+
+  const all = entities as unknown as SearchEntity[];
+  const input = document.getElementById('q') as HTMLInputElement;
+  const result = document.getElementById('result') as HTMLElement;
+
+  function render() {
+    const hits = searchEntities(all, input.value);
+    if (!input.value.trim()) {
+      result.innerHTML = '<li class="page-sub" id="hint">输入关键词开始搜索</li>';
+      return;
+    }
+    if (!hits.length) {
+      result.innerHTML = '<li class="page-sub">没有找到相关内容，换个关键词试试</li>';
+      return;
+    }
+    result.innerHTML = hits.map((e) => `
+      <li class="card-cut search-result">
+        <span class="search-result__type">${e.type}</span>
+        <a class="search-result__title" href="${e.url}">${e.title}</a>
+        <span class="search-result__sub">${e.sub}</span>
+      </li>
+    `).join('');
+  }
+
+  input.addEventListener('input', render);
+</script>
+
+<style>
+  .search-input {
+    width: 100%; max-width: 560px;
+    margin: 1.2rem 0 1.6rem;
+    padding: 0.7rem 1rem;
+    background: rgba(236, 232, 225, 0.06);
+    box-shadow: inset 0 0 0 1px var(--val-line);
+    color: var(--val-cream);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+  }
+  .search-input:focus { box-shadow: inset 0 0 0 1px var(--val-red); }
+  .search-list { list-style: none; display: grid; gap: 0.6rem; }
+  .search-result { display: flex; align-items: center; gap: 0.8rem; padding: 0.75rem 1rem; }
+  .search-result__type { font-size: 0.7rem; color: var(--val-red); font-weight: 800; white-space: nowrap; }
+  .search-result__title { font-weight: 700; }
+  .search-result__title:hover { color: var(--val-red); }
+  .search-result__sub { font-size: 0.75rem; color: var(--val-gray); }
+</style>
