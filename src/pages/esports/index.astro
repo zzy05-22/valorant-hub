@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('esports', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+<BaseLayout title="电竞资讯｜无畏契约资料站" description="VCT 赛事体系导读、观赛指南与赛事资讯">
+  <main class="container section">
+    <div class="label-cut">Esports</div>
+    <h1>电竞资讯</h1>
+    <p class="page-sub">赛事科普 · 观赛指南 · 赛程资讯</p>
+    <ul class="note-list">
+      {posts.map((p) => (
+        <li class="card-cut note-item">
+          <a class="note-item__title" href={`/esports/${p.id}/`}>{p.data.title}</a>
+          <p class="note-item__meta">{p.data.type} · {p.data.publishDate.toLocaleDateString('zh-CN')}</p>
+          <p class="note-item__excerpt">{p.data.excerpt}</p>
+        </li>
+      ))}
+    </ul>
+  </main>
+</BaseLayout>
+
+<style>
+  .note-list { list-style: none; display: grid; gap: 0.75rem; }
+  .note-item { padding: 1rem 1.2rem; }
+  .note-item__title { font-weight: 800; }
+  .note-item__title:hover { color: var(--val-red); }
+  .note-item__meta { color: var(--val-red); font-size: 0.75rem; margin-top: 0.25rem; }
+  .note-item__excerpt { color: var(--val-gray); font-size: 0.85rem; margin-top: 0.25rem; }
+</style>
