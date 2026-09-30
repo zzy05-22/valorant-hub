@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AgentCard from '../components/AgentCard.astro';
+import agentsData from '../data/agents.json';
+import { getCollection } from 'astro:content';
+
+const featuredAgents = agentsData.agents.slice(0, 6);
+const guides = (await getCollection('guides', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 3);
+---
+<BaseLayout title="无畏契约中文资料站｜特工 · 武器 · 教学" description="无畏契约中文资料站：特工图鉴、武器数据、新手教学，数据跟随版本自动更新">
+  <main>
+    <section class="hero container">
+      <div class="label-cut">Defy the Limits · 无畏契约</div>
+      <h1>在这里，<span class="hl">精准</span>即是艺术</h1>
+      <p class="subtitle">特工图鉴 · 武器参数 · 新手教学</p>
+      <div class="hero__cta">
+        <a class="btn btn-primary" href="/agents/">浏览特工</a>
+        <a class="btn btn-ghost" href="/guides/">新手教学</a>
+      </div>
+    </section>
+    <section class="container section-block">
+      <h2>热门特工</h2>
+      <div class="grid">
+        {featuredAgents.map((a) => <AgentCard agent={a} />)}
+      </div>
+      <p class="more"><a href="/agents/">查看全部特工 →</a></p>
+    </section>
+    <section class="container section-block">
+      <h2>最新教学</h2>
+      <ul class="guide-list">
+        {guides.map((g) => (
+          <li class="card-cut guide-item">
+            <a class="guide-item__title" href={`/guides/${g.id}/`}>{g.data.title}</a>
+            <p class="guide-item__excerpt">{g.data.excerpt}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="more"><a href="/guides/">全部教学 →</a></p>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero { padding: 5rem 1.5rem 3.5rem; max-width: 1080px; }
+  .hero h1 { max-width: 12em; }
+  .hl { color: var(--val-red); }
+  .hero__cta { display: flex; gap: 0.9rem; margin-top: 1.6rem; }
+  .section-block { padding-bottom: 3rem; }
+  .more { margin-top: 1rem; font-weight: 700; font-size: 0.85rem; }
+  .more a { color: var(--val-gray); }
+  .more a:hover { color: var(--val-red); }
+  .guide-list { list-style: none; display: grid; gap: 0.75rem; }
+  .guide-item { padding: 1rem 1.2rem; }
+  .guide-item__title { font-weight: 800; }
+  .guide-item__title:hover { color: var(--val-red); }
+  .guide-item__excerpt { color: var(--val-gray); font-size: 0.85rem; margin-top: 0.25rem; }
+</style>
