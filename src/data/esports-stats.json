@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-02T09:02:46.497Z",
+  "syncedAt": "2026-10-03T08:35:29.602Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -327,16 +327,16 @@
     {
       "name": "xavi8k",
       "team": "GE",
-      "maps": 22,
-      "rounds": 475,
+      "maps": 24,
+      "rounds": 512,
       "rating": 1.13,
       "acs": 205,
       "kd": 1.12,
-      "kast": "72%",
-      "adr": 134.3,
-      "kills": 347,
-      "deaths": 311,
-      "assists": 171
+      "kast": "73%",
+      "adr": 134.2,
+      "kills": 373,
+      "deaths": 332,
+      "assists": 181
     },
     {
       "name": "Alfajer",
@@ -619,18 +619,18 @@
       "assists": 75
     },
     {
-      "name": "iZu",
-      "team": "T1",
-      "maps": 20,
-      "rounds": 411,
+      "name": "PatMen",
+      "team": "GE",
+      "maps": 24,
+      "rounds": 512,
       "rating": 1.1,
-      "acs": 189,
-      "kd": 1.12,
-      "kast": "76%",
-      "adr": 125.4,
-      "kills": 278,
-      "deaths": 249,
-      "assists": 109
+      "acs": 224,
+      "kd": 1.11,
+      "kast": "74%",
+      "adr": 146,
+      "kills": 405,
+      "deaths": 364,
+      "assists": 151
     },
     {
       "name": "lovers",
@@ -715,20 +715,6 @@
       "kills": 280,
       "deaths": 249,
       "assists": 89
-    },
-    {
-      "name": "PatMen",
-      "team": "GE",
-      "maps": 22,
-      "rounds": 475,
-      "rating": 1.09,
-      "acs": 221,
-      "kd": 1.09,
-      "kast": "73%",
-      "adr": 144.3,
-      "kills": 371,
-      "deaths": 340,
-      "assists": 136
     },
     {
       "name": "runneR",
@@ -941,6 +927,20 @@
       "assists": 56
     },
     {
+      "name": "iZu",
+      "team": "T1",
+      "maps": 23,
+      "rounds": 469,
+      "rating": 1.07,
+      "acs": 184,
+      "kd": 1.07,
+      "kast": "76%",
+      "adr": 122.4,
+      "kills": 306,
+      "deaths": 287,
+      "assists": 124
+    },
+    {
       "name": "Sayonara",
       "team": "VIT",
       "maps": 11,
@@ -1011,6 +1011,20 @@
       "assists": 28
     },
     {
+      "name": "Kr1stal",
+      "team": "GE",
+      "maps": 24,
+      "rounds": 512,
+      "rating": 1.06,
+      "acs": 189,
+      "kd": 1.01,
+      "kast": "77%",
+      "adr": 129.9,
+      "kills": 333,
+      "deaths": 330,
+      "assists": 158
+    },
+    {
       "name": "Killua",
       "team": "FS",
       "maps": 13,
@@ -1023,20 +1037,6 @@
       "kills": 179,
       "deaths": 179,
       "assists": 108
-    },
-    {
-      "name": "CHICHOO",
-      "team": "EDG",
-      "maps": 10,
-      "rounds": 212,
-      "rating": 1.06,
-      "acs": 210,
-      "kd": 1.05,
-      "kast": "66%",
-      "adr": 143.5,
-      "kills": 153,
-      "deaths": 146,
-      "assists": 58
     },
     {
       "name": "dos9",
@@ -1263,18 +1263,18 @@
       "assists": 25
     },
     {
-      "name": "Kr1stal",
+      "name": "UdoTan",
       "team": "GE",
-      "maps": 22,
-      "rounds": 475,
+      "maps": 24,
+      "rounds": 512,
       "rating": 1.04,
-      "acs": 185,
-      "kd": 0.96,
-      "kast": "77%",
-      "adr": 128.3,
-      "kills": 298,
-      "deaths": 312,
-      "assists": 147
+      "acs": 229,
+      "kd": 1.09,
+      "kast": "71%",
+      "adr": 148.8,
+      "kills": 410,
+      "deaths": 376,
+      "assists": 100
     },
     {
       "name": "leaf",
@@ -1484,12 +1484,12 @@
     },
     {
       "rank": 5,
-      "name": "MIBR Academy",
+      "name": "FURIA",
       "region": "Brazil"
     },
     {
       "rank": 6,
-      "name": "FURIA",
+      "name": "MIBR Academy",
       "region": "Brazil"
     },
     {
@@ -1499,12 +1499,12 @@
     },
     {
       "rank": 8,
-      "name": "ELEVATE",
+      "name": "Arashi",
       "region": "Brazil"
     },
     {
       "rank": 9,
-      "name": "Arashi",
+      "name": "ELEVATE",
       "region": "Brazil"
     },
     {
