@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-04T08:52:28.765Z",
+  "syncedAt": "2026-10-05T09:38:39.302Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -157,6 +157,20 @@
       "assists": 69
     },
     {
+      "name": "Ying",
+      "team": "KBG",
+      "maps": 13,
+      "rounds": 300,
+      "rating": 1.18,
+      "acs": 229,
+      "kd": 1.06,
+      "kast": "61%",
+      "adr": 156.2,
+      "kills": 232,
+      "deaths": 218,
+      "assists": 91
+    },
+    {
       "name": "kamo",
       "team": "TL",
       "maps": 24,
@@ -201,16 +215,16 @@
     {
       "name": "lukxo",
       "team": "LOUD",
-      "maps": 27,
-      "rounds": 574,
+      "maps": 29,
+      "rounds": 617,
       "rating": 1.16,
       "acs": 234,
       "kd": 1.3,
-      "kast": "70%",
-      "adr": 152.1,
-      "kills": 493,
-      "deaths": 380,
-      "assists": 59
+      "kast": "71%",
+      "adr": 152.7,
+      "kills": 530,
+      "deaths": 408,
+      "assists": 68
     },
     {
       "name": "vo0kashu",
@@ -227,20 +241,6 @@
       "assists": 38
     },
     {
-      "name": "AAAAY",
-      "team": "FPX",
-      "maps": 18,
-      "rounds": 373,
-      "rating": 1.15,
-      "acs": 202,
-      "kd": 1.1,
-      "kast": "74%",
-      "adr": 153.6,
-      "kills": 274,
-      "deaths": 249,
-      "assists": 83
-    },
-    {
       "name": "Shyy",
       "team": "FUR",
       "maps": 16,
@@ -253,6 +253,20 @@
       "kills": 251,
       "deaths": 211,
       "assists": 78
+    },
+    {
+      "name": "erde",
+      "team": "LOUD",
+      "maps": 29,
+      "rounds": 617,
+      "rating": 1.15,
+      "acs": 213,
+      "kd": 1.19,
+      "kast": "74%",
+      "adr": 137.4,
+      "kills": 463,
+      "deaths": 389,
+      "assists": 227
     },
     {
       "name": "Ray",
@@ -283,18 +297,18 @@
       "assists": 69
     },
     {
-      "name": "xavi8k",
-      "team": "GE",
-      "maps": 24,
-      "rounds": 512,
-      "rating": 1.13,
-      "acs": 205,
-      "kd": 1.12,
-      "kast": "73%",
-      "adr": 134.2,
-      "kills": 373,
-      "deaths": 332,
-      "assists": 181
+      "name": "AAAAY",
+      "team": "FPX",
+      "maps": 15,
+      "rounds": 315,
+      "rating": 1.14,
+      "acs": 200,
+      "kd": 1.07,
+      "kast": "71%",
+      "adr": 161.9,
+      "kills": 228,
+      "deaths": 214,
+      "assists": 69
     },
     {
       "name": "Alfajer",
@@ -395,6 +409,20 @@
       "assists": 151
     },
     {
+      "name": "xavi8k",
+      "team": "GE",
+      "maps": 26,
+      "rounds": 555,
+      "rating": 1.12,
+      "acs": 203,
+      "kd": 1.1,
+      "kast": "71%",
+      "adr": 133.1,
+      "kills": 398,
+      "deaths": 363,
+      "assists": 194
+    },
+    {
       "name": "waddle",
       "team": "",
       "maps": 5,
@@ -407,20 +435,6 @@
       "kills": 81,
       "deaths": 70,
       "assists": 32
-    },
-    {
-      "name": "erde",
-      "team": "LOUD",
-      "maps": 27,
-      "rounds": 574,
-      "rating": 1.12,
-      "acs": 207,
-      "kd": 1.14,
-      "kast": "73%",
-      "adr": 134.8,
-      "kills": 417,
-      "deaths": 366,
-      "assists": 212
     },
     {
       "name": "Asuna",
@@ -479,6 +493,20 @@
       "assists": 34
     },
     {
+      "name": "PatMen",
+      "team": "GE",
+      "maps": 26,
+      "rounds": 555,
+      "rating": 1.11,
+      "acs": 227,
+      "kd": 1.13,
+      "kast": "74%",
+      "adr": 147.7,
+      "kills": 450,
+      "deaths": 397,
+      "assists": 156
+    },
+    {
       "name": "f4ngeer",
       "team": "AG",
       "maps": 16,
@@ -507,18 +535,18 @@
       "assists": 48
     },
     {
-      "name": "s0pp",
-      "team": "FUT",
-      "maps": 18,
-      "rounds": 378,
+      "name": "iZu",
+      "team": "T1",
+      "maps": 25,
+      "rounds": 515,
       "rating": 1.11,
-      "acs": 239,
-      "kd": 1.24,
-      "kast": "72%",
-      "adr": 153.2,
-      "kills": 324,
-      "deaths": 262,
-      "assists": 67
+      "acs": 191,
+      "kd": 1.12,
+      "kast": "77%",
+      "adr": 127.9,
+      "kills": 352,
+      "deaths": 314,
+      "assists": 136
     },
     {
       "name": "endoist",
@@ -533,6 +561,20 @@
       "kills": 94,
       "deaths": 81,
       "assists": 21
+    },
+    {
+      "name": "Tonk",
+      "team": "KBG",
+      "maps": 13,
+      "rounds": 300,
+      "rating": 1.11,
+      "acs": 211,
+      "kd": 1.18,
+      "kast": "64%",
+      "adr": 165,
+      "kills": 234,
+      "deaths": 198,
+      "assists": 65
     },
     {
       "name": "nAts",
@@ -579,16 +621,16 @@
     {
       "name": "yetujey",
       "team": "FUT",
-      "maps": 18,
-      "rounds": 378,
+      "maps": 20,
+      "rounds": 424,
       "rating": 1.1,
       "acs": 199,
-      "kd": 1.2,
+      "kd": 1.18,
       "kast": "71%",
-      "adr": 131.4,
-      "kills": 279,
-      "deaths": 232,
-      "assists": 75
+      "adr": 131.7,
+      "kills": 314,
+      "deaths": 265,
+      "assists": 80
     },
     {
       "name": "deLb",
@@ -603,20 +645,6 @@
       "kills": 272,
       "deaths": 238,
       "assists": 69
-    },
-    {
-      "name": "PatMen",
-      "team": "GE",
-      "maps": 24,
-      "rounds": 512,
-      "rating": 1.1,
-      "acs": 224,
-      "kd": 1.11,
-      "kast": "74%",
-      "adr": 146,
-      "kills": 405,
-      "deaths": 364,
-      "assists": 151
     },
     {
       "name": "lovers",
@@ -659,20 +687,6 @@
       "kills": 205,
       "deaths": 192,
       "assists": 91
-    },
-    {
-      "name": "KovaQ",
-      "team": "",
-      "maps": 7,
-      "rounds": 140,
-      "rating": 1.09,
-      "acs": 201,
-      "kd": 1.08,
-      "kast": "75%",
-      "adr": 135.8,
-      "kills": 99,
-      "deaths": 92,
-      "assists": 48
     },
     {
       "name": "keiko",
@@ -801,6 +815,20 @@
       "assists": 126
     },
     {
+      "name": "s0pp",
+      "team": "FUT",
+      "maps": 20,
+      "rounds": 424,
+      "rating": 1.08,
+      "acs": 238,
+      "kd": 1.19,
+      "kast": "72%",
+      "adr": 151.7,
+      "kills": 358,
+      "deaths": 302,
+      "assists": 80
+    },
+    {
       "name": "NIZ",
       "team": "SP",
       "maps": 12,
@@ -883,20 +911,6 @@
       "kills": 264,
       "deaths": 235,
       "assists": 56
-    },
-    {
-      "name": "iZu",
-      "team": "T1",
-      "maps": 23,
-      "rounds": 469,
-      "rating": 1.07,
-      "acs": 184,
-      "kd": 1.07,
-      "kast": "76%",
-      "adr": 122.4,
-      "kills": 306,
-      "deaths": 287,
-      "assists": 124
     },
     {
       "name": "Sayonara",
@@ -997,20 +1011,6 @@
       "assists": 99
     },
     {
-      "name": "Kr1stal",
-      "team": "GE",
-      "maps": 24,
-      "rounds": 512,
-      "rating": 1.06,
-      "acs": 189,
-      "kd": 1.01,
-      "kast": "77%",
-      "adr": 129.9,
-      "kills": 333,
-      "deaths": 330,
-      "assists": 158
-    },
-    {
       "name": "Killua",
       "team": "FS",
       "maps": 13,
@@ -1051,20 +1051,6 @@
       "kills": 471,
       "deaths": 426,
       "assists": 122
-    },
-    {
-      "name": "Ying",
-      "team": "KBG",
-      "maps": 16,
-      "rounds": 368,
-      "rating": 1.06,
-      "acs": 220,
-      "kd": 1.03,
-      "kast": "67%",
-      "adr": 136.9,
-      "kills": 274,
-      "deaths": 267,
-      "assists": 111
     },
     {
       "name": "crashies",
@@ -1221,20 +1207,6 @@
       "assists": 25
     },
     {
-      "name": "UdoTan",
-      "team": "GE",
-      "maps": 24,
-      "rounds": 512,
-      "rating": 1.04,
-      "acs": 229,
-      "kd": 1.09,
-      "kast": "71%",
-      "adr": 148.8,
-      "kills": 410,
-      "deaths": 376,
-      "assists": 100
-    },
-    {
       "name": "skuba",
       "team": "NRG",
       "maps": 19,
@@ -1247,20 +1219,6 @@
       "kills": 245,
       "deaths": 238,
       "assists": 139
-    },
-    {
-      "name": "coconut",
-      "team": "FPX",
-      "maps": 18,
-      "rounds": 373,
-      "rating": 1.04,
-      "acs": 202,
-      "kd": 1.04,
-      "kast": "69%",
-      "adr": 131.6,
-      "kills": 257,
-      "deaths": 248,
-      "assists": 98
     },
     {
       "name": "david",
@@ -1305,6 +1263,20 @@
       "assists": 92
     },
     {
+      "name": "zhe",
+      "team": "JDG",
+      "maps": 22,
+      "rounds": 455,
+      "rating": 1.04,
+      "acs": 212,
+      "kd": 1.12,
+      "kast": "72%",
+      "adr": 135,
+      "kills": 344,
+      "deaths": 306,
+      "assists": 77
+    },
+    {
       "name": "glacier",
       "team": "WOL",
       "maps": 11,
@@ -1333,20 +1305,6 @@
       "assists": 171
     },
     {
-      "name": "Tonk",
-      "team": "KBG",
-      "maps": 16,
-      "rounds": 368,
-      "rating": 1.04,
-      "acs": 208,
-      "kd": 1.13,
-      "kast": "68%",
-      "adr": 142.1,
-      "kills": 282,
-      "deaths": 249,
-      "assists": 79
-    },
-    {
       "name": "iamgrq",
       "team": "AG",
       "maps": 16,
@@ -1359,6 +1317,48 @@
       "kills": 232,
       "deaths": 241,
       "assists": 151
+    },
+    {
+      "name": "Rb",
+      "team": "NS",
+      "maps": 27,
+      "rounds": 580,
+      "rating": 1.03,
+      "acs": 186,
+      "kd": 1.03,
+      "kast": "73%",
+      "adr": 115.6,
+      "kills": 384,
+      "deaths": 373,
+      "assists": 238
+    },
+    {
+      "name": "BABYBAY",
+      "team": "G2",
+      "maps": 27,
+      "rounds": 573,
+      "rating": 1.03,
+      "acs": 198,
+      "kd": 1.05,
+      "kast": "69%",
+      "adr": 131.7,
+      "kills": 408,
+      "deaths": 388,
+      "assists": 102
+    },
+    {
+      "name": "Kr1stal",
+      "team": "GE",
+      "maps": 26,
+      "rounds": 555,
+      "rating": 1.03,
+      "acs": 185,
+      "kd": 0.98,
+      "kast": "76%",
+      "adr": 125.9,
+      "kills": 353,
+      "deaths": 362,
+      "assists": 168
     }
   ],
   "teams": [
@@ -1394,13 +1394,13 @@
     },
     {
       "rank": 7,
-      "name": "FUT Esports",
-      "region": "Türkiye"
+      "name": "Team Liquid",
+      "region": "Europe"
     },
     {
       "rank": 8,
-      "name": "Team Liquid",
-      "region": "Europe"
+      "name": "FUT Esports",
+      "region": "Türkiye"
     },
     {
       "rank": 9,
@@ -1409,8 +1409,8 @@
     },
     {
       "rank": 10,
-      "name": "Joblife",
-      "region": "Europe"
+      "name": "CGN Esports",
+      "region": "Germany"
     },
     {
       "rank": 1,
