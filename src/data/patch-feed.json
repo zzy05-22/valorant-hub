@@ -14,7 +14,7 @@
         "进度更新",
         "武器更新",
         "错误修复",
-        "KNOWN ISSUES"
+        "已知问题"
       ]
     },
     {
@@ -22,8 +22,8 @@
       "date": "2026-09-01",
       "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-05",
       "sections": [
-        "ALL PLATFORMS",
-        "PC ONLY"
+        "全部平台",
+        "仅 PC"
       ]
     },
     {
@@ -31,12 +31,12 @@
       "date": "2026-08-18",
       "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-04",
       "sections": [
-        "MAP UPDATES",
+        "地图更新",
         "错误修复",
-        "PREMIER UPDATES"
+        "Premier 赛事更新"
       ]
     }
   ],
-  "syncedAt": "2026-10-08T02:12:34.944Z",
+  "syncedAt": "2026-10-08T02:16:28.778Z",
   "source": "playvalorant.com"
 }

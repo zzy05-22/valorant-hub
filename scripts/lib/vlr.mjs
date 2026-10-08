@@ -175,8 +175,16 @@ export function parseMatches(html) {
 }
 
 // matches 页实测无 cookie gate（与 stats/rankings 的 302 门不同）：直接 fetch，勿套 fetchHtml 模板
+// 2026-10-08 补：/matches 只含未开赛场次，已结束比赛在 /matches/results（同构结构）——双源合并
 export async function fetchMatches() {
-  const res = await fetch('https://www.vlr.gg/matches', { headers: UA });
-  if (!res.ok) throw new Error(`VLR HTTP ${res.status} for https://www.vlr.gg/matches`);
-  return parseMatches(await res.text());
+  const [schedRes, resultsRes] = await Promise.all([
+    fetch('https://www.vlr.gg/matches', { headers: UA }),
+    fetch('https://www.vlr.gg/matches/results', { headers: UA }),
+  ]);
+  if (!schedRes.ok) throw new Error(`VLR HTTP ${schedRes.status} for https://www.vlr.gg/matches`);
+  // results 失败软容错：赛程页是主数据源，赛果抓不到不阻断整体（sync 外层块仍有兜底）
+  const resultsHtml = resultsRes.ok ? await resultsRes.text() : '';
+  const scheduled = parseMatches(await schedRes.text());
+  const completed = resultsHtml ? parseMatches(resultsHtml).slice(0, 30) : [];
+  return [...scheduled, ...completed];
 }

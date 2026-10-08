@@ -3,7 +3,7 @@
 // 注：UA 保持纯 ASCII——HTTP header 无法携带非 latin1 字符（node fetch 会抛 ByteString 错误）
 const UA = { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) valorant-hub/1.0 (static info site project)' };
 
-// 章节标题中文映射（Riot 官方公告固定 9 个 h2 标题；未映射章节原样保留）
+// 章节标题中文映射（Riot 官方公告 h2 标题；未映射章节原样保留）
 export const SECTION_ZH = {
   'GENERAL UPDATES': '综合更新',
   'CLIENT UPDATES': '客户端更新',
@@ -14,6 +14,11 @@ export const SECTION_ZH = {
   'PROGRESSION UPDATES': '进度更新',
   'WEAPONS UPDATES': '武器更新',
   'BUG FIXES': '错误修复',
+  'MAP UPDATES': '地图更新',
+  'PREMIER UPDATES': 'Premier 赛事更新',
+  'KNOWN ISSUES': '已知问题',
+  'ALL PLATFORMS': '全部平台',
+  'PC ONLY': '仅 PC',
 };
 
 // 解析公告列表页（playvalorant.com/en-us/news/game-updates/）
