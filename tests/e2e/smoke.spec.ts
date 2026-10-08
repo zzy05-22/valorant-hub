@@ -100,3 +100,9 @@ test('准星库页面与预览复制', async ({ page }) => {
   await page.locator('.xh-copy').first().click();
   await expect(page.locator('.xh-copy').first()).toContainText(/已复制|已选中/);
 });
+
+test('赛程赛果页可访问', async ({ page }) => {
+  await page.goto('/esports/matches/');
+  await expect(page.getByRole('heading', { name: '赛程赛果' })).toBeVisible();
+  await expect(page.locator('.mx-card').first()).toBeVisible();
+});
