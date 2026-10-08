@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-08T02:55:47.731Z",
+  "syncedAt": "2026-10-08T09:33:53.520Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -29,20 +29,6 @@
       "kills": 196,
       "deaths": 157,
       "assists": 101
-    },
-    {
-      "name": "yosemite",
-      "team": "WOL",
-      "maps": 5,
-      "rounds": 116,
-      "rating": 1.25,
-      "acs": 224,
-      "kd": 1.12,
-      "kast": "73%",
-      "adr": 160.3,
-      "kills": 91,
-      "deaths": 81,
-      "assists": 25
     },
     {
       "name": "Meiy",
@@ -561,6 +547,20 @@
       "kills": 350,
       "deaths": 304,
       "assists": 122
+    },
+    {
+      "name": "ZmjjKK",
+      "team": "EDG",
+      "maps": 6,
+      "rounds": 117,
+      "rating": 1.1,
+      "acs": 241,
+      "kd": 1.11,
+      "kast": "66%",
+      "adr": 156.6,
+      "kills": 98,
+      "deaths": 88,
+      "assists": 14
     },
     {
       "name": "keiko",
@@ -1165,20 +1165,6 @@
       "assists": 38
     },
     {
-      "name": "d4v41",
-      "team": "PRX",
-      "maps": 17,
-      "rounds": 379,
-      "rating": 1.04,
-      "acs": 200,
-      "kd": 1.09,
-      "kast": "72%",
-      "adr": 131,
-      "kills": 275,
-      "deaths": 252,
-      "assists": 77
-    },
-    {
       "name": "david",
       "team": "",
       "maps": 7,
@@ -1205,20 +1191,6 @@
       "kills": 344,
       "deaths": 306,
       "assists": 77
-    },
-    {
-      "name": "Jieni7",
-      "team": "EDG",
-      "maps": 5,
-      "rounds": 107,
-      "rating": 1.04,
-      "acs": 185,
-      "kd": 1,
-      "kast": "73%",
-      "adr": 121.2,
-      "kills": 71,
-      "deaths": 71,
-      "assists": 55
     },
     {
       "name": "Erv",
@@ -1359,6 +1331,34 @@
       "kills": 119,
       "deaths": 113,
       "assists": 32
+    },
+    {
+      "name": "Xlele",
+      "team": "FPX",
+      "maps": 13,
+      "rounds": 271,
+      "rating": 1.03,
+      "acs": 195,
+      "kd": 1.01,
+      "kast": "66%",
+      "adr": 138.8,
+      "kills": 184,
+      "deaths": 183,
+      "assists": 92
+    },
+    {
+      "name": "Jamelinho213",
+      "team": "SGE",
+      "maps": 9,
+      "rounds": 181,
+      "rating": 1.03,
+      "acs": 227,
+      "kd": 1.04,
+      "kast": "73%",
+      "adr": 150.8,
+      "kills": 142,
+      "deaths": 137,
+      "assists": 42
     }
   ],
   "teams": [
