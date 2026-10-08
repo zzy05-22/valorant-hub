@@ -10,9 +10,14 @@ const { code, size = 64 } = Astro.props;
 const r = parseCrosshairCode(code);
 
 // 64×64 视窗缩放：游戏内长度 1-10 映射 ×2.2，粗细 1-6 映射 ×1.6（竖线长度独立于横线）
-const S = { len: r.inner.length * 2.2, vLen: r.inner.vLength * 2.2, th: r.inner.thickness * 1.6, gap: r.inner.gap * 2.2 };
+// 归一化：所有准星的视觉跨度统一到约 38px——预览大小一致（仅影响预览绘制，复制导入游戏不受影响）
+const raw = { len: r.inner.length * 2.2, vLen: r.inner.vLength * 2.2, gap: r.inner.gap * 2.2, th: r.inner.thickness * 1.6, dotR: r.dot.size * 0.7 };
+const hasLines = r.inner.enabled && raw.len > 0;
+const span = hasLines ? Math.max((raw.len + raw.gap) * 2, (raw.vLen + raw.gap) * 2) : raw.dotR * 2;
+const scale = span > 0 ? Math.min(38 / span, 6) : 1;
+const S = { len: raw.len * scale, vLen: raw.vLen * scale, th: Math.max(raw.th * scale, 0.9), gap: raw.gap * scale, dotR: Math.max(raw.dotR * scale, 0.9) };
 const C = 32;
-const outlineW = r.outline.enabled ? Math.max(1, r.outline.thickness) : 0;
+const outlineW = r.outline.enabled ? Math.max(1, r.outline.thickness * Math.max(scale, 0.7)) : 0;
 const innerOpacity = r.inner.opacity * r.opacity;
 ---
 <svg viewBox="0 0 64 64" width={size} height={size} role="img" aria-label="准星预览" style="display:block">
@@ -35,6 +40,6 @@ const innerOpacity = r.inner.opacity * r.opacity;
     </g>
   )}
   {r.dot.enabled && (
-    <circle cx={C} cy={C} r={Math.max(0.8, r.dot.size * 0.7)} fill={r.color} opacity={r.opacity} />
+    <circle cx={C} cy={C} r={S.dotR} fill={r.color} opacity={r.opacity} />
   )}
 </svg>
