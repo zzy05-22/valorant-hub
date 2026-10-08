@@ -27,9 +27,11 @@ const maps = Object.fromEntries(involvedMapIds.map((id) => {
   const m = mapsData.maps.find((x) => x.id === id)!;
   return [id, { name: m.zh.name !== m.en.name ? `${m.zh.name} ${m.en.name}` : m.en.name, icon: m.displayIcon }];
 }));
-const agents = Object.fromEntries(involvedAgentIds.map((id) => {
+// 特工分组配色（"全部"视图分组着色/图例用；按本面板涉及特工顺序分配，面板内互异）
+const AGENT_COLORS = ['#FF4655', '#00E5B0', '#7ee787', '#a78bfa', '#ffd166', '#ff8a5c', '#5bc0ff', '#f472b6', '#22d3ee', '#a3e635'];
+const agents = Object.fromEntries(involvedAgentIds.map((id, i) => {
   const a = agentsData.agents.find((x) => x.id === id)!;
-  return [id, { name: agentName(a), icon: a.displayIcon }];
+  return [id, { name: agentName(a), icon: a.displayIcon, color: AGENT_COLORS[i % AGENT_COLORS.length] }];
 }));
 
 const initialMapId = mode === 'map' ? focusId : involvedMapIds[0];
@@ -38,6 +40,7 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
 {spots.length ? (
   <div class="lineup">
     <div class="lineup__picker" id="picker">
+      {mode === 'map' && <button class="chip-btn" data-id="__all__">全部</button>}
       {mode === 'map'
         ? involvedAgentIds.map((id) => <button class="chip-btn" data-id={id}>{agents[id].name}</button>)
         : involvedMapIds.map((id) => <button class="chip-btn" data-id={id}>{maps[id].name}</button>)}
@@ -46,7 +49,10 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
       <div class="lineup__map">
         <img id="lineup-map" src={maps[initialMapId].icon} alt="" onerror="this.src='/favicon.svg'" />
       </div>
-      <ul class="lineup__list" id="lineup-list"></ul>
+      <div class="lineup__panel">
+        <div class="lineup__legend" id="lineup-legend"></div>
+        <ul class="lineup__list" id="lineup-list"></ul>
+      </div>
     </div>
     <p class="data-meta">点位由社区整理，站位细节以游戏内实测为准 · 图上精确标注可用<a href="/lineup-tool/">点位标注工具</a></p>
     <script type="application/json" id="lineup-data" set:html={JSON.stringify({ mode, focusId, maps, agents, spots, initialMapId, initialAgentId })} />
@@ -56,20 +62,22 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
 )}
 
 <script>
-  import { filterSpots, type LineupSpot } from '../utils/lineups';
+  import { filterSpots, groupSpotsByAgent, type LineupSpot } from '../utils/lineups';
 
   const el = document.getElementById('lineup-data');
   if (el) {
     const data = JSON.parse(el.textContent || '{}') as {
       mode: 'map' | 'agent'; focusId: string;
       maps: Record<string, { name: string; icon: string }>;
-      agents: Record<string, { name: string; icon: string }>;
+      agents: Record<string, { name: string; icon: string; color: string }>;
       spots: LineupSpot[]; initialMapId: string; initialAgentId: string;
     };
     const mapImg = document.getElementById('lineup-map') as HTMLImageElement;
     const list = document.getElementById('lineup-list') as HTMLElement;
+    const legend = document.getElementById('lineup-legend') as HTMLElement;
     const btns = document.querySelectorAll<HTMLButtonElement>('#picker .chip-btn');
 
+    const ALL = '__all__'; // "全部"视图：该图全部特工点位按特工分组着色（仅地图模式提供）
     let selected = data.mode === 'map' ? data.initialAgentId : data.initialMapId;
     const curMap = () => (data.mode === 'map' ? data.focusId : selected);
     const curAgent = () => (data.mode === 'map' ? selected : data.focusId);
@@ -78,14 +86,32 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
 
     function render() {
       mapImg.src = data.maps[curMap()].icon;
-      const visible = filterSpots(data.spots, curMap(), curAgent());
-      list.innerHTML = visible.map((s) => `
-        <li class="lineup__item">
-          <strong>${s.label}</strong>
-          <span class="lineup__meta">${ABILITY_LABEL[s.ability] ?? s.ability} · ${s.side}</span>
-          <p>${s.note}</p>
-        </li>
-      `).join('') || '<li class="page-sub">该组合暂无点位</li>';
+      const isAll = data.mode === 'map' && selected === ALL;
+      legend.classList.toggle('lineup__legend--on', isAll);
+      if (isAll) {
+        // 全部视图：groupSpotsByAgent 分组着色，图例 = 特工名 + 颜色点
+        const grouped = groupSpotsByAgent(data.spots.filter((s) => s.mapId === data.focusId));
+        legend.innerHTML = [...grouped.keys()]
+          .map((id) => `<span class="lineup__lg"><i style="background:${data.agents[id].color}"></i>${data.agents[id].name}</span>`)
+          .join('');
+        list.innerHTML = [...grouped.entries()].flatMap(([id, spots]) =>
+          spots.map((s) => `
+            <li class="lineup__item" style="border-left:3px solid ${data.agents[id].color}">
+              <strong>${s.label}</strong>
+              <span class="lineup__meta">${data.agents[id].name} · ${ABILITY_LABEL[s.ability] ?? s.ability} · ${s.side}</span>
+              <p>${s.note}</p>
+            </li>`)
+        ).join('') || '<li class="page-sub">该图暂无点位</li>';
+      } else {
+        const visible = filterSpots(data.spots, curMap(), curAgent());
+        list.innerHTML = visible.map((s) => `
+          <li class="lineup__item">
+            <strong>${s.label}</strong>
+            <span class="lineup__meta">${ABILITY_LABEL[s.ability] ?? s.ability} · ${s.side}</span>
+            <p>${s.note}</p>
+          </li>
+        `).join('') || '<li class="page-sub">该组合暂无点位</li>';
+      }
       btns.forEach((b) => b.classList.toggle('chip-btn--active', b.dataset.id === selected));
     }
 
@@ -109,6 +135,11 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
   .lineup__stage { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(240px, 1fr); gap: 1rem; align-items: start; }
   .lineup__map { position: relative; }
   .lineup__map img { width: 100%; display: block; }
+  .lineup__panel { display: grid; gap: 0.6rem; }
+  .lineup__legend { display: none; }
+  .lineup__legend--on { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+  :global(.lineup__lg) { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--val-cream); font-size: 0.74rem; font-weight: 700; }
+  :global(.lineup__lg i) { width: 0.6rem; height: 0.6rem; border-radius: 50%; display: inline-block; flex-shrink: 0; }
   .lineup__list { list-style: none; display: grid; gap: 0.6rem; }
   :global(.lineup__item) { padding: 0.6rem 0.8rem; box-shadow: inset 0 0 0 1px var(--val-line); background: rgba(236,232,225,.04); }
   :global(.lineup__item strong) { display: block; font-size: 0.9rem; }

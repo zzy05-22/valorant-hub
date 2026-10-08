@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import agentsData from '../../data/agents.json';
+import mapsData from '../../data/maps.json';
+import { getCollection } from 'astro:content';
+import { groupSpotsByAgent, groupSpotsByMap, type LineupSpot } from '../../utils/lineups';
+
+// 点位库总览：只做既有数据的浏览聚合（零新增坐标），点位详情仍落在地图详情页
+const allSpots: LineupSpot[] = (await getCollection('lineups')).flatMap(
+  (entry) => entry.data.spots.map((s) => ({ ...s, mapId: entry.data.mapId })),
+);
+const byMap = groupSpotsByMap(allSpots);
+const byAgent = groupSpotsByAgent(allSpots);
+const total = allSpots.length;
+const agentCount = byAgent.size;
+
+const cards = [...byMap.entries()].map(([mapId, spots]) => {
+  const m = mapsData.maps.find((x) => x.id === mapId)!;
+  const agentIds = [...new Set(spots.map((s) => s.agentId))];
+  return {
+    mapId,
+    name: m.zh.name !== m.en.name ? `${m.zh.name} ${m.en.name}` : m.en.name,
+    count: spots.length,
+    agentCount: agentIds.length,
+    agentAvatars: agentIds.map((id) => {
+      const a = agentsData.agents.find((x) => x.id === id)!;
+      return { icon: a.displayIcon, alt: a.zh.name };
+    }),
+  };
+});
+---
+<BaseLayout
+  title="特工点位库｜无畏契约中文资料站"
+  description={`无畏契约道具点位库：${cards.length} 张竞技地图共 ${total} 个高价值点位，覆盖 ${agentCount} 位特工，进攻与防守双视角`}
+>
+  <PageHero label="Lineups" title="特工点位库" subtitle={`${cards.length} 张地图 · ${total} 个点位 · 攻防双视角`} />
+  <main class="container section">
+    <section class="role-group">
+      <h2>按地图浏览</h2>
+      <p class="page-sub">选择地图查看该图全部特工的道具点位（技能释放站位与瞄准参照）</p>
+      <div class="lu-grid">
+        {cards.map((c) => (
+          <a class="card-cut card-lift lu-card" href={`/maps/${c.mapId}/`}>
+            <div class="lu-card__head">
+              <b>{c.name}</b>
+              <span>{c.count} 个点位</span>
+            </div>
+            <div class="lu-card__avatars">
+              {c.agentAvatars.map((a) => (
+                <img src={a.icon} alt={a.alt} loading="lazy" onerror="this.src='/favicon.svg'" />
+              ))}
+            </div>
+            <div class="lu-card__foot">
+              <span>覆盖 {c.agentCount} 位特工</span>
+              <span class="lu-card__more">查看点位 →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <p class="lu-note">点位持续补充中：当前每图收录 8 个高价值点位，覆盖 {agentCount} 位特工；新点位经实测校准后收录</p>
+    </section>
+    <p class="data-meta">点位由社区整理，站位细节以游戏内实测为准 · 图上精确标注可用<a href="/lineup-tool/">点位标注工具</a></p>
+  </main>
+</BaseLayout>
+
+<style>
+  .lu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.8rem; }
+  .lu-card { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.9rem 1rem; border-radius: 12px; }
+  .lu-card__head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+  .lu-card__head b { color: var(--val-cream); font-size: 0.95rem; }
+  .lu-card__head span { color: var(--val-gray); font-size: 0.72rem; white-space: nowrap; }
+  .lu-card__avatars { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .lu-card__avatars img {
+    width: 2rem; height: 2rem; border-radius: 50%; object-fit: cover;
+    box-shadow: inset 0 0 0 1px var(--val-line);
+  }
+  .lu-card__foot { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+  .lu-card__foot > span:first-child { color: var(--val-gray); font-size: 0.72rem; }
+  .lu-card__more { color: var(--val-red); font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+  .lu-note {
+    margin-top: 1rem; padding: 0.7rem 1rem; font-size: 0.78rem; color: var(--val-gray);
+    box-shadow: inset 0 0 0 1px var(--val-line); background: rgba(236, 232, 225, 0.04);
+  }
+</style>
