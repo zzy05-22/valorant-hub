@@ -10,8 +10,6 @@ const live = all.filter((m) => m.status === 'live');
 const upcoming = all.filter((m) => m.status === 'upcoming');
 const completed = all.filter((m) => m.status === 'completed');
 
-const statusZh = (s: string) => (s === 'upcoming' ? '未开始' : s === 'live' ? '进行中' : '已结束');
-
 // 按日期分组（数据本身按时间排序，同日相邻归组）
 type DayGroup = { date: string; label: string; isToday: boolean; matches: Match[] };
 const groupByDate = (list: Match[]): DayGroup[] => {
@@ -55,7 +53,9 @@ const completedDays = groupByDate(completed.slice(0, 20));
       <h2>赛程日历</h2>
       {upcomingDays.length === 0 ? <p class="page-sub">暂无排期，等待赛程公布</p> : upcomingDays.map((day) => (
         <div class="mt-day-group">
-          <h3 class:list={['mt-day', { 'mt-day--today': day.isToday }]}>{day.isToday ? `今天 · ${day.label}` : day.label}</h3>
+          <h3 class="mt-day">
+            {day.isToday && <span class="mt-today">今天</span>}{day.label}
+          </h3>
           {day.matches.map((m) => (
             <div class="card-cut mt-row">
               <div class="mt-row__time">{m.time}</div>
@@ -65,10 +65,7 @@ const completedDays = groupByDate(completed.slice(0, 20));
                   <span class="mt-row__vslabel">VS</span>
                   <b>{teamZh(m.teamB)}</b>
                 </div>
-                <div class="mt-row__meta">
-                  <span class="mt-row__status">{statusZh(m.status)}</span>
-                  <span class="mt-row__event">{eventZh(m.event)}{m.series ? ` · ${seriesZh(m.series)}` : ''}</span>
-                </div>
+                <div class="mt-row__meta"><span class="mt-row__event">{eventZh(m.event)}{m.series ? ` · ${seriesZh(m.series)}` : ''}</span></div>
               </div>
             </div>
           ))}
@@ -86,14 +83,13 @@ const completedDays = groupByDate(completed.slice(0, 20));
               <div class="mt-row__time">{m.time}</div>
               <div class="mt-row__main">
                 <div class="mt-row__vs">
-                  <b class={m.winner === 'A' ? 'mt-win' : ''}>{teamZh(m.teamA)}</b>
-                  <span class="mt-row__score">{m.scoreA} : {m.scoreB}</span>
-                  <b class={m.winner === 'B' ? 'mt-win' : ''}>{teamZh(m.teamB)}</b>
+                  <b class={m.winner === 'A' ? 'mt-winner' : 'mt-loser'}>{teamZh(m.teamA)}</b>
+                  <span class="mt-row__score">
+                    <em class={m.winner === 'A' ? 's-win' : 's-lose'}>{m.scoreA}</em><i>:</i><em class={m.winner === 'B' ? 's-win' : 's-lose'}>{m.scoreB}</em>
+                  </span>
+                  <b class={m.winner === 'B' ? 'mt-winner' : 'mt-loser'}>{teamZh(m.teamB)}</b>
                 </div>
-                <div class="mt-row__meta">
-                  <span class="mt-row__status">{statusZh(m.status)}</span>
-                  <span class="mt-row__event">{eventZh(m.event)}{m.series ? ` · ${seriesZh(m.series)}` : ''}</span>
-                </div>
+                <div class="mt-row__meta"><span class="mt-row__event">{eventZh(m.event)}{m.series ? ` · ${seriesZh(m.series)}` : ''}</span></div>
               </div>
             </div>
           ))}
@@ -106,21 +102,28 @@ const completedDays = groupByDate(completed.slice(0, 20));
 
 <style>
   .mt-day-group { margin-bottom: 1.4rem; }
-  .mt-day { margin: 0 0 0.6rem; font-size: 0.92rem; font-weight: 800; color: var(--val-cream); border-left: 3px solid var(--val-red); padding-left: 0.6rem; }
-  .mt-day--today { color: var(--val-red); }
-  .mt-row { display: flex; align-items: center; gap: 1rem; padding: 0.65rem 0.9rem; margin-bottom: 0.5rem; min-width: 0; }
+  .mt-day { display: flex; align-items: center; gap: 0.55rem; margin: 0 0 0.6rem; font-size: 0.92rem; font-weight: 800; color: var(--val-cream); letter-spacing: 0.02em; }
+  .mt-day::before { content: ''; width: 4px; height: 1.05rem; background: var(--val-red); transform: skewX(-12deg); flex-shrink: 0; }
+  .mt-day::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--val-red), transparent 70%); opacity: 0.55; }
+  .mt-today { background: var(--val-red); color: #fff; font-size: 0.62rem; font-weight: 900; padding: 2px 9px; border-radius: 4px; letter-spacing: 2px; transform: skewX(-12deg); flex-shrink: 0; }
+  .mt-row { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 1rem; margin-bottom: 0.5rem; min-width: 0; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .mt-row:hover { border-color: rgba(255, 70, 85, 0.55); transform: translateX(3px); }
   .mt-row--live { border-color: var(--val-red); }
-  .mt-row__time { flex-shrink: 0; width: 4.6rem; color: var(--val-cream); font-weight: 800; font-size: 0.88rem; }
+  .mt-row__time { flex-shrink: 0; width: 4.6rem; color: var(--val-cream); font-weight: 800; font-size: 0.88rem; letter-spacing: 0.03em; }
   .mt-row__main { flex: 1; min-width: 0; }
   .mt-row__vs { display: flex; align-items: center; gap: 0.8rem; }
-  .mt-row__vs b { color: var(--val-cream); font-size: 0.95rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mt-row__vs b { font-size: 0.95rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .mt-row__vs b:last-of-type { text-align: right; }
-  .mt-row__vslabel, .mt-row__score { flex-shrink: 0; color: var(--val-red); font-size: 0.78rem; font-weight: 800; letter-spacing: 1px; }
-  .mt-row__score { font-size: 0.92rem; }
-  .mt-row__meta { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; }
-  .mt-row__status { flex-shrink: 0; color: rgba(236, 232, 225, 0.5); font-size: 0.65rem; border: 1px solid var(--val-line); padding: 1px 6px; border-radius: 4px; }
+  .mt-winner { color: var(--val-cream); font-weight: 900; }
+  .mt-loser { color: rgba(236, 232, 225, 0.38); font-weight: 500; }
+  .mt-row__vslabel { flex-shrink: 0; transform: skewX(-12deg); background: rgba(255, 70, 85, 0.1); border: 1px solid rgba(255, 70, 85, 0.4); color: var(--val-red); font-size: 0.6rem; font-weight: 900; padding: 2px 8px; border-radius: 3px; letter-spacing: 1px; }
+  .mt-row__score { flex-shrink: 0; display: flex; align-items: center; }
+  .mt-row__score em { font-style: normal; font-size: 1.08rem; font-weight: 900; letter-spacing: 0.02em; }
+  .mt-row__score i { font-style: normal; color: rgba(236, 232, 225, 0.35); font-size: 0.78rem; font-weight: 700; margin: 0 0.35rem; }
+  .s-win { color: #FF4655; text-shadow: 0 0 14px rgba(255, 70, 85, 0.55); }
+  .s-lose { color: rgba(236, 232, 225, 0.42); }
+  .mt-row__meta { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.28rem; }
   .mt-row__event { color: var(--val-gray); font-size: 0.68rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .mt-win { color: #FF4655 !important; text-shadow: 0 0 12px rgba(255, 70, 85, 0.45); }
   .mt-live { display: inline-block; background: #FF4655; color: #fff; font-size: 0.62rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; letter-spacing: 1px; }
   @media (max-width: 640px) {
     .mt-row { flex-wrap: wrap; row-gap: 0.3rem; }
