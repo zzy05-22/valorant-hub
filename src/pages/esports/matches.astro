@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import matchesData from '../../data/matches.json';
+
+interface Match { href: string; teamA: string; teamB: string; scoreA: number | null; scoreB: number | null; winner: 'A' | 'B' | null; status: string; time: string; event: string; series: string; date: string; }
+const all = (matchesData as { matches: Match[] }).matches;
+const live = all.filter((m) => m.status === 'live');
+const upcoming = all.filter((m) => m.status === 'upcoming');
+const completed = all.filter((m) => m.status === 'completed');
+---
+<BaseLayout title="赛程赛果｜无畏契约资料站" description="VCT 赛程与赛果实时看板：进行中、即将开赛与最近战报">
+  <PageHero label="Matches" title="赛程赛果" subtitle={`${all.length} 场比赛 · 数据源 vlr.gg · 每日自动同步`} />
+  <main class="container section">
+    {live.length > 0 && (
+      <section class="role-group">
+        <h2>正在直播</h2>
+        <div class="mx-grid">
+          {live.map((m) => (
+            <div class="card-cut mx-card">
+              <div class="mx-card__event"><span class="mx-live">● LIVE</span>{m.event}{m.series ? ` · ${m.series}` : ''}</div>
+              <div class="mx-card__vs">
+                <b class={m.winner === 'A' ? 'mx-win' : ''}>{m.teamA}</b>
+                <span class="mx-card__score">{m.scoreA} : {m.scoreB}</span>
+                <b class={m.winner === 'B' ? 'mx-win' : ''}>{m.teamB}</b>
+              </div>
+              <div class="mx-card__note">{m.date ? `${m.date} · ` : ''}{m.time}（vlr.gg 时区）</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+    <section class="role-group">
+      <h2>即将开赛</h2>
+      {upcoming.length === 0 ? <p class="page-sub">暂无排期，等待赛程公布</p> : (
+      <div class="mx-grid">
+        {upcoming.slice(0, 20).map((m) => (
+          <div class="card-cut mx-card">
+            <div class="mx-card__event">{m.event}{m.series ? ` · ${m.series}` : ''}</div>
+            <div class="mx-card__vs"><b>{m.teamA}</b><span class="mx-card__time">{m.time}</span><b>{m.teamB}</b></div>
+            <div class="mx-card__note">{m.date ? `${m.date} · ` : ''}约 {m.time} 开赛（vlr.gg 时区）</div>
+          </div>
+        ))}
+      </div>)}
+    </section>
+    <section class="role-group">
+      <h2>最近赛果</h2>
+      {completed.length === 0 ? <p class="page-sub">暂无已结束比赛记录</p> : (
+      <div class="mx-grid">
+        {completed.slice(0, 20).map((m) => (
+          <div class="card-cut mx-card">
+            <div class="mx-card__event">{m.event}{m.series ? ` · ${m.series}` : ''}</div>
+            <div class="mx-card__vs">
+              <b class={m.winner === 'A' ? 'mx-win' : ''}>{m.teamA}</b>
+              <span class="mx-card__score">{m.scoreA} : {m.scoreB}</span>
+              <b class={m.winner === 'B' ? 'mx-win' : ''}>{m.teamB}</b>
+            </div>
+            <div class="mx-card__note">{m.date ? `${m.date} · ` : ''}{m.time}（vlr.gg 时区）</div>
+          </div>
+        ))}
+      </div>)}
+    </section>
+    <p class="data-meta">赛程数据来自 vlr.gg，每日自动同步；比分以官方为准。</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .mx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  @media (max-width: 768px) { .mx-grid { grid-template-columns: 1fr; } }
+  .mx-card { padding: 0.9rem 1.1rem; }
+  .mx-card__event { color: var(--val-gray); font-size: 0.72rem; margin-bottom: 0.45rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mx-card__vs { display: flex; align-items: center; gap: 0.6rem; }
+  .mx-card__vs b { color: var(--val-cream); font-size: 0.95rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mx-card__vs b:last-of-type { text-align: right; }
+  .mx-card__time, .mx-card__score { color: var(--val-cream); font-size: 0.85rem; font-weight: 800; flex-shrink: 0; }
+  .mx-card__score { letter-spacing: 1px; }
+  .mx-card__note { color: rgba(236, 232, 225, 0.45); font-size: 0.68rem; margin-top: 0.45rem; }
+  .mx-win { color: #FF4655 !important; text-shadow: 0 0 12px rgba(255, 70, 85, 0.45); }
+  .mx-live { display: inline-block; background: #FF4655; color: #fff; font-size: 0.6rem; font-weight: 800; padding: 1px 6px; border-radius: 4px; letter-spacing: 1px; margin-right: 0.5rem; vertical-align: 1px; }
+</style>

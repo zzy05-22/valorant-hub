@@ -85,3 +85,98 @@ export function validateEsportsStats({ players, teams }) {
   if (!(players[0].rating > 1)) return false;
   return true;
 }
+
+// 文本清洗（matches 专用）：去标签 + 实体 + 空白归一（比 stripTags 多处理 &ndash;，不影响 stats/rankings 既有行为）
+const cleanText = (s) => s
+  .replace(/<[^>]+>/g, '')
+  .replace(/&nbsp;/g, ' ')
+  .replace(/&ndash;/g, '–')
+  .replace(/&#39;/g, "'")
+  .replace(/&amp;/g, '&')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+// 解析赛程赛果（vlr.gg/matches；2026-10-08 实测该页直接 200，无 cookie gate）
+// 实测结构：
+// - 日期分隔条：<div class="wf-label mod-large">Fri, October 9, 2026</div>（按出现顺序归入后续比赛块，无分隔条时为空串）
+// - 比赛块：<a href="..." class="wf-module-item match-item ...">…</a>
+// - 队名：match-item-vs-team-name > text-of（内含 flag span + 队名）
+// - 比分：match-item-vs-team-score；未开赛 class 含 mod-upcoming、值为 &ndash;；
+//   已结束值为数字，results 页胜者队在 match-item-vs-team 的 class 含 mod-winner（实测），
+//   亦兼容 score class 含 mod-win 的写法（计划探测结构），数字不等时再兜底取大者
+// - 状态：ml-status（Upcoming/Live/Completed 等；非 Live 且双方比分均为数字 → completed）
+// - 赛事：match-item-event 内含 match-item-event-series 子 div；实测 series 在前、赛事名在后，
+//   与计划探测的"赛事名在前"顺序相反——两种顺序均按"剔除 series div 后剩余文本即赛事名"兼容处理
+export function parseMatches(html) {
+  const matches = [];
+  const tokens = html.match(
+    /<div class="wf-label mod-large">[\s\S]*?<\/div>|<a\b[^>]*\bclass="[^"]*\bmatch-item\b[^"]*"[^>]*>[\s\S]*?<\/a>/g,
+  ) ?? [];
+  let date = '';
+  for (const tok of tokens) {
+    if (tok.startsWith('<div class="wf-label')) {
+      // 今天的分隔条内含 <span class="wf-tag">Today</span> 标记（results 页还有 Yesterday），剥掉后保留纯日期
+      date = cleanText(tok.replace(/^<div class="wf-label[^>]*>/, '').replace(/<\/div>$/, '')).replace(/\s*(Today|Yesterday)$/, '');
+      continue;
+    }
+    const href = tok.match(/<a\b[^>]*\shref="([^"]+)"/)?.[1] ?? '';
+    const time = cleanText(tok.match(/match-item-time[^"]*">([\s\S]*?)<\/div>/)?.[1] ?? '');
+    // 胜者队的 name div 内可能插有 <i class="sp-hide ..."> 图标（results 页实测），故用 [\s\S]*? 跳过
+    const names = [...tok.matchAll(/match-item-vs-team-name">[\s\S]*?<div class="text-of">([\s\S]*?)<\/div>/g)]
+      .map((m) => cleanText(m[1]));
+    if (names.length < 2) continue; // 非比赛块（防御）
+    const scoreParts = [...tok.matchAll(/match-item-vs-team-score([^"]*)">([\s\S]*?)<\/div>/g)]
+      .map((m) => ({ cls: m[1], val: cleanText(m[2]) }));
+    // team div 的 class（负向断言排除 -name/-score 前缀 div）：捕获 ' ' 或 ' mod-winner'
+    const teamCls = [...tok.matchAll(/<div class="match-item-vs-team(?![-\w])([^"]*)"/g)].map((m) => m[1]);
+    const parseScore = (part) => {
+      if (!part || part.cls.includes('mod-upcoming')) return null;
+      if (!/^\d+$/.test(part.val)) return null;
+      return Number(part.val);
+    };
+    const scoreA = parseScore(scoreParts[0]);
+    const scoreB = parseScore(scoreParts[1]);
+    let winner = null;
+    if (teamCls[0]?.includes('mod-winner') && !teamCls[1]?.includes('mod-winner')) winner = 'A';
+    else if (teamCls[1]?.includes('mod-winner') && !teamCls[0]?.includes('mod-winner')) winner = 'B';
+    else if (scoreParts[0]?.cls.includes('mod-win') && !scoreParts[1]?.cls.includes('mod-win')) winner = 'A';
+    else if (scoreParts[1]?.cls.includes('mod-win') && !scoreParts[0]?.cls.includes('mod-win')) winner = 'B';
+    else if (scoreA != null && scoreB != null && scoreA !== scoreB) winner = scoreA > scoreB ? 'A' : 'B';
+    const rawStatus = cleanText(tok.match(/ml-status">([^<]*)</)?.[1] ?? '');
+    const status = rawStatus === 'Live' ? 'live'
+      : (scoreA != null && scoreB != null) ? 'completed' : 'upcoming';
+    let event = '';
+    let series = '';
+    const evM = tok.match(/<div class="match-item-event[^"]*">([\s\S]*?)(?=<div class="match-item-icon"|\s*<\/a>)/);
+    if (evM) {
+      const seriesM = evM[1].match(/<div class="match-item-event-series[^"]*">[\s\S]*?<\/div>/);
+      if (seriesM) {
+        series = cleanText(seriesM[0].replace(/^<div class="match-item-event-series[^"]]*>/, '').replace(/<\/div>$/, ''));
+        event = cleanText(evM[1].replace(seriesM[0], ''));
+      } else {
+        event = cleanText(evM[1]);
+      }
+    }
+    matches.push({
+      href,
+      teamA: names[0],
+      teamB: names[1],
+      scoreA,
+      scoreB,
+      winner,
+      status,
+      time,
+      event,
+      series,
+      date,
+    });
+  }
+  return matches;
+}
+
+// matches 页实测无 cookie gate（与 stats/rankings 的 302 门不同）：直接 fetch，勿套 fetchHtml 模板
+export async function fetchMatches() {
+  const res = await fetch('https://www.vlr.gg/matches', { headers: UA });
+  if (!res.ok) throw new Error(`VLR HTTP ${res.status} for https://www.vlr.gg/matches`);
+  return parseMatches(await res.text());
+}

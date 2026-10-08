@@ -6,7 +6,7 @@ import path from 'node:path';
 import { fetchAgents, fetchWeapons, fetchMaps, fetchVersion } from './lib/api.mjs';
 import { transformAgents, transformWeapons, transformMaps } from './lib/transform.mjs';
 import { validateAgents, validateWeapons, validateMaps } from './lib/validate.mjs';
-import { fetchHtml, parsePlayerStats, parseTeamRanking, validateEsportsStats } from './lib/vlr.mjs';
+import { fetchHtml, parsePlayerStats, parseTeamRanking, validateEsportsStats, fetchMatches } from './lib/vlr.mjs';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 
@@ -69,6 +69,17 @@ async function main() {
     console.log(`[sync] esports 数据完成：players=${players.length} teams=${teams.length}`);
   } catch (err) {
     console.warn('[sync] vlr.gg 抓取失败（保留旧数据）:', err.message);
+  }
+
+  // —— 赛程赛果同步（vlr.gg/matches，独立容错：失败只 warn，不影响其他数据源）——
+  try {
+    const matches = await fetchMatches();
+    await atomicWrite(path.join(DATA_DIR, 'matches.json'), {
+      matches, syncedAt: new Date().toISOString(), source: 'vlr.gg/matches',
+    });
+    console.log(`matches synced: ${matches.length} 场`);
+  } catch (err) {
+    console.warn(`warn: matches sync failed: ${err?.message ?? err}`);
   }
 
   console.log(`[sync] 完成：agents=${agents.length} weapons=${weapons.length} maps=${maps.length} version=${version.versionNumber}`);

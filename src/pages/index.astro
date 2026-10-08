@@ -42,6 +42,11 @@ const maxContrib = topContributors[0]?.count ?? 1;
 import esportsStats from '../data/esports-stats.json';
 const topPlayers = esportsStats.players.slice(0, 5);
 
+// —— 赛程速览（vlr.gg/matches 每日同步）——
+import matchesData from '../data/matches.json';
+const upcomingMatches = (matchesData as { matches: { teamA: string; teamB: string; time: string; event: string; status: string }[] }).matches
+  .filter((m) => m.status === 'upcoming').slice(0, 4);
+
 // —— 内容 ——
 const guides = (await getCollection('guides', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()).slice(0, 3);
@@ -155,6 +160,22 @@ const liveStats = esportsStats.players[0];
           ))}
         </div>
       </section>
+
+      <!-- ⑥.5 赛程速览（vlr.gg 每日同步；无排期时整体不渲染） -->
+      {upcomingMatches.length > 0 && (
+        <section class="block6">
+          <header class="block6__head"><h2>赛程速览</h2><span class="block6__en">MATCHES</span><a class="block6__more" href="/esports/matches/">全部赛程 →</a></header>
+          <div class="block6__grid block6__grid--wide">
+            {upcomingMatches.map((m) => (
+              <a class="card-cut card-lift match6" href="/esports/matches/">
+                <b class="match6__vs">{m.teamA} <span>vs</span> {m.teamB}</b>
+                <span class="match6__time">{m.time}</span>
+                <span class="match6__event">{m.event}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       <!-- ⑦ 数据一览：定位环形图 + 点位贡献榜 -->
       <section class="block6 grid-2">
@@ -334,4 +355,10 @@ const liveStats = esportsStats.players[0];
   .map6 img { width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform .25s ease; }
   .map6:hover img { transform: scale(1.05); }
   .map6__name { position: absolute; left: .8rem; bottom: .6rem; color: var(--val-cream); font-weight: 800; text-shadow: 0 1px 4px rgba(0,0,0,.9); }
+
+  .match6 { display: block; border-radius: 14px; padding: .85rem .9rem; }
+  .match6__vs { color: var(--val-cream); font-size: .92rem; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .match6__vs span { color: var(--val-red); font-weight: 900; }
+  .match6__time { display: inline-block; color: var(--val-cream); font-size: .82rem; font-weight: 800; margin-top: .3rem; letter-spacing: 1px; }
+  .match6__event { display: block; color: var(--val-gray); font-size: .68rem; margin-top: .25rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 </style>
