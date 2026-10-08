@@ -5,9 +5,11 @@ import CrosshairPreview from '../../components/CrosshairPreview.astro';
 import { getCollection } from 'astro:content';
 
 const crosshairs = await getCollection('crosshairs');
+const proCrosshairs = crosshairs.filter((c) => c.data.tags.includes('职业选手'));
+const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业选手'));
 ---
 <BaseLayout title="准星库｜无畏契约资料站" description="热门准星代码合集：SVG 实时预览、一键复制，游戏内导入即用">
-  <PageHero label="Crosshairs" title="准星库" subtitle={`${crosshairs.length} 个准星 · 预览为近似渲染 · 以游戏内导入效果为准`} />
+  <PageHero label="Crosshairs" title="准星库" subtitle={`${crosshairs.length} 个准星 · 经典 ${classicCrosshairs.length} · 选手 ${proCrosshairs.length}`} />
   <main class="container section">
     <section class="role-group">
       <h2>导入方法</h2>
@@ -16,9 +18,29 @@ const crosshairs = await getCollection('crosshairs');
       </p>
     </section>
     <section class="role-group">
-      <h2>全部准星</h2>
+      <h2>经典准星</h2>
       <div class="xh-grid">
-        {crosshairs.map((c) => (
+        {classicCrosshairs.map((c) => (
+          <div class="card-cut xh-card">
+            <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
+            <div class="xh-card__info">
+              <b>{c.data.name}</b>
+              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}</div>
+              <p>{c.data.note}</p>
+            </div>
+            <div class="xh-card__code">
+              <code>{c.data.code}</code>
+              <button type="button" class="btn btn-primary xh-copy" data-code={c.data.code}>复制代码</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    <section class="role-group">
+      <h2>职业选手准星</h2>
+      <p class="xh-howto">代码来自社区公开资料（2026-10 整理），选手会随时间更换准星，以游戏内实际效果为准。</p>
+      <div class="xh-grid">
+        {proCrosshairs.map((c) => (
           <div class="card-cut xh-card">
             <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
             <div class="xh-card__info">
