@@ -14,7 +14,14 @@ const isActive = (href: string) =>
 ---
 <header class="nav">
   <div class="container nav__inner">
-    <a class="nav__logo" href="/">VALORANT <span>资料站</span></a>
+    <a class="nav__logo" href="/">
+      <svg viewBox="0 0 64 64" width="22" height="22" aria-hidden="true">
+        <rect width="64" height="64" rx="10" fill="#0F1923"/>
+        <path d="M15 12 L23.5 12 L29 33 L34.5 12 L43 12 L33 54 L25 54 Z" fill="#FF4655" opacity="0.4"/>
+        <path d="M18 12 L26.5 12 L32 33 L37.5 12 L46 12 L36 54 L28 54 Z" fill="#ECE8E1"/>
+      </svg>
+      VALORANT <span>资料站</span>
+    </a>
     <nav class="nav__links">
       {items.map((i) => (
         <a href={i.href} class:list={[{ 'nav__link--active': isActive(i.href) }]}>{i.label}</a>
@@ -36,7 +43,8 @@ const isActive = (href: string) =>
     border-bottom: 1px solid var(--val-line);
   }
   .nav__inner { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1.5rem; }
-  .nav__logo { font-weight: 900; letter-spacing: 0.05em; color: var(--val-red); }
+  .nav__logo { display: flex; align-items: center; gap: 0.45rem; font-weight: 900; letter-spacing: 0.05em; color: var(--val-red); }
+  .nav__logo svg { flex-shrink: 0; }
   .nav__logo span { color: var(--val-cream); font-weight: 700; font-size: 0.85rem; margin-left: 0.2rem; }
   .nav__links { display: flex; gap: 1.25rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; }
   .nav__links a:hover { color: var(--val-red); }
