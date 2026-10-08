@@ -1,0 +1,20 @@
+{
+  "source": "社区公开资料整理（2026-10 查证：exputer/eloboss/senslab/redbull/prosettings 系，多来源交叉），选手会随时间调整设置，以其实际为准",
+  "syncedAt": "2026-10-08",
+  "players": {
+    "tenz": { "dpi": 1600, "sens": 0.275, "edpi": 440 },
+    "aspas": { "dpi": 800, "sens": 0.4, "edpi": 320 },
+    "scream": { "dpi": 400, "sens": 0.785, "edpi": 314 },
+    "yay": { "dpi": 800, "sens": 0.27, "edpi": 216 },
+    "cned": { "dpi": 800, "sens": 0.32, "edpi": 265 },
+    "nats": { "dpi": 800, "sens": 0.49, "edpi": 392 },
+    "n4rrate": { "dpi": 1600, "sens": 0.16, "edpi": 256 },
+    "asuna": { "dpi": 1400, "sens": 0.295, "edpi": 413 },
+    "shahzam": { "dpi": 800, "sens": 0.265, "edpi": 212 },
+    "shroud": { "dpi": 450, "sens": 0.78, "edpi": 351 },
+    "forsaken": { "dpi": 800, "sens": 0.702, "edpi": 482 },
+    "alfajer": { "dpi": 400, "sens": 0.45, "edpi": 180 },
+    "derke": { "dpi": 400, "sens": 0.74, "edpi": 296 },
+    "marved": { "edpi": 245, "note": "仅查证到 edpi（senslab 记录），DPI/灵敏度拆分未收录" }
+  }
+}

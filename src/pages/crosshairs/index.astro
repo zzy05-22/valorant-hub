@@ -3,6 +3,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import CrosshairPreview from '../../components/CrosshairPreview.astro';
 import { getCollection } from 'astro:content';
+import proSettingsData from '../../data/pro-settings.json';
+
+// 选手灵敏度联动：pro-settings.json 与 pro-*.json 准星卡按 id 关联，查证到的才显示（宁缺毋假）
+type Sens = { dpi?: number; sens?: number; edpi: number; note?: string };
+const sensMap = (proSettingsData as { players: Record<string, Sens> }).players;
+const sensOf = (cardId: string): Sens | undefined => sensMap[cardId.replace(/^pro-/, '')];
+const sensTitle = (s: Sens) => (s.dpi && s.sens ? `${s.dpi} DPI × ${s.sens} ≈ ${s.edpi} edpi` : (s.note ?? `${s.edpi} edpi`));
 
 const crosshairs = await getCollection('crosshairs');
 const proCrosshairs = crosshairs.filter((c) => c.data.tags.includes('职业选手'));
@@ -26,7 +33,7 @@ const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业
             <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
             <div class="xh-card__info">
               <b>{c.data.name}</b>
-              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}</div>
+              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}{sensOf(c.id) && <span class="xh-card__sens" title={sensTitle(sensOf(c.id)!)}>{sensOf(c.id)!.edpi} edpi</span>}</div>
               <p>{c.data.note}</p>
             </div>
             <div class="xh-card__code">
@@ -39,14 +46,14 @@ const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业
     </section>
     <section class="role-group">
       <h2>职业选手准星</h2>
-      <p class="xh-howto">代码来自社区公开资料（2026-10 整理），选手会随时间更换准星，以游戏内实际效果为准。</p>
+      <p class="xh-howto">准星与灵敏度来自社区公开资料（2026-10 整理，多来源交叉验证；灵敏度标签悬停可见 DPI 与游戏内灵敏度明细），选手会随时间更换设置，以其实际为准。</p>
       <div class="xh-grid">
         {proCrosshairs.map((c) => (
           <div class="card-cut xh-card">
             <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
             <div class="xh-card__info">
               <b>{c.data.name}</b>
-              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}</div>
+              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}{sensOf(c.id) && <span class="xh-card__sens" title={sensTitle(sensOf(c.id)!)}>{sensOf(c.id)!.edpi} edpi</span>}</div>
               <p>{c.data.note}</p>
             </div>
             <div class="xh-card__code">
@@ -66,7 +73,7 @@ const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业
             <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
             <div class="xh-card__info">
               <b>{c.data.name}</b>
-              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}</div>
+              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}{sensOf(c.id) && <span class="xh-card__sens" title={sensTitle(sensOf(c.id)!)}>{sensOf(c.id)!.edpi} edpi</span>}</div>
               <p>{c.data.note}</p>
             </div>
             <div class="xh-card__code">
@@ -116,6 +123,7 @@ const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业
   .xh-card__info b { color: var(--val-cream); font-size: 1rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .xh-card__tags { display: flex; gap: 0.4rem; margin: 0.35rem 0; flex-wrap: nowrap; overflow: hidden; }
   .xh-card__tags span { background: rgba(255, 70, 85, 0.12); color: var(--val-red); font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
+  .xh-card__tags .xh-card__sens { background: rgba(24, 229, 245, 0.08); color: #18E5F5; border: 1px solid rgba(24, 229, 245, 0.35); }
   .xh-card__info p { color: var(--val-gray); font-size: 0.82rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 3.2em; }
   .xh-card__code { display: flex; align-items: center; gap: 0.6rem; margin-top: auto; }
   .xh-card__code code { flex: 1; min-width: 0; font-family: ui-monospace, monospace; font-size: 0.68rem; color: var(--val-gray); background: rgba(236, 232, 225, 0.04); padding: 0.5rem 0.6rem; overflow-x: auto; white-space: nowrap; }
