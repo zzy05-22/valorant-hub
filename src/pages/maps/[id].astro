@@ -39,8 +39,26 @@ const calloutGroups = ZONE_ORDER
   })
   .filter((g) => g.items.length > 0);
 
-// 报点地图标注：世界坐标 → 战术图百分比
-// 攻守出生点天然锚定地图边界，线性归一化 + 8% 边距；方向假设：x 正→右、y 负→上（以 Ascent 渲染验证为准）
+// 报点地图标注：世界坐标 → 战术图百分比（各图官方战术图朝向不统一，逐图独立变换）
+// 标定方式：13 张竞技图以「人工修正过的 lineups 真值 + 攻守出生点方位 + 地图形状/包点方位」三重约束标定
+// 未列入的非竞技图用默认变换，标记可能存在偏移
+const MAP_TRANSFORM: Record<string, (nx: number, ny: number) => [number, number]> = {
+  ascent: (a, b) => [1 - a, b],        // 镜像x（lineups 真值标定）
+  split: (a, b) => [1 - a, b],         // A 左 B 右 攻下守上
+  haven: (a, b) => [1 - a, b],         // 三点横排 A 左 B 中 C 右
+  icebox: (a, b) => [a, 1 - b],        // 镜像y（A 左 B 右 攻下守上）
+  abyss: (a, b) => [1 - a, 1 - b],    // 180°（lineups 真值标定）
+  corrode: (a, b) => [1 - a, 1 - b],  // 180°（lineups 真值标定）
+  bind: (a, b) => [1 - b, a],         // cw90（lineups 真值标定）
+  fracture: (a, b) => [1 - b, a],     // cw90（lineups 真值标定）
+  summit: (a, b) => [1 - b, a],       // cw90（lineups 真值标定）
+  sunset: (a, b) => [1 - b, 1 - a],   // 180t（lineups 真值标定）
+  breeze: (a, b) => [1 - b, 1 - a],   // A 左 B 右 攻下守上
+  lotus: (a, b) => [1 - b, 1 - a],    // 三点横排
+  pearl: (a, b) => [1 - b, 1 - a],    // A 左 B 右 攻下守上
+};
+const defaultTransform = (a: number, b: number): [number, number] => [1 - a, b];
+const tf = MAP_TRANSFORM[map.id] ?? defaultTransform;
 const PAD = 8;
 const xs = callouts.map((c) => c.x), ys = callouts.map((c) => c.y);
 const minX = Math.min(...xs), maxX = Math.max(...xs);
@@ -50,12 +68,15 @@ const ZONE_COLOR: Record<string, string> = {
   A: '#FF4655', B: '#18E5F5', C: '#B046FF', Mid: '#FFD54A',
   'Attacker Side': '#7FDB8A', 'Defender Side': '#ECE8E1',
 };
-const calloutMarkers = callouts.map((c, i) => ({
-  zone: c.zone,
-  zh: translated[i].zh,
-  left: PAD + ((c.x - minX) / spanX) * (100 - PAD * 2),
-  top: PAD + ((c.y - minY) / spanY) * (100 - PAD * 2),
-}));
+const calloutMarkers = callouts.map((c, i) => {
+  const [lx, ty] = tf((c.x - minX) / spanX, (c.y - minY) / spanY);
+  return {
+    zone: c.zone,
+    zh: translated[i].zh,
+    left: PAD + lx * (100 - PAD * 2),
+    top: PAD + ty * (100 - PAD * 2),
+  };
+});
 ---
 <BaseLayout
   title={`${name}｜无畏契约资料站`}
