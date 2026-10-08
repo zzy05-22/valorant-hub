@@ -38,6 +38,24 @@ const calloutGroups = ZONE_ORDER
     return { zone, items };
   })
   .filter((g) => g.items.length > 0);
+
+// 报点地图标注：世界坐标 → 战术图百分比
+// 攻守出生点天然锚定地图边界，线性归一化 + 8% 边距；方向假设：x 正→右、y 负→上（以 Ascent 渲染验证为准）
+const PAD = 8;
+const xs = callouts.map((c) => c.x), ys = callouts.map((c) => c.y);
+const minX = Math.min(...xs), maxX = Math.max(...xs);
+const minY = Math.min(...ys), maxY = Math.max(...ys);
+const spanX = maxX - minX || 1, spanY = maxY - minY || 1;
+const ZONE_COLOR: Record<string, string> = {
+  A: '#FF4655', B: '#18E5F5', C: '#B046FF', Mid: '#FFD54A',
+  'Attacker Side': '#7FDB8A', 'Defender Side': '#ECE8E1',
+};
+const calloutMarkers = callouts.map((c, i) => ({
+  zone: c.zone,
+  zh: translated[i].zh,
+  left: PAD + ((c.x - minX) / spanX) * (100 - PAD * 2),
+  top: PAD + ((c.y - minY) / spanY) * (100 - PAD * 2),
+}));
 ---
 <BaseLayout
   title={`${name}｜无畏契约资料站`}
@@ -57,7 +75,15 @@ const calloutGroups = ZONE_ORDER
     {calloutGroups.length > 0 && (
       <>
         <h2>报点速查</h2>
-        <p class="page-sub">官方 callout 与中文通行叫法对照；通用译名整理中，未收录的以英文原名沟通即可</p>
+        <p class="page-sub">标注图与文字表数据同源（官方 callout + 中文通行叫法）；通用译名整理中，未收录的以英文原名沟通即可</p>
+        <div class="co-map card-cut">
+          <img class="co-map__img" src={map.displayIcon} alt={`${name} 报点标注`} loading="lazy" />
+          {calloutMarkers.map((m) => (
+            <span class="co-marker" style={`left:${m.left.toFixed(1)}%;top:${m.top.toFixed(1)}%;--c:${ZONE_COLOR[m.zone] ?? '#ECE8E1'}`}>
+              <i></i><b>{m.zone === 'Attacker Side' ? '攻方 ' : m.zone === 'Defender Side' ? '守方 ' : ''}{m.zh}</b>
+            </span>
+          ))}
+        </div>
         <div class="co-grid">
           {calloutGroups.map((g) => (
             <div class="card-cut co-zone">
@@ -93,4 +119,11 @@ const calloutGroups = ZONE_ORDER
   .co-item { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; font-size: 0.82rem; line-height: 1.5; }
   .co-en { color: var(--val-cream); }
   .co-zh { color: var(--val-red); font-weight: 700; text-align: right; flex-shrink: 0; }
+  .co-map { position: relative; margin-bottom: 1.2rem; overflow: hidden; }
+  .co-map__img { display: block; width: 100%; }
+  .co-marker { position: absolute; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 0.28rem; z-index: 2; }
+  .co-marker i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); box-shadow: 0 0 9px var(--c); border: 1.5px solid rgba(15, 25, 35, 0.85); flex-shrink: 0; transition: transform 0.15s ease; }
+  .co-marker b { color: var(--val-cream); font-size: 0.58rem; font-weight: 600; background: rgba(15, 25, 35, 0.78); padding: 1px 5px; border-radius: 3px; white-space: nowrap; opacity: 0.85; transition: opacity 0.15s ease; }
+  .co-marker:hover i { transform: scale(1.4); }
+  .co-marker:hover b { opacity: 1; color: var(--c); box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
 </style>
