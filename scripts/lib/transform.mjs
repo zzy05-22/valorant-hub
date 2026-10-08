@@ -100,6 +100,14 @@ export function transformMaps(zhList, enList) {
         coordinates: zh.coordinates ?? '',
         displayIcon: zh.displayIcon ?? '',
         splash: zh.splash ?? '',
+        // P11-2：保留官方 callouts（取 en 侧：regionName 为英文原文，如 Tree/Main/Site；
+        // zh 侧 API 该字段为官方中文但与本站「英文原名 + 中文通行叫法对照」展示契约不符，故不取）
+        callouts: (en.callouts ?? []).map((c) => ({
+          region: c.regionName ?? '',
+          zone: c.superRegionName ?? '',
+          x: c.location?.x ?? 0,
+          y: c.location?.y ?? 0,
+        })),
       };
     })
     .filter((m) => {

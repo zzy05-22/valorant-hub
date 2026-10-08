@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import mapsData from '../../data/maps.json';
 import { getCollection, render as renderGuide } from 'astro:content';
 import LineupPanel from '../../components/LineupPanel.astro';
+import { translateCallouts } from '../../utils/callouts';
 
 export function getStaticPaths() {
   return mapsData.maps.map((map) => ({ params: { id: map.id }, props: { map } }));
@@ -14,6 +15,29 @@ const name = map.zh.name !== map.en.name ? `${map.zh.name} ${map.en.name}` : map
 const allGuides = await getCollection('mapGuides', ({ data }) => !data.draft);
 const guideEntry = allGuides.find((g) => g.data.mapId === map.id) ?? null;
 const GuideContent = guideEntry ? (await renderGuide(guideEntry)).Content : null;
+
+// 报点速查：官方 callouts 按 zone 分组 + 中文通行叫法对照（未收录保留英文原文）
+const callouts = map.callouts ?? [];
+const translated = translateCallouts(callouts);
+const ZONE_LABEL: Record<string, string> = {
+  A: 'A 区', B: 'B 区', C: 'C 区', Mid: '中路',
+  'Attacker Side': '攻方', 'Defender Side': '守方',
+};
+const ZONE_ORDER = ['A', 'B', 'C', 'Mid', 'Attacker Side', 'Defender Side'];
+const PREFIX_ZONE = new Set(['A', 'B', 'C']);
+const calloutGroups = ZONE_ORDER
+  .map((zone) => {
+    const items: { en: string; zh: string }[] = [];
+    callouts.forEach((c, i) => {
+      if (c.zone !== zone) return;
+      items.push({
+        en: PREFIX_ZONE.has(c.zone) ? `${c.zone} ${c.region}` : c.region,
+        zh: translated[i].zh,
+      });
+    });
+    return { zone, items };
+  })
+  .filter((g) => g.items.length > 0);
 ---
 <BaseLayout
   title={`${name}｜无畏契约资料站`}
@@ -30,6 +54,24 @@ const GuideContent = guideEntry ? (await renderGuide(guideEntry)).Content : null
     {map.zh.description && <p class="m-text">{map.zh.description}</p>}
     <h2>点位图示</h2>
     <LineupPanel mode="map" focusId={map.id} />
+    {calloutGroups.length > 0 && (
+      <>
+        <h2>报点速查</h2>
+        <p class="page-sub">官方 callout 与中文通行叫法对照；通用译名整理中，未收录的以英文原名沟通即可</p>
+        <div class="co-grid">
+          {calloutGroups.map((g) => (
+            <div class="card-cut co-zone">
+              <h3>{ZONE_LABEL[g.zone] ?? g.zone}</h3>
+              <ul>
+                {g.items.map((it) => (
+                  <li class="co-item"><span class="co-en">{it.en}</span><span class="co-zh">{it.zh}</span></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </>
+    )}
     <h2>攻防思路</h2>
     {GuideContent ? (
       <article class="prose m-guide"><GuideContent /></article>
@@ -44,4 +86,11 @@ const GuideContent = guideEntry ? (await renderGuide(guideEntry)).Content : null
   .m-img { width: 100%; max-width: 640px; margin: 1.2rem 0; border: 1px solid var(--val-line); }
   .m-text { color: var(--val-gray); max-width: 46em; margin-bottom: 1rem; }
   .m-guide { max-width: 46em; }
+  .co-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.8rem; }
+  .co-zone { padding: 0.8rem 1rem; }
+  .co-zone h3 { color: var(--val-red); font-size: 0.8rem; letter-spacing: 0.12em; margin-bottom: 0.55rem; }
+  .co-zone ul { list-style: none; display: grid; gap: 0.35rem; }
+  .co-item { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; font-size: 0.82rem; line-height: 1.5; }
+  .co-en { color: var(--val-cream); }
+  .co-zh { color: var(--val-red); font-weight: 700; text-align: right; flex-shrink: 0; }
 </style>

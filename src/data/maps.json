@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-08T02:50:39.557Z",
+  "syncedAt": "2026-10-08T02:55:47.731Z",
   "version": "13.06.00.5590001",
   "maps": [
     {
@@ -17,7 +17,8 @@
       },
       "coordinates": "",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/dd3a1cd9-41b1-50ea-3bd6-a7bb3c5978bd/splash.png"
+      "splash": "https://media.valorant-api.com/maps/dd3a1cd9-41b1-50ea-3bd6-a7bb3c5978bd/splash.png",
+      "callouts": []
     },
     {
       "id": "ascent",
@@ -34,7 +35,141 @@
       },
       "coordinates": "45°26'BF'N,12°20'Q'E",
       "displayIcon": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png"
+      "splash": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png",
+      "callouts": [
+        {
+          "region": "Tree",
+          "zone": "A",
+          "x": 3980.9062,
+          "y": -5938.758
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 4489.032,
+          "y": -3014.0515
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 5321.6206,
+          "y": -4710.1274
+        },
+        {
+          "region": "Window",
+          "zone": "A",
+          "x": 4023.0244,
+          "y": -8180.692
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 6153.585,
+          "y": -6626.2114
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 60,
+          "y": 50
+        },
+        {
+          "region": "Lobby",
+          "zone": "B",
+          "x": -1490.5864,
+          "y": -1389.9706
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": -1983.6713,
+          "y": -5840.8125
+        },
+        {
+          "region": "Boat House",
+          "zone": "B",
+          "x": -4484.774,
+          "y": -7763.3584
+        },
+        {
+          "region": "Bottom",
+          "zone": "Mid",
+          "x": 1122.2262,
+          "y": -5951.704
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": -2344.065,
+          "y": -7548.511
+        },
+        {
+          "region": "Catwalk",
+          "zone": "Mid",
+          "x": 2315.7944,
+          "y": -4127.2554
+        },
+        {
+          "region": "Cubby",
+          "zone": "Mid",
+          "x": 3387.3167,
+          "y": -5129.764
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 1995.2354,
+          "y": -9744.923
+        },
+        {
+          "region": "Garden",
+          "zone": "A",
+          "x": 3773.6653,
+          "y": -7551.3535
+        },
+        {
+          "region": "Market",
+          "zone": "Mid",
+          "x": 1089.1044,
+          "y": -7363.1914
+        },
+        {
+          "region": "Courtyard",
+          "zone": "Mid",
+          "x": 1222.7029,
+          "y": -4586.6
+        },
+        {
+          "region": "Link",
+          "zone": "Mid",
+          "x": -632.0929,
+          "y": -4280.2573
+        },
+        {
+          "region": "Pizza",
+          "zone": "Mid",
+          "x": 1801.5667,
+          "y": -7262.1704
+        },
+        {
+          "region": "Rafters",
+          "zone": "A",
+          "x": 6129.893,
+          "y": -8210
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 2753.9297,
+          "y": -2129.6155
+        },
+        {
+          "region": "Wine",
+          "zone": "A",
+          "x": 7358.7407,
+          "y": -4689.2705
+        }
+      ]
     },
     {
       "id": "split",
@@ -51,7 +186,153 @@
       },
       "coordinates": "35°41'CD'N,139°41'WX'E",
       "displayIcon": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png"
+      "splash": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png",
+      "callouts": [
+        {
+          "region": "Back",
+          "zone": "A",
+          "x": 7345.049,
+          "y": -7858.0405
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 6814.217,
+          "y": -2457.7468
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 6279.9795,
+          "y": -4492.833
+        },
+        {
+          "region": "Rafters",
+          "zone": "A",
+          "x": 5434.726,
+          "y": -6258.442
+        },
+        {
+          "region": "Ramps",
+          "zone": "A",
+          "x": 4330,
+          "y": -4750
+        },
+        {
+          "region": "Screens",
+          "zone": "A",
+          "x": 5648.7144,
+          "y": -8868.611
+        },
+        {
+          "region": "Sewer",
+          "zone": "A",
+          "x": 4862.6064,
+          "y": -2367.2578
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 6588.6597,
+          "y": -6761.131
+        },
+        {
+          "region": "Tower",
+          "zone": "A",
+          "x": 4636.7925,
+          "y": -6748.2334
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 1901.97,
+          "y": 59.588867
+        },
+        {
+          "region": "Alley",
+          "zone": "B",
+          "x": -1158.0048,
+          "y": -8066.301
+        },
+        {
+          "region": "Back",
+          "zone": "B",
+          "x": -3107.181,
+          "y": -7417.2607
+        },
+        {
+          "region": "Link",
+          "zone": "B",
+          "x": -27.670135,
+          "y": -2369.784
+        },
+        {
+          "region": "Garage",
+          "zone": "B",
+          "x": -2190.7827,
+          "y": -3848.0293
+        },
+        {
+          "region": "Rafters",
+          "zone": "B",
+          "x": -637.1397,
+          "y": -6070.6167
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": -2167.2456,
+          "y": -6264.7715
+        },
+        {
+          "region": "Stairs",
+          "zone": "B",
+          "x": 1061.493,
+          "y": -6760.976
+        },
+        {
+          "region": "Tower",
+          "zone": "B",
+          "x": 168.89589,
+          "y": -5290.194
+        },
+        {
+          "region": "Lobby",
+          "zone": "B",
+          "x": -1271.6421,
+          "y": -1983.6248
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 2142.3635,
+          "y": -8964.969
+        },
+        {
+          "region": "Bottom",
+          "zone": "Mid",
+          "x": 1922.6552,
+          "y": -2899.4626
+        },
+        {
+          "region": "Mail",
+          "zone": "Mid",
+          "x": 1155.3333,
+          "y": -4808.6436
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 2021.9575,
+          "y": -4596.936
+        },
+        {
+          "region": "Vent",
+          "zone": "Mid",
+          "x": 3155.1648,
+          "y": -5338.5215
+        }
+      ]
     },
     {
       "id": "fracture",
@@ -68,7 +349,141 @@
       },
       "coordinates": "35°48'BI\"N 106°08'YQ\"W",
       "displayIcon": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/splash.png"
+      "splash": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/splash.png",
+      "callouts": [
+        {
+          "region": "Bridge",
+          "zone": "Attacker Side",
+          "x": 13204,
+          "y": -756
+        },
+        {
+          "region": "Bench",
+          "zone": "B",
+          "x": 11473,
+          "y": -2897
+        },
+        {
+          "region": "Arcade",
+          "zone": "B",
+          "x": 10181,
+          "y": -4179
+        },
+        {
+          "region": "Tower",
+          "zone": "B",
+          "x": 9155,
+          "y": -5601
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 8178,
+          "y": -5942
+        },
+        {
+          "region": "Generator",
+          "zone": "B",
+          "x": 8362,
+          "y": -3380
+        },
+        {
+          "region": "Link",
+          "zone": "B",
+          "x": 9198,
+          "y": -2741
+        },
+        {
+          "region": "Canteen",
+          "zone": "B",
+          "x": 7111,
+          "y": -3138
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 8578,
+          "y": 1302
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 9156,
+          "y": -677
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": 5967,
+          "y": -5343
+        },
+        {
+          "region": "Tree",
+          "zone": "B",
+          "x": 4965,
+          "y": -4109
+        },
+        {
+          "region": "Tunnel",
+          "zone": "B",
+          "x": 7402,
+          "y": -4058
+        },
+        {
+          "region": "Hall",
+          "zone": "A",
+          "x": 5063.5464,
+          "y": 2057.6648
+        },
+        {
+          "region": "Door",
+          "zone": "A",
+          "x": 5807.855,
+          "y": 1940.4603
+        },
+        {
+          "region": "Rope",
+          "zone": "A",
+          "x": 6638.828,
+          "y": 1052.6461
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 5878.792,
+          "y": 3450.9639
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 8125.7627,
+          "y": 3373.7861
+        },
+        {
+          "region": "Drop",
+          "zone": "A",
+          "x": 9306.803,
+          "y": 2826.1626
+        },
+        {
+          "region": "Dish",
+          "zone": "A",
+          "x": 11296.665,
+          "y": 1391.7144
+        },
+        {
+          "region": "Gate",
+          "zone": "A",
+          "x": 12962,
+          "y": 1565
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 4345.554,
+          "y": -948.4505
+        }
+      ]
     },
     {
       "id": "bind",
@@ -85,7 +500,153 @@
       },
       "coordinates": "34°2'A'N,6°51'Z'W",
       "displayIcon": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/splash.png"
+      "splash": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/splash.png",
+      "callouts": [
+        {
+          "region": "Exit",
+          "zone": "A",
+          "x": 7550.4106,
+          "y": 5874.497
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 6365.635,
+          "y": -1007.0208
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 6113.239,
+          "y": 3158.823
+        },
+        {
+          "region": "Short",
+          "zone": "A",
+          "x": 7983.3467,
+          "y": 803.96063
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 10747.902,
+          "y": 2664.4436
+        },
+        {
+          "region": "Teleporter",
+          "zone": "A",
+          "x": 9432.303,
+          "y": 489.8803
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 161.64832,
+          "y": 77.51108
+        },
+        {
+          "region": "Exit",
+          "zone": "B",
+          "x": 8921.412,
+          "y": -1763.2295
+        },
+        {
+          "region": "Hall",
+          "zone": "B",
+          "x": 12981.879,
+          "y": -4941.7544
+        },
+        {
+          "region": "Link",
+          "zone": "B",
+          "x": 6361.57,
+          "y": -2621.1829
+        },
+        {
+          "region": "Fountain",
+          "zone": "B",
+          "x": 5737.1484,
+          "y": -5390.446
+        },
+        {
+          "region": "Long",
+          "zone": "B",
+          "x": 7666.669,
+          "y": -6512.8022
+        },
+        {
+          "region": "Short",
+          "zone": "B",
+          "x": 7424.1313,
+          "y": -3056.4531
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 11108.108,
+          "y": -4831.4585
+        },
+        {
+          "region": "Teleporter",
+          "zone": "B",
+          "x": 9027.776,
+          "y": -7223.8066
+        },
+        {
+          "region": "Window",
+          "zone": "B",
+          "x": 8826.788,
+          "y": -4309.4116
+        },
+        {
+          "region": "Bath",
+          "zone": "A",
+          "x": 9106.541,
+          "y": 4449.6587
+        },
+        {
+          "region": "Cave",
+          "zone": "Attacker Side",
+          "x": 3920.3887,
+          "y": 256.94193
+        },
+        {
+          "region": "Cubby",
+          "zone": "A",
+          "x": 8605.168,
+          "y": 174.89832
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 14641.918,
+          "y": -1017.6743
+        },
+        {
+          "region": "Elbow",
+          "zone": "B",
+          "x": 11212.901,
+          "y": -7095.3335
+        },
+        {
+          "region": "Garden",
+          "zone": "B",
+          "x": 9144.103,
+          "y": -5598.1274
+        },
+        {
+          "region": "Lamps",
+          "zone": "A",
+          "x": 10649.471,
+          "y": 79.904434
+        },
+        {
+          "region": "Tower",
+          "zone": "A",
+          "x": 12872.583,
+          "y": 2556.7708
+        }
+      ]
     },
     {
       "id": "skirmish-a",
@@ -102,7 +663,8 @@
       },
       "coordinates": "",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/a9009649-421f-d5d5-f80c-0cbe02c125bb/splash.png"
+      "splash": "https://media.valorant-api.com/maps/a9009649-421f-d5d5-f80c-0cbe02c125bb/splash.png",
+      "callouts": []
     },
     {
       "id": "skirmish-b",
@@ -119,7 +681,8 @@
       },
       "coordinates": "",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/a38a3f9a-4042-844c-8970-a3ac2f7ce93d/splash.png"
+      "splash": "https://media.valorant-api.com/maps/a38a3f9a-4042-844c-8970-a3ac2f7ce93d/splash.png",
+      "callouts": []
     },
     {
       "id": "skirmish-c",
@@ -136,7 +699,8 @@
       },
       "coordinates": "",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/a264de0f-4a04-9c78-c97a-a6b192ce6e86/splash.png"
+      "splash": "https://media.valorant-api.com/maps/a264de0f-4a04-9c78-c97a-a6b192ce6e86/splash.png",
+      "callouts": []
     },
     {
       "id": "skirmish-e",
@@ -153,7 +717,8 @@
       },
       "coordinates": "",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/4490f1d6-4818-bf5f-9b3a-9c9a8dbb52ed/splash.png"
+      "splash": "https://media.valorant-api.com/maps/4490f1d6-4818-bf5f-9b3a-9c9a8dbb52ed/splash.png",
+      "callouts": []
     },
     {
       "id": "skirmish-d",
@@ -170,7 +735,8 @@
       },
       "coordinates": "",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/1c7555fc-4bc6-3b98-9674-789d47ef6c50/splash.png"
+      "splash": "https://media.valorant-api.com/maps/1c7555fc-4bc6-3b98-9674-789d47ef6c50/splash.png",
+      "callouts": []
     },
     {
       "id": "breeze",
@@ -187,7 +753,147 @@
       },
       "coordinates": "26°11'AG\"N 71°10'WY\"W",
       "displayIcon": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/splash.png"
+      "splash": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/splash.png",
+      "callouts": [
+        {
+          "region": "Hall",
+          "zone": "Mid",
+          "x": 4256.5713,
+          "y": 2491.0493
+        },
+        {
+          "region": "Bridge",
+          "zone": "A",
+          "x": 8400,
+          "y": 3525
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 8900,
+          "y": 3525
+        },
+        {
+          "region": "Arches",
+          "zone": "Defender Side",
+          "x": 9400,
+          "y": -1300
+        },
+        {
+          "region": "Wood Doors",
+          "zone": "Mid",
+          "x": 4825,
+          "y": 2550
+        },
+        {
+          "region": "Pillar",
+          "zone": "Mid",
+          "x": 4175,
+          "y": 475
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 6175,
+          "y": 525
+        },
+        {
+          "region": "Nest",
+          "zone": "Mid",
+          "x": 8650,
+          "y": 275
+        },
+        {
+          "region": "Window",
+          "zone": "B",
+          "x": 2225,
+          "y": -4175
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": 3550,
+          "y": -4450
+        },
+        {
+          "region": "Elbow",
+          "zone": "B",
+          "x": 4675,
+          "y": -2900
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 6450,
+          "y": -5650
+        },
+        {
+          "region": "Tunnel",
+          "zone": "B",
+          "x": 6450,
+          "y": -1450
+        },
+        {
+          "region": "Ramp",
+          "zone": "A",
+          "x": 7300,
+          "y": 2725
+        },
+        {
+          "region": "Back",
+          "zone": "B",
+          "x": 7550,
+          "y": -5675
+        },
+        {
+          "region": "Wall",
+          "zone": "B",
+          "x": 8550,
+          "y": -3000
+        },
+        {
+          "region": "Cannon",
+          "zone": "Mid",
+          "x": 2900,
+          "y": -1850
+        },
+        {
+          "region": "Bottom",
+          "zone": "Mid",
+          "x": 1575,
+          "y": 475
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": -1250,
+          "y": 3400
+        },
+        {
+          "region": "Shop",
+          "zone": "A",
+          "x": 2150,
+          "y": 4250
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 4825,
+          "y": 6325
+        },
+        {
+          "region": "Pyramids",
+          "zone": "A",
+          "x": 5200,
+          "y": 5450
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": -575,
+          "y": -450
+        }
+      ]
     },
     {
       "id": "district",
@@ -204,7 +910,87 @@
       },
       "coordinates": "",
       "displayIcon": "https://media.valorant-api.com/maps/690b3ed2-4dff-945b-8223-6da834e30d24/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/690b3ed2-4dff-945b-8223-6da834e30d24/splash.png"
+      "splash": "https://media.valorant-api.com/maps/690b3ed2-4dff-945b-8223-6da834e30d24/splash.png",
+      "callouts": [
+        {
+          "region": "Box",
+          "zone": "Attacker Side",
+          "x": -2225,
+          "y": 1700
+        },
+        {
+          "region": "Nest",
+          "zone": "Attacker Side",
+          "x": -2200,
+          "y": 800
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": -1200,
+          "y": 3000
+        },
+        {
+          "region": "Stairs",
+          "zone": "Attacker Side",
+          "x": -200,
+          "y": 1200
+        },
+        {
+          "region": "Wall",
+          "zone": "Attacker Side",
+          "x": 700,
+          "y": 900
+        },
+        {
+          "region": "Box",
+          "zone": "Defender Side",
+          "x": -2225,
+          "y": -2900
+        },
+        {
+          "region": "Nest",
+          "zone": "Defender Side",
+          "x": -2200,
+          "y": -1700
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": -1200,
+          "y": -3000
+        },
+        {
+          "region": "Stairs",
+          "zone": "Defender Side",
+          "x": -200,
+          "y": -1200
+        },
+        {
+          "region": "Wall",
+          "zone": "Defender Side",
+          "x": 700,
+          "y": -900
+        },
+        {
+          "region": "Generator",
+          "zone": "Mid",
+          "x": -1400,
+          "y": -1000
+        },
+        {
+          "region": "Horseshoe",
+          "zone": "Mid",
+          "x": -3200,
+          "y": -900
+        },
+        {
+          "region": "Sewer",
+          "zone": "Mid",
+          "x": 700,
+          "y": -900
+        }
+      ]
     },
     {
       "id": "kasbah",
@@ -221,7 +1007,141 @@
       },
       "coordinates": "",
       "displayIcon": "https://media.valorant-api.com/maps/12452a9d-48c3-0b02-e7eb-0381c3520404/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/12452a9d-48c3-0b02-e7eb-0381c3520404/splash.png"
+      "splash": "https://media.valorant-api.com/maps/12452a9d-48c3-0b02-e7eb-0381c3520404/splash.png",
+      "callouts": [
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Angle Box",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Link",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Pit",
+          "zone": "Mid",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Tower",
+          "zone": "Mid",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Ramp",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Flat Box",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Nest",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Tunnel",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Window",
+          "zone": "Defender Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Angle Box",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Link",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Pit",
+          "zone": "Mid",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Tower",
+          "zone": "Mid",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Ramp",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Flat Box",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Nest",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Tunnel",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "region": "Window",
+          "zone": "Attacker Side",
+          "x": 0,
+          "y": 0
+        }
+      ]
     },
     {
       "id": "drift",
@@ -238,7 +1158,75 @@
       },
       "coordinates": "",
       "displayIcon": "https://media.valorant-api.com/maps/2c09d728-42d5-30d8-43dc-96a05cc7ee9d/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/2c09d728-42d5-30d8-43dc-96a05cc7ee9d/splash.png"
+      "splash": "https://media.valorant-api.com/maps/2c09d728-42d5-30d8-43dc-96a05cc7ee9d/splash.png",
+      "callouts": [
+        {
+          "region": "Alley",
+          "zone": "Attacker Side",
+          "x": 3200,
+          "y": 2200
+        },
+        {
+          "region": "Nest",
+          "zone": "Attacker Side",
+          "x": 2000,
+          "y": -3400
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 1200,
+          "y": -2200
+        },
+        {
+          "region": "Tower",
+          "zone": "Attacker Side",
+          "x": -400,
+          "y": -1800
+        },
+        {
+          "region": "Yard",
+          "zone": "Attacker Side",
+          "x": -1600,
+          "y": -3400
+        },
+        {
+          "region": "Alley",
+          "zone": "Defender Side",
+          "x": -3200,
+          "y": -2200
+        },
+        {
+          "region": "Nest",
+          "zone": "Defender Side",
+          "x": -2000,
+          "y": 3400
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": -1200,
+          "y": 2200
+        },
+        {
+          "region": "Tower",
+          "zone": "Defender Side",
+          "x": 400,
+          "y": 1800
+        },
+        {
+          "region": "Yard",
+          "zone": "Defender Side",
+          "x": 1600,
+          "y": 3400
+        },
+        {
+          "region": "Water",
+          "zone": "Mid",
+          "x": -800,
+          "y": -600
+        }
+      ]
     },
     {
       "id": "glitch",
@@ -255,7 +1243,8 @@
       },
       "coordinates": "",
       "displayIcon": "https://media.valorant-api.com/maps/d6336a5a-428f-c591-98db-c8a291159134/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/d6336a5a-428f-c591-98db-c8a291159134/splash.png"
+      "splash": "https://media.valorant-api.com/maps/d6336a5a-428f-c591-98db-c8a291159134/splash.png",
+      "callouts": []
     },
     {
       "id": "piazza",
@@ -272,7 +1261,8 @@
       },
       "coordinates": "",
       "displayIcon": "https://media.valorant-api.com/maps/de28aa9b-4cbe-1003-320e-6cb3ec309557/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/de28aa9b-4cbe-1003-320e-6cb3ec309557/splash.png"
+      "splash": "https://media.valorant-api.com/maps/de28aa9b-4cbe-1003-320e-6cb3ec309557/splash.png",
+      "callouts": []
     },
     {
       "id": "abyss",
@@ -289,7 +1279,147 @@
       },
       "coordinates": "70° 50' AJ\" N, 9° 00' VX\" W",
       "displayIcon": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/splash.png"
+      "splash": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/splash.png",
+      "callouts": [
+        {
+          "region": "Bridge",
+          "zone": "A",
+          "x": 5700,
+          "y": -375
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 2800,
+          "y": -2450
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 3250,
+          "y": 3400
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 3800,
+          "y": 1650
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 4300,
+          "y": -200
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 950,
+          "y": 4950
+        },
+        {
+          "region": "Tower",
+          "zone": "A",
+          "x": 3025,
+          "y": -125
+        },
+        {
+          "region": "Bend",
+          "zone": "Mid",
+          "x": -1700,
+          "y": 1075
+        },
+        {
+          "region": "Link",
+          "zone": "B",
+          "x": -2000,
+          "y": -2350
+        },
+        {
+          "region": "Lobby",
+          "zone": "B",
+          "x": -3650,
+          "y": 4025
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": -4450,
+          "y": 1525
+        },
+        {
+          "region": "Nest",
+          "zone": "B",
+          "x": -4975,
+          "y": 2150
+        },
+        {
+          "region": "Bottom",
+          "zone": "Mid",
+          "x": -400,
+          "y": 575
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": -4425,
+          "y": -1175
+        },
+        {
+          "region": "Catwalk",
+          "zone": "Mid",
+          "x": 600,
+          "y": 525
+        },
+        {
+          "region": "Danger",
+          "zone": "B",
+          "x": -5850,
+          "y": 700
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 950,
+          "y": -5275
+        },
+        {
+          "region": "Library",
+          "zone": "Mid",
+          "x": -325,
+          "y": -600
+        },
+        {
+          "region": "Secret",
+          "zone": "A",
+          "x": 3775,
+          "y": -3850
+        },
+        {
+          "region": "Security",
+          "zone": "A",
+          "x": 4900,
+          "y": -2975
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 775,
+          "y": -2375
+        },
+        {
+          "region": "Tower",
+          "zone": "B",
+          "x": -3925,
+          "y": -2500
+        },
+        {
+          "region": "Vent",
+          "zone": "A",
+          "x": 1700,
+          "y": -325
+        }
+      ]
     },
     {
       "id": "lotus",
@@ -306,7 +1436,177 @@
       },
       "coordinates": "14°07'AD.4\"N8 74°53'XY\"E8",
       "displayIcon": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/splash.png"
+      "splash": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/splash.png",
+      "callouts": [
+        {
+          "region": "Top",
+          "zone": "A",
+          "x": 9260.3,
+          "y": 5045.5884
+        },
+        {
+          "region": "Drop",
+          "zone": "A",
+          "x": 9516.38,
+          "y": 6092.8936
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 7735.5396,
+          "y": 5557.309
+        },
+        {
+          "region": "Hut",
+          "zone": "A",
+          "x": 7917.4614,
+          "y": 5557.309
+        },
+        {
+          "region": "Tree",
+          "zone": "A",
+          "x": 6149.525,
+          "y": 5557.309
+        },
+        {
+          "region": "Door",
+          "zone": "A",
+          "x": 5608.7563,
+          "y": 5203.91
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 5288.3022,
+          "y": 4159.762
+        },
+        {
+          "region": "Rubble",
+          "zone": "A",
+          "x": 4401.0713,
+          "y": 4918.189
+        },
+        {
+          "region": "Root",
+          "zone": "A",
+          "x": 4401.0713,
+          "y": 3294.1523
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 2685.951,
+          "y": 2927.1755
+        },
+        {
+          "region": "Lobby",
+          "zone": "C",
+          "x": 1403.5685,
+          "y": -1576.5884
+        },
+        {
+          "region": "Pillars",
+          "zone": "B",
+          "x": 3565.3691,
+          "y": 668.18317
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": 4876.832,
+          "y": -47.87195
+        },
+        {
+          "region": "Door",
+          "zone": "C",
+          "x": 4818.6655,
+          "y": -1752.8021
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 6368.0327,
+          "y": 668.18317
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 6011.0664,
+          "y": 2087.6528
+        },
+        {
+          "region": "Upper",
+          "zone": "B",
+          "x": 7682.943,
+          "y": 1517.3606
+        },
+        {
+          "region": "Waterfall",
+          "zone": "C",
+          "x": 6719.804,
+          "y": -1994.2986
+        },
+        {
+          "region": "Link",
+          "zone": "C",
+          "x": 7504.109,
+          "y": -1377.893
+        },
+        {
+          "region": "Stairs",
+          "zone": "A",
+          "x": 8257.875,
+          "y": 3860.9312
+        },
+        {
+          "region": "Mound",
+          "zone": "C",
+          "x": 3863.7183,
+          "y": -1576.5884
+        },
+        {
+          "region": "Main",
+          "zone": "C",
+          "x": 5311.2646,
+          "y": -3148.162
+        },
+        {
+          "region": "Bend",
+          "zone": "C",
+          "x": 5657.522,
+          "y": -5281.4395
+        },
+        {
+          "region": "Site",
+          "zone": "C",
+          "x": 6676.6636,
+          "y": -4265.876
+        },
+        {
+          "region": "Hall",
+          "zone": "C",
+          "x": 7902.0615,
+          "y": -4265.876
+        },
+        {
+          "region": "Gravel",
+          "zone": "C",
+          "x": 8936.881,
+          "y": -1752.2874
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 9686.767,
+          "y": 1697.8223
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 1401.2915,
+          "y": 777.29834
+        }
+      ]
     },
     {
       "id": "sunset",
@@ -323,7 +1623,111 @@
       },
       "coordinates": "34° 2′ C″ N, 118° 12′ YT″ W",
       "displayIcon": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/splash.png"
+      "splash": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/splash.png",
+      "callouts": [
+        {
+          "region": "Boba",
+          "zone": "B",
+          "x": 2200,
+          "y": -4800
+        },
+        {
+          "region": "Tiles",
+          "zone": "Mid",
+          "x": -1800,
+          "y": 400
+        },
+        {
+          "region": "Market",
+          "zone": "B",
+          "x": -200,
+          "y": -3400
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": -600,
+          "y": -5850
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": -2000,
+          "y": -5650
+        },
+        {
+          "region": "Lobby",
+          "zone": "B",
+          "x": -3400,
+          "y": -2600
+        },
+        {
+          "region": "Bottom",
+          "zone": "Mid",
+          "x": -1800,
+          "y": -2025
+        },
+        {
+          "region": "Courtyard",
+          "zone": "Mid",
+          "x": -600,
+          "y": -1200
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": -1800,
+          "y": 2000
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": -400,
+          "y": 2200
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 2200,
+          "y": 3000
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 1000,
+          "y": 3200
+        },
+        {
+          "region": "Elbow",
+          "zone": "A",
+          "x": 200,
+          "y": 4200
+        },
+        {
+          "region": "Alley",
+          "zone": "A",
+          "x": 3400,
+          "y": 3600
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 3805.4785,
+          "y": -1989.0962
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 2000,
+          "y": -2000
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": -6025,
+          "y": -400
+        }
+      ]
     },
     {
       "id": "basic-training",
@@ -340,7 +1744,8 @@
       },
       "coordinates": "",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/1f10dab3-4294-3827-fa35-c2aa00213cf3/splash.png"
+      "splash": "https://media.valorant-api.com/maps/1f10dab3-4294-3827-fa35-c2aa00213cf3/splash.png",
+      "callouts": []
     },
     {
       "id": "pearl",
@@ -357,7 +1762,165 @@
       },
       "coordinates": "38°42'ED\"N8 9°08'XS\"W8",
       "displayIcon": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/splash.png"
+      "splash": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/splash.png",
+      "callouts": [
+        {
+          "region": "Hall",
+          "zone": "B",
+          "x": 7495.6177,
+          "y": -4954.14
+        },
+        {
+          "region": "Doors",
+          "zone": "Mid",
+          "x": 4701.24,
+          "y": 597.23285
+        },
+        {
+          "region": "Connector",
+          "zone": "Mid",
+          "x": 6047.0464,
+          "y": 1800.0436
+        },
+        {
+          "region": "Water",
+          "zone": "Defender Side",
+          "x": 7808.019,
+          "y": 1800.0419
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 11092.458,
+          "y": 378.79883
+        },
+        {
+          "region": "Flowers",
+          "zone": "A",
+          "x": 9263.969,
+          "y": 2507.3403
+        },
+        {
+          "region": "Secret",
+          "zone": "A",
+          "x": 10458.144,
+          "y": 3831.5127
+        },
+        {
+          "region": "Dugout",
+          "zone": "A",
+          "x": 7660.6597,
+          "y": 5854.0664
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 6613.846,
+          "y": 5569.5254
+        },
+        {
+          "region": "Records",
+          "zone": "Defender Side",
+          "x": 8973.152,
+          "y": -1470.2677
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 2075,
+          "y": 725
+        },
+        {
+          "region": "Tunnel",
+          "zone": "B",
+          "x": 8973.152,
+          "y": -2155.1323
+        },
+        {
+          "region": "Tower",
+          "zone": "B",
+          "x": 8533.423,
+          "y": -2851.3516
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 6368.5713,
+          "y": 3825
+        },
+        {
+          "region": "Restaurant",
+          "zone": "A",
+          "x": 4430.452,
+          "y": 2813.1267
+        },
+        {
+          "region": "Link",
+          "zone": "B",
+          "x": 4503.3633,
+          "y": -591.64435
+        },
+        {
+          "region": "Art",
+          "zone": "A",
+          "x": 4561.95,
+          "y": 3406.8806
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 6055.2104,
+          "y": 3782.704
+        },
+        {
+          "region": "Plaza",
+          "zone": "Mid",
+          "x": 2750,
+          "y": -325
+        },
+        {
+          "region": "Shops",
+          "zone": "Mid",
+          "x": 800,
+          "y": -1450
+        },
+        {
+          "region": "Club",
+          "zone": "B",
+          "x": 800,
+          "y": -1450
+        },
+        {
+          "region": "Ramp",
+          "zone": "B",
+          "x": 1750,
+          "y": -3800
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": 4050,
+          "y": -4375
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 5800,
+          "y": -2850
+        },
+        {
+          "region": "Screen",
+          "zone": "B",
+          "x": 6260.4326,
+          "y": -5000.933
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": -550,
+          "y": -600
+        }
+      ]
     },
     {
       "id": "summit",
@@ -374,7 +1937,153 @@
       },
       "coordinates": "北纬29°18'FC\"，东经110°25'ZQ\"",
       "displayIcon": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/splash.png"
+      "splash": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/splash.png",
+      "callouts": [
+        {
+          "region": "Bottom",
+          "zone": "Mid",
+          "x": 7500,
+          "y": 5825
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 4025,
+          "y": 6525
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 3174.9998,
+          "y": 8625
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 5500,
+          "y": 8625
+        },
+        {
+          "region": "Garden",
+          "zone": "A",
+          "x": 7675,
+          "y": 9925
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 7675,
+          "y": 11600
+        },
+        {
+          "region": "Art",
+          "zone": "A",
+          "x": 9525,
+          "y": 9925
+        },
+        {
+          "region": "Cave",
+          "zone": "A",
+          "x": 9525,
+          "y": 12125
+        },
+        {
+          "region": "Hall",
+          "zone": "A",
+          "x": 9525,
+          "y": 8600
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 8250,
+          "y": 8050
+        },
+        {
+          "region": "Lobby",
+          "zone": "B",
+          "x": 5125,
+          "y": 3225
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 12075,
+          "y": 6175
+        },
+        {
+          "region": "Window",
+          "zone": "Mid",
+          "x": 8700,
+          "y": 5825
+        },
+        {
+          "region": "Gym",
+          "zone": "B",
+          "x": 10525,
+          "y": 3100.0002
+        },
+        {
+          "region": "Trophy",
+          "zone": "B",
+          "x": 9075,
+          "y": 3675.0002
+        },
+        {
+          "region": "Tower",
+          "zone": "B",
+          "x": 10175,
+          "y": 1450.0001
+        },
+        {
+          "region": "Drop",
+          "zone": "B",
+          "x": 9850,
+          "y": 75.00015
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 8550,
+          "y": 1375.0001
+        },
+        {
+          "region": "Link",
+          "zone": "B",
+          "x": 7500,
+          "y": 3775
+        },
+        {
+          "region": "Fountain",
+          "zone": "Mid",
+          "x": 5675,
+          "y": 6175
+        },
+        {
+          "region": "Bend",
+          "zone": "Mid",
+          "x": 6475,
+          "y": 7850
+        },
+        {
+          "region": "Tiles",
+          "zone": "Mid",
+          "x": 4960.938,
+          "y": 4233.579
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": 6500,
+          "y": 1849.9999
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 1100,
+          "y": -100
+        }
+      ]
     },
     {
       "id": "icebox",
@@ -391,7 +2100,159 @@
       },
       "coordinates": "76°44' A\"N 149°30' Z\"E",
       "displayIcon": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/splash.png"
+      "splash": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/splash.png",
+      "callouts": [
+        {
+          "region": "Garage",
+          "zone": "B",
+          "x": -1250,
+          "y": -1425
+        },
+        {
+          "region": "Belt",
+          "zone": "A",
+          "x": -7200,
+          "y": -850
+        },
+        {
+          "region": "Nest",
+          "zone": "A",
+          "x": -6650,
+          "y": 900
+        },
+        {
+          "region": "Pipes",
+          "zone": "A",
+          "x": -6150,
+          "y": 450
+        },
+        {
+          "region": "Rafters",
+          "zone": "A",
+          "x": -6450,
+          "y": 4250
+        },
+        {
+          "region": "Screen",
+          "zone": "A",
+          "x": -5100,
+          "y": 3325
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": -6400,
+          "y": 3200
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": -3925,
+          "y": -4450
+        },
+        {
+          "region": "Yellow",
+          "zone": "B",
+          "x": 2050,
+          "y": -25
+        },
+        {
+          "region": "Back",
+          "zone": "B",
+          "x": 251,
+          "y": 4269
+        },
+        {
+          "region": "Cubby",
+          "zone": "B",
+          "x": 1050,
+          "y": -975
+        },
+        {
+          "region": "Green",
+          "zone": "B",
+          "x": -450,
+          "y": -700
+        },
+        {
+          "region": "Hall",
+          "zone": "B",
+          "x": 300,
+          "y": 3050
+        },
+        {
+          "region": "Hut",
+          "zone": "B",
+          "x": -1425,
+          "y": 4400
+        },
+        {
+          "region": "Kitchen",
+          "zone": "B",
+          "x": -2221.3618,
+          "y": 3403.649
+        },
+        {
+          "region": "Orange",
+          "zone": "B",
+          "x": -632,
+          "y": 1700
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 1725,
+          "y": 2575
+        },
+        {
+          "region": "Snowman",
+          "zone": "B",
+          "x": 2250,
+          "y": 3960.3218
+        },
+        {
+          "region": "Snow Pile",
+          "zone": "B",
+          "x": -1775,
+          "y": 2500
+        },
+        {
+          "region": "Tube",
+          "zone": "B",
+          "x": -2300,
+          "y": 1275
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": -3750,
+          "y": 7075
+        },
+        {
+          "region": "Blue",
+          "zone": "Mid",
+          "x": -2825,
+          "y": 975
+        },
+        {
+          "region": "Boiler",
+          "zone": "Mid",
+          "x": -3375,
+          "y": 2925
+        },
+        {
+          "region": "Pallet",
+          "zone": "Mid",
+          "x": -4450,
+          "y": 1775
+        },
+        {
+          "region": "Fence",
+          "zone": "B",
+          "x": 363,
+          "y": 3595
+        }
+      ]
     },
     {
       "id": "the-range",
@@ -408,7 +2269,8 @@
       },
       "coordinates": "45°26'FF'N,12°20'Q'E",
       "displayIcon": "",
-      "splash": "https://media.valorant-api.com/maps/ee613ee9-28b7-4beb-9666-08db13bb2244/splash.png"
+      "splash": "https://media.valorant-api.com/maps/ee613ee9-28b7-4beb-9666-08db13bb2244/splash.png",
+      "callouts": []
     },
     {
       "id": "corrode",
@@ -425,7 +2287,135 @@
       },
       "coordinates": "48° 38' FH\" N8, 1° 33' YV\" W8",
       "displayIcon": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/splash.png"
+      "splash": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/splash.png",
+      "callouts": [
+        {
+          "region": "Crane",
+          "zone": "A",
+          "x": 4458.2866,
+          "y": -3999.4976
+        },
+        {
+          "region": "Elbow",
+          "zone": "A",
+          "x": 5583.2793,
+          "y": -2074.4995
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 1783.2793,
+          "y": -1049.5073
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 4333.2793,
+          "y": 2600.4976
+        },
+        {
+          "region": "Main",
+          "zone": "A",
+          "x": 5933.2793,
+          "y": 1225.4977
+        },
+        {
+          "region": "Pocket",
+          "zone": "A",
+          "x": 5583.2793,
+          "y": -799.4995
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 3458.2793,
+          "y": -1824.5004
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": -25,
+          "y": 5675
+        },
+        {
+          "region": "Yard",
+          "zone": "A",
+          "x": 4333.2793,
+          "y": -799.50256
+        },
+        {
+          "region": "Arch",
+          "zone": "B",
+          "x": -3216.7134,
+          "y": -4399.5156
+        },
+        {
+          "region": "Elbow",
+          "zone": "B",
+          "x": -5591.7236,
+          "y": -2924.5183
+        },
+        {
+          "region": "Link",
+          "zone": "B",
+          "x": -1291.7185,
+          "y": -1824.5093
+        },
+        {
+          "region": "Lobby",
+          "zone": "B",
+          "x": -1666.7264,
+          "y": 2775.4875
+        },
+        {
+          "region": "Main",
+          "zone": "B",
+          "x": -2716.7236,
+          "y": 750.4862
+        },
+        {
+          "region": "Bottom",
+          "zone": "Mid",
+          "x": 133.27757,
+          "y": 175.49072
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": -2716.7234,
+          "y": -1174.5138
+        },
+        {
+          "region": "Tower",
+          "zone": "B",
+          "x": -3516.7236,
+          "y": -2924.5183
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 8.286561,
+          "y": -5749.507
+        },
+        {
+          "region": "Stairs",
+          "zone": "Mid",
+          "x": 133.28067,
+          "y": -1474.5093
+        },
+        {
+          "region": "Window",
+          "zone": "Mid",
+          "x": 133.28421,
+          "y": -3099.5093
+        },
+        {
+          "region": "Top",
+          "zone": "Mid",
+          "x": 133.2815,
+          "y": -1824.5093
+        }
+      ]
     },
     {
       "id": "haven",
@@ -442,7 +2432,135 @@
       },
       "coordinates": "27°28'A'N,89°38'WZ'E",
       "displayIcon": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/displayicon.png",
-      "splash": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/splash.png"
+      "splash": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/splash.png",
+      "callouts": [
+        {
+          "region": "Garden",
+          "zone": "A",
+          "x": 3100.261,
+          "y": -4683.6016
+        },
+        {
+          "region": "Link",
+          "zone": "A",
+          "x": 4244.4214,
+          "y": -10715.68
+        },
+        {
+          "region": "Lobby",
+          "zone": "A",
+          "x": 3438.537,
+          "y": -6260.409
+        },
+        {
+          "region": "Long",
+          "zone": "A",
+          "x": 6209.695,
+          "y": -6901.142
+        },
+        {
+          "region": "Sewer",
+          "zone": "A",
+          "x": 3452.8735,
+          "y": -7915.7246
+        },
+        {
+          "region": "Site",
+          "zone": "A",
+          "x": 6309.3076,
+          "y": -9225.703
+        },
+        {
+          "region": "Spawn",
+          "zone": "Attacker Side",
+          "x": 1741.7622,
+          "y": -2642.7925
+        },
+        {
+          "region": "Back",
+          "zone": "B",
+          "x": 1966.1608,
+          "y": -10664.775
+        },
+        {
+          "region": "Site",
+          "zone": "B",
+          "x": 1884.706,
+          "y": -9231.335
+        },
+        {
+          "region": "Link",
+          "zone": "C",
+          "x": -87.761444,
+          "y": -10004.415
+        },
+        {
+          "region": "Lobby",
+          "zone": "C",
+          "x": -1642.189,
+          "y": -5720.345
+        },
+        {
+          "region": "Long",
+          "zone": "C",
+          "x": -3356.814,
+          "y": -5990.872
+        },
+        {
+          "region": "Garage",
+          "zone": "C",
+          "x": 180.07678,
+          "y": -7999.5845
+        },
+        {
+          "region": "Window",
+          "zone": "C",
+          "x": -10.126678,
+          "y": -8993.241
+        },
+        {
+          "region": "Site",
+          "zone": "C",
+          "x": -2378.1328,
+          "y": -9010.557
+        },
+        {
+          "region": "Cubby",
+          "zone": "C",
+          "x": -2119.7693,
+          "y": -6561.603
+        },
+        {
+          "region": "Spawn",
+          "zone": "Defender Side",
+          "x": 2946.3042,
+          "y": -12714.707
+        },
+        {
+          "region": "Doors",
+          "zone": "Mid",
+          "x": 151.11594,
+          "y": -6262.9155
+        },
+        {
+          "region": "Courtyard",
+          "zone": "Mid",
+          "x": 1822.1299,
+          "y": -6712.6875
+        },
+        {
+          "region": "Window",
+          "zone": "Mid",
+          "x": 1950.2218,
+          "y": -5567.912
+        },
+        {
+          "region": "Tower",
+          "zone": "A",
+          "x": 6721.4043,
+          "y": -10472.5205
+        }
+      ]
     }
   ]
 }
