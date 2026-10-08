@@ -69,7 +69,10 @@ const ZONE_COLOR: Record<string, string> = {
   'Attacker Side': '#7FDB8A', 'Defender Side': '#ECE8E1',
 };
 const calloutMarkers = callouts.map((c, i) => {
-  const [lx, ty] = tf((c.x - minX) / spanX, (c.y - minY) / spanY);
+  let [lx, ty] = tf((c.x - minX) / spanX, (c.y - minY) / spanY);
+  // 用户观察校准（2026-10-08）：标记整体相比正确位置顺时针偏 90°，统一逆时针回转
+  // 屏幕逆时针 90°：(lx, ty) → (ty, 1 - lx)
+  [lx, ty] = [ty, 1 - lx];
   return {
     zone: c.zone,
     zh: translated[i].zh,

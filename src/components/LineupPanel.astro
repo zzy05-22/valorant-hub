@@ -73,6 +73,7 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
       spots: LineupSpot[]; initialMapId: string; initialAgentId: string;
     };
     const mapImg = document.getElementById('lineup-map') as HTMLImageElement;
+    const mapStage = document.querySelector('.lineup__map') as HTMLElement;
     const list = document.getElementById('lineup-list') as HTMLElement;
     const legend = document.getElementById('lineup-legend') as HTMLElement;
     const btns = document.querySelectorAll<HTMLButtonElement>('#picker .chip-btn');
@@ -87,6 +88,20 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
     function render() {
       mapImg.src = data.maps[curMap()].icon;
       const isAll = data.mode === 'map' && selected === ALL;
+      // 地图上的点位标记（x/y 百分比绝对定位；"全部"视图按特工分组着色）
+      const visibleSpots = isAll
+        ? data.spots.filter((s) => s.mapId === data.focusId)
+        : filterSpots(data.spots, curMap(), curAgent());
+      mapStage.querySelectorAll('.lineup__mark').forEach((el) => el.remove());
+      for (const s of visibleSpots) {
+        const mark = document.createElement('div');
+        mark.className = 'lineup__mark';
+        mark.style.left = `${s.x}%`;
+        mark.style.top = `${s.y}%`;
+        mark.title = `${data.agents[s.agentId]?.name ?? ''} · ${s.label}`;
+        if (isAll && data.agents[s.agentId]) mark.style.background = data.agents[s.agentId].color;
+        mapStage.appendChild(mark);
+      }
       legend.classList.toggle('lineup__legend--on', isAll);
       if (isAll) {
         // 全部视图：groupSpotsByAgent 分组着色，图例 = 特工名 + 颜色点
@@ -145,5 +160,6 @@ const initialAgentId = mode === 'map' ? involvedAgentIds[0] : focusId;
   :global(.lineup__item strong) { display: block; font-size: 0.9rem; }
   :global(.lineup__meta) { color: var(--val-red); font-size: 0.72rem; font-weight: 700; }
   :global(.lineup__item p) { color: var(--val-gray); font-size: 0.82rem; margin-top: 0.25rem; }
+  :global(.lineup__mark) { position: absolute; width: 11px; height: 11px; border-radius: 50%; background: var(--val-red); border: 2px solid rgba(236, 232, 225, 0.85); transform: translate(-50%, -50%); box-shadow: 0 0 7px rgba(255, 70, 85, 0.75); cursor: default; z-index: 2; }
   @media (max-width: 768px) { .lineup__stage { grid-template-columns: 1fr; } }
 </style>
