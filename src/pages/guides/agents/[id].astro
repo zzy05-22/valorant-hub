@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import agentsData from '../../../data/agents.json';
+import metaJson from '../../../data/meta.json';
+
+interface Ability { slot: string; zh: { name: string; description: string }; icon: string }
+interface Agent {
+  id: string;
+  zh: { name: string; role: string; description: string };
+  en: { name: string };
+  displayIcon: string;
+  abilities: Ability[];
+}
+const agents = (agentsData as { agents: Agent[] }).agents;
+
+export async function getStaticPaths() {
+  const guides = await getCollection('agentGuides', ({ data }) => !data.draft);
+  return guides.map((g) => ({ params: { id: g.data.agentId }, props: { guide: g } }));
+}
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+const agent = agents.find((a) => a.id === guide.data.agentId)!;
+
+// 职业赛出场联动（当前赛事各地图 pick 率）
+const meta = metaJson as { event: { name: string }; maps: { name: string; picks: { agent: string; pct: number }[] }[] };
+const metaPicks = meta.maps
+  .flatMap((m) => m.picks.filter((p) => p.agent === agent.en.name).map((p) => ({ map: m.name, pct: p.pct })))
+  .sort((a, b) => b.pct - a.pct);
+
+// 道具点位联动（该特工有收录点位的地图）
+const lineups = await getCollection('lineups');
+const lineupMaps = lineups
+  .filter((l) => ((l.data as { spots?: { agentId?: string }[] }).spots ?? []).some((s) => s?.agentId === agent.id))
+  .map((l) => l.id);
+---
+<BaseLayout
+  title={`${agent.zh.name}上手教学｜无畏契约资料站`}
+  description={`${agent.zh.name}（${agent.en.name}）的中文上手教学：技能机制详解、用法要点、常见错误与实战思路`}
+>
+  <main class="container section">
+    <a class="back" href="/guides/agents/">← 返回特工教学</a>
+
+    <header class="ag-head card-cut">
+      <img class="ag-head__icon" src={agent.displayIcon} alt={agent.zh.name} loading="lazy" onerror="this.style.display='none'" />
+      <div class="ag-head__info">
+        <div class="label-cut">{agent.zh.role}</div>
+        <h1>{agent.zh.name} <span>{agent.en.name}</span></h1>
+        <p class="ag-head__title">{guide.data.title}</p>
+      </div>
+      <a class="btn btn-ghost" href={`/agents/${agent.id}/`}>图鉴 →</a>
+    </header>
+
+    <section class="role-group">
+      <h2>技能速览（官方数据）</h2>
+      <div class="ag-abils">
+        {agent.abilities.map((ab) => (
+          <div class="card-cut ag-abil">
+            <div class="ag-abil__key">{ab.slot}</div>
+            <div>
+              <b>{ab.zh.name}</b>
+              <p>{ab.zh.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="data-meta">以上为官方数据镜像；下方为社区整理的实战教学。</p>
+    </section>
+
+    <article class="prose">
+      <Content />
+    </article>
+
+    <section class="role-group">
+      <h2>延伸参考</h2>
+      {lineupMaps.length > 0 && (
+        <div class="ag-links">
+          <b class="ag-links__label">道具点位</b>
+          {lineupMaps.map((m) => (
+            <a class="chip" href={`/maps/${m}/`}>{m}</a>
+          ))}
+        </div>
+      )}
+      {metaPicks.length > 0 && (
+        <div class="ag-links">
+          <b class="ag-links__label">{meta.event.name} 出场</b>
+          {metaPicks.map((p) => (
+            <span class="chip">{p.map} {p.pct}%</span>
+          ))}
+        </div>
+      )}
+      <div class="ag-links">
+        <b class="ag-links__label">相关阅读</b>
+        <a class="chip" href="/guides/agent-roles/">位置职责入门</a>
+        <a class="chip" href="/guides/util-basics/">道具基本功</a>
+        <a class="chip" href="/esports/meta/">职业赛 meta</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .ag-head { display: flex; align-items: center; gap: 1.1rem; padding: 1.1rem 1.2rem; margin-bottom: 1.6rem; }
+  .ag-head__icon { width: 64px; height: 64px; object-fit: contain; flex-shrink: 0; }
+  .ag-head__info { flex: 1; min-width: 0; }
+  .ag-head__info h1 { font-size: 1.5rem; margin: 0.2rem 0; }
+  .ag-head__info h1 span { color: var(--val-gray); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; margin-left: 0.4rem; }
+  .ag-head__title { color: var(--val-gray); font-size: 0.85rem; margin: 0; }
+  .ag-abils { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.8rem; }
+  .ag-abil { display: flex; gap: 0.7rem; padding: 0.8rem 0.9rem; }
+  .ag-abil__key { width: 1.6rem; height: 1.6rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255, 70, 85, 0.14); color: var(--val-red); font-weight: 900; font-size: 0.8rem; border-radius: 4px; }
+  .ag-abil b { color: var(--val-cream); font-size: 0.88rem; }
+  .ag-abil p { color: var(--val-gray); font-size: 0.72rem; line-height: 1.5; margin: 0.25rem 0 0; }
+  .ag-links { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin: 0.6rem 0; }
+  .ag-links__label { color: var(--val-cream); font-size: 0.8rem; flex-shrink: 0; }
+  .chip { background: rgba(236, 232, 225, 0.07); color: var(--val-cream); font-size: 0.72rem; padding: 0.32rem 0.7rem; border-radius: 999px; text-decoration: none; border: 1px solid var(--val-line); }
+  a.chip:hover { border-color: var(--val-red); color: var(--val-red); }
+</style>

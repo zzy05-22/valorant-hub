@@ -10,6 +10,10 @@ const categories = [...new Set(guides.map((g) => g.data.category))];
 <BaseLayout title="新手教学｜无畏契约资料站" description="无畏契约新手教学：入门、机制、经济、术语">
   <PageHero label="Guides" title="新手教学" subtitle="入门 · 机制 · 经济 · 术语" />
   <main class="container section">
+    <a class="card-cut card-lift ag-entry" href="/guides/agents/" style="display:flex;flex-direction:column;gap:0.3rem;padding:1rem 1.2rem;margin-bottom:1.6rem;text-decoration:none;">
+      <b style="color:var(--val-cream);font-size:1rem;">特工上手教学</b>
+      <span style="color:var(--val-gray);font-size:0.8rem;">29 位特工的技能详解、用法要点与实战思路，与点位库和职业赛数据联动 →</span>
+    </a>
     {categories.map((cat) => (
       <section class="role-group">
         <h2>{cat}</h2>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import agentsData from '../../../data/agents.json';
+import { getCollection } from 'astro:content';
+
+interface Agent {
+  id: string;
+  zh: { name: string; role: string; description: string };
+  en: { name: string };
+  displayIcon: string;
+}
+const agents = (agentsData as { agents: Agent[] }).agents;
+const guides = await getCollection('agentGuides');
+const guideMap = new Map(guides.map((g) => [g.data.agentId, g]));
+const roles = [...new Set(agents.map((a) => a.zh.role))];
+const withGuides = agents.filter((a) => guideMap.has(a.id)).length;
+---
+<BaseLayout
+  title="特工上手教学｜无畏契约资料站"
+  description="29 位特工的中文上手教学：技能机制、用法要点、常见错误与实战思路，与点位库和职业赛数据联动"
+>
+  <PageHero
+    label="Agent Guides"
+    title="特工上手教学"
+    subtitle={`${withGuides}/${agents.length} 位特工 · 技能详解 · 实战思路 · 数据联动`}
+  />
+  <main class="container section">
+    {roles.map((role) => (
+      <section class="role-group">
+        <h2>{role}</h2>
+        <div class="ag-grid">
+          {agents
+            .filter((a) => a.zh.role === role)
+            .map((a) => {
+              const g = guideMap.get(a.id);
+              return (
+                <a class:list={['card-cut', 'ag-card', { 'ag-card--todo': !g }]} href={g ? `/guides/agents/${a.id}/` : undefined}>
+                  <img class="ag-card__icon" src={a.displayIcon} alt={a.zh.name} loading="lazy" onerror="this.style.display='none'" />
+                  <div class="ag-card__name">
+                    <b>{a.zh.name}</b>
+                    <span>{a.en.name}</span>
+                  </div>
+                  <p class="ag-card__note">{g ? g.data.title : '教学编写中'}</p>
+                </a>
+              );
+            })}
+        </div>
+      </section>
+    ))}
+    <p class="data-meta">技能价格与机制以游戏内当前版本为准；教学内容由社区整理持续更新。</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .ag-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.9rem; }
+  .ag-card { padding: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem; text-decoration: none; min-width: 0; }
+  .ag-card__icon { width: 52px; height: 52px; object-fit: contain; }
+  .ag-card__name b { color: var(--val-cream); font-size: 0.95rem; display: block; }
+  .ag-card__name span { color: var(--val-gray); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; }
+  .ag-card__note { color: var(--val-gray); font-size: 0.75rem; line-height: 1.5; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ag-card--todo { opacity: 0.45; cursor: default; }
+  .ag-card:not(.ag-card--todo):hover { border-color: var(--val-red); }
+</style>

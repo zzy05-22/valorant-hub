@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SkillPanel from '../../components/SkillPanel.astro';
 import agentsData from '../../data/agents.json';
 import LineupPanel from '../../components/LineupPanel.astro';
+import { getCollection } from 'astro:content';
 
 export function getStaticPaths() {
   return agentsData.agents.map((agent) => ({
@@ -12,6 +13,8 @@ export function getStaticPaths() {
 }
 const { agent } = Astro.props;
 const portrait = agent.fullPortrait || agent.displayIcon;
+const agentGuides = await getCollection('agentGuides');
+const hasGuide = agentGuides.some((g) => g.data.agentId === agent.id);
 ---
 <BaseLayout
   title={`${agent.zh.name} ${agent.en.name}｜无畏契约资料站`}
@@ -27,6 +30,9 @@ const portrait = agent.fullPortrait || agent.displayIcon;
         <p class="hero__desc">{agent.zh.description}</p>
       </div>
     </div>
+    <a style="display:inline-block;margin:0.4rem 0 1rem;color:var(--val-red);font-weight:700;font-size:0.85rem;text-decoration:none;" href={hasGuide ? `/guides/agents/${agent.id}/` : '/guides/agents/'}>
+      {hasGuide ? '查看上手教学 →' : '特工上手教学 →'}
+    </a>
     <h2>技能</h2>
     <div class="skills">
       {agent.abilities.map((ab) => <SkillPanel ability={ab} />)}

@@ -12,6 +12,16 @@ const guides = defineCollection({
   }),
 });
 
+const agentGuides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/agent-guides' }),
+  schema: z.object({
+    agentId: z.string(),
+    title: z.string(),
+    publishDate: z.coerce.date(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const esports = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/esports' }),
   schema: z.object({
@@ -71,4 +81,4 @@ const crosshairs = defineCollection({
   }),
 });
 
-export const collections = { guides, esports, patchNotes, mapGuides, lineups, crosshairs };
+export const collections = { guides, esports, patchNotes, mapGuides, lineups, crosshairs, agentGuides };
