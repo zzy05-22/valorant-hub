@@ -145,7 +145,7 @@ const zoneShapes = zones.map((z) => {
   .co-figure__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
   .co-figure figcaption { margin-top: 0.4rem; text-align: center; }
   .co-zone-g { cursor: default; }
-  .co-zone-poly { stroke-width: 0.005; transition: fill 0.15s ease; }
+  .co-zone-poly { stroke-width: 0.005px; transition: fill 0.15s ease; }
   .co-zone-g[data-cat='a'] .co-zone-poly { stroke: rgba(255, 70, 85, 0.9); fill: rgba(255, 70, 85, 0.16); }
   .co-zone-g[data-cat='b'] .co-zone-poly { stroke: rgba(24, 229, 245, 0.9); fill: rgba(24, 229, 245, 0.16); }
   .co-zone-g[data-cat='c'] .co-zone-poly { stroke: rgba(176, 70, 255, 0.9); fill: rgba(176, 70, 255, 0.16); }
@@ -158,23 +158,23 @@ const zoneShapes = zones.map((z) => {
   .co-zone-g[data-cat='mid']:hover .co-zone-poly { fill: rgba(255, 213, 74, 0.34); }
   .co-zone-g[data-cat='spawn']:hover .co-zone-poly { fill: rgba(236, 232, 225, 0.28); }
   .co-zone-g[data-cat='other']:hover .co-zone-poly { fill: rgba(127, 219, 138, 0.34); }
-  .co-zone-dot { fill: rgba(236, 232, 225, 0.95); stroke: rgba(15, 25, 35, 0.9); stroke-width: 0.005; }
+  .co-zone-dot { fill: rgba(236, 232, 225, 0.95); stroke: rgba(15, 25, 35, 0.9); stroke-width: 0.005px; }
   .co-zone-g[data-cat='a'] .co-zone-dot { fill: #ff4655; }
   .co-zone-g[data-cat='b'] .co-zone-dot { fill: #18e5f5; }
   .co-zone-g[data-cat='c'] .co-zone-dot { fill: #b046ff; }
   .co-zone-g[data-cat='mid'] .co-zone-dot { fill: #ffd54a; }
   .co-zone-label {
-    font-size: 0.026;
+    font-size: 0.026px;
     font-weight: 600;
     fill: var(--val-cream);
     text-anchor: middle;
     paint-order: stroke;
     stroke: rgba(15, 25, 35, 0.92);
-    stroke-width: 0.008;
+    stroke-width: 0.008px;
     opacity: 0.92;
     pointer-events: none;
     transition: opacity 0.12s ease;
   }
-  .co-zone-label.is-major { opacity: 1; font-size: 0.036; font-weight: 700; }
+  .co-zone-label.is-major { opacity: 1; font-size: 0.036px; font-weight: 700; }
   .co-zone-g:hover .co-zone-label { opacity: 1; }
 </style>
