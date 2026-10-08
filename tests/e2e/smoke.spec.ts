@@ -106,3 +106,14 @@ test('赛程赛果页可访问', async ({ page }) => {
   await expect(page.getByRole('heading', { name: '赛程赛果' })).toBeVisible();
   await expect(page.locator('.mx-card').first()).toBeVisible();
 });
+
+test('职业赛 meta 页可访问', async ({ page }) => {
+  await page.goto('/esports/meta/');
+  await expect(page.getByRole('heading', { name: '职业赛数据' })).toBeVisible();
+});
+
+test('点位库总览页可访问', async ({ page }) => {
+  await page.goto('/lineups/');
+  await expect(page.getByRole('heading', { name: '特工点位库' })).toBeVisible();
+  await expect(page.locator('.card-cut').first()).toBeVisible();
+});
