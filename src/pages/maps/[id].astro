@@ -39,47 +39,10 @@ const calloutGroups = ZONE_ORDER
   })
   .filter((g) => g.items.length > 0);
 
-// 报点地图标注：世界坐标 → 战术图百分比（各图官方战术图朝向不统一，逐图独立变换）
-// 标定方式：13 张竞技图以「人工修正过的 lineups 真值 + 攻守出生点方位 + 地图形状/包点方位」三重约束标定
-// 未列入的非竞技图用默认变换，标记可能存在偏移
-const MAP_TRANSFORM: Record<string, (nx: number, ny: number) => [number, number]> = {
-  ascent: (a, b) => [1 - a, b],        // 镜像x（lineups 真值标定）
-  split: (a, b) => [1 - a, b],         // A 左 B 右 攻下守上
-  haven: (a, b) => [1 - a, b],         // 三点横排 A 左 B 中 C 右
-  icebox: (a, b) => [a, 1 - b],        // 镜像y（A 左 B 右 攻下守上）
-  abyss: (a, b) => [1 - a, 1 - b],    // 180°（lineups 真值标定）
-  corrode: (a, b) => [1 - a, 1 - b],  // 180°（lineups 真值标定）
-  bind: (a, b) => [1 - b, a],         // cw90（lineups 真值标定）
-  fracture: (a, b) => [1 - b, a],     // cw90（lineups 真值标定）
-  summit: (a, b) => [1 - b, a],       // cw90（lineups 真值标定）
-  sunset: (a, b) => [1 - b, 1 - a],   // 180t（lineups 真值标定）
-  breeze: (a, b) => [1 - b, 1 - a],   // A 左 B 右 攻下守上
-  lotus: (a, b) => [1 - b, 1 - a],    // 三点横排
-  pearl: (a, b) => [1 - b, 1 - a],    // A 左 B 右 攻下守上
-};
-const defaultTransform = (a: number, b: number): [number, number] => [1 - a, b];
-const tf = MAP_TRANSFORM[map.id] ?? defaultTransform;
-const PAD = 8;
-const xs = callouts.map((c) => c.x), ys = callouts.map((c) => c.y);
-const minX = Math.min(...xs), maxX = Math.max(...xs);
-const minY = Math.min(...ys), maxY = Math.max(...ys);
-const spanX = maxX - minX || 1, spanY = maxY - minY || 1;
-const ZONE_COLOR: Record<string, string> = {
-  A: '#FF4655', B: '#18E5F5', C: '#B046FF', Mid: '#FFD54A',
-  'Attacker Side': '#7FDB8A', 'Defender Side': '#ECE8E1',
-};
-const calloutMarkers = callouts.map((c, i) => {
-  let [lx, ty] = tf((c.x - minX) / spanX, (c.y - minY) / spanY);
-  // 用户观察校准（2026-10-08）：标记整体相比正确位置顺时针偏 90°，统一逆时针回转
-  // 屏幕逆时针 90°：(lx, ty) → (ty, 1 - lx)
-  [lx, ty] = [ty, 1 - lx];
-  return {
-    zone: c.zone,
-    zh: translated[i].zh,
-    left: PAD + lx * (100 - PAD * 2),
-    top: PAD + ty * (100 - PAD * 2),
-  };
-});
+// 报点标注图：直接使用 BWIKI（B 站中文 Wiki）整理的现成标注图
+// 说明：官方世界坐标与战术图的映射经四轮自动标定仍不可靠，改用社区现成标注资源（2026-10-08）
+const CALLOUT_MAP_IDS = new Set(['ascent', 'split', 'haven', 'icebox', 'abyss', 'corrode', 'bind', 'fracture', 'summit', 'sunset', 'breeze', 'lotus', 'pearl']);
+const hasCalloutMap = CALLOUT_MAP_IDS.has(map.id);
 ---
 <BaseLayout
   title={`${name}｜无畏契约资料站`}
@@ -100,14 +63,12 @@ const calloutMarkers = callouts.map((c, i) => {
       <>
         <h2>报点速查</h2>
         <p class="page-sub">标注图与文字表数据同源（官方 callout + 中文通行叫法）；通用译名整理中，未收录的以英文原名沟通即可</p>
-        <div class="co-map card-cut">
-          <img class="co-map__img" src={map.displayIcon} alt={`${name} 报点标注`} loading="lazy" />
-          {calloutMarkers.map((m) => (
-            <span class="co-marker" style={`left:${m.left.toFixed(1)}%;top:${m.top.toFixed(1)}%;--c:${ZONE_COLOR[m.zone] ?? '#ECE8E1'}`}>
-              <i></i><b>{m.zone === 'Attacker Side' ? '攻方 ' : m.zone === 'Defender Side' ? '守方 ' : ''}{m.zh}</b>
-            </span>
-          ))}
-        </div>
+        {hasCalloutMap && (
+          <figure class="co-figure">
+            <img class="co-figure__img" src={`/map-callouts/${map.id}.png`} alt={`${name} 报点标注图`} loading="lazy" />
+            <figcaption class="data-meta">标注图来自 BWIKI（wiki.biligame.com/valorant）社区整理，仅供学习交流，中文报点以游戏内为准</figcaption>
+          </figure>
+        )}
         <div class="co-grid">
           {calloutGroups.map((g) => (
             <div class="card-cut co-zone">
@@ -143,11 +104,7 @@ const calloutMarkers = callouts.map((c, i) => {
   .co-item { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; font-size: 0.82rem; line-height: 1.5; }
   .co-en { color: var(--val-cream); }
   .co-zh { color: var(--val-red); font-weight: 700; text-align: right; flex-shrink: 0; }
-  .co-map { position: relative; margin-bottom: 1.2rem; overflow: hidden; }
-  .co-map__img { display: block; width: 100%; }
-  .co-marker { position: absolute; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 0.28rem; z-index: 2; }
-  .co-marker i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); box-shadow: 0 0 9px var(--c); border: 1.5px solid rgba(15, 25, 35, 0.85); flex-shrink: 0; transition: transform 0.15s ease; }
-  .co-marker b { color: var(--val-cream); font-size: 0.58rem; font-weight: 600; background: rgba(15, 25, 35, 0.78); padding: 1px 5px; border-radius: 3px; white-space: nowrap; opacity: 0.85; transition: opacity 0.15s ease; }
-  .co-marker:hover i { transform: scale(1.4); }
-  .co-marker:hover b { opacity: 1; color: var(--c); box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+  .co-figure { margin: 0 0 1.2rem; }
+  .co-figure__img { display: block; width: 100%; max-width: 720px; margin: 0 auto; border: 1px solid var(--val-line); background: rgba(236, 232, 225, 0.03); }
+  .co-figure figcaption { margin-top: 0.4rem; text-align: center; }
 </style>
