@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('首页可访问且核心入口齐全', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('精准');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('无畏契约');
   await expect(page.getByRole('link', { name: '浏览特工' })).toBeVisible();
   await expect(page.getByRole('link', { name: '新手教学' })).toBeVisible();
 });
