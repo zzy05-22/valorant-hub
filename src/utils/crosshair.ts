@@ -4,7 +4,7 @@ export interface CrosshairRender {
   color: string;
   opacity: number;
   dot: { enabled: boolean; size: number };
-  inner: { enabled: boolean; thickness: number; length: number; opacity: number; gap: number };
+  inner: { enabled: boolean; thickness: number; length: number; vLength: number; opacity: number; gap: number };
   outline: { enabled: boolean; thickness: number };
 }
 
@@ -14,7 +14,6 @@ const COLOR_MAP: Record<string, string> = {
 };
 
 export function parseCrosshairCode(code: string): CrosshairRender {
-  // 段格式 "key;value"，配对解析
   const parts = (code || '').split(';');
   const map = new Map<string, string>();
   for (let i = 0; i + 1 < parts.length; i += 2) {
@@ -24,19 +23,24 @@ export function parseCrosshairCode(code: string): CrosshairRender {
     const v = Number(map.get(k));
     return Number.isFinite(v) ? v : d;
   };
-  const color = COLOR_MAP[map.get('c') ?? ''] ?? '#FFFFFF';
+  // u;RRGGBBAA 自定义色优先（真实格式的选手准星常用：黑色/粉色/黄绿等）
+  const custom = map.get('u');
+  const color = custom && /^[0-9A-Fa-f]{6}/.test(custom)
+    ? `#${custom.slice(0, 6)}`
+    : COLOR_MAP[map.get('c') ?? ''] ?? '#FFFFFF';
   const thickness = num('0t', 2);
+  const length = Math.max(0, num('0l', 6));
   return {
     color,
     opacity: Math.max(0, Math.min(1, num('o', 1))),
     dot: { enabled: num('d', 0) === 1, size: num('z', 3) },
     inner: {
-      // 内线关闭 = 长度与粗细均为 0（游戏中点掉内线即如此编码）
-      enabled: !(thickness === 0 && num('0l', 6) === 0),
+      enabled: !(thickness === 0 && length === 0),
       thickness: Math.max(1, thickness),
-      length: Math.max(0, num('0l', 6)),
+      length,
+      vLength: Math.max(0, num('0v', length)), // 无 0v 时竖线回退横线长度
       opacity: Math.max(0, Math.min(1, num('0o', 1))),
-      gap: num('0a', 3),
+      gap: num('0g', 3), // 真实格式 0g 是间隔；0a 是移动误差系数，忽略不渲染
     },
     outline: { enabled: num('0f', 0) === 1, thickness: num('1b', 1) },
   };
