@@ -104,7 +104,7 @@ test('准星库页面与预览复制', async ({ page }) => {
 test('赛程赛果页可访问', async ({ page }) => {
   await page.goto('/esports/matches/');
   await expect(page.getByRole('heading', { name: '赛程赛果' })).toBeVisible();
-  await expect(page.locator('.mx-card').first()).toBeVisible();
+  await expect(page.locator('.mt-row').first()).toBeVisible();
 });
 
 test('职业赛 meta 页可访问', async ({ page }) => {
