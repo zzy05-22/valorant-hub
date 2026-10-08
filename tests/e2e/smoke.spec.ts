@@ -117,3 +117,14 @@ test('点位库总览页可访问', async ({ page }) => {
   await expect(page.getByRole('heading', { name: '特工点位库' })).toBeVisible();
   await expect(page.locator('.card-cut').first()).toBeVisible();
 });
+
+test('特工教学列表可访问', async ({ page }) => {
+  await page.goto('/guides/agents/');
+  await expect(page.getByRole('heading', { name: '特工上手教学' })).toBeVisible();
+});
+
+test('特工教学详情可访问', async ({ page }) => {
+  await page.goto('/guides/agents/jett/');
+  await expect(page.getByRole('heading', { name: /捷风/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '技能速览（官方数据）' })).toBeVisible();
+});
