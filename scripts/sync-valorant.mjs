@@ -7,6 +7,7 @@ import { fetchAgents, fetchWeapons, fetchMaps, fetchVersion } from './lib/api.mj
 import { transformAgents, transformWeapons, transformMaps } from './lib/transform.mjs';
 import { validateAgents, validateWeapons, validateMaps } from './lib/validate.mjs';
 import { fetchHtml, parsePlayerStats, parseTeamRanking, validateEsportsStats, fetchMatches } from './lib/vlr.mjs';
+import { fetchPatchFeed } from './lib/riot-patches.mjs';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 
@@ -80,6 +81,17 @@ async function main() {
     console.log(`matches synced: ${matches.length} 场`);
   } catch (err) {
     console.warn(`warn: matches sync failed: ${err?.message ?? err}`);
+  }
+
+  // —— 版本公告同步（playvalorant.com，独立容错：失败只 warn，不影响其他数据源）——
+  try {
+    const patches = await fetchPatchFeed();
+    await atomicWrite(path.join(DATA_DIR, 'patch-feed.json'), {
+      patches, syncedAt: new Date().toISOString(), source: 'playvalorant.com',
+    });
+    console.log(`patch-feed synced: ${patches.length} 个版本`);
+  } catch (err) {
+    console.warn(`warn: patch-feed sync failed: ${err?.message ?? err}`);
   }
 
   console.log(`[sync] 完成：agents=${agents.length} weapons=${weapons.length} maps=${maps.length} version=${version.versionNumber}`);

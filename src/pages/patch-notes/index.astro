@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import patchFeed from '../../data/patch-feed.json';
 
+const { patches } = patchFeed as { patches: { version: string; date: string; url: string; sections: string[] }[] };
 const notes = (await getCollection('patchNotes', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 ---
@@ -10,6 +12,21 @@ const notes = (await getCollection('patchNotes', ({ data }) => !data.draft))
     <div class="label-cut">Patch Notes</div>
     <h1>版本资讯</h1>
     <p class="page-sub">数据每日自动同步 · 版本导读持续更新</p>
+    <section class="role-group">
+      <h2>版本时间线（自动同步）</h2>
+      <p class="page-sub">数据来自 Riot 官方版本公告（每日同步），摘要为公告章节结构，正文见官方原文。</p>
+      <div class="pf-grid">
+        {patches.map((p) => (
+          <div class="card-cut pf-card">
+            <div class="pf-card__ver">版本 {p.version}</div>
+            <div class="pf-card__date">{p.date}</div>
+            <div class="pf-card__sections">{p.sections.map((s) => <span>{s}</span>)}</div>
+            <a class="pf-card__link" href={p.url} target="_blank" rel="noopener noreferrer">官方公告原文 →</a>
+          </div>
+        ))}
+      </div>
+    </section>
+    <section class="role-group">
     <ul class="note-list">
       {notes.map((n) => (
         <li class="card-cut note-item">
@@ -19,6 +36,7 @@ const notes = (await getCollection('patchNotes', ({ data }) => !data.draft))
         </li>
       ))}
     </ul>
+    </section>
   </main>
 </BaseLayout>
 
@@ -29,4 +47,14 @@ const notes = (await getCollection('patchNotes', ({ data }) => !data.draft))
   .note-item__title:hover { color: var(--val-red); }
   .note-item__meta { color: var(--val-red); font-size: 0.75rem; margin-top: 0.25rem; }
   .note-item__excerpt { color: var(--val-gray); font-size: 0.85rem; margin-top: 0.25rem; }
+
+  .pf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  @media (max-width: 768px) { .pf-grid { grid-template-columns: 1fr; } }
+  .pf-card { padding: 1rem 1.2rem; }
+  .pf-card__ver { color: var(--val-red); font-size: 1.15rem; font-weight: 900; font-style: italic; }
+  .pf-card__date { color: var(--val-gray); font-size: 0.72rem; margin-top: 0.15rem; }
+  .pf-card__sections { display: flex; gap: 0.4rem; margin: 0.55rem 0; flex-wrap: wrap; }
+  .pf-card__sections span { background: rgba(255, 70, 85, 0.12); color: var(--val-red); font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
+  .pf-card__link { display: inline-block; color: var(--val-cream); font-size: 0.8rem; font-weight: 700; margin-top: 0.35rem; }
+  .pf-card__link:hover { color: var(--val-red); }
 </style>
