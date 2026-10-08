@@ -111,13 +111,13 @@ const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业
   .xh-howto { color: var(--val-gray); max-width: 46em; font-size: 0.9rem; line-height: 1.8; }
   .xh-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   @media (max-width: 768px) { .xh-grid { grid-template-columns: 1fr; } }
-  .xh-card { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .xh-card { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; min-width: 0; }
   .xh-card__preview { background: rgba(236, 232, 225, 0.04); border-radius: 12px; padding: 0.8rem; display: flex; align-items: center; justify-content: center; }
   .xh-card__info b { color: var(--val-cream); font-size: 1rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .xh-card__tags { display: flex; gap: 0.4rem; margin: 0.35rem 0; flex-wrap: nowrap; overflow: hidden; }
   .xh-card__tags span { background: rgba(255, 70, 85, 0.12); color: var(--val-red); font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
   .xh-card__info p { color: var(--val-gray); font-size: 0.82rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 3.2em; }
   .xh-card__code { display: flex; align-items: center; gap: 0.6rem; margin-top: auto; }
-  .xh-card__code code { flex: 1; font-family: ui-monospace, monospace; font-size: 0.68rem; color: var(--val-gray); background: rgba(236, 232, 225, 0.04); padding: 0.5rem 0.6rem; overflow-x: auto; white-space: nowrap; }
+  .xh-card__code code { flex: 1; min-width: 0; font-family: ui-monospace, monospace; font-size: 0.68rem; color: var(--val-gray); background: rgba(236, 232, 225, 0.04); padding: 0.5rem 0.6rem; overflow-x: auto; white-space: nowrap; }
   .xh-copy { font-size: 0.72rem; padding: 0.5rem 0.9rem; white-space: nowrap; }
 </style>
