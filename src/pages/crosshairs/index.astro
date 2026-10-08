@@ -6,10 +6,11 @@ import { getCollection } from 'astro:content';
 
 const crosshairs = await getCollection('crosshairs');
 const proCrosshairs = crosshairs.filter((c) => c.data.tags.includes('职业选手'));
-const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业选手'));
+const officialCrosshairs = crosshairs.filter((c) => c.data.tags.includes('官方站精选'));
+const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业选手') && !c.data.tags.includes('官方站精选'));
 ---
 <BaseLayout title="准星库｜无畏契约资料站" description="热门准星代码合集：SVG 实时预览、一键复制，游戏内导入即用">
-  <PageHero label="Crosshairs" title="准星库" subtitle={`${crosshairs.length} 个准星 · 经典 ${classicCrosshairs.length} · 选手 ${proCrosshairs.length}`} />
+  <PageHero label="Crosshairs" title="准星库" subtitle={`${crosshairs.length} 个准星 · 经典 ${classicCrosshairs.length} · 选手 ${proCrosshairs.length} · 官方站 ${officialCrosshairs.length}`} />
   <main class="container section">
     <section class="role-group">
       <h2>导入方法</h2>
@@ -41,6 +42,26 @@ const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业
       <p class="xh-howto">代码来自社区公开资料（2026-10 整理），选手会随时间更换准星，以游戏内实际效果为准。</p>
       <div class="xh-grid">
         {proCrosshairs.map((c) => (
+          <div class="card-cut xh-card">
+            <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
+            <div class="xh-card__info">
+              <b>{c.data.name}</b>
+              <div class="xh-card__tags">{c.data.tags.map((t) => <span>{t}</span>)}</div>
+              <p>{c.data.note}</p>
+            </div>
+            <div class="xh-card__code">
+              <code>{c.data.code}</code>
+              <button type="button" class="btn btn-primary xh-copy" data-code={c.data.code}>复制代码</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    <section class="role-group">
+      <h2>官方站精选</h2>
+      <p class="xh-howto">来自腾讯 WeGame 官方准星站收录的通用款（2026-10 整理），自定义配色系为主。</p>
+      <div class="xh-grid">
+        {officialCrosshairs.map((c) => (
           <div class="card-cut xh-card">
             <div class="xh-card__preview"><CrosshairPreview code={c.data.code} size={72} /></div>
             <div class="xh-card__info">
@@ -92,11 +113,11 @@ const classicCrosshairs = crosshairs.filter((c) => !c.data.tags.includes('职业
   @media (max-width: 768px) { .xh-grid { grid-template-columns: 1fr; } }
   .xh-card { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; }
   .xh-card__preview { background: rgba(236, 232, 225, 0.04); border-radius: 12px; padding: 0.8rem; display: flex; align-items: center; justify-content: center; }
-  .xh-card__info b { color: var(--val-cream); font-size: 1rem; }
+  .xh-card__info b { color: var(--val-cream); font-size: 1rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .xh-card__tags { display: flex; gap: 0.4rem; margin: 0.35rem 0; flex-wrap: wrap; }
   .xh-card__tags span { background: rgba(255, 70, 85, 0.12); color: var(--val-red); font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
-  .xh-card__info p { color: var(--val-gray); font-size: 0.82rem; line-height: 1.6; }
-  .xh-card__code { display: flex; align-items: center; gap: 0.6rem; }
+  .xh-card__info p { color: var(--val-gray); font-size: 0.82rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 3.2em; }
+  .xh-card__code { display: flex; align-items: center; gap: 0.6rem; margin-top: auto; }
   .xh-card__code code { flex: 1; font-family: ui-monospace, monospace; font-size: 0.68rem; color: var(--val-gray); background: rgba(236, 232, 225, 0.04); padding: 0.5rem 0.6rem; overflow-x: auto; white-space: nowrap; }
   .xh-copy { font-size: 0.72rem; padding: 0.5rem 0.9rem; white-space: nowrap; }
 </style>
