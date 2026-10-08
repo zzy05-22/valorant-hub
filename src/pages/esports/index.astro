@@ -12,7 +12,10 @@ const posts = (await getCollection('esports', ({ data }) => !data.draft))
 <BaseLayout title="资讯中心｜无畏契约资料站" description="版本公告与赛事资讯：跟随版本更新，覆盖 VCT 赛程">
   <PageHero label="News" title="资讯中心" subtitle="版本公告 · 赛事科普 · 观赛指南 · 赛程资讯" />
   <main class="container section">
-    <a class="card-cut card-lift matches-entry" href="/esports/matches/">赛程赛果 · VCT 全部比赛一览（每日同步）→</a>
+    <div class="entry-grid">
+      <a class="card-cut card-lift matches-entry" href="/esports/matches/">赛程赛果 · VCT 全部比赛一览（每日同步）→</a>
+      <a class="card-cut card-lift matches-entry" href="/esports/meta/">职业赛数据 · 地图攻防与特工出场 meta（每日同步）→</a>
+    </div>
     <section class="role-group">
       <h2>最新版本公告</h2>
       <ul class="note-list">
@@ -48,6 +51,8 @@ const posts = (await getCollection('esports', ({ data }) => !data.draft))
   .note-item__title:hover { color: var(--val-red); }
   .note-item__meta { color: var(--val-red); font-size: 0.75rem; margin-top: 0.25rem; }
   .note-item__excerpt { color: var(--val-gray); font-size: 0.85rem; margin-top: 0.25rem; }
-  .matches-entry { display: block; padding: 0.9rem 1.2rem; margin-bottom: 1.5rem; color: var(--val-cream); font-weight: 800; font-size: 0.95rem; }
+  .entry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1.5rem; }
+  @media (max-width: 768px) { .entry-grid { grid-template-columns: 1fr; } }
+  .matches-entry { display: block; padding: 0.9rem 1.2rem; color: var(--val-cream); font-weight: 800; font-size: 0.95rem; }
   .matches-entry:hover { color: var(--val-red); }
 </style>

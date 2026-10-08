@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import meta from '../../data/meta.json';
+import agentsData from '../../data/agents.json';
+
+interface Pick { agent: string; pct: number; }
+interface MetaMap { name: string; matches: number; atkWin: number; defWin: number; picks: Pick[]; }
+const { event, maps } = meta as unknown as { event: { id: number; name: string }; maps: MetaMap[] };
+
+// vlr 特工名 → 站点「中文 英文」双名（大小写/斜杠归一化匹配；未命中保留原名）
+const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+const agentByNorm = new Map(agentsData.agents.map((a) => [norm(a.en.name), a]));
+const zhAgent = (name: string): string => {
+  const a = agentByNorm.get(norm(name));
+  return a && a.zh.name !== a.en.name ? `${a.zh.name} ${a.en.name}` : name;
+};
+// 特工出场横条透明度 = pct 映射红色强度（纯 CSS 色阶：5% → 0.34，100% → 1）
+const heatOpacity = (pct: number) => Math.min(1, 0.3 + pct / 100 * 0.7).toFixed(2);
+---
+<BaseLayout title="职业赛数据｜无畏契约资料站" description={`VCT 职业赛 meta：地图攻防胜率与特工出场率（${event.name}），数据源 vlr.gg 每日同步`}>
+  <PageHero label="Meta" title="职业赛数据" subtitle={`${event.name} · 每日自动同步`} />
+  <main class="container section">
+    <section class="role-group">
+      <h2>地图攻防胜率</h2>
+      <p class="page-sub">各地图进攻方（ATK）与防守方（DEF）回合胜率对比</p>
+      <div class="mt-grid">
+        {maps.map((m) => (
+          <div class="card-cut mt-card">
+            <div class="mt-card__head">
+              <b>{m.name}</b>
+              <span>{m.matches} 场</span>
+            </div>
+            <div class="mt-bar">
+              <span class="mt-bar__atk" style={`width:${m.atkWin}%`}>ATK {m.atkWin}%</span>
+              <span class="mt-bar__def" style={`width:${m.defWin}%`}>DEF {m.defWin}%</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    <section class="role-group">
+      <h2>特工出场热力</h2>
+      <p class="page-sub">每张地图的特工出场率横条（仅展示有出场记录的特工，按全局出场率排序）</p>
+      <div class="mt-grid">
+        {maps.map((m) => (
+          <div class="card-cut mt-card">
+            <div class="mt-card__head">
+              <b>{m.name}</b>
+              <span>{m.picks.filter((p) => p.pct > 0).length} 位特工</span>
+            </div>
+            <ul class="mt-picks">
+              {m.picks.filter((p) => p.pct > 0).map((p) => (
+                <li class="mt-pick">
+                  <span class="mt-pick__name">{zhAgent(p.agent)}</span>
+                  <span class="mt-pick__track"><span class="mt-pick__bar" style={`width:${p.pct}%; opacity:${heatOpacity(p.pct)}`} /></span>
+                  <span class="mt-pick__pct">{p.pct}%</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+    <p class="data-meta">数据来自 vlr.gg（当日赛事 {event.name}），每日自动同步；特工 pct 为该图出场率，ATK/DEF 为回合胜率。</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .mt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  @media (max-width: 768px) { .mt-grid { grid-template-columns: 1fr; } }
+  .mt-card { padding: 0.9rem 1.1rem; }
+  .mt-card__head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.55rem; }
+  .mt-card__head b { color: var(--val-cream); font-size: 0.95rem; }
+  .mt-card__head span { color: var(--val-gray); font-size: 0.72rem; }
+  /* 攻防双色条：ATK 红向左、DEF 青向右，宽度即胜率 */
+  .mt-bar { display: flex; height: 1.15rem; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.03em; overflow: hidden; }
+  .mt-bar__atk { background: var(--val-red); color: #fff; display: flex; align-items: center; justify-content: flex-start; padding-left: 0.45rem; min-width: 3.1rem; white-space: nowrap; }
+  .mt-bar__def { background: rgba(0, 229, 176, 0.82); color: #06231d; display: flex; align-items: center; justify-content: flex-end; padding-right: 0.45rem; min-width: 3.1rem; white-space: nowrap; }
+  .mt-picks { list-style: none; display: grid; gap: 0.32rem; }
+  .mt-pick { display: grid; grid-template-columns: minmax(8.5rem, 42%) 1fr 2.6rem; gap: 0.55rem; align-items: center; }
+  .mt-pick__name { color: var(--val-cream); font-size: 0.78rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mt-pick__track { background: rgba(236, 232, 225, 0.08); height: 0.7rem; overflow: hidden; }
+  .mt-pick__bar { display: block; height: 100%; background: var(--val-red); }
+  .mt-pick__pct { color: var(--val-gray); font-size: 0.72rem; text-align: right; font-variant-numeric: tabular-nums; }
+</style>

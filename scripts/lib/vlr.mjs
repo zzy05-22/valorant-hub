@@ -188,3 +188,62 @@ export async function fetchMatches() {
   const completed = resultsHtml ? parseMatches(resultsHtml).slice(0, 30) : [];
   return [...scheduled, ...completed];
 }
+
+// —— 职业赛 meta（P11-1）——
+// 解析赛事列表（vlr.gg/events）：页面第一个 /event/{id}/{slug} 链接即当前最重要赛事
+// 2026-10-08 实测：首位为 href="/event/2766/valorant-champions-2026"
+export function parseEventList(html) {
+  const m = html.match(/href="\/event\/(\d+)\/([a-z0-9-]+)"/);
+  if (!m) return null;
+  const name = m[2].split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  return { id: Number(m[1]), name };
+}
+
+// 解析赛事 meta（vlr.gg/event/agents/{id} 主表）
+// 2026-10-08 实测（559KB）：页面共 8 张表——主表 class="wf-table mod-pr-global"（含 pr-global-row 行），
+// 其余 7 张为每图明细子表（其 th img 才带 title）。解析必须限定主表，否则子表会污染特工序列。
+// - 主表表头：Map | # | ATK WIN | DEF WIN | 每特工一个 th；特工 img 实测无 title、仅 src 文件名，
+//   故 title 优先、文件名兜底（jett.png → Jett）；两路对 29 特工实测产出完全一致的序列
+// - 数据行：<tr class="pr-global-row ">（首行 mod-all 为全赛事汇总，首 td 无地图名，跳过）；每图一行：
+//   首 td = map-pseudo-icon">S</span> + 地图名；3 个 mod-right = 场次/ATK%/DEF%；
+//   mod-color-sq 格子按表头顺序对应特工 pick%（% 与数字在独立文本节点，正则容忍空白）
+export function parseEventAgents(html) {
+  const table = (html.match(/<table\b[\s\S]*?<\/table>/g) ?? []).find((t) => t.includes('pr-global-row')) ?? html;
+  const agents = [];
+  for (const th of table.match(/<th\b[\s\S]*?<\/th>/g) ?? []) {
+    const img = th.match(/<img\b[^>]*>/)?.[0] ?? '';
+    if (!/game\/agents\//.test(img)) continue; // Map/#/ATK/DEF 等非特工表头
+    const title = img.match(/\stitle="([^"]+)"/)?.[1];
+    if (title) { agents.push(title); continue; }
+    const file = img.match(/game\/agents\/([a-z0-9-]+)\.png/)?.[1] ?? '';
+    if (file) agents.push(file.split('-').map((p) => p.charAt(0).toUpperCase() + p.slice(1)).join('-'));
+  }
+  const num = (s) => Number(s.match(/\d+/)?.[0] ?? 0);
+  const maps = [];
+  for (const block of table.match(/<tr class="pr-global-row[^"]*">[\s\S]*?<\/tr>/g) ?? []) {
+    const nameM = block.match(/map-pseudo-icon">[A-Za-z]<\/span>([^<]*)/);
+    if (!nameM) continue; // 汇总行（mod-all）首 td 无地图名
+    const right = [...block.matchAll(/<td class="mod-right[^"]*"[^>]*>([\s\S]*?)<\/td>/g)]
+      .map((m) => num(stripTags(m[1])));
+    maps.push({
+      name: nameM[1].trim(),
+      matches: right[0] ?? 0,
+      atkWin: right[1] ?? 0,
+      defWin: right[2] ?? 0,
+      picks: [...block.matchAll(/<td class="mod-color-sq[^"]*"[^>]*>([\s\S]*?)<\/td>/g)]
+        .slice(0, agents.length)
+        .map((m, i) => ({ agent: agents[i], pct: num(stripTags(m[1])) })),
+    });
+  }
+  return { maps };
+}
+
+// 抓取职业赛 meta：/events 定位当前赛事 → /event/agents/{id} 解析地图攻防与特工 pick 矩阵
+// 2026-10-08 实测两页均直接 200（无 cookie gate，与 matches 同类；fetchHtml 对 200 页面直接透传）
+export async function fetchEventMeta() {
+  const event = parseEventList(await fetchHtml('https://www.vlr.gg/events'));
+  if (!event) throw new Error('VLR events 页未解析到赛事链接');
+  const { maps } = parseEventAgents(await fetchHtml(`https://www.vlr.gg/event/agents/${event.id}`));
+  if (!maps.length) throw new Error(`VLR event/agents 无地图数据（event=${event.id}）`);
+  return { event, maps, syncedAt: new Date().toISOString() };
+}

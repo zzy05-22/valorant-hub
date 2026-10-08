@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { parseMatches, parsePlayerStats, parseTeamRanking, validateEsportsStats } from '../scripts/lib/vlr.mjs';
+import { parseEventAgents, parseEventList, parseMatches, parsePlayerStats, parseTeamRanking, validateEsportsStats } from '../scripts/lib/vlr.mjs';
 
 const statsHtml = readFileSync('tests/fixtures/vlr-stats.html', 'utf8');
 const rankingHtml = readFileSync('tests/fixtures/vlr-ranking.html', 'utf8');
@@ -83,5 +83,35 @@ describe('parseMatches（赛程赛果）', () => {
     expect(ms[1].event).toContain('VCT Champions 2026');
     expect(ms[1].series).toBe('Grand Final');
     expect(ms[0].time).toBe('5:00 PM');
+  });
+});
+
+describe('parseEventAgents（职业赛 meta）', () => {
+  const fixture = `<table><tr><th style="width: 42px; height: 40px; padding: 0;">
+      <img src="/img/vlr/game/agents/jett.png" title="Jett"></th>
+      <th><img src="/img/vlr/game/agents/omen.png" title="Omen"></th></tr>
+    <tr class="pr-global-row "><td style="white-space: nowrap;"><span class="map-pseudo-icon">S</span>
+      Split</td>
+      <td class="mod-right">7</td><td class="mod-right">68%</td><td class="mod-right">32%</td>
+      <td class="mod-color-sq mod-center" style="--stat-h:155">86%</td>
+      <td class="mod-color-sq mod-center" style="--stat-h:0">0%</td></tr></table>`;
+
+  it('解析地图行：场次与攻防胜率', () => {
+    const r = parseEventAgents(fixture);
+    expect(r.maps).toHaveLength(1);
+    expect(r.maps[0]).toMatchObject({ name: 'Split', matches: 7, atkWin: 68, defWin: 32 });
+  });
+
+  it('解析特工 pick 矩阵（按 th 顺序对应）', () => {
+    const r = parseEventAgents(fixture);
+    expect(r.maps[0].picks).toEqual([
+      { agent: 'Jett', pct: 86 },
+      { agent: 'Omen', pct: 0 },
+    ]);
+  });
+
+  it('parseEventList 提取当前赛事', () => {
+    const list = parseEventList('<a href="/event/2766/valorant-champions-2026">...</a>');
+    expect(list).toEqual({ id: 2766, name: 'Valorant Champions 2026' });
   });
 });
