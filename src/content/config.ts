@@ -5,7 +5,7 @@ const guides = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
   schema: z.object({
     title: z.string(),
-    category: z.enum(['入门', '机制', '经济', '术语']),
+    category: z.enum(['入门', '机制', '经济', '术语', '枪法', '意识', '进阶']),
     excerpt: z.string(),
     publishDate: z.coerce.date(),
     draft: z.boolean().default(false),
