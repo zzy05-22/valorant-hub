@@ -4,8 +4,6 @@ import mapsData from '../../data/maps.json';
 import { getCollection, render as renderGuide } from 'astro:content';
 import LineupPanel from '../../components/LineupPanel.astro';
 import { translateCallouts } from '../../utils/callouts';
-import { MAP_ZONES } from '../../data/map-zones';
-import { zoneToZh, zoneCategory } from '../../utils/zone-name';
 
 export function getStaticPaths() {
   return mapsData.maps.map((map) => ({ params: { id: map.id }, props: { map } }));
@@ -40,25 +38,6 @@ const calloutGroups = ZONE_ORDER
     return { zone, items };
   })
   .filter((g) => g.items.length > 0);
-
-// 区域标注：使用社区项目 Valorant-Zone-Stats 的分区多边形（官方战术图归一化坐标，社区工具验证过的真值）
-// 说明：官方世界坐标直算映射经多轮尝试不可靠（图朝向/锚点无法从现有数据解出），
-// 改用社区已在图上标定好的 zones 数据，再以词干映射转中文（2026-10-08）
-// 覆盖 10/13 张竞技图；abyss/corrode/summit 上游未收录，本节回退为纯文本报点表
-const zones = MAP_ZONES[map.id] ?? [];
-const zoneShapes = zones.map((z) => {
-  const cx = z.pts.reduce((s, p) => s + p[0], 0) / z.pts.length;
-  const cy = z.pts.reduce((s, p) => s + p[1], 0) / z.pts.length;
-  return {
-    cat: zoneCategory(z.name),
-    zh: zoneToZh(z.name),
-    pts: z.pts.map(([x, y]) => `${x},${y}`).join(' '),
-    cx,
-    cy,
-    // 爆点/出生点常驻显示标签，其余悬停显示
-    major: /Site|Spawn/.test(z.name),
-  };
-});
 ---
 <BaseLayout
   title={`${name}｜无畏契约资料站`}
@@ -78,32 +57,7 @@ const zoneShapes = zones.map((z) => {
     {calloutGroups.length > 0 && (
       <>
         <h2>报点速查</h2>
-        <p class="page-sub">区域标注图来自社区项目 Valorant-Zone-Stats（社区验证坐标，覆盖 10/13 图，未覆盖图仅显示文字表）；文字表为官方 callout + 中文通行叫法对照</p>
-        {zoneShapes.length > 0 && (
-          <figure class="co-figure">
-            <div class="co-figure__stage">
-              <img class="co-figure__img" src={map.displayIcon} alt={`${name} 战术图`} loading="lazy" />
-              <svg
-                class="co-figure__svg"
-                viewBox="0 0 1 1"
-                preserveAspectRatio="none"
-                role="img"
-                aria-label={`${name} 区域标注`}
-              >
-                {zoneShapes.map((z) => (
-                  <g class="co-zone-g" data-cat={z.cat}>
-                    <polygon class="co-zone-poly" points={z.pts} />
-                    <circle class="co-zone-dot" cx={z.cx} cy={z.cy} r="0.009" />
-                    <text class={`co-zone-label${z.major ? ' is-major' : ''}`} x={z.cx} y={z.cy} dy="0.01">{z.zh}</text>
-                  </g>
-                ))}
-              </svg>
-            </div>
-            <figcaption class="data-meta">
-              区域划分与坐标来自社区项目 Valorant-Zone-Stats（官方战术图归一化坐标），中文名为通行叫法直译，以游戏内实际叫法为准；悬停区域可见名称
-            </figcaption>
-          </figure>
-        )}
+        <p class="page-sub">官方 callout + 中文通行叫法对照；通用译名整理中，未收录的以英文原名沟通即可</p>
         <div class="co-grid">
           {calloutGroups.map((g) => (
             <div class="card-cut co-zone">
@@ -139,42 +93,4 @@ const zoneShapes = zones.map((z) => {
   .co-item { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; font-size: 0.82rem; line-height: 1.5; }
   .co-en { color: var(--val-cream); }
   .co-zh { color: var(--val-red); font-weight: 700; text-align: right; flex-shrink: 0; }
-  .co-figure { margin: 0 0 1.2rem; }
-  .co-figure__stage { position: relative; width: 100%; max-width: 720px; margin: 0 auto; border: 1px solid var(--val-line); background: rgba(236, 232, 225, 0.03); }
-  .co-figure__img { display: block; width: 100%; }
-  .co-figure__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-  .co-figure figcaption { margin-top: 0.4rem; text-align: center; }
-  .co-zone-g { cursor: default; }
-  .co-zone-poly { stroke-width: 0.005px; transition: fill 0.15s ease; }
-  .co-zone-g[data-cat='a'] .co-zone-poly { stroke: rgba(255, 70, 85, 0.9); fill: rgba(255, 70, 85, 0.16); }
-  .co-zone-g[data-cat='b'] .co-zone-poly { stroke: rgba(24, 229, 245, 0.9); fill: rgba(24, 229, 245, 0.16); }
-  .co-zone-g[data-cat='c'] .co-zone-poly { stroke: rgba(176, 70, 255, 0.9); fill: rgba(176, 70, 255, 0.16); }
-  .co-zone-g[data-cat='mid'] .co-zone-poly { stroke: rgba(255, 213, 74, 0.9); fill: rgba(255, 213, 74, 0.16); }
-  .co-zone-g[data-cat='spawn'] .co-zone-poly { stroke: rgba(236, 232, 225, 0.9); fill: rgba(236, 232, 225, 0.12); }
-  .co-zone-g[data-cat='other'] .co-zone-poly { stroke: rgba(127, 219, 138, 0.9); fill: rgba(127, 219, 138, 0.16); }
-  .co-zone-g[data-cat='a']:hover .co-zone-poly { fill: rgba(255, 70, 85, 0.34); }
-  .co-zone-g[data-cat='b']:hover .co-zone-poly { fill: rgba(24, 229, 245, 0.34); }
-  .co-zone-g[data-cat='c']:hover .co-zone-poly { fill: rgba(176, 70, 255, 0.34); }
-  .co-zone-g[data-cat='mid']:hover .co-zone-poly { fill: rgba(255, 213, 74, 0.34); }
-  .co-zone-g[data-cat='spawn']:hover .co-zone-poly { fill: rgba(236, 232, 225, 0.28); }
-  .co-zone-g[data-cat='other']:hover .co-zone-poly { fill: rgba(127, 219, 138, 0.34); }
-  .co-zone-dot { fill: rgba(236, 232, 225, 0.95); stroke: rgba(15, 25, 35, 0.9); stroke-width: 0.005px; }
-  .co-zone-g[data-cat='a'] .co-zone-dot { fill: #ff4655; }
-  .co-zone-g[data-cat='b'] .co-zone-dot { fill: #18e5f5; }
-  .co-zone-g[data-cat='c'] .co-zone-dot { fill: #b046ff; }
-  .co-zone-g[data-cat='mid'] .co-zone-dot { fill: #ffd54a; }
-  .co-zone-label {
-    font-size: 0.026px;
-    font-weight: 600;
-    fill: var(--val-cream);
-    text-anchor: middle;
-    paint-order: stroke;
-    stroke: rgba(15, 25, 35, 0.92);
-    stroke-width: 0.008px;
-    opacity: 0.92;
-    pointer-events: none;
-    transition: opacity 0.12s ease;
-  }
-  .co-zone-label.is-major { opacity: 1; font-size: 0.036px; font-weight: 700; }
-  .co-zone-g:hover .co-zone-label { opacity: 1; }
 </style>
