@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-09T09:41:03.366Z",
+  "syncedAt": "2026-10-10T09:07:12.664Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -199,20 +199,6 @@
       "assists": 221
     },
     {
-      "name": "vo0kashu",
-      "team": "DRG",
-      "maps": 6,
-      "rounds": 130,
-      "rating": 1.19,
-      "acs": 238,
-      "kd": 1.2,
-      "kast": "68%",
-      "adr": 154.6,
-      "kills": 112,
-      "deaths": 93,
-      "assists": 28
-    },
-    {
       "name": "crazyguy",
       "team": "RRQ",
       "maps": 6,
@@ -409,6 +395,20 @@
       "assists": 60
     },
     {
+      "name": "Asuna",
+      "team": "100T",
+      "maps": 18,
+      "rounds": 360,
+      "rating": 1.13,
+      "acs": 221,
+      "kd": 1.15,
+      "kast": "74%",
+      "adr": 139.1,
+      "kills": 278,
+      "deaths": 241,
+      "assists": 129
+    },
+    {
       "name": "Verno",
       "team": "MIBR",
       "maps": 12,
@@ -521,6 +521,20 @@
       "assists": 63
     },
     {
+      "name": "bang",
+      "team": "100T",
+      "maps": 18,
+      "rounds": 360,
+      "rating": 1.11,
+      "acs": 194,
+      "kd": 1.17,
+      "kast": "77%",
+      "adr": 125,
+      "kills": 252,
+      "deaths": 215,
+      "assists": 158
+    },
+    {
       "name": "PatMen",
       "team": "GE",
       "maps": 24,
@@ -591,18 +605,18 @@
       "assists": 122
     },
     {
-      "name": "ZmjjKK",
-      "team": "EDG",
-      "maps": 6,
-      "rounds": 117,
+      "name": "Cryocells",
+      "team": "100T",
+      "maps": 18,
+      "rounds": 360,
       "rating": 1.1,
-      "acs": 241,
-      "kd": 1.11,
-      "kast": "66%",
-      "adr": 156.6,
-      "kills": 98,
-      "deaths": 88,
-      "assists": 14
+      "acs": 203,
+      "kd": 1.29,
+      "kast": "76%",
+      "adr": 134,
+      "kills": 277,
+      "deaths": 214,
+      "assists": 63
     },
     {
       "name": "deLb",
@@ -631,6 +645,20 @@
       "kills": 168,
       "deaths": 146,
       "assists": 61
+    },
+    {
+      "name": "iZu",
+      "team": "T1",
+      "maps": 28,
+      "rounds": 582,
+      "rating": 1.1,
+      "acs": 193,
+      "kd": 1.12,
+      "kast": "75%",
+      "adr": 128.4,
+      "kills": 405,
+      "deaths": 360,
+      "assists": 146
     },
     {
       "name": "stonezy",
@@ -689,20 +717,6 @@
       "assists": 31
     },
     {
-      "name": "Asuna",
-      "team": "100T",
-      "maps": 15,
-      "rounds": 306,
-      "rating": 1.09,
-      "acs": 220,
-      "kd": 1.09,
-      "kast": "72%",
-      "adr": 140.9,
-      "kills": 231,
-      "deaths": 211,
-      "assists": 108
-    },
-    {
       "name": "MAGNUM",
       "team": "EP",
       "maps": 10,
@@ -715,34 +729,6 @@
       "kills": 161,
       "deaths": 142,
       "assists": 57
-    },
-    {
-      "name": "Nicc",
-      "team": "DRG",
-      "maps": 7,
-      "rounds": 156,
-      "rating": 1.09,
-      "acs": 206,
-      "kd": 1.12,
-      "kast": "79%",
-      "adr": 130.1,
-      "kills": 116,
-      "deaths": 104,
-      "assists": 47
-    },
-    {
-      "name": "iZu",
-      "team": "T1",
-      "maps": 25,
-      "rounds": 519,
-      "rating": 1.09,
-      "acs": 189,
-      "kd": 1.11,
-      "kast": "76%",
-      "adr": 126.3,
-      "kills": 353,
-      "deaths": 317,
-      "assists": 131
     },
     {
       "name": "margaret",
@@ -773,20 +759,6 @@
       "assists": 78
     },
     {
-      "name": "Timotino",
-      "team": "100T",
-      "maps": 15,
-      "rounds": 306,
-      "rating": 1.08,
-      "acs": 235,
-      "kd": 1.21,
-      "kast": "73%",
-      "adr": 149.3,
-      "kills": 252,
-      "deaths": 209,
-      "assists": 70
-    },
-    {
       "name": "splash",
       "team": "TYL",
       "maps": 21,
@@ -813,20 +785,6 @@
       "kills": 182,
       "deaths": 167,
       "assists": 75
-    },
-    {
-      "name": "Coco",
-      "team": "TEC",
-      "maps": 16,
-      "rounds": 332,
-      "rating": 1.08,
-      "acs": 200,
-      "kd": 0.99,
-      "kast": "73%",
-      "adr": 130.9,
-      "kills": 233,
-      "deaths": 236,
-      "assists": 130
     },
     {
       "name": "kozzy",
@@ -871,20 +829,6 @@
       "assists": 48
     },
     {
-      "name": "bang",
-      "team": "100T",
-      "maps": 15,
-      "rounds": 306,
-      "rating": 1.07,
-      "acs": 188,
-      "kd": 1.11,
-      "kast": "75%",
-      "adr": 121.8,
-      "kills": 208,
-      "deaths": 188,
-      "assists": 129
-    },
-    {
       "name": "leaf",
       "team": "G2",
       "maps": 27,
@@ -913,20 +857,6 @@
       "assists": 37
     },
     {
-      "name": "vora",
-      "team": "100T",
-      "maps": 15,
-      "rounds": 306,
-      "rating": 1.07,
-      "acs": 186,
-      "kd": 1.1,
-      "kast": "76%",
-      "adr": 120.7,
-      "kills": 202,
-      "deaths": 183,
-      "assists": 97
-    },
-    {
       "name": "Sato",
       "team": "LEV",
       "maps": 7,
@@ -941,6 +871,20 @@
       "assists": 36
     },
     {
+      "name": "Timotino",
+      "team": "100T",
+      "maps": 18,
+      "rounds": 360,
+      "rating": 1.07,
+      "acs": 233,
+      "kd": 1.18,
+      "kast": "74%",
+      "adr": 149.4,
+      "kills": 293,
+      "deaths": 248,
+      "assists": 87
+    },
+    {
       "name": "iamgrq",
       "team": "AG",
       "maps": 11,
@@ -953,20 +897,6 @@
       "kills": 168,
       "deaths": 169,
       "assists": 99
-    },
-    {
-      "name": "Rb",
-      "team": "NS",
-      "maps": 27,
-      "rounds": 571,
-      "rating": 1.06,
-      "acs": 186,
-      "kd": 1.08,
-      "kast": "74%",
-      "adr": 115.3,
-      "kills": 384,
-      "deaths": 357,
-      "assists": 228
     },
     {
       "name": "trexx",
@@ -1067,20 +997,6 @@
       "assists": 111
     },
     {
-      "name": "Cryocells",
-      "team": "100T",
-      "maps": 15,
-      "rounds": 306,
-      "rating": 1.05,
-      "acs": 194,
-      "kd": 1.18,
-      "kast": "75%",
-      "adr": 128.5,
-      "kills": 221,
-      "deaths": 187,
-      "assists": 50
-    },
-    {
       "name": "artzin",
       "team": "FUR",
       "maps": 14,
@@ -1095,20 +1011,6 @@
       "assists": 144
     },
     {
-      "name": "BerLIN",
-      "team": "JDG",
-      "maps": 20,
-      "rounds": 405,
-      "rating": 1.05,
-      "acs": 189,
-      "kd": 1.02,
-      "kast": "72%",
-      "adr": 124.9,
-      "kills": 270,
-      "deaths": 264,
-      "assists": 124
-    },
-    {
       "name": "dgzin",
       "team": "EG",
       "maps": 12,
@@ -1121,6 +1023,20 @@
       "kills": 218,
       "deaths": 197,
       "assists": 46
+    },
+    {
+      "name": "vora",
+      "team": "100T",
+      "maps": 18,
+      "rounds": 360,
+      "rating": 1.05,
+      "acs": 184,
+      "kd": 1.08,
+      "kast": "77%",
+      "adr": 119.8,
+      "kills": 232,
+      "deaths": 214,
+      "assists": 121
     },
     {
       "name": "Shr1mp",
@@ -1163,34 +1079,6 @@
       "kills": 131,
       "deaths": 119,
       "assists": 38
-    },
-    {
-      "name": "Xross",
-      "team": "NS",
-      "maps": 27,
-      "rounds": 571,
-      "rating": 1.05,
-      "acs": 182,
-      "kd": 1.06,
-      "kast": "76%",
-      "adr": 124.4,
-      "kills": 372,
-      "deaths": 352,
-      "assists": 146
-    },
-    {
-      "name": "zhe",
-      "team": "JDG",
-      "maps": 20,
-      "rounds": 405,
-      "rating": 1.05,
-      "acs": 211,
-      "kd": 1.13,
-      "kast": "72%",
-      "adr": 133.9,
-      "kills": 306,
-      "deaths": 270,
-      "assists": 73
     },
     {
       "name": "Tacolilla",
@@ -1291,18 +1179,18 @@
       "assists": 75
     },
     {
-      "name": "Dambi",
+      "name": "Xross",
       "team": "NS",
-      "maps": 27,
-      "rounds": 571,
+      "maps": 30,
+      "rounds": 625,
       "rating": 1.04,
-      "acs": 224,
-      "kd": 1.06,
-      "kast": "72%",
-      "adr": 142.1,
-      "kills": 444,
-      "deaths": 420,
-      "assists": 157
+      "acs": 181,
+      "kd": 1.02,
+      "kast": "75%",
+      "adr": 124.4,
+      "kills": 401,
+      "deaths": 394,
+      "assists": 160
     },
     {
       "name": "K1ra",
@@ -1333,6 +1221,20 @@
       "assists": 171
     },
     {
+      "name": "Rb",
+      "team": "NS",
+      "maps": 30,
+      "rounds": 625,
+      "rating": 1.03,
+      "acs": 182,
+      "kd": 1.02,
+      "kast": "73%",
+      "adr": 112.8,
+      "kills": 409,
+      "deaths": 400,
+      "assists": 250
+    },
+    {
       "name": "Sylvan",
       "team": "TS",
       "maps": 6,
@@ -1345,6 +1247,104 @@
       "kills": 103,
       "deaths": 95,
       "assists": 39
+    },
+    {
+      "name": "BerLIN",
+      "team": "JDG",
+      "maps": 18,
+      "rounds": 364,
+      "rating": 1.03,
+      "acs": 188,
+      "kd": 1,
+      "kast": "72%",
+      "adr": 123.8,
+      "kills": 241,
+      "deaths": 240,
+      "assists": 107
+    },
+    {
+      "name": "Wolfen",
+      "team": "CGN",
+      "maps": 6,
+      "rounds": 127,
+      "rating": 1.03,
+      "acs": 208,
+      "kd": 1.02,
+      "kast": "76%",
+      "adr": 152.6,
+      "kills": 89,
+      "deaths": 87,
+      "assists": 41
+    },
+    {
+      "name": "Kicks",
+      "team": "TL",
+      "maps": 24,
+      "rounds": 487,
+      "rating": 1.03,
+      "acs": 177,
+      "kd": 1.01,
+      "kast": "71%",
+      "adr": 114.9,
+      "kills": 313,
+      "deaths": 310,
+      "assists": 176
+    },
+    {
+      "name": "Apinya",
+      "team": "SP",
+      "maps": 12,
+      "rounds": 253,
+      "rating": 1.03,
+      "acs": 203,
+      "kd": 1.02,
+      "kast": "70%",
+      "adr": 134.2,
+      "kills": 178,
+      "deaths": 174,
+      "assists": 72
+    },
+    {
+      "name": "Francis",
+      "team": "NS",
+      "maps": 30,
+      "rounds": 625,
+      "rating": 1.03,
+      "acs": 226,
+      "kd": 1.07,
+      "kast": "69%",
+      "adr": 144.3,
+      "kills": 492,
+      "deaths": 458,
+      "assists": 117
+    },
+    {
+      "name": "cb",
+      "team": "NOVA",
+      "maps": 9,
+      "rounds": 183,
+      "rating": 1.03,
+      "acs": 200,
+      "kd": 1.02,
+      "kast": "69%",
+      "adr": 127.1,
+      "kills": 126,
+      "deaths": 124,
+      "assists": 50
+    },
+    {
+      "name": "Coco",
+      "team": "TEC",
+      "maps": 13,
+      "rounds": 275,
+      "rating": 1.03,
+      "acs": 194,
+      "kd": 0.94,
+      "kast": "70%",
+      "adr": 124.7,
+      "kills": 184,
+      "deaths": 196,
+      "assists": 103
     }
   ],
   "teams": [
@@ -1355,13 +1355,13 @@
     },
     {
       "rank": 2,
-      "name": "Enterprise Esports",
-      "region": "Czech Republic"
+      "name": "Fire Flux Esports",
+      "region": "Türkiye"
     },
     {
       "rank": 3,
-      "name": "Fire Flux Esports",
-      "region": "Türkiye"
+      "name": "Enterprise Esports",
+      "region": "Czech Republic"
     },
     {
       "rank": 4,
@@ -1370,13 +1370,13 @@
     },
     {
       "rank": 5,
-      "name": "BBL Esports",
-      "region": "Türkiye"
+      "name": "Eintracht Frankfurt",
+      "region": "Germany"
     },
     {
       "rank": 6,
-      "name": "Eintracht Frankfurt",
-      "region": "Germany"
+      "name": "BBL Esports",
+      "region": "Türkiye"
     },
     {
       "rank": 7,
@@ -1445,8 +1445,8 @@
     },
     {
       "rank": 10,
-      "name": "Sentinels",
-      "region": "United States"
+      "name": "barbeque chicken",
+      "region": "International"
     },
     {
       "rank": 1,
