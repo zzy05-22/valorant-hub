@@ -1,6 +1,20 @@
 {
   "patches": [
     {
+      "version": "13.08",
+      "date": "2026-10-13",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-08",
+      "sections": [
+        "综合更新",
+        "AGENTS UPDATES",
+        "客户端更新",
+        "竞技更新",
+        "地图更新",
+        "错误修复",
+        "已知问题"
+      ]
+    },
+    {
       "version": "13.06",
       "date": "2026-09-22",
       "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-06",
@@ -25,18 +39,8 @@
         "全部平台",
         "仅 PC"
       ]
-    },
-    {
-      "version": "13.04",
-      "date": "2026-08-18",
-      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-04",
-      "sections": [
-        "地图更新",
-        "错误修复",
-        "Premier 赛事更新"
-      ]
     }
   ],
-  "syncedAt": "2026-10-13T09:46:51.759Z",
+  "syncedAt": "2026-10-14T08:03:49.905Z",
   "source": "playvalorant.com"
 }

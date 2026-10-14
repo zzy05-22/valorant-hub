@@ -8,7 +8,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "2:00 PM",
       "event": "Game Changers 2026: Americas Last Chance Qualifier",
       "series": "Main Event–Round Robin",
       "date": "Wed, October 14, 2026"
@@ -21,7 +21,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "2:00 PM",
+      "time": "4:00 PM",
       "event": "Game Changers 2026: Americas Last Chance Qualifier",
       "series": "Main Event–Round Robin",
       "date": "Wed, October 14, 2026"
@@ -34,7 +34,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "4:00 PM",
+      "time": "6:00 PM",
       "event": "Game Changers 2026: Americas Last Chance Qualifier",
       "series": "Main Event–Round Robin",
       "date": "Wed, October 14, 2026"
@@ -47,7 +47,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "2:00 PM",
+      "time": "4:00 PM",
       "event": "Game Changers 2026: Americas Last Chance Qualifier",
       "series": "Main Event–Grand Final",
       "date": "Thu, October 15, 2026"
@@ -60,10 +60,10 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "11:00 PM",
+      "time": "1:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Upper Final",
-      "date": "Thu, October 15, 2026"
+      "date": "Fri, October 16, 2026"
     },
     {
       "href": "/754742/100-thieves-vs-g2-esports-valorant-champions-2026-lr3",
@@ -73,7 +73,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Lower Round 3",
       "date": "Fri, October 16, 2026"
@@ -86,7 +86,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 AM",
+      "time": "2:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Lower Final",
       "date": "Sat, October 17, 2026"
@@ -99,10 +99,10 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "11:00 PM",
+      "time": "1:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Grand Final",
-      "date": "Sat, October 17, 2026"
+      "date": "Sun, October 18, 2026"
     },
     {
       "href": "/769456/tbd-project-blender-2026-group-b",
@@ -281,7 +281,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "7:30 AM",
+      "time": "9:30 AM",
       "event": "Monsters Reloaded 2026",
       "series": "Closed Qualifier Playoffs–Lower Final",
       "date": "Mon, October 12, 2026"
@@ -294,7 +294,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "4:15 AM",
+      "time": "6:15 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Lower Round 2",
       "date": "Sun, October 11, 2026"
@@ -307,7 +307,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Lower Round 2",
       "date": "Sun, October 11, 2026"
@@ -320,7 +320,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "5:00 AM",
+      "time": "7:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Upper Semifinals",
       "date": "Sat, October 10, 2026"
@@ -333,7 +333,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Upper Semifinals",
       "date": "Sat, October 10, 2026"
@@ -346,7 +346,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "5:10 AM",
+      "time": "7:10 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Lower Round 1",
       "date": "Fri, October 9, 2026"
@@ -359,7 +359,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Lower Round 1",
       "date": "Fri, October 9, 2026"
@@ -372,7 +372,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "4:20 AM",
+      "time": "6:20 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Upper Quarterfinals",
       "date": "Thu, October 8, 2026"
@@ -385,7 +385,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Upper Quarterfinals",
       "date": "Thu, October 8, 2026"
@@ -398,7 +398,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "4:30 AM",
+      "time": "6:30 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Upper Quarterfinals",
       "date": "Wed, October 7, 2026"
@@ -411,7 +411,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Upper Quarterfinals",
       "date": "Wed, October 7, 2026"
@@ -424,7 +424,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "4:25 AM",
+      "time": "6:25 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Decider (A)",
       "date": "Sun, October 4, 2026"
@@ -437,7 +437,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Decider (B)",
       "date": "Sun, October 4, 2026"
@@ -450,7 +450,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "4:30 AM",
+      "time": "6:30 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Decider (D)",
       "date": "Sat, October 3, 2026"
@@ -463,7 +463,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Decider (C)",
       "date": "Sat, October 3, 2026"
@@ -476,7 +476,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "4:00 AM",
+      "time": "6:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Elimination (A)",
       "date": "Fri, October 2, 2026"
@@ -489,7 +489,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Elimination (B)",
       "date": "Fri, October 2, 2026"
@@ -502,7 +502,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "5:05 AM",
+      "time": "7:05 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Elimination (D)",
       "date": "Thu, October 1, 2026"
@@ -515,7 +515,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Elimination (C)",
       "date": "Thu, October 1, 2026"
@@ -528,7 +528,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "4:55 AM",
+      "time": "6:55 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Winner's (A)",
       "date": "Wed, September 30, 2026"
@@ -541,7 +541,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Winner's (B)",
       "date": "Wed, September 30, 2026"
@@ -554,7 +554,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "5:30 AM",
+      "time": "7:30 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Winner's (D)",
       "date": "Tue, September 29, 2026"
@@ -567,7 +567,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Winner's (C)",
       "date": "Tue, September 29, 2026"
@@ -580,7 +580,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "4:35 AM",
+      "time": "6:35 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Opening (A)",
       "date": "Sun, September 27, 2026"
@@ -593,7 +593,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Opening (A)",
       "date": "Sun, September 27, 2026"
@@ -606,7 +606,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "5:30 AM",
+      "time": "7:30 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Opening (B)",
       "date": "Sat, September 26, 2026"
@@ -619,7 +619,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Opening (B)",
       "date": "Sat, September 26, 2026"
@@ -632,7 +632,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "4:25 AM",
+      "time": "6:25 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Opening (D)",
       "date": "Fri, September 25, 2026"
@@ -645,7 +645,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 AM",
+      "time": "4:00 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Opening (D)",
       "date": "Fri, September 25, 2026"
@@ -658,12 +658,12 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "5:25 AM",
+      "time": "7:25 AM",
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Opening (C)",
       "date": "Thu, September 24, 2026"
     }
   ],
-  "syncedAt": "2026-10-13T09:46:50.551Z",
+  "syncedAt": "2026-10-14T08:03:49.072Z",
   "source": "vlr.gg/matches"
 }

@@ -1,12 +1,12 @@
 {
-  "syncedAt": "2026-10-13T09:46:49.963Z",
-  "version": "13.06.00.5590001",
+  "syncedAt": "2026-10-14T08:03:48.671Z",
+  "version": "13.08.00.5627607",
   "maps": [
     {
       "id": "gauntlet",
       "uuid": "dd3a1cd9-41b1-50ea-3bd6-a7bb3c5978bd",
       "zh": {
-        "name": "Gauntlet",
+        "name": "异变轮战",
         "description": "",
         "tacticalDescription": ""
       },
@@ -2292,8 +2292,8 @@
         {
           "region": "Crane",
           "zone": "A",
-          "x": 4458.2866,
-          "y": -3999.4976
+          "x": 4236.0996,
+          "y": -4045.004
         },
         {
           "region": "Elbow",
@@ -2346,8 +2346,8 @@
         {
           "region": "Arch",
           "zone": "B",
-          "x": -3216.7134,
-          "y": -4399.5156
+          "x": -3098.5598,
+          "y": -4399.515
         },
         {
           "region": "Elbow",
