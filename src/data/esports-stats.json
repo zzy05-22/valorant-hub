@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-16T07:33:51.536Z",
+  "syncedAt": "2026-10-17T07:13:30.242Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -117,16 +117,16 @@
     {
       "name": "erde",
       "team": "LOUD",
-      "maps": 30,
-      "rounds": 642,
-      "rating": 1.21,
-      "acs": 220,
+      "maps": 33,
+      "rounds": 705,
+      "rating": 1.22,
+      "acs": 223,
       "kd": 1.28,
       "kast": "76%",
-      "adr": 142.3,
-      "kills": 500,
-      "deaths": 390,
-      "assists": 244
+      "adr": 144.9,
+      "kills": 554,
+      "deaths": 433,
+      "assists": 276
     },
     {
       "name": "N4RRATE",
@@ -187,16 +187,16 @@
     {
       "name": "lukxo",
       "team": "LOUD",
-      "maps": 30,
-      "rounds": 642,
-      "rating": 1.19,
-      "acs": 240,
-      "kd": 1.34,
+      "maps": 33,
+      "rounds": 705,
+      "rating": 1.2,
+      "acs": 244,
+      "kd": 1.36,
       "kast": "71%",
-      "adr": 155.9,
-      "kills": 568,
-      "deaths": 424,
-      "assists": 77
+      "adr": 158.1,
+      "kills": 632,
+      "deaths": 466,
+      "assists": 85
     },
     {
       "name": "sickrey",
@@ -243,16 +243,16 @@
     {
       "name": "trent",
       "team": "G2",
-      "maps": 29,
-      "rounds": 609,
+      "maps": 32,
+      "rounds": 675,
       "rating": 1.17,
-      "acs": 203,
+      "acs": 204,
       "kd": 1.21,
       "kast": "77%",
-      "adr": 134.8,
-      "kills": 455,
-      "deaths": 375,
-      "assists": 195
+      "adr": 135.1,
+      "kills": 505,
+      "deaths": 416,
+      "assists": 216
     },
     {
       "name": "primmie",
@@ -267,20 +267,6 @@
       "kills": 92,
       "deaths": 76,
       "assists": 21
-    },
-    {
-      "name": "Asuna",
-      "team": "100T",
-      "maps": 20,
-      "rounds": 403,
-      "rating": 1.15,
-      "acs": 226,
-      "kd": 1.18,
-      "kast": "75%",
-      "adr": 142.4,
-      "kills": 317,
-      "deaths": 269,
-      "assists": 146
     },
     {
       "name": "brawk",
@@ -355,16 +341,30 @@
     {
       "name": "bang",
       "team": "100T",
-      "maps": 20,
-      "rounds": 403,
+      "maps": 23,
+      "rounds": 469,
       "rating": 1.11,
-      "acs": 193,
-      "kd": 1.17,
+      "acs": 196,
+      "kd": 1.16,
       "kast": "76%",
-      "adr": 125.1,
-      "kills": 281,
-      "deaths": 241,
-      "assists": 174
+      "adr": 127.8,
+      "kills": 332,
+      "deaths": 286,
+      "assists": 200
+    },
+    {
+      "name": "Cryocells",
+      "team": "100T",
+      "maps": 23,
+      "rounds": 469,
+      "rating": 1.11,
+      "acs": 204,
+      "kd": 1.3,
+      "kast": "75%",
+      "adr": 134.3,
+      "kills": 363,
+      "deaths": 279,
+      "assists": 81
     },
     {
       "name": "PatMen",
@@ -423,18 +423,18 @@
       "assists": 122
     },
     {
-      "name": "BABYBAY",
-      "team": "G2",
-      "maps": 29,
-      "rounds": 609,
+      "name": "Asuna",
+      "team": "100T",
+      "maps": 23,
+      "rounds": 469,
       "rating": 1.1,
-      "acs": 208,
+      "acs": 217,
       "kd": 1.13,
-      "kast": "72%",
-      "adr": 139.3,
-      "kills": 454,
-      "deaths": 403,
-      "assists": 125
+      "kast": "74%",
+      "adr": 137.4,
+      "kills": 357,
+      "deaths": 316,
+      "assists": 165
     },
     {
       "name": "stonezy",
@@ -479,18 +479,18 @@
       "assists": 20
     },
     {
-      "name": "Cryocells",
-      "team": "100T",
-      "maps": 20,
-      "rounds": 403,
+      "name": "BABYBAY",
+      "team": "G2",
+      "maps": 32,
+      "rounds": 675,
       "rating": 1.09,
-      "acs": 198,
-      "kd": 1.28,
-      "kast": "76%",
-      "adr": 130.7,
-      "kills": 304,
-      "deaths": 237,
-      "assists": 70
+      "acs": 208,
+      "kd": 1.12,
+      "kast": "72%",
+      "adr": 138.9,
+      "kills": 501,
+      "deaths": 449,
+      "assists": 141
     },
     {
       "name": "Verno",
@@ -505,20 +505,6 @@
       "kills": 149,
       "deaths": 139,
       "assists": 60
-    },
-    {
-      "name": "Sayonara",
-      "team": "VIT",
-      "maps": 16,
-      "rounds": 358,
-      "rating": 1.09,
-      "acs": 192,
-      "kd": 1.17,
-      "kast": "74%",
-      "adr": 129,
-      "kills": 257,
-      "deaths": 219,
-      "assists": 86
     },
     {
       "name": "PTC",
@@ -547,6 +533,20 @@
       "kills": 425,
       "deaths": 386,
       "assists": 148
+    },
+    {
+      "name": "Sayonara",
+      "team": "VIT",
+      "maps": 19,
+      "rounds": 421,
+      "rating": 1.08,
+      "acs": 196,
+      "kd": 1.14,
+      "kast": "73%",
+      "adr": 129.5,
+      "kills": 305,
+      "deaths": 267,
+      "assists": 102
     },
     {
       "name": "slowly",
@@ -589,20 +589,6 @@
       "kills": 81,
       "deaths": 70,
       "assists": 37
-    },
-    {
-      "name": "vora",
-      "team": "100T",
-      "maps": 20,
-      "rounds": 403,
-      "rating": 1.07,
-      "acs": 187,
-      "kd": 1.1,
-      "kast": "78%",
-      "adr": 123,
-      "kills": 264,
-      "deaths": 239,
-      "assists": 135
     },
     {
       "name": "Sato",
@@ -677,16 +663,16 @@
     {
       "name": "Timotino",
       "team": "100T",
-      "maps": 20,
-      "rounds": 403,
+      "maps": 23,
+      "rounds": 469,
       "rating": 1.06,
-      "acs": 230,
-      "kd": 1.19,
+      "acs": 231,
+      "kd": 1.17,
       "kast": "73%",
-      "adr": 148.2,
-      "kills": 327,
-      "deaths": 275,
-      "assists": 97
+      "adr": 149.3,
+      "kills": 378,
+      "deaths": 324,
+      "assists": 117
     },
     {
       "name": "BerLIN",
@@ -801,20 +787,6 @@
       "assists": 47
     },
     {
-      "name": "Chronicle",
-      "team": "VIT",
-      "maps": 16,
-      "rounds": 358,
-      "rating": 1.03,
-      "acs": 214,
-      "kd": 1.03,
-      "kast": "69%",
-      "adr": 141.5,
-      "kills": 257,
-      "deaths": 249,
-      "assists": 93
-    },
-    {
       "name": "Rb",
       "team": "NS",
       "maps": 28,
@@ -913,6 +885,20 @@
       "assists": 51
     },
     {
+      "name": "vora",
+      "team": "100T",
+      "maps": 23,
+      "rounds": 469,
+      "rating": 1.03,
+      "acs": 181,
+      "kd": 1.04,
+      "kast": "77%",
+      "adr": 119,
+      "kills": 298,
+      "deaths": 287,
+      "assists": 157
+    },
+    {
       "name": "zhe",
       "team": "JDG",
       "maps": 14,
@@ -943,30 +929,30 @@
     {
       "name": "valyn",
       "team": "G2",
-      "maps": 29,
-      "rounds": 609,
+      "maps": 32,
+      "rounds": 675,
       "rating": 1.02,
-      "acs": 197,
-      "kd": 1.01,
+      "acs": 194,
+      "kd": 1,
       "kast": "74%",
-      "adr": 126.9,
-      "kills": 426,
-      "deaths": 420,
-      "assists": 230
+      "adr": 124.9,
+      "kills": 465,
+      "deaths": 465,
+      "assists": 260
     },
     {
       "name": "leaf",
       "team": "G2",
-      "maps": 29,
-      "rounds": 609,
+      "maps": 32,
+      "rounds": 675,
       "rating": 1.02,
-      "acs": 199,
+      "acs": 203,
       "kd": 1.04,
       "kast": "71%",
-      "adr": 131,
-      "kills": 425,
-      "deaths": 408,
-      "assists": 179
+      "adr": 132.5,
+      "kills": 478,
+      "deaths": 459,
+      "assists": 198
     },
     {
       "name": "something",
@@ -1039,20 +1025,6 @@
       "assists": 88
     },
     {
-      "name": "DaviH",
-      "team": "LOUD",
-      "maps": 30,
-      "rounds": 642,
-      "rating": 1.01,
-      "acs": 162,
-      "kd": 0.94,
-      "kast": "73%",
-      "adr": 111.4,
-      "kills": 357,
-      "deaths": 381,
-      "assists": 203
-    },
-    {
       "name": "KROSTALY",
       "team": "FUT",
       "maps": 16,
@@ -1109,6 +1081,20 @@
       "assists": 164
     },
     {
+      "name": "Chronicle",
+      "team": "VIT",
+      "maps": 19,
+      "rounds": 421,
+      "rating": 0.99,
+      "acs": 209,
+      "kd": 0.97,
+      "kast": "71%",
+      "adr": 138.7,
+      "kills": 293,
+      "deaths": 302,
+      "assists": 119
+    },
+    {
       "name": "BeYN",
       "team": "KRX",
       "maps": 8,
@@ -1121,20 +1107,6 @@
       "kills": 111,
       "deaths": 119,
       "assists": 44
-    },
-    {
-      "name": "PROFEK",
-      "team": "VIT",
-      "maps": 16,
-      "rounds": 358,
-      "rating": 0.99,
-      "acs": 185,
-      "kd": 1.01,
-      "kast": "74%",
-      "adr": 120.3,
-      "kills": 239,
-      "deaths": 236,
-      "assists": 121
     },
     {
       "name": "Laz",
@@ -1163,6 +1135,20 @@
       "kills": 277,
       "deaths": 268,
       "assists": 76
+    },
+    {
+      "name": "DaviH",
+      "team": "LOUD",
+      "maps": 33,
+      "rounds": 705,
+      "rating": 0.99,
+      "acs": 159,
+      "kd": 0.92,
+      "kast": "73%",
+      "adr": 108.9,
+      "kills": 386,
+      "deaths": 420,
+      "assists": 223
     },
     {
       "name": "dos9",
@@ -1205,6 +1191,20 @@
       "kills": 149,
       "deaths": 154,
       "assists": 54
+    },
+    {
+      "name": "PROFEK",
+      "team": "VIT",
+      "maps": 19,
+      "rounds": 421,
+      "rating": 0.98,
+      "acs": 184,
+      "kd": 0.98,
+      "kast": "74%",
+      "adr": 119.7,
+      "kills": 277,
+      "deaths": 283,
+      "assists": 145
     },
     {
       "name": "LewN",
@@ -1396,13 +1396,13 @@
     },
     {
       "rank": 3,
-      "name": "G2 Esports",
-      "region": "United States"
+      "name": "LEVIATÁN",
+      "region": "Argentina"
     },
     {
       "rank": 4,
-      "name": "LEVIATÁN",
-      "region": "Argentina"
+      "name": "G2 Esports",
+      "region": "United States"
     },
     {
       "rank": 5,
