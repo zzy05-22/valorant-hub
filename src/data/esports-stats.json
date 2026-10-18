@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-17T07:13:30.242Z",
+  "syncedAt": "2026-10-18T07:26:46.348Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -311,6 +311,20 @@
       "assists": 55
     },
     {
+      "name": "Cryocells",
+      "team": "100T",
+      "maps": 27,
+      "rounds": 556,
+      "rating": 1.12,
+      "acs": 209,
+      "kd": 1.29,
+      "kast": "74%",
+      "adr": 135.8,
+      "kills": 437,
+      "deaths": 338,
+      "assists": 89
+    },
+    {
       "name": "xavi8k",
       "team": "GE",
       "maps": 24,
@@ -325,6 +339,20 @@
       "assists": 176
     },
     {
+      "name": "Sayonara",
+      "team": "VIT",
+      "maps": 23,
+      "rounds": 508,
+      "rating": 1.12,
+      "acs": 202,
+      "kd": 1.18,
+      "kast": "73%",
+      "adr": 134.6,
+      "kills": 377,
+      "deaths": 320,
+      "assists": 131
+    },
+    {
       "name": "yong",
       "team": "KRX",
       "maps": 8,
@@ -337,34 +365,6 @@
       "kills": 145,
       "deaths": 125,
       "assists": 36
-    },
-    {
-      "name": "bang",
-      "team": "100T",
-      "maps": 23,
-      "rounds": 469,
-      "rating": 1.11,
-      "acs": 196,
-      "kd": 1.16,
-      "kast": "76%",
-      "adr": 127.8,
-      "kills": 332,
-      "deaths": 286,
-      "assists": 200
-    },
-    {
-      "name": "Cryocells",
-      "team": "100T",
-      "maps": 23,
-      "rounds": 469,
-      "rating": 1.11,
-      "acs": 204,
-      "kd": 1.3,
-      "kast": "75%",
-      "adr": 134.3,
-      "kills": 363,
-      "deaths": 279,
-      "assists": 81
     },
     {
       "name": "PatMen",
@@ -421,20 +421,6 @@
       "kills": 350,
       "deaths": 304,
       "assists": 122
-    },
-    {
-      "name": "Asuna",
-      "team": "100T",
-      "maps": 23,
-      "rounds": 469,
-      "rating": 1.1,
-      "acs": 217,
-      "kd": 1.13,
-      "kast": "74%",
-      "adr": 137.4,
-      "kills": 357,
-      "deaths": 316,
-      "assists": 165
     },
     {
       "name": "stonezy",
@@ -535,18 +521,18 @@
       "assists": 148
     },
     {
-      "name": "Sayonara",
-      "team": "VIT",
-      "maps": 19,
-      "rounds": 421,
+      "name": "Timotino",
+      "team": "100T",
+      "maps": 27,
+      "rounds": 556,
       "rating": 1.08,
-      "acs": 196,
-      "kd": 1.14,
-      "kast": "73%",
-      "adr": 129.5,
-      "kills": 305,
-      "deaths": 267,
-      "assists": 102
+      "acs": 234,
+      "kd": 1.17,
+      "kast": "72%",
+      "adr": 150.6,
+      "kills": 451,
+      "deaths": 387,
+      "assists": 141
     },
     {
       "name": "slowly",
@@ -561,6 +547,20 @@
       "kills": 341,
       "deaths": 298,
       "assists": 64
+    },
+    {
+      "name": "bang",
+      "team": "100T",
+      "maps": 27,
+      "rounds": 556,
+      "rating": 1.07,
+      "acs": 194,
+      "kd": 1.09,
+      "kast": "76%",
+      "adr": 125.9,
+      "kills": 384,
+      "deaths": 351,
+      "assists": 233
     },
     {
       "name": "dgzin",
@@ -619,6 +619,20 @@
       "assists": 34
     },
     {
+      "name": "Asuna",
+      "team": "100T",
+      "maps": 27,
+      "rounds": 556,
+      "rating": 1.06,
+      "acs": 209,
+      "kd": 1.07,
+      "kast": "71%",
+      "adr": 132.9,
+      "kills": 405,
+      "deaths": 379,
+      "assists": 188
+    },
+    {
       "name": "trexx",
       "team": "TL",
       "maps": 24,
@@ -659,20 +673,6 @@
       "kills": 183,
       "deaths": 164,
       "assists": 30
-    },
-    {
-      "name": "Timotino",
-      "team": "100T",
-      "maps": 23,
-      "rounds": 469,
-      "rating": 1.06,
-      "acs": 231,
-      "kd": 1.17,
-      "kast": "73%",
-      "adr": 149.3,
-      "kills": 378,
-      "deaths": 324,
-      "assists": 117
     },
     {
       "name": "BerLIN",
@@ -885,20 +885,6 @@
       "assists": 51
     },
     {
-      "name": "vora",
-      "team": "100T",
-      "maps": 23,
-      "rounds": 469,
-      "rating": 1.03,
-      "acs": 181,
-      "kd": 1.04,
-      "kast": "77%",
-      "adr": 119,
-      "kills": 298,
-      "deaths": 287,
-      "assists": 157
-    },
-    {
       "name": "zhe",
       "team": "JDG",
       "maps": 14,
@@ -967,6 +953,20 @@
       "kills": 292,
       "deaths": 266,
       "assists": 61
+    },
+    {
+      "name": "vora",
+      "team": "100T",
+      "maps": 27,
+      "rounds": 556,
+      "rating": 1.02,
+      "acs": 180,
+      "kd": 1.02,
+      "kast": "75%",
+      "adr": 120.1,
+      "kills": 353,
+      "deaths": 346,
+      "assists": 180
     },
     {
       "name": "Francis",
@@ -1081,20 +1081,6 @@
       "assists": 164
     },
     {
-      "name": "Chronicle",
-      "team": "VIT",
-      "maps": 19,
-      "rounds": 421,
-      "rating": 0.99,
-      "acs": 209,
-      "kd": 0.97,
-      "kast": "71%",
-      "adr": 138.7,
-      "kills": 293,
-      "deaths": 302,
-      "assists": 119
-    },
-    {
       "name": "BeYN",
       "team": "KRX",
       "maps": 8,
@@ -1193,20 +1179,6 @@
       "assists": 54
     },
     {
-      "name": "PROFEK",
-      "team": "VIT",
-      "maps": 19,
-      "rounds": 421,
-      "rating": 0.98,
-      "acs": 184,
-      "kd": 0.98,
-      "kast": "74%",
-      "adr": 119.7,
-      "kills": 277,
-      "deaths": 283,
-      "assists": 145
-    },
-    {
       "name": "LewN",
       "team": "KC",
       "maps": 17,
@@ -1277,6 +1249,20 @@
       "assists": 59
     },
     {
+      "name": "Chronicle",
+      "team": "VIT",
+      "maps": 23,
+      "rounds": 508,
+      "rating": 0.97,
+      "acs": 206,
+      "kd": 0.96,
+      "kast": "70%",
+      "adr": 136.2,
+      "kills": 352,
+      "deaths": 367,
+      "assists": 142
+    },
+    {
       "name": "MaKo",
       "team": "KRX",
       "maps": 8,
@@ -1289,6 +1275,20 @@
       "kills": 118,
       "deaths": 126,
       "assists": 77
+    },
+    {
+      "name": "PROFEK",
+      "team": "VIT",
+      "maps": 23,
+      "rounds": 508,
+      "rating": 0.97,
+      "acs": 177,
+      "kd": 0.96,
+      "kast": "74%",
+      "adr": 116.3,
+      "kills": 325,
+      "deaths": 339,
+      "assists": 173
     },
     {
       "name": "Hermes",
@@ -1406,12 +1406,12 @@
     },
     {
       "rank": 5,
-      "name": "Shopify Rebellion Black",
+      "name": "SaD Esports",
       "region": "United States"
     },
     {
       "rank": 6,
-      "name": "SaD Esports",
+      "name": "Shopify Rebellion Black",
       "region": "United States"
     },
     {

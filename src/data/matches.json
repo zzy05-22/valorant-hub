@@ -1,43 +1,17 @@
 {
   "matches": [
     {
-      "href": "/754743/team-vitality-vs-100-thieves-valorant-champions-2026-lbf",
-      "teamA": "Team Vitality",
-      "teamB": "100 Thieves",
+      "href": "/754737/loud-vs-team-vitality-valorant-champions-2026-gf",
+      "teamA": "LOUD",
+      "teamB": "Team Vitality",
       "scoreA": 0,
       "scoreB": 0,
       "winner": null,
       "status": "completed",
-      "time": "12:00 AM",
-      "event": "Valorant Champions 2026",
-      "series": "Playoffs–Lower Final",
-      "date": "Sat, October 17, 2026"
-    },
-    {
-      "href": "/754737/loud-vs-tbd-valorant-champions-2026-gf",
-      "teamA": "LOUD",
-      "teamB": "TBD",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
       "time": "11:00 PM",
       "event": "Valorant Champions 2026",
       "series": "Playoffs–Grand Final",
       "date": "Sat, October 17, 2026"
-    },
-    {
-      "href": "/769450/tbd-project-blender-2026-group-a",
-      "teamA": "TBD",
-      "teamB": "TBD",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "TBD",
-      "event": "Project Blender 2026",
-      "series": "Phase 2–Group A",
-      "date": "Wed, October 21, 2026"
     },
     {
       "href": "/769451/tbd-project-blender-2026-group-a",
@@ -154,6 +128,19 @@
       "time": "TBD",
       "event": "Project Blender 2026",
       "series": "Phase 2–Group B",
+      "date": "Wed, October 21, 2026"
+    },
+    {
+      "href": "/769450/tbd-project-blender-2026-group-a",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "TBD",
+      "event": "Project Blender 2026",
+      "series": "Phase 2–Group A",
       "date": "Wed, October 21, 2026"
     },
     {
@@ -428,6 +415,19 @@
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Grand Final",
       "date": "Sun, November 1, 2026"
+    },
+    {
+      "href": "/754743/team-vitality-vs-100-thieves-valorant-champions-2026-lbf",
+      "teamA": "Team Vitality",
+      "teamB": "100 Thieves",
+      "scoreA": 3,
+      "scoreB": 1,
+      "winner": "A",
+      "status": "completed",
+      "time": "12:00 AM",
+      "event": "Valorant Champions 2026",
+      "series": "Playoffs–Lower Final",
+      "date": "Sat, October 17, 2026"
     },
     {
       "href": "/754742/100-thieves-vs-g2-esports-valorant-champions-2026-lr3",
@@ -805,21 +805,8 @@
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Winner's (C)",
       "date": "Tue, September 29, 2026"
-    },
-    {
-      "href": "/753445/jd-gaming-vs-fut-esports-valorant-champions-2026-opening-a",
-      "teamA": "JD Gaming",
-      "teamB": "FUT Esports",
-      "scoreA": 0,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "4:35 AM",
-      "event": "Valorant Champions 2026",
-      "series": "Group Stage–Opening (A)",
-      "date": "Sun, September 27, 2026"
     }
   ],
-  "syncedAt": "2026-10-17T07:13:30.772Z",
+  "syncedAt": "2026-10-18T07:26:46.887Z",
   "source": "vlr.gg/matches"
 }
