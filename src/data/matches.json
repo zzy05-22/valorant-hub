@@ -1,27 +1,14 @@
 {
   "matches": [
     {
-      "href": "/777944/wolves-esports-vs-a-team-vct-china-2026-threshold-week-1-ro12",
-      "teamA": "Wolves Esports",
-      "teamB": "A Team",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "9:00 PM",
-      "event": "VCT China 2026: Threshold",
-      "series": "Week 1–Round of 12",
-      "date": "Tue, October 20, 2026"
-    },
-    {
       "href": "/777945/any-questions-gaming-vs-world-sports-invictus-gaming-vct-china-2026-threshold-week-1-ro12",
       "teamA": "Any Questions Gaming",
       "teamB": "World Sports Invictus Gaming",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "11:00 PM",
+      "scoreA": 1,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "11:20 PM",
       "event": "VCT China 2026: Threshold",
       "series": "Week 1–Round of 12",
       "date": "Tue, October 20, 2026"
@@ -34,7 +21,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "1:00 AM",
+      "time": "1:30 AM",
       "event": "VCT China 2026: Threshold",
       "series": "Week 1–Round of 12",
       "date": "Wed, October 21, 2026"
@@ -47,7 +34,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "3:00 AM",
+      "time": "4:00 AM",
       "event": "VCT China 2026: Threshold",
       "series": "Week 1–Round of 12",
       "date": "Wed, October 21, 2026"
@@ -131,9 +118,9 @@
       "date": "Thu, October 22, 2026"
     },
     {
-      "href": "/777948/keepbest-gaming-vs-tbd-vct-china-2026-threshold-week-1-qf",
+      "href": "/777948/keepbest-gaming-vs-wolves-esports-vct-china-2026-threshold-week-1-qf",
       "teamA": "KeepBest Gaming",
-      "teamB": "TBD",
+      "teamB": "Wolves Esports",
       "scoreA": null,
       "scoreB": null,
       "winner": null,
@@ -313,7 +300,7 @@
       "date": "Fri, October 23, 2026"
     },
     {
-      "href": "/769162/tbd-project-blender-2026-sf",
+      "href": "/769161/tbd-project-blender-2026-sf",
       "teamA": "TBD",
       "teamB": "TBD",
       "scoreA": null,
@@ -326,7 +313,7 @@
       "date": "Fri, October 23, 2026"
     },
     {
-      "href": "/769161/tbd-project-blender-2026-sf",
+      "href": "/769162/tbd-project-blender-2026-sf",
       "teamA": "TBD",
       "teamB": "TBD",
       "scoreA": null,
@@ -352,6 +339,19 @@
       "date": "Sat, October 24, 2026"
     },
     {
+      "href": "/772431/fut-esports-vs-fire-flux-esports-monsters-reloaded-2026-main-event-sf",
+      "teamA": "FUT Esports",
+      "teamB": "Fire Flux Esports",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "3:30 AM",
+      "event": "Monsters Reloaded 2026",
+      "series": "Main Event–Semifinals",
+      "date": "Sat, October 24, 2026"
+    },
+    {
       "href": "/777950/tbd-vct-china-2026-threshold-week-1-sf",
       "teamA": "TBD",
       "teamB": "TBD",
@@ -365,19 +365,6 @@
       "date": "Sat, October 24, 2026"
     },
     {
-      "href": "/772431/fut-esports-vs-fire-flux-esports-monsters-reloaded-2026-main-event-sf",
-      "teamA": "FUT Esports",
-      "teamB": "Fire Flux Esports",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "9:00 AM",
-      "event": "Monsters Reloaded 2026",
-      "series": "Main Event–Semifinals",
-      "date": "Sat, October 24, 2026"
-    },
-    {
       "href": "/772432/giantx-vs-bbl-esports-monsters-reloaded-2026-main-event-sf",
       "teamA": "GIANTX",
       "teamB": "BBL Esports",
@@ -385,7 +372,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "9:00 AM",
+      "time": "6:30 AM",
       "event": "Monsters Reloaded 2026",
       "series": "Main Event–Semifinals",
       "date": "Sat, October 24, 2026"
@@ -450,7 +437,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "9:00 AM",
+      "time": "4:30 AM",
       "event": "Monsters Reloaded 2026",
       "series": "Main Event–Grand Final",
       "date": "Sun, October 25, 2026"
@@ -649,6 +636,32 @@
       "event": "VCT China 2026: Threshold",
       "series": "Week 2–Quarterfinals",
       "date": "Fri, October 30, 2026"
+    },
+    {
+      "href": "/777963/tbd-vct-china-2026-threshold-week-2-qf",
+      "teamA": "TBD",
+      "teamB": "TBD",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "4:00 AM",
+      "event": "VCT China 2026: Threshold",
+      "series": "Week 2–Quarterfinals",
+      "date": "Fri, October 30, 2026"
+    },
+    {
+      "href": "/777944/wolves-esports-vs-a-team-vct-china-2026-threshold-week-1-ro12",
+      "teamA": "Wolves Esports",
+      "teamB": "A Team",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "9:00 PM",
+      "event": "VCT China 2026: Threshold",
+      "series": "Week 1–Round of 12",
+      "date": "Tue, October 20, 2026"
     },
     {
       "href": "/754737/loud-vs-team-vitality-valorant-champions-2026-gf",
@@ -1026,21 +1039,8 @@
       "event": "Valorant Champions 2026",
       "series": "Group Stage–Winner's (B)",
       "date": "Wed, September 30, 2026"
-    },
-    {
-      "href": "/753461/karmine-corp-vs-nrg-valorant-champions-2026-winners-d",
-      "teamA": "Karmine Corp",
-      "teamB": "NRG",
-      "scoreA": 1,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "5:30 AM",
-      "event": "Valorant Champions 2026",
-      "series": "Group Stage–Winner's (D)",
-      "date": "Tue, September 29, 2026"
     }
   ],
-  "syncedAt": "2026-10-20T07:57:13.309Z",
+  "syncedAt": "2026-10-21T08:01:26.484Z",
   "source": "vlr.gg/matches"
 }
