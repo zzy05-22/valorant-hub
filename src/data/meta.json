@@ -6,49 +6,49 @@
   "maps": [
     {
       "name": "Summit",
-      "matches": 5,
-      "atkWin": 52,
-      "defWin": 48,
+      "matches": 6,
+      "atkWin": 48,
+      "defWin": 52,
       "picks": [
         {
           "agent": "Omen",
-          "pct": 60
+          "pct": 58
         },
         {
           "agent": "Neon",
-          "pct": 70
+          "pct": 67
         },
         {
           "agent": "Fade",
-          "pct": 90
+          "pct": 92
         },
         {
           "agent": "Cypher",
-          "pct": 40
+          "pct": 42
+        },
+        {
+          "agent": "Waylay",
+          "pct": 17
         },
         {
           "agent": "Sova",
           "pct": 0
         },
         {
-          "agent": "Waylay",
-          "pct": 10
-        },
-        {
           "agent": "Chamber",
-          "pct": 60
-        },
-        {
-          "agent": "Viper",
-          "pct": 10
+          "pct": 58
         },
         {
           "agent": "Yoru",
-          "pct": 40
+          "pct": 42
         },
         {
           "agent": "Phoenix",
           "pct": 0
+        },
+        {
+          "agent": "Viper",
+          "pct": 8
         },
         {
           "agent": "Jett",
@@ -60,15 +60,15 @@
         },
         {
           "agent": "Harbor",
-          "pct": 40
-        },
-        {
-          "agent": "Skye",
-          "pct": 10
+          "pct": 42
         },
         {
           "agent": "Raze",
-          "pct": 20
+          "pct": 17
+        },
+        {
+          "agent": "Skye",
+          "pct": 8
         },
         {
           "agent": "Vyse",
@@ -83,6 +83,10 @@
           "pct": 0
         },
         {
+          "agent": "Kayo",
+          "pct": 0
+        },
+        {
           "agent": "Breach",
           "pct": 0
         },
@@ -92,10 +96,6 @@
         },
         {
           "agent": "Killjoy",
-          "pct": 0
-        },
-        {
-          "agent": "Kayo",
           "pct": 0
         },
         {
@@ -130,9 +130,9 @@
     },
     {
       "name": "Lotus",
-      "matches": 4,
-      "atkWin": 50,
-      "defWin": 50,
+      "matches": 5,
+      "atkWin": 45,
+      "defWin": 55,
       "picks": [
         {
           "agent": "Omen",
@@ -140,31 +140,27 @@
         },
         {
           "agent": "Neon",
-          "pct": 88
+          "pct": 70
         },
         {
           "agent": "Fade",
-          "pct": 75
+          "pct": 80
         },
         {
           "agent": "Cypher",
-          "pct": 25
+          "pct": 30
+        },
+        {
+          "agent": "Waylay",
+          "pct": 20
         },
         {
           "agent": "Sova",
           "pct": 0
         },
         {
-          "agent": "Waylay",
-          "pct": 25
-        },
-        {
           "agent": "Chamber",
-          "pct": 38
-        },
-        {
-          "agent": "Viper",
-          "pct": 50
+          "pct": 30
         },
         {
           "agent": "Yoru",
@@ -175,8 +171,12 @@
           "pct": 0
         },
         {
+          "agent": "Viper",
+          "pct": 50
+        },
+        {
           "agent": "Jett",
-          "pct": 0
+          "pct": 10
         },
         {
           "agent": "Sage",
@@ -187,23 +187,27 @@
           "pct": 0
         },
         {
-          "agent": "Skye",
-          "pct": 25
+          "agent": "Raze",
+          "pct": 30
         },
         {
-          "agent": "Raze",
-          "pct": 13
+          "agent": "Skye",
+          "pct": 20
         },
         {
           "agent": "Vyse",
-          "pct": 38
+          "pct": 40
         },
         {
           "agent": "Veto",
-          "pct": 25
+          "pct": 20
         },
         {
           "agent": "Astra",
+          "pct": 0
+        },
+        {
+          "agent": "Kayo",
           "pct": 0
         },
         {
@@ -216,10 +220,6 @@
         },
         {
           "agent": "Killjoy",
-          "pct": 0
-        },
-        {
-          "agent": "Kayo",
           "pct": 0
         },
         {
@@ -254,9 +254,9 @@
     },
     {
       "name": "Ascent",
-      "matches": 3,
-      "atkWin": 46,
-      "defWin": 54,
+      "matches": 4,
+      "atkWin": 47,
+      "defWin": 53,
       "picks": [
         {
           "agent": "Omen",
@@ -264,43 +264,43 @@
         },
         {
           "agent": "Neon",
-          "pct": 17
+          "pct": 25
         },
         {
           "agent": "Fade",
-          "pct": 17
+          "pct": 25
         },
         {
           "agent": "Cypher",
           "pct": 100
         },
         {
-          "agent": "Sova",
-          "pct": 83
+          "agent": "Waylay",
+          "pct": 25
         },
         {
-          "agent": "Waylay",
-          "pct": 17
+          "agent": "Sova",
+          "pct": 75
         },
         {
           "agent": "Chamber",
           "pct": 0
         },
         {
+          "agent": "Yoru",
+          "pct": 25
+        },
+        {
+          "agent": "Phoenix",
+          "pct": 75
+        },
+        {
           "agent": "Viper",
           "pct": 0
         },
         {
-          "agent": "Yoru",
-          "pct": 17
-        },
-        {
-          "agent": "Phoenix",
-          "pct": 83
-        },
-        {
           "agent": "Jett",
-          "pct": 67
+          "pct": 50
         },
         {
           "agent": "Sage",
@@ -311,11 +311,11 @@
           "pct": 0
         },
         {
-          "agent": "Skye",
+          "agent": "Raze",
           "pct": 0
         },
         {
-          "agent": "Raze",
+          "agent": "Skye",
           "pct": 0
         },
         {
@@ -331,6 +331,10 @@
           "pct": 0
         },
         {
+          "agent": "Kayo",
+          "pct": 0
+        },
+        {
           "agent": "Breach",
           "pct": 0
         },
@@ -340,10 +344,6 @@
         },
         {
           "agent": "Killjoy",
-          "pct": 0
-        },
-        {
-          "agent": "Kayo",
           "pct": 0
         },
         {
@@ -399,19 +399,15 @@
           "pct": 75
         },
         {
-          "agent": "Sova",
-          "pct": 100
-        },
-        {
           "agent": "Waylay",
           "pct": 75
         },
         {
-          "agent": "Chamber",
-          "pct": 0
+          "agent": "Sova",
+          "pct": 100
         },
         {
-          "agent": "Viper",
+          "agent": "Chamber",
           "pct": 0
         },
         {
@@ -421,6 +417,10 @@
         {
           "agent": "Phoenix",
           "pct": 25
+        },
+        {
+          "agent": "Viper",
+          "pct": 0
         },
         {
           "agent": "Jett",
@@ -435,11 +435,11 @@
           "pct": 25
         },
         {
-          "agent": "Skye",
+          "agent": "Raze",
           "pct": 0
         },
         {
-          "agent": "Raze",
+          "agent": "Skye",
           "pct": 0
         },
         {
@@ -455,6 +455,10 @@
           "pct": 50
         },
         {
+          "agent": "Kayo",
+          "pct": 0
+        },
+        {
           "agent": "Breach",
           "pct": 0
         },
@@ -464,10 +468,6 @@
         },
         {
           "agent": "Killjoy",
-          "pct": 0
-        },
-        {
-          "agent": "Kayo",
           "pct": 0
         },
         {
@@ -523,20 +523,16 @@
           "pct": 0
         },
         {
-          "agent": "Sova",
-          "pct": 0
-        },
-        {
           "agent": "Waylay",
           "pct": 75
         },
         {
-          "agent": "Chamber",
+          "agent": "Sova",
           "pct": 0
         },
         {
-          "agent": "Viper",
-          "pct": 100
+          "agent": "Chamber",
+          "pct": 0
         },
         {
           "agent": "Yoru",
@@ -545,6 +541,10 @@
         {
           "agent": "Phoenix",
           "pct": 25
+        },
+        {
+          "agent": "Viper",
+          "pct": 100
         },
         {
           "agent": "Jett",
@@ -559,12 +559,12 @@
           "pct": 0
         },
         {
-          "agent": "Skye",
-          "pct": 25
-        },
-        {
           "agent": "Raze",
           "pct": 0
+        },
+        {
+          "agent": "Skye",
+          "pct": 25
         },
         {
           "agent": "Vyse",
@@ -576,6 +576,10 @@
         },
         {
           "agent": "Astra",
+          "pct": 0
+        },
+        {
+          "agent": "Kayo",
           "pct": 0
         },
         {
@@ -591,7 +595,127 @@
           "pct": 0
         },
         {
+          "agent": "Iso",
+          "pct": 0
+        },
+        {
+          "agent": "Tejo",
+          "pct": 0
+        },
+        {
+          "agent": "Gekko",
+          "pct": 0
+        },
+        {
+          "agent": "Deadlock",
+          "pct": 0
+        },
+        {
+          "agent": "Clove",
+          "pct": 0
+        },
+        {
+          "agent": "Brimstone",
+          "pct": 0
+        },
+        {
+          "agent": "Miks",
+          "pct": 0
+        }
+      ]
+    },
+    {
+      "name": "Sunset",
+      "matches": 2,
+      "atkWin": 55,
+      "defWin": 45,
+      "picks": [
+        {
+          "agent": "Omen",
+          "pct": 100
+        },
+        {
+          "agent": "Neon",
+          "pct": 75
+        },
+        {
+          "agent": "Fade",
+          "pct": 25
+        },
+        {
+          "agent": "Cypher",
+          "pct": 50
+        },
+        {
+          "agent": "Waylay",
+          "pct": 50
+        },
+        {
+          "agent": "Sova",
+          "pct": 50
+        },
+        {
+          "agent": "Chamber",
+          "pct": 50
+        },
+        {
+          "agent": "Yoru",
+          "pct": 25
+        },
+        {
+          "agent": "Phoenix",
+          "pct": 25
+        },
+        {
+          "agent": "Viper",
+          "pct": 0
+        },
+        {
+          "agent": "Jett",
+          "pct": 0
+        },
+        {
+          "agent": "Sage",
+          "pct": 25
+        },
+        {
+          "agent": "Harbor",
+          "pct": 0
+        },
+        {
+          "agent": "Raze",
+          "pct": 0
+        },
+        {
+          "agent": "Skye",
+          "pct": 0
+        },
+        {
+          "agent": "Vyse",
+          "pct": 0
+        },
+        {
+          "agent": "Veto",
+          "pct": 0
+        },
+        {
+          "agent": "Astra",
+          "pct": 0
+        },
+        {
           "agent": "Kayo",
+          "pct": 25
+        },
+        {
+          "agent": "Breach",
+          "pct": 0
+        },
+        {
+          "agent": "Reyna",
+          "pct": 0
+        },
+        {
+          "agent": "Killjoy",
           "pct": 0
         },
         {
@@ -647,19 +771,15 @@
           "pct": 100
         },
         {
-          "agent": "Sova",
-          "pct": 100
-        },
-        {
           "agent": "Waylay",
           "pct": 50
         },
         {
-          "agent": "Chamber",
-          "pct": 0
+          "agent": "Sova",
+          "pct": 100
         },
         {
-          "agent": "Viper",
+          "agent": "Chamber",
           "pct": 0
         },
         {
@@ -669,6 +789,10 @@
         {
           "agent": "Phoenix",
           "pct": 50
+        },
+        {
+          "agent": "Viper",
+          "pct": 0
         },
         {
           "agent": "Jett",
@@ -683,11 +807,11 @@
           "pct": 0
         },
         {
-          "agent": "Skye",
+          "agent": "Raze",
           "pct": 0
         },
         {
-          "agent": "Raze",
+          "agent": "Skye",
           "pct": 0
         },
         {
@@ -703,127 +827,7 @@
           "pct": 0
         },
         {
-          "agent": "Breach",
-          "pct": 0
-        },
-        {
-          "agent": "Reyna",
-          "pct": 0
-        },
-        {
-          "agent": "Killjoy",
-          "pct": 0
-        },
-        {
           "agent": "Kayo",
-          "pct": 0
-        },
-        {
-          "agent": "Iso",
-          "pct": 0
-        },
-        {
-          "agent": "Tejo",
-          "pct": 0
-        },
-        {
-          "agent": "Gekko",
-          "pct": 0
-        },
-        {
-          "agent": "Deadlock",
-          "pct": 0
-        },
-        {
-          "agent": "Clove",
-          "pct": 0
-        },
-        {
-          "agent": "Brimstone",
-          "pct": 0
-        },
-        {
-          "agent": "Miks",
-          "pct": 0
-        }
-      ]
-    },
-    {
-      "name": "Sunset",
-      "matches": 1,
-      "atkWin": 43,
-      "defWin": 57,
-      "picks": [
-        {
-          "agent": "Omen",
-          "pct": 100
-        },
-        {
-          "agent": "Neon",
-          "pct": 50
-        },
-        {
-          "agent": "Fade",
-          "pct": 50
-        },
-        {
-          "agent": "Cypher",
-          "pct": 50
-        },
-        {
-          "agent": "Sova",
-          "pct": 50
-        },
-        {
-          "agent": "Waylay",
-          "pct": 50
-        },
-        {
-          "agent": "Chamber",
-          "pct": 50
-        },
-        {
-          "agent": "Viper",
-          "pct": 0
-        },
-        {
-          "agent": "Yoru",
-          "pct": 50
-        },
-        {
-          "agent": "Phoenix",
-          "pct": 0
-        },
-        {
-          "agent": "Jett",
-          "pct": 0
-        },
-        {
-          "agent": "Sage",
-          "pct": 50
-        },
-        {
-          "agent": "Harbor",
-          "pct": 0
-        },
-        {
-          "agent": "Skye",
-          "pct": 0
-        },
-        {
-          "agent": "Raze",
-          "pct": 0
-        },
-        {
-          "agent": "Vyse",
-          "pct": 0
-        },
-        {
-          "agent": "Veto",
-          "pct": 0
-        },
-        {
-          "agent": "Astra",
           "pct": 0
         },
         {
@@ -836,10 +840,6 @@
         },
         {
           "agent": "Killjoy",
-          "pct": 0
-        },
-        {
-          "agent": "Kayo",
           "pct": 0
         },
         {
@@ -873,6 +873,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-10-24T07:38:02.463Z",
+  "syncedAt": "2026-10-25T07:50:22.932Z",
   "source": "vlr.gg"
 }
