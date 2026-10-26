@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-25T07:50:21.214Z",
+  "syncedAt": "2026-10-26T08:09:38.778Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -87,6 +87,20 @@
       "assists": 17
     },
     {
+      "name": "PatMen",
+      "team": "",
+      "maps": 21,
+      "rounds": 440,
+      "rating": 1.13,
+      "acs": 224,
+      "kd": 1.15,
+      "kast": "75%",
+      "adr": 146.2,
+      "kills": 354,
+      "deaths": 308,
+      "assists": 130
+    },
+    {
       "name": "kamo",
       "team": "TL",
       "maps": 17,
@@ -129,34 +143,6 @@
       "assists": 89
     },
     {
-      "name": "xavi8k",
-      "team": "",
-      "maps": 24,
-      "rounds": 507,
-      "rating": 1.12,
-      "acs": 203,
-      "kd": 1.1,
-      "kast": "70%",
-      "adr": 132.5,
-      "kills": 363,
-      "deaths": 331,
-      "assists": 176
-    },
-    {
-      "name": "PatMen",
-      "team": "",
-      "maps": 24,
-      "rounds": 507,
-      "rating": 1.11,
-      "acs": 222,
-      "kd": 1.12,
-      "kast": "75%",
-      "adr": 144.3,
-      "kills": 405,
-      "deaths": 360,
-      "assists": 144
-    },
-    {
       "name": "Sayonara",
       "team": "VIT",
       "maps": 21,
@@ -169,6 +155,20 @@
       "kills": 345,
       "deaths": 299,
       "assists": 121
+    },
+    {
+      "name": "xavi8k",
+      "team": "",
+      "maps": 21,
+      "rounds": 440,
+      "rating": 1.09,
+      "acs": 196,
+      "kd": 1.07,
+      "kast": "69%",
+      "adr": 127.2,
+      "kills": 307,
+      "deaths": 288,
+      "assists": 146
     },
     {
       "name": "aspas",
@@ -241,20 +241,6 @@
       "assists": 36
     },
     {
-      "name": "yong",
-      "team": "KRX",
-      "maps": 5,
-      "rounds": 110,
-      "rating": 1.07,
-      "acs": 230,
-      "kd": 1.07,
-      "kast": "70%",
-      "adr": 155.6,
-      "kills": 87,
-      "deaths": 81,
-      "assists": 26
-    },
-    {
       "name": "Asuna",
       "team": "100T",
       "maps": 27,
@@ -297,6 +283,20 @@
       "assists": 125
     },
     {
+      "name": "Jinggg",
+      "team": "PRX",
+      "maps": 16,
+      "rounds": 353,
+      "rating": 1.05,
+      "acs": 223,
+      "kd": 1.06,
+      "kast": "70%",
+      "adr": 148.4,
+      "kills": 274,
+      "deaths": 259,
+      "assists": 79
+    },
+    {
       "name": "keiko",
       "team": "",
       "maps": 22,
@@ -309,20 +309,6 @@
       "kills": 320,
       "deaths": 298,
       "assists": 108
-    },
-    {
-      "name": "Rb",
-      "team": "NS",
-      "maps": 26,
-      "rounds": 544,
-      "rating": 1.04,
-      "acs": 182,
-      "kd": 1.04,
-      "kast": "72%",
-      "adr": 113.1,
-      "kills": 359,
-      "deaths": 345,
-      "assists": 213
     },
     {
       "name": "BABYBAY",
@@ -341,16 +327,16 @@
     {
       "name": "Kr1stal",
       "team": "",
-      "maps": 24,
-      "rounds": 507,
+      "maps": 21,
+      "rounds": 440,
       "rating": 1.04,
       "acs": 187,
-      "kd": 0.98,
+      "kd": 0.99,
       "kast": "76%",
-      "adr": 127.5,
-      "kills": 327,
-      "deaths": 334,
-      "assists": 151
+      "adr": 126,
+      "kills": 286,
+      "deaths": 288,
+      "assists": 125
     },
     {
       "name": "kiNgg",
@@ -365,6 +351,34 @@
       "kills": 83,
       "deaths": 82,
       "assists": 38
+    },
+    {
+      "name": "Rb",
+      "team": "NS",
+      "maps": 24,
+      "rounds": 501,
+      "rating": 1.03,
+      "acs": 181,
+      "kd": 1.03,
+      "kast": "72%",
+      "adr": 112.7,
+      "kills": 332,
+      "deaths": 322,
+      "assists": 190
+    },
+    {
+      "name": "something",
+      "team": "PRX",
+      "maps": 16,
+      "rounds": 353,
+      "rating": 1.03,
+      "acs": 206,
+      "kd": 1.12,
+      "kast": "69%",
+      "adr": 134.3,
+      "kills": 262,
+      "deaths": 234,
+      "assists": 56
     },
     {
       "name": "Verno",
@@ -451,20 +465,6 @@
       "assists": 44
     },
     {
-      "name": "something",
-      "team": "PRX",
-      "maps": 18,
-      "rounds": 396,
-      "rating": 1.02,
-      "acs": 205,
-      "kd": 1.1,
-      "kast": "67%",
-      "adr": 132.5,
-      "kills": 292,
-      "deaths": 266,
-      "assists": 61
-    },
-    {
       "name": "vora",
       "team": "100T",
       "maps": 27,
@@ -477,34 +477,6 @@
       "kills": 353,
       "deaths": 346,
       "assists": 180
-    },
-    {
-      "name": "BeYN",
-      "team": "",
-      "maps": 5,
-      "rounds": 110,
-      "rating": 1.01,
-      "acs": 186,
-      "kd": 1,
-      "kast": "70%",
-      "adr": 129.5,
-      "kills": 76,
-      "deaths": 76,
-      "assists": 23
-    },
-    {
-      "name": "Jinggg",
-      "team": "PRX",
-      "maps": 18,
-      "rounds": 396,
-      "rating": 1.01,
-      "acs": 217,
-      "kd": 1.01,
-      "kast": "69%",
-      "adr": 144.6,
-      "kills": 297,
-      "deaths": 295,
-      "assists": 88
     },
     {
       "name": "dos9",
@@ -523,16 +495,30 @@
     {
       "name": "Xross",
       "team": "NS",
-      "maps": 26,
-      "rounds": 544,
-      "rating": 1,
-      "acs": 177,
+      "maps": 24,
+      "rounds": 501,
+      "rating": 1.01,
+      "acs": 176,
       "kd": 0.97,
       "kast": "74%",
-      "adr": 121,
-      "kills": 336,
-      "deaths": 347,
-      "assists": 134
+      "adr": 120.7,
+      "kills": 308,
+      "deaths": 319,
+      "assists": 123
+    },
+    {
+      "name": "d4v41",
+      "team": "PRX",
+      "maps": 16,
+      "rounds": 353,
+      "rating": 1,
+      "acs": 193,
+      "kd": 1.06,
+      "kast": "71%",
+      "adr": 126.8,
+      "kills": 251,
+      "deaths": 236,
+      "assists": 66
     },
     {
       "name": "Avez",
@@ -563,20 +549,6 @@
       "assists": 115
     },
     {
-      "name": "d4v41",
-      "team": "PRX",
-      "maps": 18,
-      "rounds": 396,
-      "rating": 0.99,
-      "acs": 191,
-      "kd": 1.03,
-      "kast": "70%",
-      "adr": 126,
-      "kills": 277,
-      "deaths": 268,
-      "assists": 76
-    },
-    {
       "name": "DaviH",
       "team": "LOUD",
       "maps": 37,
@@ -605,20 +577,6 @@
       "assists": 17
     },
     {
-      "name": "Francis",
-      "team": "NS",
-      "maps": 26,
-      "rounds": 544,
-      "rating": 0.99,
-      "acs": 221,
-      "kd": 1.02,
-      "kast": "67%",
-      "adr": 141.2,
-      "kills": 416,
-      "deaths": 406,
-      "assists": 100
-    },
-    {
       "name": "leaf",
       "team": "G2",
       "maps": 25,
@@ -631,20 +589,6 @@
       "kills": 356,
       "deaths": 364,
       "assists": 143
-    },
-    {
-      "name": "Dambi",
-      "team": "NS",
-      "maps": 26,
-      "rounds": 544,
-      "rating": 0.98,
-      "acs": 215,
-      "kd": 0.97,
-      "kast": "69%",
-      "adr": 137.5,
-      "kills": 400,
-      "deaths": 414,
-      "assists": 153
     },
     {
       "name": "Zexy",
@@ -675,18 +619,32 @@
       "assists": 148
     },
     {
-      "name": "UdoTan",
-      "team": "",
+      "name": "Francis",
+      "team": "NS",
       "maps": 24,
-      "rounds": 507,
-      "rating": 0.96,
-      "acs": 216,
-      "kd": 0.98,
-      "kast": "70%",
-      "adr": 139.5,
+      "rounds": 501,
+      "rating": 0.97,
+      "acs": 219,
+      "kd": 1,
+      "kast": "67%",
+      "adr": 140.2,
       "kills": 379,
-      "deaths": 385,
-      "assists": 107
+      "deaths": 379,
+      "assists": 91
+    },
+    {
+      "name": "Ivy",
+      "team": "NS",
+      "maps": 24,
+      "rounds": 501,
+      "rating": 0.97,
+      "acs": 194,
+      "kd": 0.99,
+      "kast": "68%",
+      "adr": 128.8,
+      "kills": 346,
+      "deaths": 351,
+      "assists": 118
     },
     {
       "name": "Derke",
@@ -703,18 +661,18 @@
       "assists": 74
     },
     {
-      "name": "f0rsakeN",
+      "name": "invy",
       "team": "PRX",
-      "maps": 18,
-      "rounds": 396,
+      "maps": 16,
+      "rounds": 353,
       "rating": 0.96,
-      "acs": 187,
-      "kd": 0.93,
-      "kast": "70%",
-      "adr": 121.9,
-      "kills": 264,
-      "deaths": 283,
-      "assists": 141
+      "acs": 184,
+      "kd": 0.91,
+      "kast": "73%",
+      "adr": 123.5,
+      "kills": 221,
+      "deaths": 243,
+      "assists": 125
     },
     {
       "name": "skuba",
@@ -759,20 +717,6 @@
       "assists": 72
     },
     {
-      "name": "Ivy",
-      "team": "NS",
-      "maps": 26,
-      "rounds": 544,
-      "rating": 0.96,
-      "acs": 193,
-      "kd": 0.99,
-      "kast": "68%",
-      "adr": 128.5,
-      "kills": 376,
-      "deaths": 381,
-      "assists": 127
-    },
-    {
       "name": "SUYGETSU",
       "team": "KC",
       "maps": 14,
@@ -801,6 +745,20 @@
       "assists": 97
     },
     {
+      "name": "f0rsakeN",
+      "team": "PRX",
+      "maps": 16,
+      "rounds": 353,
+      "rating": 0.95,
+      "acs": 183,
+      "kd": 0.92,
+      "kast": "71%",
+      "adr": 119.1,
+      "kills": 231,
+      "deaths": 251,
+      "assists": 132
+    },
+    {
       "name": "LewN",
       "team": "KC",
       "maps": 14,
@@ -813,6 +771,20 @@
       "kills": 213,
       "deaths": 205,
       "assists": 52
+    },
+    {
+      "name": "Dambi",
+      "team": "NS",
+      "maps": 24,
+      "rounds": 501,
+      "rating": 0.95,
+      "acs": 212,
+      "kd": 0.93,
+      "kast": "69%",
+      "adr": 135.8,
+      "kills": 359,
+      "deaths": 388,
+      "assists": 143
     },
     {
       "name": "Chronicle",
@@ -857,18 +829,18 @@
       "assists": 183
     },
     {
-      "name": "invy",
-      "team": "PRX",
-      "maps": 18,
-      "rounds": 396,
+      "name": "UdoTan",
+      "team": "",
+      "maps": 21,
+      "rounds": 440,
       "rating": 0.94,
-      "acs": 179,
-      "kd": 0.89,
-      "kast": "72%",
-      "adr": 120.9,
-      "kills": 243,
-      "deaths": 274,
-      "assists": 133
+      "acs": 216,
+      "kd": 0.96,
+      "kast": "70%",
+      "adr": 139.6,
+      "kills": 328,
+      "deaths": 340,
+      "assists": 98
     },
     {
       "name": "basic",
@@ -897,6 +869,20 @@
       "kills": 598,
       "deaths": 600,
       "assists": 148
+    },
+    {
+      "name": "Autumn",
+      "team": "",
+      "maps": 21,
+      "rounds": 440,
+      "rating": 0.93,
+      "acs": 190,
+      "kd": 0.98,
+      "kast": "69%",
+      "adr": 123.5,
+      "kills": 300,
+      "deaths": 305,
+      "assists": 89
     },
     {
       "name": "Foxy9",
@@ -1011,20 +997,6 @@
       "assists": 38
     },
     {
-      "name": "HYUNMIN",
-      "team": "",
-      "maps": 5,
-      "rounds": 110,
-      "rating": 0.9,
-      "acs": 197,
-      "kd": 0.93,
-      "kast": "70%",
-      "adr": 134.1,
-      "kills": 76,
-      "deaths": 82,
-      "assists": 16
-    },
-    {
       "name": "Mazino",
       "team": "MIBR",
       "maps": 7,
@@ -1067,20 +1039,6 @@
       "assists": 42
     },
     {
-      "name": "Autumn",
-      "team": "",
-      "maps": 24,
-      "rounds": 507,
-      "rating": 0.88,
-      "acs": 181,
-      "kd": 0.92,
-      "kast": "67%",
-      "adr": 118.4,
-      "kills": 329,
-      "deaths": 356,
-      "assists": 96
-    },
-    {
       "name": "jawgemo",
       "team": "G2",
       "maps": 25,
@@ -1093,20 +1051,6 @@
       "kills": 357,
       "deaths": 402,
       "assists": 117
-    },
-    {
-      "name": "MaKo",
-      "team": "",
-      "maps": 5,
-      "rounds": 110,
-      "rating": 0.88,
-      "acs": 188,
-      "kd": 0.85,
-      "kast": "75%",
-      "adr": 123.9,
-      "kills": 71,
-      "deaths": 84,
-      "assists": 46
     },
     {
       "name": "oonzmlp",
@@ -1249,20 +1193,6 @@
       "assists": 36
     },
     {
-      "name": "free1ng",
-      "team": "",
-      "maps": 5,
-      "rounds": 110,
-      "rating": 0.74,
-      "acs": 169,
-      "kd": 0.83,
-      "kast": "64%",
-      "adr": 105.8,
-      "kills": 68,
-      "deaths": 82,
-      "assists": 13
-    },
-    {
       "name": "C0M",
       "team": "FUR",
       "maps": 5,
@@ -1279,16 +1209,16 @@
     {
       "name": "Life",
       "team": "DRG",
-      "maps": 9,
-      "rounds": 207,
+      "maps": 11,
+      "rounds": 244,
       "rating": 0,
-      "acs": 277,
-      "kd": 1.45,
+      "acs": 273,
+      "kd": 1.47,
       "kast": "",
       "adr": 0,
-      "kills": 206,
-      "deaths": 142,
-      "assists": 42
+      "kills": 241,
+      "deaths": 164,
+      "assists": 46
     },
     {
       "name": "Ninebody",
@@ -1307,30 +1237,30 @@
     {
       "name": "vo0kashu",
       "team": "DRG",
-      "maps": 7,
-      "rounds": 162,
+      "maps": 9,
+      "rounds": 199,
       "rating": 0,
-      "acs": 236,
-      "kd": 1.28,
+      "acs": 232,
+      "kd": 1.24,
       "kast": "",
       "adr": 0,
-      "kills": 134,
-      "deaths": 105,
-      "assists": 40
+      "kills": 162,
+      "deaths": 131,
+      "assists": 51
     },
     {
       "name": "Flex1n",
       "team": "DRG",
-      "maps": 7,
-      "rounds": 162,
+      "maps": 9,
+      "rounds": 199,
       "rating": 0,
-      "acs": 179,
-      "kd": 0.95,
+      "acs": 197,
+      "kd": 1.08,
       "kast": "",
       "adr": 0,
-      "kills": 102,
-      "deaths": 107,
-      "assists": 55
+      "kills": 138,
+      "deaths": 128,
+      "assists": 79
     },
     {
       "name": "Haodong",
@@ -1401,6 +1331,76 @@
       "kills": 81,
       "deaths": 85,
       "assists": 21
+    },
+    {
+      "name": "Deryeon",
+      "team": "WOL",
+      "maps": 6,
+      "rounds": 134,
+      "rating": 0,
+      "acs": 184,
+      "kd": 0.96,
+      "kast": "",
+      "adr": 0,
+      "kills": 88,
+      "deaths": 92,
+      "assists": 40
+    },
+    {
+      "name": "Nicc",
+      "team": "DRG",
+      "maps": 11,
+      "rounds": 244,
+      "rating": 0,
+      "acs": 183,
+      "kd": 1.02,
+      "kast": "",
+      "adr": 0,
+      "kills": 153,
+      "deaths": 150,
+      "assists": 107
+    },
+    {
+      "name": "coconut",
+      "team": "FPX",
+      "maps": 16,
+      "rounds": 353,
+      "rating": 0,
+      "acs": 191,
+      "kd": 1,
+      "kast": "",
+      "adr": 0,
+      "kills": 226,
+      "deaths": 227,
+      "assists": 107
+    },
+    {
+      "name": "S1Mon",
+      "team": "AQ",
+      "maps": 15,
+      "rounds": 312,
+      "rating": 0,
+      "acs": 187,
+      "kd": 1.1,
+      "kast": "",
+      "adr": 0,
+      "kills": 207,
+      "deaths": 189,
+      "assists": 115
+    },
+    {
+      "name": "Spring",
+      "team": "WOL",
+      "maps": 6,
+      "rounds": 134,
+      "rating": 0,
+      "acs": 274,
+      "kd": 1.44,
+      "kast": "",
+      "adr": 0,
+      "kills": 127,
+      "deaths": 88,
+      "assists": 34
     }
   ],
   "teams": [
