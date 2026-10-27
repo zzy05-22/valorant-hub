@@ -1,32 +1,6 @@
 {
   "matches": [
     {
-      "href": "/773440/sk-nebula-vs-fennel-gc-game-changers-2026-championship-s-o-paulo-lr2",
-      "teamA": "SK Nebula",
-      "teamB": "FENNEL GC",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "1:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Lower Round 2",
-      "date": "Mon, October 26, 2026"
-    },
-    {
-      "href": "/773439/g2-gozen-vs-team-liquid-brazil-game-changers-2026-championship-s-o-paulo-lr2",
-      "teamA": "G2 Gozen",
-      "teamB": "Team Liquid Brazil",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "4:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Lower Round 2",
-      "date": "Mon, October 26, 2026"
-    },
-    {
       "href": "/777956/unsettled-resentment-vs-victory-no-limits-gaming-vct-2026-china-threshold-week-2-ro12",
       "teamA": "Unsettled Resentment",
       "teamB": "Victory No Limits Gaming",
@@ -105,9 +79,9 @@
       "date": "Wed, October 28, 2026"
     },
     {
-      "href": "/773442/tbd-game-changers-2026-championship-s-o-paulo-lr3",
+      "href": "/773442/sk-nebula-vs-tbd-game-changers-2026-championship-s-o-paulo-lr3",
       "teamA": "TBD",
-      "teamB": "TBD",
+      "teamB": "SK Nebula",
       "scoreA": null,
       "scoreB": null,
       "winner": null,
@@ -118,9 +92,9 @@
       "date": "Wed, October 28, 2026"
     },
     {
-      "href": "/773441/tbd-game-changers-2026-championship-s-o-paulo-lr3",
+      "href": "/773441/team-liquid-brazil-vs-tbd-game-changers-2026-championship-s-o-paulo-lr3",
       "teamA": "TBD",
-      "teamB": "TBD",
+      "teamB": "Team Liquid Brazil",
       "scoreA": null,
       "scoreB": null,
       "winner": null,
@@ -272,6 +246,32 @@
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Grand Final",
       "date": "Sun, November 1, 2026"
+    },
+    {
+      "href": "/773439/g2-gozen-vs-team-liquid-brazil-game-changers-2026-championship-s-o-paulo-lr2",
+      "teamA": "G2 Gozen",
+      "teamB": "Team Liquid Brazil",
+      "scoreA": 0,
+      "scoreB": 2,
+      "winner": "B",
+      "status": "completed",
+      "time": "3:10 PM",
+      "event": "Game Changers 2026: Championship São Paulo",
+      "series": "Main Event–Lower Round 2",
+      "date": "Mon, October 26, 2026"
+    },
+    {
+      "href": "/773440/sk-nebula-vs-fennel-gc-game-changers-2026-championship-s-o-paulo-lr2",
+      "teamA": "SK Nebula",
+      "teamB": "FENNEL GC",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "1:00 PM",
+      "event": "Game Changers 2026: Championship São Paulo",
+      "series": "Main Event–Lower Round 2",
+      "date": "Mon, October 26, 2026"
     },
     {
       "href": "/773437/team-liquid-brazil-vs-nova-esports-gc-game-changers-2026-championship-s-o-paulo-lr1",
@@ -636,34 +636,8 @@
       "event": "Project Blender 2026",
       "series": "Phase 2–Group A",
       "date": "Thu, October 22, 2026"
-    },
-    {
-      "href": "/778510/habos-babos-vs-joblife-project-blender-2026-group-a",
-      "teamA": "Habos Babos",
-      "teamB": "Joblife",
-      "scoreA": 0,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "3:00 AM",
-      "event": "Project Blender 2026",
-      "series": "Phase 2–Group A",
-      "date": "Thu, October 22, 2026"
-    },
-    {
-      "href": "/778513/team-george-vs-natus-vincere-junior-project-blender-2026-group-b",
-      "teamA": "TEAM GEORGE",
-      "teamB": "Natus Vincere Junior",
-      "scoreA": 0,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "1:30 PM",
-      "event": "Project Blender 2026",
-      "series": "Phase 2–Group B",
-      "date": "Wed, October 21, 2026"
     }
   ],
-  "syncedAt": "2026-10-26T08:09:39.123Z",
+  "syncedAt": "2026-10-27T08:24:29.023Z",
   "source": "vlr.gg/matches"
 }
