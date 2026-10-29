@@ -1,58 +1,6 @@
 {
   "matches": [
     {
-      "href": "/777958/a-team-vs-octagonal-disposition-gaming-vct-2026-china-threshold-week-2-ro12",
-      "teamA": "A Team",
-      "teamB": "Octagonal Disposition Gaming",
-      "scoreA": 0,
-      "scoreB": 0,
-      "winner": null,
-      "status": "completed",
-      "time": "5:00 AM",
-      "event": "VCT 2026: China Threshold",
-      "series": "Week 2–Round of 12",
-      "date": "Wed, October 28, 2026"
-    },
-    {
-      "href": "/777959/any-questions-gaming-vs-rare-atom-vct-2026-china-threshold-week-2-ro12",
-      "teamA": "Any Questions Gaming",
-      "teamB": "Rare Atom",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "7:00 AM",
-      "event": "VCT 2026: China Threshold",
-      "series": "Week 2–Round of 12",
-      "date": "Wed, October 28, 2026"
-    },
-    {
-      "href": "/773442/mibr-gc-vs-sk-nebula-game-changers-2026-championship-s-o-paulo-lr3",
-      "teamA": "MIBR GC",
-      "teamB": "SK Nebula",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "2:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Lower Round 3",
-      "date": "Wed, October 28, 2026"
-    },
-    {
-      "href": "/773441/kr-blaze-vs-team-liquid-brazil-game-changers-2026-championship-s-o-paulo-lr3",
-      "teamA": "KRÜ BLAZE",
-      "teamB": "Team Liquid Brazil",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "5:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Lower Round 3",
-      "date": "Wed, October 28, 2026"
-    },
-    {
       "href": "/777960/keepbest-gaming-vs-unsettled-resentment-vct-2026-china-threshold-week-2-qf",
       "teamA": "KeepBest Gaming",
       "teamB": "Unsettled Resentment",
@@ -79,9 +27,9 @@
       "date": "Thu, October 29, 2026"
     },
     {
-      "href": "/777962/nova-esports-vs-tbd-vct-2026-china-threshold-week-2-qf",
+      "href": "/777962/nova-esports-vs-a-team-vct-2026-china-threshold-week-2-qf",
       "teamA": "Nova Esports",
-      "teamB": "TBD",
+      "teamB": "A Team",
       "scoreA": null,
       "scoreB": null,
       "winner": null,
@@ -92,9 +40,9 @@
       "date": "Fri, October 30, 2026"
     },
     {
-      "href": "/777963/funplus-phoenix-vs-tbd-vct-2026-china-threshold-week-2-qf",
+      "href": "/777963/funplus-phoenix-vs-any-questions-gaming-vct-2026-china-threshold-week-2-qf",
       "teamA": "FunPlus Phoenix",
-      "teamB": "TBD",
+      "teamB": "Any Questions Gaming",
       "scoreA": null,
       "scoreB": null,
       "winner": null,
@@ -118,9 +66,9 @@
       "date": "Fri, October 30, 2026"
     },
     {
-      "href": "/773443/tbd-game-changers-2026-championship-s-o-paulo-lr4",
-      "teamA": "TBD",
-      "teamB": "TBD",
+      "href": "/773443/kr-blaze-vs-mibr-gc-game-changers-2026-championship-s-o-paulo-lr4",
+      "teamA": "KRÜ BLAZE",
+      "teamB": "MIBR GC",
       "scoreA": null,
       "scoreB": null,
       "winner": null,
@@ -194,6 +142,58 @@
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Grand Final",
       "date": "Sun, November 1, 2026"
+    },
+    {
+      "href": "/773441/kr-blaze-vs-team-liquid-brazil-game-changers-2026-championship-s-o-paulo-lr3",
+      "teamA": "KRÜ BLAZE",
+      "teamB": "Team Liquid Brazil",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "3:40 PM",
+      "event": "Game Changers 2026: Championship São Paulo",
+      "series": "Main Event–Lower Round 3",
+      "date": "Wed, October 28, 2026"
+    },
+    {
+      "href": "/773442/mibr-gc-vs-sk-nebula-game-changers-2026-championship-s-o-paulo-lr3",
+      "teamA": "MIBR GC",
+      "teamB": "SK Nebula",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "2:00 PM",
+      "event": "Game Changers 2026: Championship São Paulo",
+      "series": "Main Event–Lower Round 3",
+      "date": "Wed, October 28, 2026"
+    },
+    {
+      "href": "/777959/any-questions-gaming-vs-rare-atom-vct-2026-china-threshold-week-2-ro12",
+      "teamA": "Any Questions Gaming",
+      "teamB": "Rare Atom",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "7:25 AM",
+      "event": "VCT 2026: China Threshold",
+      "series": "Week 2–Round of 12",
+      "date": "Wed, October 28, 2026"
+    },
+    {
+      "href": "/777958/a-team-vs-octagonal-disposition-gaming-vct-2026-china-threshold-week-2-ro12",
+      "teamA": "A Team",
+      "teamB": "Octagonal Disposition Gaming",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "5:00 AM",
+      "event": "VCT 2026: China Threshold",
+      "series": "Week 2–Round of 12",
+      "date": "Wed, October 28, 2026"
     },
     {
       "href": "/773434/shopify-rebellion-gold-vs-kr-blaze-game-changers-2026-championship-s-o-paulo-ubsf",
@@ -532,60 +532,8 @@
       "event": "Project Blender 2026",
       "series": "Phase 2–Group B",
       "date": "Thu, October 22, 2026"
-    },
-    {
-      "href": "/778517/blezz-vs-natus-vincere-junior-project-blender-2026-group-b",
-      "teamA": "Blezz",
-      "teamB": "Natus Vincere Junior",
-      "scoreA": 1,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "12:00 PM",
-      "event": "Project Blender 2026",
-      "series": "Phase 2–Group B",
-      "date": "Thu, October 22, 2026"
-    },
-    {
-      "href": "/778511/cgn-esports-vs-habos-babos-project-blender-2026-group-a",
-      "teamA": "CGN Esports",
-      "teamB": "Habos Babos",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "10:10 AM",
-      "event": "Project Blender 2026",
-      "series": "Phase 2–Group A",
-      "date": "Thu, October 22, 2026"
-    },
-    {
-      "href": "/778512/eintracht-frankfurt-vs-joblife-project-blender-2026-group-a",
-      "teamA": "Eintracht Frankfurt",
-      "teamB": "Joblife",
-      "scoreA": 2,
-      "scoreB": 1,
-      "winner": "A",
-      "status": "completed",
-      "time": "8:25 AM",
-      "event": "Project Blender 2026",
-      "series": "Phase 2–Group A",
-      "date": "Thu, October 22, 2026"
-    },
-    {
-      "href": "/778516/eternal-fire-vs-natus-vincere-junior-project-blender-2026-group-b",
-      "teamA": "Eternal Fire",
-      "teamB": "Natus Vincere Junior",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "7:40 AM",
-      "event": "Project Blender 2026",
-      "series": "Phase 2–Group B",
-      "date": "Thu, October 22, 2026"
     }
   ],
-  "syncedAt": "2026-10-28T09:02:03.357Z",
+  "syncedAt": "2026-10-29T08:59:25.941Z",
   "source": "vlr.gg/matches"
 }
