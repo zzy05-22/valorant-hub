@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-30T09:06:08.747Z",
+  "syncedAt": "2026-10-31T08:58:17.351Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -943,30 +943,30 @@
     {
       "name": "Juicy",
       "team": "AQ",
-      "maps": 17,
-      "rounds": 358,
+      "maps": 20,
+      "rounds": 421,
       "rating": 0,
-      "acs": 258,
-      "kd": 1.37,
+      "acs": 246,
+      "kd": 1.31,
       "kast": "",
       "adr": 0,
-      "kills": 334,
-      "deaths": 243,
-      "assists": 69
+      "kills": 376,
+      "deaths": 286,
+      "assists": 73
     },
     {
       "name": "Layla",
       "team": "AT",
-      "maps": 7,
-      "rounds": 157,
+      "maps": 10,
+      "rounds": 227,
       "rating": 0,
-      "acs": 205,
-      "kd": 0.99,
+      "acs": 206,
+      "kd": 1.01,
       "kast": "",
       "adr": 0,
-      "kills": 116,
-      "deaths": 117,
-      "assists": 24
+      "kills": 169,
+      "deaths": 167,
+      "assists": 35
     },
     {
       "name": "Deryeon",
@@ -999,30 +999,30 @@
     {
       "name": "coconut",
       "team": "FPX",
-      "maps": 16,
-      "rounds": 353,
+      "maps": 19,
+      "rounds": 416,
       "rating": 0,
-      "acs": 191,
-      "kd": 1,
+      "acs": 193,
+      "kd": 1.03,
       "kast": "",
       "adr": 0,
-      "kills": 226,
-      "deaths": 227,
-      "assists": 107
+      "kills": 270,
+      "deaths": 262,
+      "assists": 125
     },
     {
       "name": "S1Mon",
       "team": "AQ",
-      "maps": 17,
-      "rounds": 358,
+      "maps": 20,
+      "rounds": 421,
       "rating": 0,
-      "acs": 186,
-      "kd": 1.08,
+      "acs": 181,
+      "kd": 1.06,
       "kast": "",
       "adr": 0,
-      "kills": 235,
-      "deaths": 218,
-      "assists": 130
+      "kills": 268,
+      "deaths": 254,
+      "assists": 151
     },
     {
       "name": "Spring",
@@ -1041,16 +1041,16 @@
     {
       "name": "monk",
       "team": "AT",
-      "maps": 7,
-      "rounds": 157,
+      "maps": 10,
+      "rounds": 227,
       "rating": 0,
-      "acs": 169,
-      "kd": 0.81,
+      "acs": 163,
+      "kd": 0.76,
       "kast": "",
       "adr": 0,
-      "kills": 91,
-      "deaths": 112,
-      "assists": 68
+      "kills": 126,
+      "deaths": 165,
+      "assists": 94
     },
     {
       "name": "aluba",
@@ -1069,16 +1069,16 @@
     {
       "name": "Eren",
       "team": "AT",
-      "maps": 7,
-      "rounds": 157,
+      "maps": 10,
+      "rounds": 227,
       "rating": 0,
-      "acs": 208,
-      "kd": 0.95,
+      "acs": 211,
+      "kd": 0.93,
       "kast": "",
       "adr": 0,
-      "kills": 109,
-      "deaths": 115,
-      "assists": 42
+      "kills": 158,
+      "deaths": 170,
+      "assists": 61
     },
     {
       "name": "jowa",
@@ -1097,16 +1097,16 @@
     {
       "name": "AAAAY",
       "team": "FPX",
-      "maps": 16,
-      "rounds": 353,
+      "maps": 19,
+      "rounds": 416,
       "rating": 0,
-      "acs": 203,
-      "kd": 1.11,
+      "acs": 205,
+      "kd": 1.1,
       "kast": "",
       "adr": 0,
-      "kills": 261,
-      "deaths": 236,
-      "assists": 80
+      "kills": 307,
+      "deaths": 278,
+      "assists": 95
     },
     {
       "name": "QiuYe",
@@ -1153,30 +1153,30 @@
     {
       "name": "Dannyy",
       "team": "AQ",
-      "maps": 17,
-      "rounds": 358,
+      "maps": 20,
+      "rounds": 421,
       "rating": 0,
-      "acs": 170,
-      "kd": 0.89,
+      "acs": 166,
+      "kd": 0.88,
       "kast": "",
       "adr": 0,
-      "kills": 215,
-      "deaths": 242,
-      "assists": 78
+      "kills": 248,
+      "deaths": 283,
+      "assists": 89
     },
     {
       "name": "GREEN",
       "team": "NOVA",
-      "maps": 5,
-      "rounds": 106,
+      "maps": 8,
+      "rounds": 176,
       "rating": 0,
-      "acs": 226,
-      "kd": 1.17,
+      "acs": 206,
+      "kd": 1.04,
       "kast": "",
       "adr": 0,
-      "kills": 84,
-      "deaths": 72,
-      "assists": 42
+      "kills": 129,
+      "deaths": 124,
+      "assists": 67
     },
     {
       "name": "MarT1n",
@@ -1195,30 +1195,30 @@
     {
       "name": "cb",
       "team": "NOVA",
-      "maps": 8,
-      "rounds": 160,
+      "maps": 11,
+      "rounds": 230,
       "rating": 0,
-      "acs": 192,
-      "kd": 0.91,
+      "acs": 199,
+      "kd": 1.01,
       "kast": "",
       "adr": 0,
-      "kills": 105,
-      "deaths": 116,
-      "assists": 44
+      "kills": 157,
+      "deaths": 155,
+      "assists": 68
     },
     {
       "name": "GuanG",
       "team": "NOVA",
-      "maps": 8,
-      "rounds": 160,
+      "maps": 11,
+      "rounds": 230,
       "rating": 0,
-      "acs": 201,
-      "kd": 1.07,
+      "acs": 207,
+      "kd": 1.13,
       "kast": "",
       "adr": 0,
-      "kills": 113,
-      "deaths": 106,
-      "assists": 40
+      "kills": 170,
+      "deaths": 151,
+      "assists": 46
     },
     {
       "name": "Dynamite",
@@ -1237,16 +1237,16 @@
     {
       "name": "Dingwei",
       "team": "AT",
-      "maps": 7,
-      "rounds": 157,
+      "maps": 10,
+      "rounds": 227,
       "rating": 0,
-      "acs": 152,
-      "kd": 0.74,
+      "acs": 158,
+      "kd": 0.82,
       "kast": "",
       "adr": 0,
-      "kills": 79,
-      "deaths": 107,
-      "assists": 45
+      "kills": 122,
+      "deaths": 149,
+      "assists": 59
     },
     {
       "name": "qiutiaN",
@@ -1279,58 +1279,58 @@
     {
       "name": "swagzor",
       "team": "NOVA",
-      "maps": 8,
-      "rounds": 160,
+      "maps": 11,
+      "rounds": 230,
       "rating": 0,
-      "acs": 232,
-      "kd": 1.17,
+      "acs": 236,
+      "kd": 1.23,
       "kast": "",
       "adr": 0,
-      "kills": 131,
-      "deaths": 112,
-      "assists": 40
+      "kills": 192,
+      "deaths": 156,
+      "assists": 57
     },
     {
       "name": "Youjun",
       "team": "AQ",
-      "maps": 17,
-      "rounds": 358,
+      "maps": 20,
+      "rounds": 421,
       "rating": 0,
-      "acs": 181,
-      "kd": 1.03,
+      "acs": 182,
+      "kd": 1.02,
       "kast": "",
       "adr": 0,
-      "kills": 234,
-      "deaths": 227,
-      "assists": 157
+      "kills": 274,
+      "deaths": 268,
+      "assists": 190
     },
     {
       "name": "Ezeir",
       "team": "NOVA",
-      "maps": 8,
-      "rounds": 160,
+      "maps": 11,
+      "rounds": 230,
       "rating": 0,
-      "acs": 258,
-      "kd": 1.43,
+      "acs": 234,
+      "kd": 1.29,
       "kast": "",
       "adr": 0,
-      "kills": 146,
-      "deaths": 102,
-      "assists": 67
+      "kills": 189,
+      "deaths": 147,
+      "assists": 84
     },
     {
       "name": "5CM",
       "team": "AQ",
-      "maps": 17,
-      "rounds": 358,
+      "maps": 20,
+      "rounds": 421,
       "rating": 0,
-      "acs": 230,
-      "kd": 1.03,
+      "acs": 238,
+      "kd": 1.08,
       "kast": "",
       "adr": 0,
-      "kills": 279,
-      "deaths": 271,
-      "assists": 110
+      "kills": 343,
+      "deaths": 318,
+      "assists": 127
     },
     {
       "name": "waituu",
@@ -1377,16 +1377,16 @@
     {
       "name": "Setrod",
       "team": "FPX",
-      "maps": 16,
-      "rounds": 353,
+      "maps": 19,
+      "rounds": 416,
       "rating": 0,
-      "acs": 240,
-      "kd": 1.16,
+      "acs": 230,
+      "kd": 1.09,
       "kast": "",
       "adr": 0,
-      "kills": 304,
-      "deaths": 263,
-      "assists": 51
+      "kills": 341,
+      "deaths": 312,
+      "assists": 60
     },
     {
       "name": "Ying",
@@ -1526,32 +1526,32 @@
     },
     {
       "rank": 5,
-      "name": "FURIA",
-      "region": "Brazil"
-    },
-    {
-      "rank": 6,
       "name": "MIBR Academy",
       "region": "Brazil"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "name": "Fluxo W7M",
       "region": "Brazil"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "name": "Arashi",
       "region": "Brazil"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "name": "ELEVATE",
       "region": "Brazil"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "name": "44 AIM",
+      "region": "Brazil"
+    },
+    {
+      "rank": 10,
+      "name": "BIDINHAS",
       "region": "Brazil"
     }
   ]
