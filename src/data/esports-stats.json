@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-31T08:58:17.351Z",
+  "syncedAt": "2026-11-01T09:48:02.129Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -242,7 +242,7 @@
     },
     {
       "name": "Jinggg",
-      "team": "PRX",
+      "team": "",
       "maps": 11,
       "rounds": 241,
       "rating": 1.05,
@@ -466,7 +466,7 @@
     },
     {
       "name": "d4v41",
-      "team": "PRX",
+      "team": "",
       "maps": 11,
       "rounds": 241,
       "rating": 0.98,
@@ -859,16 +859,16 @@
     {
       "name": "Ninebody",
       "team": "UR",
-      "maps": 20,
-      "rounds": 426,
+      "maps": 23,
+      "rounds": 489,
       "rating": 0,
       "acs": 224,
-      "kd": 0.97,
+      "kd": 0.99,
       "kast": "",
       "adr": 0,
-      "kills": 314,
-      "deaths": 324,
-      "assists": 114
+      "kills": 363,
+      "deaths": 367,
+      "assists": 133
     },
     {
       "name": "vo0kashu",
@@ -943,16 +943,16 @@
     {
       "name": "Juicy",
       "team": "AQ",
-      "maps": 20,
-      "rounds": 421,
+      "maps": 22,
+      "rounds": 463,
       "rating": 0,
-      "acs": 246,
-      "kd": 1.31,
+      "acs": 241,
+      "kd": 1.26,
       "kast": "",
       "adr": 0,
-      "kills": 376,
-      "deaths": 286,
-      "assists": 73
+      "kills": 401,
+      "deaths": 319,
+      "assists": 79
     },
     {
       "name": "Layla",
@@ -1013,16 +1013,16 @@
     {
       "name": "S1Mon",
       "team": "AQ",
-      "maps": 20,
-      "rounds": 421,
+      "maps": 22,
+      "rounds": 463,
       "rating": 0,
       "acs": 181,
-      "kd": 1.06,
+      "kd": 1.04,
       "kast": "",
       "adr": 0,
-      "kills": 268,
-      "deaths": 254,
-      "assists": 151
+      "kills": 296,
+      "deaths": 285,
+      "assists": 164
     },
     {
       "name": "Spring",
@@ -1083,16 +1083,16 @@
     {
       "name": "jowa",
       "team": "WSIG",
-      "maps": 7,
-      "rounds": 149,
+      "maps": 10,
+      "rounds": 212,
       "rating": 0,
-      "acs": 166,
-      "kd": 0.86,
+      "acs": 181,
+      "kd": 0.9,
       "kast": "",
       "adr": 0,
-      "kills": 84,
-      "deaths": 98,
-      "assists": 65
+      "kills": 129,
+      "deaths": 144,
+      "assists": 88
     },
     {
       "name": "AAAAY",
@@ -1111,16 +1111,16 @@
     {
       "name": "QiuYe",
       "team": "UR",
-      "maps": 20,
-      "rounds": 426,
+      "maps": 23,
+      "rounds": 489,
       "rating": 0,
-      "acs": 208,
-      "kd": 1.05,
+      "acs": 202,
+      "kd": 1.03,
       "kast": "",
       "adr": 0,
-      "kills": 310,
-      "deaths": 295,
-      "assists": 123
+      "kills": 349,
+      "deaths": 338,
+      "assists": 139
     },
     {
       "name": "lucas",
@@ -1153,16 +1153,16 @@
     {
       "name": "Dannyy",
       "team": "AQ",
-      "maps": 20,
-      "rounds": 421,
+      "maps": 22,
+      "rounds": 463,
       "rating": 0,
-      "acs": 166,
-      "kd": 0.88,
+      "acs": 168,
+      "kd": 0.86,
       "kast": "",
       "adr": 0,
-      "kills": 248,
-      "deaths": 283,
-      "assists": 89
+      "kills": 274,
+      "deaths": 318,
+      "assists": 92
     },
     {
       "name": "GREEN",
@@ -1181,44 +1181,44 @@
     {
       "name": "MarT1n",
       "team": "UR",
-      "maps": 10,
-      "rounds": 221,
-      "rating": 0,
-      "acs": 180,
-      "kd": 0.92,
-      "kast": "",
-      "adr": 0,
-      "kills": 139,
-      "deaths": 151,
-      "assists": 49
-    },
-    {
-      "name": "cb",
-      "team": "NOVA",
-      "maps": 11,
-      "rounds": 230,
+      "maps": 13,
+      "rounds": 284,
       "rating": 0,
       "acs": 199,
       "kd": 1.01,
       "kast": "",
       "adr": 0,
-      "kills": 157,
-      "deaths": 155,
-      "assists": 68
+      "kills": 199,
+      "deaths": 197,
+      "assists": 66
+    },
+    {
+      "name": "cb",
+      "team": "NOVA",
+      "maps": 13,
+      "rounds": 272,
+      "rating": 0,
+      "acs": 192,
+      "kd": 0.99,
+      "kast": "",
+      "adr": 0,
+      "kills": 180,
+      "deaths": 181,
+      "assists": 81
     },
     {
       "name": "GuanG",
       "team": "NOVA",
-      "maps": 11,
-      "rounds": 230,
+      "maps": 13,
+      "rounds": 272,
       "rating": 0,
       "acs": 207,
-      "kd": 1.13,
+      "kd": 1.14,
       "kast": "",
       "adr": 0,
-      "kills": 170,
-      "deaths": 151,
-      "assists": 46
+      "kills": 201,
+      "deaths": 176,
+      "assists": 58
     },
     {
       "name": "Dynamite",
@@ -1251,86 +1251,86 @@
     {
       "name": "qiutiaN",
       "team": "NOVA",
-      "maps": 8,
-      "rounds": 160,
+      "maps": 10,
+      "rounds": 202,
       "rating": 0,
-      "acs": 162,
-      "kd": 0.83,
+      "acs": 181,
+      "kd": 0.97,
       "kast": "",
       "adr": 0,
-      "kills": 90,
-      "deaths": 109,
-      "assists": 42
+      "kills": 131,
+      "deaths": 135,
+      "assists": 51
     },
     {
       "name": "CXIX666",
       "team": "UR",
-      "maps": 20,
-      "rounds": 426,
+      "maps": 23,
+      "rounds": 489,
       "rating": 0,
-      "acs": 185,
-      "kd": 1.01,
+      "acs": 186,
+      "kd": 1.03,
       "kast": "",
       "adr": 0,
-      "kills": 276,
-      "deaths": 273,
-      "assists": 103
+      "kills": 320,
+      "deaths": 311,
+      "assists": 116
     },
     {
       "name": "swagzor",
       "team": "NOVA",
-      "maps": 11,
-      "rounds": 230,
+      "maps": 13,
+      "rounds": 272,
       "rating": 0,
-      "acs": 236,
-      "kd": 1.23,
+      "acs": 233,
+      "kd": 1.21,
       "kast": "",
       "adr": 0,
-      "kills": 192,
-      "deaths": 156,
-      "assists": 57
+      "kills": 222,
+      "deaths": 184,
+      "assists": 73
     },
     {
       "name": "Youjun",
       "team": "AQ",
-      "maps": 20,
-      "rounds": 421,
+      "maps": 22,
+      "rounds": 463,
       "rating": 0,
-      "acs": 182,
-      "kd": 1.02,
+      "acs": 179,
+      "kd": 0.99,
       "kast": "",
       "adr": 0,
-      "kills": 274,
-      "deaths": 268,
-      "assists": 190
+      "kills": 296,
+      "deaths": 300,
+      "assists": 202
     },
     {
       "name": "Ezeir",
       "team": "NOVA",
-      "maps": 11,
-      "rounds": 230,
+      "maps": 13,
+      "rounds": 272,
       "rating": 0,
-      "acs": 234,
-      "kd": 1.29,
+      "acs": 239,
+      "kd": 1.31,
       "kast": "",
       "adr": 0,
-      "kills": 189,
-      "deaths": 147,
-      "assists": 84
+      "kills": 230,
+      "deaths": 175,
+      "assists": 101
     },
     {
       "name": "5CM",
       "team": "AQ",
-      "maps": 20,
-      "rounds": 421,
+      "maps": 22,
+      "rounds": 463,
       "rating": 0,
-      "acs": 238,
-      "kd": 1.08,
+      "acs": 237,
+      "kd": 1.06,
       "kast": "",
       "adr": 0,
-      "kills": 343,
-      "deaths": 318,
-      "assists": 127
+      "kills": 375,
+      "deaths": 353,
+      "assists": 131
     },
     {
       "name": "waituu",
@@ -1491,18 +1491,18 @@
     },
     {
       "rank": 8,
+      "name": "barbeque chicken",
+      "region": "International"
+    },
+    {
+      "rank": 9,
       "name": "ENVY",
       "region": "United States"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Maryville University",
       "region": "United States"
-    },
-    {
-      "rank": 10,
-      "name": "barbeque chicken",
-      "region": "International"
     },
     {
       "rank": 1,
