@@ -1,19 +1,6 @@
 {
   "matches": [
     {
-      "href": "/777966/unsettled-resentment-vs-nova-esports-vct-2026-china-threshold-week-2-gf",
-      "teamA": "Unsettled Resentment",
-      "teamB": "Nova Esports",
-      "scoreA": 0,
-      "scoreB": 0,
-      "winner": null,
-      "status": "completed",
-      "time": "3:00 AM",
-      "event": "VCT 2026: China Threshold",
-      "series": "Week 2–Grand Final",
-      "date": "Sun, November 1, 2026"
-    },
-    {
       "href": "/772818/frankfurt-bahnhofsviertel-vs-cgn-esports-spike-series-2026-convergence-emea-dach-r3",
       "teamA": "Frankfurt Bahnhofsviertel",
       "teamB": "CGN Esports",
@@ -24,33 +11,7 @@
       "time": "11:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 3",
-      "date": "Sun, November 1, 2026"
-    },
-    {
-      "href": "/772821/glacial-guardians-vs-hook-esport-spike-series-2026-convergence-emea-dach-r3",
-      "teamA": "Glacial Guardians",
-      "teamB": "HooK Esport",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "11:00 AM",
-      "event": "Spike Series 2026: Convergence EMEA - DACH",
-      "series": "Group Stage–Round 3",
-      "date": "Sun, November 1, 2026"
-    },
-    {
-      "href": "/773436/gentle-mates-gc-vs-kr-blaze-game-changers-2026-championship-s-o-paulo-gf",
-      "teamA": "Gentle Mates GC",
-      "teamB": "KRÜ BLAZE",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "12:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Grand Final",
-      "date": "Sun, November 1, 2026"
+      "date": "Wed, November 4, 2026"
     },
     {
       "href": "/772824/eintracht-frankfurt-team-vision-vs-twoface-gaming-spike-series-2026-convergence-emea-dach-r3",
@@ -246,6 +207,45 @@
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 7",
       "date": "Sun, November 29, 2026"
+    },
+    {
+      "href": "/773436/gentle-mates-gc-vs-kr-blaze-game-changers-2026-championship-s-o-paulo-gf",
+      "teamA": "Gentle Mates GC",
+      "teamB": "KRÜ BLAZE",
+      "scoreA": 2,
+      "scoreB": 3,
+      "winner": "B",
+      "status": "completed",
+      "time": "12:00 PM",
+      "event": "Game Changers 2026: Championship São Paulo",
+      "series": "Main Event–Grand Final",
+      "date": "Sun, November 1, 2026"
+    },
+    {
+      "href": "/772821/glacial-guardians-vs-hook-esport-spike-series-2026-convergence-emea-dach-r3",
+      "teamA": "Glacial Guardians",
+      "teamB": "HooK Esport",
+      "scoreA": 1,
+      "scoreB": 2,
+      "winner": "B",
+      "status": "completed",
+      "time": "11:00 AM",
+      "event": "Spike Series 2026: Convergence EMEA - DACH",
+      "series": "Group Stage–Round 3",
+      "date": "Sun, November 1, 2026"
+    },
+    {
+      "href": "/777966/unsettled-resentment-vs-nova-esports-vct-2026-china-threshold-week-2-gf",
+      "teamA": "Unsettled Resentment",
+      "teamB": "Nova Esports",
+      "scoreA": 0,
+      "scoreB": 3,
+      "winner": "B",
+      "status": "completed",
+      "time": "3:00 AM",
+      "event": "VCT 2026: China Threshold",
+      "series": "Week 2–Grand Final",
+      "date": "Sun, November 1, 2026"
     },
     {
       "href": "/773444/shopify-rebellion-gold-vs-kr-blaze-game-changers-2026-championship-s-o-paulo-lbf",
@@ -597,47 +597,8 @@
       "event": "Project Blender 2026",
       "series": "Phase 2–Grand Final",
       "date": "Sat, October 24, 2026"
-    },
-    {
-      "href": "/777950/titan-esports-club-vs-dragon-ranger-gaming-vct-2026-china-threshold-week-1-sf",
-      "teamA": "Titan Esports Club",
-      "teamB": "Dragon Ranger Gaming",
-      "scoreA": 0,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "6:00 AM",
-      "event": "VCT 2026: China Threshold",
-      "series": "Week 1–Semifinals",
-      "date": "Sat, October 24, 2026"
-    },
-    {
-      "href": "/772432/giantx-vs-bbl-esports-monsters-reloaded-2026-main-event-sf",
-      "teamA": "GIANTX",
-      "teamB": "BBL Esports",
-      "scoreA": 0,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "5:30 AM",
-      "event": "Monsters Reloaded 2026",
-      "series": "Main Event–Semifinals",
-      "date": "Sat, October 24, 2026"
-    },
-    {
-      "href": "/777951/keepbest-gaming-vs-nova-esports-vct-2026-china-threshold-week-1-sf",
-      "teamA": "KeepBest Gaming",
-      "teamB": "Nova Esports",
-      "scoreA": 0,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "4:00 AM",
-      "event": "VCT 2026: China Threshold",
-      "series": "Week 1–Semifinals",
-      "date": "Sat, October 24, 2026"
     }
   ],
-  "syncedAt": "2026-11-01T09:48:02.514Z",
+  "syncedAt": "2026-11-02T10:06:19.530Z",
   "source": "vlr.gg/matches"
 }

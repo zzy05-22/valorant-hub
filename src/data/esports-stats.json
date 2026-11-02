@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-01T09:48:02.129Z",
+  "syncedAt": "2026-11-02T10:06:19.166Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -774,7 +774,7 @@
     },
     {
       "name": "Munchkin",
-      "team": "T1",
+      "team": "",
       "maps": 21,
       "rounds": 446,
       "rating": 0.9,
@@ -859,16 +859,16 @@
     {
       "name": "Ninebody",
       "team": "UR",
-      "maps": 23,
-      "rounds": 489,
+      "maps": 26,
+      "rounds": 544,
       "rating": 0,
-      "acs": 224,
-      "kd": 0.99,
+      "acs": 217,
+      "kd": 0.94,
       "kast": "",
       "adr": 0,
-      "kills": 363,
-      "deaths": 367,
-      "assists": 133
+      "kills": 390,
+      "deaths": 416,
+      "assists": 142
     },
     {
       "name": "vo0kashu",
@@ -1111,16 +1111,16 @@
     {
       "name": "QiuYe",
       "team": "UR",
-      "maps": 23,
-      "rounds": 489,
+      "maps": 26,
+      "rounds": 544,
       "rating": 0,
       "acs": 202,
       "kd": 1.03,
       "kast": "",
       "adr": 0,
-      "kills": 349,
-      "deaths": 338,
-      "assists": 139
+      "kills": 390,
+      "deaths": 380,
+      "assists": 149
     },
     {
       "name": "lucas",
@@ -1167,58 +1167,58 @@
     {
       "name": "GREEN",
       "team": "NOVA",
-      "maps": 8,
-      "rounds": 176,
+      "maps": 9,
+      "rounds": 195,
       "rating": 0,
-      "acs": 206,
+      "acs": 204,
       "kd": 1.04,
       "kast": "",
       "adr": 0,
-      "kills": 129,
-      "deaths": 124,
-      "assists": 67
+      "kills": 142,
+      "deaths": 136,
+      "assists": 71
     },
     {
       "name": "MarT1n",
       "team": "UR",
-      "maps": 13,
-      "rounds": 284,
+      "maps": 16,
+      "rounds": 339,
       "rating": 0,
-      "acs": 199,
-      "kd": 1.01,
+      "acs": 185,
+      "kd": 0.91,
       "kast": "",
       "adr": 0,
-      "kills": 199,
-      "deaths": 197,
-      "assists": 66
+      "kills": 221,
+      "deaths": 242,
+      "assists": 74
     },
     {
       "name": "cb",
       "team": "NOVA",
-      "maps": 13,
-      "rounds": 272,
+      "maps": 16,
+      "rounds": 327,
       "rating": 0,
-      "acs": 192,
-      "kd": 0.99,
+      "acs": 193,
+      "kd": 1.04,
       "kast": "",
       "adr": 0,
-      "kills": 180,
-      "deaths": 181,
-      "assists": 81
+      "kills": 220,
+      "deaths": 212,
+      "assists": 96
     },
     {
       "name": "GuanG",
       "team": "NOVA",
-      "maps": 13,
-      "rounds": 272,
+      "maps": 16,
+      "rounds": 327,
       "rating": 0,
-      "acs": 207,
-      "kd": 1.14,
+      "acs": 211,
+      "kd": 1.23,
       "kast": "",
       "adr": 0,
-      "kills": 201,
-      "deaths": 176,
-      "assists": 58
+      "kills": 250,
+      "deaths": 203,
+      "assists": 68
     },
     {
       "name": "Dynamite",
@@ -1251,44 +1251,44 @@
     {
       "name": "qiutiaN",
       "team": "NOVA",
-      "maps": 10,
-      "rounds": 202,
+      "maps": 12,
+      "rounds": 238,
       "rating": 0,
-      "acs": 181,
-      "kd": 0.97,
+      "acs": 182,
+      "kd": 0.99,
       "kast": "",
       "adr": 0,
-      "kills": 131,
-      "deaths": 135,
-      "assists": 51
+      "kills": 153,
+      "deaths": 155,
+      "assists": 62
     },
     {
       "name": "CXIX666",
       "team": "UR",
-      "maps": 23,
-      "rounds": 489,
+      "maps": 26,
+      "rounds": 544,
       "rating": 0,
-      "acs": 186,
-      "kd": 1.03,
+      "acs": 188,
+      "kd": 0.99,
       "kast": "",
       "adr": 0,
-      "kills": 320,
-      "deaths": 311,
-      "assists": 116
+      "kills": 356,
+      "deaths": 358,
+      "assists": 133
     },
     {
       "name": "swagzor",
       "team": "NOVA",
-      "maps": 13,
-      "rounds": 272,
+      "maps": 16,
+      "rounds": 327,
       "rating": 0,
-      "acs": 233,
-      "kd": 1.21,
+      "acs": 241,
+      "kd": 1.29,
       "kast": "",
       "adr": 0,
-      "kills": 222,
-      "deaths": 184,
-      "assists": 73
+      "kills": 279,
+      "deaths": 217,
+      "assists": 85
     },
     {
       "name": "Youjun",
@@ -1307,16 +1307,16 @@
     {
       "name": "Ezeir",
       "team": "NOVA",
-      "maps": 13,
-      "rounds": 272,
+      "maps": 16,
+      "rounds": 327,
       "rating": 0,
-      "acs": 239,
-      "kd": 1.31,
+      "acs": 235,
+      "kd": 1.34,
       "kast": "",
       "adr": 0,
-      "kills": 230,
-      "deaths": 175,
-      "assists": 101
+      "kills": 274,
+      "deaths": 204,
+      "assists": 120
     },
     {
       "name": "5CM",
@@ -1476,12 +1476,12 @@
     },
     {
       "rank": 5,
-      "name": "SaD Esports",
+      "name": "Shopify Rebellion Black",
       "region": "United States"
     },
     {
       "rank": 6,
-      "name": "Shopify Rebellion Black",
+      "name": "SaD Esports",
       "region": "United States"
     },
     {
