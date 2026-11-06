@@ -1,6 +1,84 @@
 {
   "matches": [
     {
+      "href": "/784755/bar-a-esports-vs-fast-learner-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro64",
+      "teamA": "Barça eSports",
+      "teamB": "FAST LEARNER",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "10:00 AM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Round of 64",
+      "date": "Fri, November 6, 2026"
+    },
+    {
+      "href": "/784763/aurora-gaming-vs-enisorail-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro64",
+      "teamA": "Aurora Gaming",
+      "teamB": "Enisorail",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "10:00 AM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Round of 64",
+      "date": "Fri, November 6, 2026"
+    },
+    {
+      "href": "/784982/wildcard-vs-ryze-vct-2027-america-kickoff-north-america-open-qualifier-open-qualifier-1-ro12",
+      "teamA": "Wildcard",
+      "teamB": "Ryze",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "2:00 PM",
+      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
+      "series": "Open Qualifier #1–Round of 128",
+      "date": "Fri, November 6, 2026"
+    },
+    {
+      "href": "/785006/masterclass-vs-archaic-vct-2027-america-kickoff-north-america-open-qualifier-open-qualifier",
+      "teamA": "Masterclass",
+      "teamB": "Archaic",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "2:00 PM",
+      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
+      "series": "Open Qualifier #1–Round of 128",
+      "date": "Fri, November 6, 2026"
+    },
+    {
+      "href": "/785014/rejects-vs-ares-united-vct-2027-america-kickoff-north-america-open-qualifier-open-qualifier",
+      "teamA": "Rejects",
+      "teamB": "Ares United",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "2:00 PM",
+      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
+      "series": "Open Qualifier #1–Round of 128",
+      "date": "Fri, November 6, 2026"
+    },
+    {
+      "href": "/785018/untamable-beasts-vs-project-m-vct-2027-america-kickoff-north-america-open-qualifier-open-qual",
+      "teamA": "UNTAMABLE BEASTS",
+      "teamB": "Project M",
+      "scoreA": null,
+      "scoreB": null,
+      "winner": null,
+      "status": "upcoming",
+      "time": "2:05 PM",
+      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
+      "series": "Open Qualifier #1–Round of 128",
+      "date": "Fri, November 6, 2026"
+    },
+    {
       "href": "/772826/frg-vs-frankfurt-bahnhofsviertel-spike-series-2026-convergence-emea-dach-r4",
       "teamA": "FRG",
       "teamB": "Frankfurt Bahnhofsviertel",
@@ -8,7 +86,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 4",
       "date": "Sun, November 8, 2026"
@@ -21,7 +99,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 4",
       "date": "Sun, November 8, 2026"
@@ -34,7 +112,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 4",
       "date": "Sun, November 8, 2026"
@@ -47,7 +125,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "1:00 PM",
+      "time": "10:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 3",
       "date": "Tue, November 10, 2026"
@@ -60,7 +138,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "1:00 PM",
+      "time": "10:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 2",
       "date": "Fri, November 13, 2026"
@@ -73,7 +151,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 5",
       "date": "Sun, November 15, 2026"
@@ -86,7 +164,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 5",
       "date": "Sun, November 15, 2026"
@@ -99,7 +177,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "7:00 AM",
+      "time": "4:00 AM",
       "event": "EVC 2026: Elite UK League",
       "series": "Playoffs–Grand Final",
       "date": "Sat, November 21, 2026"
@@ -112,7 +190,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 6",
       "date": "Sun, November 22, 2026"
@@ -125,7 +203,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 6",
       "date": "Sun, November 22, 2026"
@@ -138,7 +216,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 6",
       "date": "Sun, November 22, 2026"
@@ -151,7 +229,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 7",
       "date": "Sun, November 29, 2026"
@@ -164,7 +242,7 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 7",
       "date": "Sun, November 29, 2026"
@@ -177,10 +255,101 @@
       "scoreB": null,
       "winner": null,
       "status": "upcoming",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 7",
       "date": "Sun, November 29, 2026"
+    },
+    {
+      "href": "/784902/masterclass-vs-lets-build-vct-2027-america-kickoff-north-america-open-qualifier-open-qualifi",
+      "teamA": "Masterclass",
+      "teamB": "Let's Build",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "2:00 PM",
+      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
+      "series": "Open Qualifier #1–Round of 256",
+      "date": "Thu, November 5, 2026"
+    },
+    {
+      "href": "/784926/untamable-beasts-vs-astris-vct-2027-america-kickoff-north-america-open-qualifier-open-qualifi",
+      "teamA": "UNTAMABLE BEASTS",
+      "teamB": "Astris",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "2:00 PM",
+      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
+      "series": "Open Qualifier #1–Round of 256",
+      "date": "Thu, November 5, 2026"
+    },
+    {
+      "href": "/784689/cgn-esports-vs-catnap-enjoyers-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro128",
+      "teamA": "CGN Esports",
+      "teamB": "Catnap Enjoyers",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "12:30 PM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Round of 128",
+      "date": "Thu, November 5, 2026"
+    },
+    {
+      "href": "/784720/project-100k-vs-friends-and-fun-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro128",
+      "teamA": "Project 100K",
+      "teamB": "friends and fun",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "12:30 PM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Round of 128",
+      "date": "Thu, November 5, 2026"
+    },
+    {
+      "href": "/784700/bar-a-esports-vs-oxygen-gaming-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro128",
+      "teamA": "Barça eSports",
+      "teamB": "Oxygen Gaming",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "11:45 AM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Round of 128",
+      "date": "Thu, November 5, 2026"
+    },
+    {
+      "href": "/784590/bar-a-esports-vs-monarchy-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro256",
+      "teamA": "Barça eSports",
+      "teamB": "MONARCHY",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "10:00 AM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Round of 256",
+      "date": "Thu, November 5, 2026"
+    },
+    {
+      "href": "/784674/honk-vs-relentless-no-call-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro256",
+      "teamA": "HONK",
+      "teamB": "RELENTLESS No Call",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "10:00 AM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Round of 256",
+      "date": "Thu, November 5, 2026"
     },
     {
       "href": "/772813/hook-esport-vs-berg-spike-series-2026-convergence-emea-dach-r2",
@@ -190,7 +359,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "1:00 PM",
+      "time": "10:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 2",
       "date": "Wed, November 4, 2026"
@@ -203,7 +372,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 3",
       "date": "Wed, November 4, 2026"
@@ -216,7 +385,7 @@
       "scoreB": 3,
       "winner": "B",
       "status": "completed",
-      "time": "1:00 PM",
+      "time": "10:00 AM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Grand Final",
       "date": "Sun, November 1, 2026"
@@ -229,7 +398,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "12:00 PM",
+      "time": "9:00 AM",
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 3",
       "date": "Sun, November 1, 2026"
@@ -242,7 +411,7 @@
       "scoreB": 3,
       "winner": "B",
       "status": "completed",
-      "time": "4:00 AM",
+      "time": "1:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Grand Final",
       "date": "Sun, November 1, 2026"
@@ -255,7 +424,7 @@
       "scoreB": 3,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 PM",
+      "time": "11:00 AM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Lower Final",
       "date": "Sat, October 31, 2026"
@@ -268,7 +437,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "8:15 AM",
+      "time": "5:15 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Semifinals",
       "date": "Sat, October 31, 2026"
@@ -281,7 +450,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "5:00 AM",
+      "time": "2:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Semifinals",
       "date": "Sat, October 31, 2026"
@@ -294,7 +463,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "5:40 PM",
+      "time": "2:40 PM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Lower Round 4",
       "date": "Fri, October 30, 2026"
@@ -307,7 +476,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 PM",
+      "time": "11:00 AM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Upper Final",
       "date": "Fri, October 30, 2026"
@@ -320,7 +489,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "8:00 AM",
+      "time": "5:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Quarterfinals",
       "date": "Fri, October 30, 2026"
@@ -333,7 +502,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "5:00 AM",
+      "time": "2:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Quarterfinals",
       "date": "Fri, October 30, 2026"
@@ -346,7 +515,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "8:00 AM",
+      "time": "5:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Quarterfinals",
       "date": "Thu, October 29, 2026"
@@ -359,7 +528,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "5:00 AM",
+      "time": "2:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Quarterfinals",
       "date": "Thu, October 29, 2026"
@@ -372,7 +541,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "3:40 PM",
+      "time": "12:40 PM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Lower Round 3",
       "date": "Wed, October 28, 2026"
@@ -385,7 +554,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "2:00 PM",
+      "time": "11:00 AM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Lower Round 3",
       "date": "Wed, October 28, 2026"
@@ -398,7 +567,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "7:25 AM",
+      "time": "4:25 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Round of 12",
       "date": "Wed, October 28, 2026"
@@ -411,7 +580,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "5:00 AM",
+      "time": "2:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Round of 12",
       "date": "Wed, October 28, 2026"
@@ -424,7 +593,7 @@
       "scoreB": 0,
       "winner": "A",
       "status": "completed",
-      "time": "4:05 PM",
+      "time": "1:05 PM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Upper Semifinals",
       "date": "Tue, October 27, 2026"
@@ -437,7 +606,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "2:00 PM",
+      "time": "11:00 AM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Upper Semifinals",
       "date": "Tue, October 27, 2026"
@@ -450,7 +619,7 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "8:50 AM",
+      "time": "5:50 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Round of 12",
       "date": "Tue, October 27, 2026"
@@ -463,7 +632,7 @@
       "scoreB": 1,
       "winner": "A",
       "status": "completed",
-      "time": "5:00 AM",
+      "time": "2:00 AM",
       "event": "VCT 2026: China Threshold",
       "series": "Week 2–Round of 12",
       "date": "Tue, October 27, 2026"
@@ -476,103 +645,12 @@
       "scoreB": 2,
       "winner": "B",
       "status": "completed",
-      "time": "4:10 PM",
+      "time": "1:10 PM",
       "event": "Game Changers 2026: Championship São Paulo",
       "series": "Main Event–Lower Round 2",
       "date": "Mon, October 26, 2026"
-    },
-    {
-      "href": "/773440/sk-nebula-vs-fennel-gc-game-changers-2026-championship-s-o-paulo-lr2",
-      "teamA": "SK Nebula",
-      "teamB": "FENNEL GC",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "2:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Lower Round 2",
-      "date": "Mon, October 26, 2026"
-    },
-    {
-      "href": "/773437/team-liquid-brazil-vs-nova-esports-gc-game-changers-2026-championship-s-o-paulo-lr1",
-      "teamA": "Team Liquid Brazil",
-      "teamB": "Nova Esports GC",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "4:45 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Lower Round 1",
-      "date": "Sun, October 25, 2026"
-    },
-    {
-      "href": "/773438/gen-g-gc-vs-fennel-gc-game-changers-2026-championship-s-o-paulo-lr1",
-      "teamA": "Gen.G GC",
-      "teamB": "FENNEL GC",
-      "scoreA": 1,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "2:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Lower Round 1",
-      "date": "Sun, October 25, 2026"
-    },
-    {
-      "href": "/772433/fire-flux-esports-vs-bbl-esports-monsters-reloaded-2026-main-event-gf",
-      "teamA": "Fire Flux Esports",
-      "teamB": "BBL Esports",
-      "scoreA": 1,
-      "scoreB": 3,
-      "winner": "B",
-      "status": "completed",
-      "time": "7:30 AM",
-      "event": "Monsters Reloaded 2026",
-      "series": "Main Event–Grand Final",
-      "date": "Sun, October 25, 2026"
-    },
-    {
-      "href": "/777952/dragon-ranger-gaming-vs-nova-esports-vct-2026-china-threshold-week-1-gf",
-      "teamA": "Dragon Ranger Gaming",
-      "teamB": "Nova Esports",
-      "scoreA": 3,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "5:00 AM",
-      "event": "VCT 2026: China Threshold",
-      "series": "Week 1–Grand Final",
-      "date": "Sun, October 25, 2026"
-    },
-    {
-      "href": "/773431/shopify-rebellion-gold-vs-sk-nebula-game-changers-2026-championship-s-o-paulo-ubqf",
-      "teamA": "Shopify Rebellion Gold",
-      "teamB": "SK Nebula",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "4:35 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Upper Quarterfinals",
-      "date": "Sat, October 24, 2026"
-    },
-    {
-      "href": "/773429/g2-gozen-vs-mibr-gc-game-changers-2026-championship-s-o-paulo-ubqf",
-      "teamA": "G2 Gozen",
-      "teamB": "MIBR GC",
-      "scoreA": 0,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "2:00 PM",
-      "event": "Game Changers 2026: Championship São Paulo",
-      "series": "Main Event–Upper Quarterfinals",
-      "date": "Sat, October 24, 2026"
     }
   ],
-  "syncedAt": "2026-11-05T09:56:52.496Z",
+  "syncedAt": "2026-11-06T09:58:33.670Z",
   "source": "vlr.gg/matches"
 }
