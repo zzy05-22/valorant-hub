@@ -95,12 +95,12 @@
           "pct": 2
         },
         {
-          "agent": "Tejo",
-          "pct": 4
-        },
-        {
           "agent": "Deadlock",
           "pct": 0
+        },
+        {
+          "agent": "Tejo",
+          "pct": 4
         },
         {
           "agent": "Veto",
@@ -223,11 +223,11 @@
           "pct": 0
         },
         {
-          "agent": "Tejo",
+          "agent": "Deadlock",
           "pct": 0
         },
         {
-          "agent": "Deadlock",
+          "agent": "Tejo",
           "pct": 0
         },
         {
@@ -262,13 +262,13 @@
     },
     {
       "name": "Haven",
-      "matches": 17,
-      "atkWin": 50,
-      "defWin": 50,
+      "matches": 18,
+      "atkWin": 52,
+      "defWin": 48,
       "picks": [
         {
           "agent": "Omen",
-          "pct": 88
+          "pct": 86
         },
         {
           "agent": "Sova",
@@ -284,19 +284,19 @@
         },
         {
           "agent": "Chamber",
-          "pct": 12
+          "pct": 14
         },
         {
           "agent": "Viper",
-          "pct": 12
+          "pct": 11
         },
         {
           "agent": "Cypher",
-          "pct": 79
+          "pct": 78
         },
         {
           "agent": "Phoenix",
-          "pct": 74
+          "pct": 72
         },
         {
           "agent": "Jett",
@@ -308,7 +308,7 @@
         },
         {
           "agent": "Yoru",
-          "pct": 9
+          "pct": 11
         },
         {
           "agent": "Waylay",
@@ -316,7 +316,7 @@
         },
         {
           "agent": "Astra",
-          "pct": 9
+          "pct": 11
         },
         {
           "agent": "Sage",
@@ -340,7 +340,7 @@
         },
         {
           "agent": "Killjoy",
-          "pct": 9
+          "pct": 8
         },
         {
           "agent": "Harbor",
@@ -351,11 +351,11 @@
           "pct": 0
         },
         {
-          "agent": "Tejo",
+          "agent": "Deadlock",
           "pct": 0
         },
         {
-          "agent": "Deadlock",
+          "agent": "Tejo",
           "pct": 0
         },
         {
@@ -479,11 +479,11 @@
           "pct": 12
         },
         {
-          "agent": "Tejo",
+          "agent": "Deadlock",
           "pct": 0
         },
         {
-          "agent": "Deadlock",
+          "agent": "Tejo",
           "pct": 0
         },
         {
@@ -518,13 +518,13 @@
     },
     {
       "name": "Abyss",
-      "matches": 8,
+      "matches": 9,
       "atkWin": 57,
       "defWin": 43,
       "picks": [
         {
           "agent": "Omen",
-          "pct": 50
+          "pct": 44
         },
         {
           "agent": "Sova",
@@ -556,7 +556,7 @@
         },
         {
           "agent": "Jett",
-          "pct": 44
+          "pct": 39
         },
         {
           "agent": "Raze",
@@ -564,15 +564,15 @@
         },
         {
           "agent": "Yoru",
-          "pct": 56
+          "pct": 61
         },
         {
           "agent": "Waylay",
-          "pct": 50
+          "pct": 56
         },
         {
           "agent": "Astra",
-          "pct": 63
+          "pct": 67
         },
         {
           "agent": "Sage",
@@ -584,7 +584,7 @@
         },
         {
           "agent": "Clove",
-          "pct": 19
+          "pct": 17
         },
         {
           "agent": "Skye",
@@ -600,23 +600,23 @@
         },
         {
           "agent": "Harbor",
-          "pct": 13
+          "pct": 11
         },
         {
           "agent": "Kayo",
-          "pct": 13
+          "pct": 11
+        },
+        {
+          "agent": "Deadlock",
+          "pct": 11
         },
         {
           "agent": "Tejo",
           "pct": 0
         },
         {
-          "agent": "Deadlock",
-          "pct": 6
-        },
-        {
           "agent": "Veto",
-          "pct": 13
+          "pct": 11
         },
         {
           "agent": "Breach",
@@ -735,12 +735,12 @@
           "pct": 0
         },
         {
-          "agent": "Tejo",
-          "pct": 0
-        },
-        {
           "agent": "Deadlock",
           "pct": 6
+        },
+        {
+          "agent": "Tejo",
+          "pct": 0
         },
         {
           "agent": "Veto",
@@ -863,12 +863,12 @@
           "pct": 0
         },
         {
-          "agent": "Tejo",
-          "pct": 13
-        },
-        {
           "agent": "Deadlock",
           "pct": 0
+        },
+        {
+          "agent": "Tejo",
+          "pct": 13
         },
         {
           "agent": "Veto",
@@ -991,12 +991,12 @@
           "pct": 0
         },
         {
-          "agent": "Tejo",
-          "pct": 7
-        },
-        {
           "agent": "Deadlock",
           "pct": 14
+        },
+        {
+          "agent": "Tejo",
+          "pct": 7
         },
         {
           "agent": "Veto",
@@ -1029,6 +1029,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-11-07T09:18:53.551Z",
+  "syncedAt": "2026-11-08T09:37:17.490Z",
   "source": "vlr.gg"
 }
