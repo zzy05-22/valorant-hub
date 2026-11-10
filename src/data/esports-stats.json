@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-09T10:27:02.792Z",
+  "syncedAt": "2026-11-10T10:31:39.733Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -45,20 +45,6 @@
       "assists": 63
     },
     {
-      "name": "gui",
-      "team": "",
-      "maps": 10,
-      "rounds": 193,
-      "rating": 1.49,
-      "acs": 280,
-      "kd": 1.94,
-      "kast": "80%",
-      "adr": 187.4,
-      "kills": 198,
-      "deaths": 102,
-      "assists": 76
-    },
-    {
       "name": "Splotza",
       "team": "",
       "maps": 7,
@@ -71,6 +57,20 @@
       "kills": 134,
       "deaths": 82,
       "assists": 69
+    },
+    {
+      "name": "phc",
+      "team": "BIDA",
+      "maps": 8,
+      "rounds": 137,
+      "rating": 1.47,
+      "acs": 237,
+      "kd": 1.7,
+      "kast": "85%",
+      "adr": 155.9,
+      "kills": 117,
+      "deaths": 69,
+      "assists": 92
     },
     {
       "name": "RayUndaunted",
@@ -115,6 +115,20 @@
       "assists": 76
     },
     {
+      "name": "tr1ck",
+      "team": "GTH",
+      "maps": 8,
+      "rounds": 152,
+      "rating": 1.45,
+      "acs": 254,
+      "kd": 1.57,
+      "kast": "89%",
+      "adr": 177.3,
+      "kills": 148,
+      "deaths": 94,
+      "assists": 56
+    },
+    {
       "name": "Dlasqx1",
       "team": "STA",
       "maps": 8,
@@ -155,6 +169,20 @@
       "kills": 124,
       "deaths": 75,
       "assists": 120
+    },
+    {
+      "name": "ghoul33",
+      "team": "",
+      "maps": 14,
+      "rounds": 286,
+      "rating": 1.43,
+      "acs": 269,
+      "kd": 1.77,
+      "kast": "79%",
+      "adr": 178.6,
+      "kills": 282,
+      "deaths": 159,
+      "assists": 97
     },
     {
       "name": "Vidal",
@@ -255,6 +283,20 @@
       "assists": 35
     },
     {
+      "name": "kramarick",
+      "team": "BIDA",
+      "maps": 8,
+      "rounds": 137,
+      "rating": 1.42,
+      "acs": 254,
+      "kd": 1.92,
+      "kast": "82%",
+      "adr": 157.5,
+      "kills": 125,
+      "deaths": 65,
+      "assists": 23
+    },
+    {
       "name": "mikee",
       "team": "FMG",
       "maps": 6,
@@ -340,7 +382,7 @@
     },
     {
       "name": "d3nZ",
-      "team": "FL",
+      "team": "ycat",
       "maps": 13,
       "rounds": 230,
       "rating": 1.41,
@@ -603,20 +645,6 @@
       "kills": 130,
       "deaths": 79,
       "assists": 42
-    },
-    {
-      "name": "silentzz",
-      "team": "",
-      "maps": 11,
-      "rounds": 200,
-      "rating": 1.38,
-      "acs": 297,
-      "kd": 1.54,
-      "kast": "78%",
-      "adr": 192.6,
-      "kills": 208,
-      "deaths": 135,
-      "assists": 61
     },
     {
       "name": "Oak",
@@ -969,20 +997,6 @@
       "assists": 59
     },
     {
-      "name": "nilooo",
-      "team": "",
-      "maps": 12,
-      "rounds": 217,
-      "rating": 1.35,
-      "acs": 250,
-      "kd": 1.66,
-      "kast": "82%",
-      "adr": 168.7,
-      "kills": 203,
-      "deaths": 122,
-      "assists": 74
-    },
-    {
       "name": "samed",
       "team": "CGN",
       "maps": 9,
@@ -1081,20 +1095,6 @@
       "assists": 78
     },
     {
-      "name": "pollo",
-      "team": "F4T",
-      "maps": 11,
-      "rounds": 200,
-      "rating": 1.33,
-      "acs": 230,
-      "kd": 1.6,
-      "kast": "83%",
-      "adr": 155.7,
-      "kills": 173,
-      "deaths": 108,
-      "assists": 53
-    },
-    {
       "name": "Jesse",
       "team": "WIP",
       "maps": 11,
@@ -1107,6 +1107,20 @@
       "kills": 166,
       "deaths": 118,
       "assists": 109
+    },
+    {
+      "name": "silentzz",
+      "team": "",
+      "maps": 13,
+      "rounds": 235,
+      "rating": 1.33,
+      "acs": 291,
+      "kd": 1.49,
+      "kast": "79%",
+      "adr": 188.5,
+      "kills": 240,
+      "deaths": 161,
+      "assists": 67
     },
     {
       "name": "zekei",
@@ -1149,20 +1163,6 @@
       "kills": 159,
       "deaths": 98,
       "assists": 67
-    },
-    {
-      "name": "znajder",
-      "team": "F4T",
-      "maps": 11,
-      "rounds": 221,
-      "rating": 1.33,
-      "acs": 282,
-      "kd": 1.46,
-      "kast": "80%",
-      "adr": 180,
-      "kills": 221,
-      "deaths": 151,
-      "assists": 78
     },
     {
       "name": "w1nfer",
@@ -1208,7 +1208,7 @@
     },
     {
       "name": "jakee",
-      "team": "",
+      "team": "OAF",
       "maps": 15,
       "rounds": 302,
       "rating": 1.32,
@@ -1345,6 +1345,20 @@
       "kills": 132,
       "deaths": 85,
       "assists": 33
+    },
+    {
+      "name": "slinc",
+      "team": "",
+      "maps": 5,
+      "rounds": 108,
+      "rating": 1.32,
+      "acs": 267,
+      "kd": 1.27,
+      "kast": "74%",
+      "adr": 176.3,
+      "kills": 100,
+      "deaths": 79,
+      "assists": 45
     }
   ],
   "teams": [
@@ -1445,7 +1459,7 @@
     },
     {
       "rank": 10,
-      "name": "Maryville University",
+      "name": "Sentinels",
       "region": "United States"
     },
     {
@@ -1495,8 +1509,8 @@
     },
     {
       "rank": 10,
-      "name": "BIDINHAS",
-      "region": "Brazil"
+      "name": "TIME DO B3M",
+      "region": "International"
     }
   ]
 }
