@@ -1,7 +1,21 @@
 {
-  "syncedAt": "2026-11-10T10:31:39.733Z",
+  "syncedAt": "2026-11-11T09:54:39.945Z",
   "source": "vlr.gg",
   "players": [
+    {
+      "name": "Izuki",
+      "team": "",
+      "maps": 9,
+      "rounds": 162,
+      "rating": 1.7,
+      "acs": 361,
+      "kd": 2.08,
+      "kast": "78%",
+      "adr": 231.1,
+      "kills": 216,
+      "deaths": 104,
+      "assists": 36
+    },
     {
       "name": "ensag",
       "team": "BRE",
@@ -43,20 +57,6 @@
       "kills": 171,
       "deaths": 78,
       "assists": 63
-    },
-    {
-      "name": "Splotza",
-      "team": "",
-      "maps": 7,
-      "rounds": 131,
-      "rating": 1.48,
-      "acs": 287,
-      "kd": 1.63,
-      "kast": "85%",
-      "adr": 183.4,
-      "kills": 134,
-      "deaths": 82,
-      "assists": 69
     },
     {
       "name": "phc",
@@ -115,18 +115,60 @@
       "assists": 76
     },
     {
+      "name": "MonOkson",
+      "team": "BXE",
+      "maps": 6,
+      "rounds": 120,
+      "rating": 1.45,
+      "acs": 251,
+      "kd": 1.79,
+      "kast": "82%",
+      "adr": 165.1,
+      "kills": 104,
+      "deaths": 58,
+      "assists": 63
+    },
+    {
+      "name": "d3mur",
+      "team": "R8",
+      "maps": 6,
+      "rounds": 112,
+      "rating": 1.45,
+      "acs": 298,
+      "kd": 1.66,
+      "kast": "82%",
+      "adr": 199.4,
+      "kills": 118,
+      "deaths": 71,
+      "assists": 37
+    },
+    {
+      "name": "soufy",
+      "team": "",
+      "maps": 6,
+      "rounds": 104,
+      "rating": 1.45,
+      "acs": 270,
+      "kd": 1.96,
+      "kast": "85%",
+      "adr": 176.6,
+      "kills": 106,
+      "deaths": 54,
+      "assists": 38
+    },
+    {
       "name": "tr1ck",
       "team": "GTH",
-      "maps": 8,
-      "rounds": 152,
-      "rating": 1.45,
-      "acs": 254,
-      "kd": 1.57,
-      "kast": "89%",
-      "adr": 177.3,
-      "kills": 148,
-      "deaths": 94,
-      "assists": 56
+      "maps": 14,
+      "rounds": 269,
+      "rating": 1.44,
+      "acs": 262,
+      "kd": 1.61,
+      "kast": "83%",
+      "adr": 176.3,
+      "kills": 271,
+      "deaths": 168,
+      "assists": 69
     },
     {
       "name": "Dlasqx1",
@@ -227,6 +269,20 @@
       "assists": 95
     },
     {
+      "name": "KHAFASH",
+      "team": "trih",
+      "maps": 6,
+      "rounds": 104,
+      "rating": 1.43,
+      "acs": 248,
+      "kd": 1.59,
+      "kast": "81%",
+      "adr": 157.3,
+      "kills": 92,
+      "deaths": 58,
+      "assists": 66
+    },
+    {
       "name": "yimmy",
       "team": "Whit",
       "maps": 8,
@@ -323,20 +379,6 @@
       "kills": 249,
       "deaths": 144,
       "assists": 98
-    },
-    {
-      "name": "Kamisseq",
-      "team": "PXL",
-      "maps": 13,
-      "rounds": 253,
-      "rating": 1.41,
-      "acs": 257,
-      "kd": 1.6,
-      "kast": "83%",
-      "adr": 169.5,
-      "kills": 240,
-      "deaths": 150,
-      "assists": 109
     },
     {
       "name": "propszin",
@@ -535,6 +577,20 @@
       "assists": 35
     },
     {
+      "name": "Syratch",
+      "team": "FEC",
+      "maps": 6,
+      "rounds": 129,
+      "rating": 1.39,
+      "acs": 244,
+      "kd": 1.41,
+      "kast": "82%",
+      "adr": 161.7,
+      "kills": 113,
+      "deaths": 80,
+      "assists": 73
+    },
+    {
       "name": "LoveX",
       "team": "",
       "maps": 12,
@@ -547,20 +603,6 @@
       "kills": 197,
       "deaths": 121,
       "assists": 93
-    },
-    {
-      "name": "M1key",
-      "team": "9ZG",
-      "maps": 10,
-      "rounds": 185,
-      "rating": 1.39,
-      "acs": 232,
-      "kd": 1.59,
-      "kast": "83%",
-      "adr": 147,
-      "kills": 157,
-      "deaths": 99,
-      "assists": 83
     },
     {
       "name": "Ellep",
@@ -603,20 +645,6 @@
       "kills": 147,
       "deaths": 99,
       "assists": 52
-    },
-    {
-      "name": "dny",
-      "team": "BRE",
-      "maps": 12,
-      "rounds": 230,
-      "rating": 1.39,
-      "acs": 293,
-      "kd": 1.5,
-      "kast": "74%",
-      "adr": 187.1,
-      "kills": 242,
-      "deaths": 161,
-      "assists": 66
     },
     {
       "name": "Kipins",
@@ -743,6 +771,20 @@
       "kills": 118,
       "deaths": 71,
       "assists": 13
+    },
+    {
+      "name": "AvovA",
+      "team": "R8",
+      "maps": 6,
+      "rounds": 112,
+      "rating": 1.37,
+      "acs": 205,
+      "kd": 1.58,
+      "kast": "83%",
+      "adr": 135.4,
+      "kills": 84,
+      "deaths": 53,
+      "assists": 66
     },
     {
       "name": "azrex",
@@ -955,6 +997,20 @@
       "assists": 23
     },
     {
+      "name": "silentzz",
+      "team": "",
+      "maps": 15,
+      "rounds": 288,
+      "rating": 1.35,
+      "acs": 294,
+      "kd": 1.5,
+      "kast": "79%",
+      "adr": 193.3,
+      "kills": 298,
+      "deaths": 199,
+      "assists": 85
+    },
+    {
       "name": "Pa1ze",
       "team": "BAR",
       "maps": 13,
@@ -997,6 +1053,20 @@
       "assists": 59
     },
     {
+      "name": "Kamisseq",
+      "team": "PXL",
+      "maps": 15,
+      "rounds": 289,
+      "rating": 1.34,
+      "acs": 248,
+      "kd": 1.46,
+      "kast": "81%",
+      "adr": 163.5,
+      "kills": 262,
+      "deaths": 180,
+      "assists": 114
+    },
+    {
       "name": "samed",
       "team": "CGN",
       "maps": 9,
@@ -1037,6 +1107,20 @@
       "kills": 155,
       "deaths": 108,
       "assists": 86
+    },
+    {
+      "name": "Darks1re",
+      "team": "Auth",
+      "maps": 7,
+      "rounds": 126,
+      "rating": 1.34,
+      "acs": 239,
+      "kd": 1.47,
+      "kast": "83%",
+      "adr": 155.7,
+      "kills": 106,
+      "deaths": 72,
+      "assists": 57
     },
     {
       "name": "Choped",
@@ -1095,6 +1179,20 @@
       "assists": 78
     },
     {
+      "name": "SpYzera",
+      "team": "",
+      "maps": 6,
+      "rounds": 120,
+      "rating": 1.33,
+      "acs": 261,
+      "kd": 1.45,
+      "kast": "84%",
+      "adr": 174.2,
+      "kills": 110,
+      "deaths": 76,
+      "assists": 48
+    },
+    {
       "name": "Jesse",
       "team": "WIP",
       "maps": 11,
@@ -1107,20 +1205,6 @@
       "kills": 166,
       "deaths": 118,
       "assists": 109
-    },
-    {
-      "name": "silentzz",
-      "team": "",
-      "maps": 13,
-      "rounds": 235,
-      "rating": 1.33,
-      "acs": 291,
-      "kd": 1.49,
-      "kast": "79%",
-      "adr": 188.5,
-      "kills": 240,
-      "deaths": 161,
-      "assists": 67
     },
     {
       "name": "zekei",
@@ -1163,6 +1247,34 @@
       "kills": 159,
       "deaths": 98,
       "assists": 67
+    },
+    {
+      "name": "dny",
+      "team": "BRE",
+      "maps": 15,
+      "rounds": 294,
+      "rating": 1.33,
+      "acs": 285,
+      "kd": 1.42,
+      "kast": "71%",
+      "adr": 180.9,
+      "kills": 298,
+      "deaths": 210,
+      "assists": 80
+    },
+    {
+      "name": "cobra",
+      "team": "vill",
+      "maps": 6,
+      "rounds": 104,
+      "rating": 1.33,
+      "acs": 211,
+      "kd": 1.69,
+      "kast": "83%",
+      "adr": 150.3,
+      "kills": 83,
+      "deaths": 49,
+      "assists": 39
     },
     {
       "name": "w1nfer",
@@ -1219,146 +1331,6 @@
       "kills": 255,
       "deaths": 176,
       "assists": 144
-    },
-    {
-      "name": "zerona",
-      "team": "",
-      "maps": 12,
-      "rounds": 214,
-      "rating": 1.32,
-      "acs": 243,
-      "kd": 1.5,
-      "kast": "81%",
-      "adr": 163.2,
-      "kills": 189,
-      "deaths": 126,
-      "assists": 88
-    },
-    {
-      "name": "Shondex",
-      "team": "MU",
-      "maps": 12,
-      "rounds": 216,
-      "rating": 1.32,
-      "acs": 243,
-      "kd": 1.68,
-      "kast": "80%",
-      "adr": 159.3,
-      "kills": 198,
-      "deaths": 118,
-      "assists": 52
-    },
-    {
-      "name": "aika",
-      "team": "",
-      "maps": 7,
-      "rounds": 141,
-      "rating": 1.32,
-      "acs": 261,
-      "kd": 1.5,
-      "kast": "74%",
-      "adr": 160.4,
-      "kills": 138,
-      "deaths": 92,
-      "assists": 29
-    },
-    {
-      "name": "Bounreon",
-      "team": "PXG",
-      "maps": 8,
-      "rounds": 160,
-      "rating": 1.32,
-      "acs": 297,
-      "kd": 1.29,
-      "kast": "73%",
-      "adr": 194.7,
-      "kills": 163,
-      "deaths": 126,
-      "assists": 43
-    },
-    {
-      "name": "GzK",
-      "team": "",
-      "maps": 8,
-      "rounds": 150,
-      "rating": 1.32,
-      "acs": 236,
-      "kd": 1.53,
-      "kast": "79%",
-      "adr": 150.3,
-      "kills": 133,
-      "deaths": 87,
-      "assists": 35
-    },
-    {
-      "name": "RYKER",
-      "team": "Cert",
-      "maps": 6,
-      "rounds": 113,
-      "rating": 1.32,
-      "acs": 273,
-      "kd": 1.36,
-      "kast": "78%",
-      "adr": 177.4,
-      "kills": 105,
-      "deaths": 77,
-      "assists": 41
-    },
-    {
-      "name": "knives",
-      "team": "Mix",
-      "maps": 10,
-      "rounds": 199,
-      "rating": 1.32,
-      "acs": 257,
-      "kd": 1.3,
-      "kast": "75%",
-      "adr": 163.3,
-      "kills": 180,
-      "deaths": 138,
-      "assists": 62
-    },
-    {
-      "name": "kimchi",
-      "team": "CCG",
-      "maps": 6,
-      "rounds": 118,
-      "rating": 1.32,
-      "acs": 251,
-      "kd": 1.41,
-      "kast": "81%",
-      "adr": 160.3,
-      "kills": 106,
-      "deaths": 75,
-      "assists": 45
-    },
-    {
-      "name": "SkeeneX",
-      "team": "Wook",
-      "maps": 7,
-      "rounds": 133,
-      "rating": 1.32,
-      "acs": 261,
-      "kd": 1.55,
-      "kast": "77%",
-      "adr": 169.1,
-      "kills": 132,
-      "deaths": 85,
-      "assists": 33
-    },
-    {
-      "name": "slinc",
-      "team": "",
-      "maps": 5,
-      "rounds": 108,
-      "rating": 1.32,
-      "acs": 267,
-      "kd": 1.27,
-      "kast": "74%",
-      "adr": 176.3,
-      "kills": 100,
-      "deaths": 79,
-      "assists": 45
     }
   ],
   "teams": [
@@ -1504,13 +1476,13 @@
     },
     {
       "rank": 9,
-      "name": "44 AIM",
+      "name": "Team Solid",
       "region": "Brazil"
     },
     {
       "rank": 10,
-      "name": "TIME DO B3M",
-      "region": "International"
+      "name": "44 AIM",
+      "region": "Brazil"
     }
   ]
 }

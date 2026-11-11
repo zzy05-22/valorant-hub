@@ -1,71 +1,6 @@
 {
   "matches": [
     {
-      "href": "/786470/xxxmasterpromegateamxxx-vs-f9-eicar-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-sf",
-      "teamA": "xXxMasterProMegaTeamxXx",
-      "teamB": "F9 EICAR",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "11:00 AM",
-      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
-      "series": "Qualifier #1–Semifinals",
-      "date": "Tue, November 10, 2026"
-    },
-    {
-      "href": "/786471/aurora-gaming-vs-pixel-lumina-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-sf",
-      "teamA": "Aurora Gaming",
-      "teamB": "Pixel Lumina",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "11:00 AM",
-      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
-      "series": "Qualifier #1–Semifinals",
-      "date": "Tue, November 10, 2026"
-    },
-    {
-      "href": "/772818/frankfurt-bahnhofsviertel-vs-cgn-esports-spike-series-2026-convergence-emea-dach-r3",
-      "teamA": "Frankfurt Bahnhofsviertel",
-      "teamB": "CGN Esports",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "1:00 PM",
-      "event": "Spike Series 2026: Convergence EMEA - DACH",
-      "series": "Group Stage–Round 3",
-      "date": "Tue, November 10, 2026"
-    },
-    {
-      "href": "/786472/tbd-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-gf",
-      "teamA": "TBD",
-      "teamB": "TBD",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "1:30 PM",
-      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
-      "series": "Qualifier #1–Grand Final",
-      "date": "Tue, November 10, 2026"
-    },
-    {
-      "href": "/786473/tbd-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-consolation",
-      "teamA": "TBD",
-      "teamB": "TBD",
-      "scoreA": null,
-      "scoreB": null,
-      "winner": null,
-      "status": "upcoming",
-      "time": "1:30 PM",
-      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
-      "series": "Qualifier #1–Consolation",
-      "date": "Tue, November 10, 2026"
-    },
-    {
       "href": "/772811/team-international-vs-cgn-esports-spike-series-2026-convergence-emea-dach-r2",
       "teamA": "Team International",
       "teamB": "CGN Esports",
@@ -194,6 +129,58 @@
       "event": "Spike Series 2026: Convergence EMEA - DACH",
       "series": "Group Stage–Round 7",
       "date": "Sun, November 29, 2026"
+    },
+    {
+      "href": "/788290/time-do-b3m-vs-mafiosos-vct-2027-america-kickoff-brazil-open-qualifier-tpm",
+      "teamA": "TIME DO B3M",
+      "teamB": "Mafiosos",
+      "scoreA": 0,
+      "scoreB": 0,
+      "winner": "B",
+      "status": "completed",
+      "time": "2:00 PM",
+      "event": "VCT 2027: America Kickoff - Brazil Open Qualifier",
+      "series": "Qualifier #1–Consolation Final",
+      "date": "Tue, November 10, 2026"
+    },
+    {
+      "href": "/786472/f9-eicar-vs-aurora-gaming-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-gf",
+      "teamA": "F9 EICAR",
+      "teamB": "Aurora Gaming",
+      "scoreA": 1,
+      "scoreB": 2,
+      "winner": "B",
+      "status": "completed",
+      "time": "1:30 PM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Grand Final",
+      "date": "Tue, November 10, 2026"
+    },
+    {
+      "href": "/786470/xxxmasterpromegateamxxx-vs-f9-eicar-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-sf",
+      "teamA": "xXxMasterProMegaTeamxXx",
+      "teamB": "F9 EICAR",
+      "scoreA": 1,
+      "scoreB": 2,
+      "winner": "B",
+      "status": "completed",
+      "time": "11:00 AM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Semifinals",
+      "date": "Tue, November 10, 2026"
+    },
+    {
+      "href": "/786471/aurora-gaming-vs-pixel-lumina-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-sf",
+      "teamA": "Aurora Gaming",
+      "teamB": "Pixel Lumina",
+      "scoreA": 2,
+      "scoreB": 0,
+      "winner": "A",
+      "status": "completed",
+      "time": "11:00 AM",
+      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
+      "series": "Qualifier #1–Semifinals",
+      "date": "Tue, November 10, 2026"
     },
     {
       "href": "/787729/stallions-esports-vs-eternals-vct-2027-emea-kickoff-mena-qualifier-middle-east-1-ro32",
@@ -378,19 +365,6 @@
       "date": "Sat, November 7, 2026"
     },
     {
-      "href": "/785099/nightblood-gaming-vs-yellow-dragon-gaming-vct-2027-america-kickoff-north-america-open-qualifie",
-      "teamA": "Nightblood Gaming",
-      "teamB": "Yellow Dragon Gaming",
-      "scoreA": 1,
-      "scoreB": 2,
-      "winner": "B",
-      "status": "completed",
-      "time": "7:30 PM",
-      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
-      "series": "Open Qualifier #1–Round of 16",
-      "date": "Sat, November 7, 2026"
-    },
-    {
       "href": "/785100/maryville-university-vs-baboons-vct-2027-america-kickoff-north-america-open-qualifier-open-qu",
       "teamA": "Maryville University",
       "teamB": "baboons",
@@ -545,47 +519,8 @@
       "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
       "series": "Qualifier #1–Round of 16",
       "date": "Sat, November 7, 2026"
-    },
-    {
-      "href": "/784796/bar-a-esports-vs-remember-the-name-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro16",
-      "teamA": "Barça eSports",
-      "teamB": "Remember The Name",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "11:00 AM",
-      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
-      "series": "Qualifier #1–Round of 16",
-      "date": "Sat, November 7, 2026"
-    },
-    {
-      "href": "/784801/pixel-lumina-vs-honk-vct-2027-emea-kickoff-europe-qualifier-qualifier-1-ro16",
-      "teamA": "Pixel Lumina",
-      "teamB": "HONK",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "11:00 AM",
-      "event": "VCT 2027: EMEA Kickoff - Europe Qualifier",
-      "series": "Qualifier #1–Round of 16",
-      "date": "Sat, November 7, 2026"
-    },
-    {
-      "href": "/785058/masterclass-vs-csl-acad-vct-2027-america-kickoff-north-america-open-qualifier-open-qualifier",
-      "teamA": "Masterclass",
-      "teamB": "CSL acad",
-      "scoreA": 2,
-      "scoreB": 0,
-      "winner": "A",
-      "status": "completed",
-      "time": "7:15 PM",
-      "event": "VCT 2027: America Kickoff - North America Open Qualifier",
-      "series": "Open Qualifier #1–Round of 64",
-      "date": "Fri, November 6, 2026"
     }
   ],
-  "syncedAt": "2026-11-10T10:31:40.010Z",
+  "syncedAt": "2026-11-11T09:54:40.347Z",
   "source": "vlr.gg/matches"
 }
