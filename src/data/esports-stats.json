@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-15T09:59:01.192Z",
+  "syncedAt": "2026-11-16T10:12:47.615Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -186,7 +186,7 @@
     },
     {
       "name": "duby",
-      "team": "GS",
+      "team": "TRAM",
       "maps": 10,
       "rounds": 176,
       "rating": 1.46,
@@ -340,7 +340,7 @@
     },
     {
       "name": "p0uco",
-      "team": "b0m",
+      "team": "b0m RPR",
       "maps": 15,
       "rounds": 272,
       "rating": 1.43,
@@ -367,20 +367,6 @@
       "assists": 42
     },
     {
-      "name": "purp0",
-      "team": "BAR",
-      "maps": 27,
-      "rounds": 460,
-      "rating": 1.42,
-      "acs": 246,
-      "kd": 2.1,
-      "kast": "84%",
-      "adr": 158.9,
-      "kills": 428,
-      "deaths": 204,
-      "assists": 85
-    },
-    {
       "name": "chqse",
       "team": "",
       "maps": 9,
@@ -393,20 +379,6 @@
       "kills": 160,
       "deaths": 98,
       "assists": 48
-    },
-    {
-      "name": "azrex",
-      "team": "",
-      "maps": 22,
-      "rounds": 413,
-      "rating": 1.42,
-      "acs": 260,
-      "kd": 1.79,
-      "kast": "80%",
-      "adr": 165,
-      "kills": 407,
-      "deaths": 227,
-      "assists": 64
     },
     {
       "name": "Mora",
@@ -463,48 +435,6 @@
       "kills": 249,
       "deaths": 144,
       "assists": 98
-    },
-    {
-      "name": "Spaz",
-      "team": "",
-      "maps": 22,
-      "rounds": 383,
-      "rating": 1.41,
-      "acs": 219,
-      "kd": 1.64,
-      "kast": "85%",
-      "adr": 140.1,
-      "kills": 302,
-      "deaths": 184,
-      "assists": 248
-    },
-    {
-      "name": "Pa1ze",
-      "team": "BAR",
-      "maps": 27,
-      "rounds": 460,
-      "rating": 1.41,
-      "acs": 265,
-      "kd": 1.81,
-      "kast": "81%",
-      "adr": 172.3,
-      "kills": 444,
-      "deaths": 245,
-      "assists": 130
-    },
-    {
-      "name": "Zamal",
-      "team": "COO",
-      "maps": 22,
-      "rounds": 374,
-      "rating": 1.41,
-      "acs": 288,
-      "kd": 1.7,
-      "kast": "81%",
-      "adr": 191.3,
-      "kills": 387,
-      "deaths": 227,
-      "assists": 108
     },
     {
       "name": "jk30",
@@ -661,6 +591,20 @@
       "assists": 59
     },
     {
+      "name": "Spaz",
+      "team": "",
+      "maps": 26,
+      "rounds": 472,
+      "rating": 1.39,
+      "acs": 220,
+      "kd": 1.59,
+      "kast": "85%",
+      "adr": 140.9,
+      "kills": 371,
+      "deaths": 234,
+      "assists": 290
+    },
+    {
       "name": "LoveX",
       "team": "",
       "maps": 12,
@@ -673,6 +617,20 @@
       "kills": 197,
       "deaths": 121,
       "assists": 93
+    },
+    {
+      "name": "Shondex",
+      "team": "MU",
+      "maps": 27,
+      "rounds": 487,
+      "rating": 1.39,
+      "acs": 258,
+      "kd": 1.81,
+      "kast": "82%",
+      "adr": 170.4,
+      "kills": 477,
+      "deaths": 264,
+      "assists": 103
     },
     {
       "name": "skyppervz",
@@ -759,20 +717,6 @@
       "assists": 48
     },
     {
-      "name": "zerona",
-      "team": "",
-      "maps": 22,
-      "rounds": 383,
-      "rating": 1.38,
-      "acs": 256,
-      "kd": 1.62,
-      "kast": "82%",
-      "adr": 169.5,
-      "kills": 356,
-      "deaths": 220,
-      "assists": 160
-    },
-    {
       "name": "kodaki",
       "team": "",
       "maps": 9,
@@ -785,20 +729,6 @@
       "kills": 167,
       "deaths": 108,
       "assists": 89
-    },
-    {
-      "name": "Shondex",
-      "team": "MU",
-      "maps": 22,
-      "rounds": 384,
-      "rating": 1.38,
-      "acs": 252,
-      "kd": 1.84,
-      "kast": "81%",
-      "adr": 166.3,
-      "kills": 370,
-      "deaths": 201,
-      "assists": 88
     },
     {
       "name": "troizyyy",
@@ -914,7 +844,7 @@
     },
     {
       "name": "StarBound",
-      "team": "AXL",
+      "team": "Zodi",
       "maps": 7,
       "rounds": 141,
       "rating": 1.37,
@@ -925,6 +855,20 @@
       "kills": 129,
       "deaths": 77,
       "assists": 16
+    },
+    {
+      "name": "azrex",
+      "team": "",
+      "maps": 24,
+      "rounds": 454,
+      "rating": 1.37,
+      "acs": 253,
+      "kd": 1.68,
+      "kast": "78%",
+      "adr": 161.2,
+      "kills": 436,
+      "deaths": 260,
+      "assists": 67
     },
     {
       "name": "Lazare",
@@ -967,20 +911,6 @@
       "kills": 96,
       "deaths": 71,
       "assists": 57
-    },
-    {
-      "name": "vandals",
-      "team": "CRB",
-      "maps": 16,
-      "rounds": 296,
-      "rating": 1.37,
-      "acs": 243,
-      "kd": 1.51,
-      "kast": "82%",
-      "adr": 159.2,
-      "kills": 262,
-      "deaths": 173,
-      "assists": 135
     },
     {
       "name": "tcoy",
@@ -1026,7 +956,7 @@
     },
     {
       "name": "Ryzin",
-      "team": "",
+      "team": "Dark",
       "maps": 7,
       "rounds": 121,
       "rating": 1.37,
@@ -1067,6 +997,20 @@
       "assists": 21
     },
     {
+      "name": "zerona",
+      "team": "",
+      "maps": 26,
+      "rounds": 472,
+      "rating": 1.36,
+      "acs": 260,
+      "kd": 1.53,
+      "kast": "81%",
+      "adr": 171.2,
+      "kills": 438,
+      "deaths": 287,
+      "assists": 199
+    },
+    {
       "name": "gurbby",
       "team": "FRG",
       "maps": 18,
@@ -1079,6 +1023,20 @@
       "kills": 322,
       "deaths": 213,
       "assists": 101
+    },
+    {
+      "name": "Zamal",
+      "team": "COO",
+      "maps": 26,
+      "rounds": 453,
+      "rating": 1.36,
+      "acs": 281,
+      "kd": 1.59,
+      "kast": "80%",
+      "adr": 185.6,
+      "kills": 450,
+      "deaths": 283,
+      "assists": 130
     },
     {
       "name": "Drog",
@@ -1235,6 +1193,20 @@
       "assists": 48
     },
     {
+      "name": "purp0",
+      "team": "BAR",
+      "maps": 32,
+      "rounds": 553,
+      "rating": 1.35,
+      "acs": 238,
+      "kd": 1.83,
+      "kast": "81%",
+      "adr": 154.5,
+      "kills": 496,
+      "deaths": 271,
+      "assists": 96
+    },
+    {
       "name": "suther",
       "team": "",
       "maps": 10,
@@ -1249,20 +1221,6 @@
       "assists": 71
     },
     {
-      "name": "MONSTEERR",
-      "team": "BAR",
-      "maps": 27,
-      "rounds": 460,
-      "rating": 1.35,
-      "acs": 246,
-      "kd": 1.71,
-      "kast": "81%",
-      "adr": 165.3,
-      "kills": 412,
-      "deaths": 241,
-      "assists": 166
-    },
-    {
       "name": "silentzz",
       "team": "",
       "maps": 15,
@@ -1275,20 +1233,6 @@
       "kills": 298,
       "deaths": 199,
       "assists": 85
-    },
-    {
-      "name": "nayi",
-      "team": "CRB",
-      "maps": 22,
-      "rounds": 403,
-      "rating": 1.35,
-      "acs": 244,
-      "kd": 1.58,
-      "kast": "82%",
-      "adr": 163.1,
-      "kills": 366,
-      "deaths": 231,
-      "assists": 136
     },
     {
       "name": "leadssj",
@@ -1331,6 +1275,62 @@
       "kills": 174,
       "deaths": 121,
       "assists": 51
+    },
+    {
+      "name": "X4nty",
+      "team": "GG",
+      "maps": 6,
+      "rounds": 111,
+      "rating": 1.35,
+      "acs": 255,
+      "kd": 1.44,
+      "kast": "78%",
+      "adr": 171,
+      "kills": 101,
+      "deaths": 70,
+      "assists": 28
+    },
+    {
+      "name": "Kamisseq",
+      "team": "PXL",
+      "maps": 15,
+      "rounds": 289,
+      "rating": 1.34,
+      "acs": 248,
+      "kd": 1.46,
+      "kast": "81%",
+      "adr": 163.5,
+      "kills": 262,
+      "deaths": 180,
+      "assists": 114
+    },
+    {
+      "name": "baha",
+      "team": "RGN",
+      "maps": 8,
+      "rounds": 147,
+      "rating": 1.34,
+      "acs": 261,
+      "kd": 1.7,
+      "kast": "82%",
+      "adr": 165.8,
+      "kills": 146,
+      "deaths": 86,
+      "assists": 31
+    },
+    {
+      "name": "Elite",
+      "team": "Lide",
+      "maps": 10,
+      "rounds": 198,
+      "rating": 1.34,
+      "acs": 230,
+      "kd": 1.53,
+      "kast": "75%",
+      "adr": 147.8,
+      "kills": 164,
+      "deaths": 107,
+      "assists": 54
     }
   ],
   "teams": [
@@ -1416,17 +1416,17 @@
     },
     {
       "rank": 7,
+      "name": "Maryville University",
+      "region": "United States"
+    },
+    {
+      "rank": 8,
       "name": "barbeque chicken",
       "region": "International"
     },
     {
-      "rank": 8,
-      "name": "ENVY",
-      "region": "United States"
-    },
-    {
       "rank": 9,
-      "name": "Maryville University",
+      "name": "ENVY",
       "region": "United States"
     },
     {
