@@ -6,7 +6,7 @@
   "maps": [
     {
       "name": "Lotus",
-      "matches": 189,
+      "matches": 191,
       "atkWin": 52,
       "defWin": 48,
       "picks": [
@@ -16,7 +16,7 @@
         },
         {
           "agent": "Neon",
-          "pct": 78
+          "pct": 77
         },
         {
           "agent": "Chamber",
@@ -36,7 +36,7 @@
         },
         {
           "agent": "Viper",
-          "pct": 41
+          "pct": 42
         },
         {
           "agent": "Raze",
@@ -68,7 +68,7 @@
         },
         {
           "agent": "Vyse",
-          "pct": 22
+          "pct": 21
         },
         {
           "agent": "Skye",
@@ -134,7 +134,7 @@
     },
     {
       "name": "Haven",
-      "matches": 143,
+      "matches": 142,
       "atkWin": 53,
       "defWin": 47,
       "picks": [
@@ -184,7 +184,7 @@
         },
         {
           "agent": "Cypher",
-          "pct": 34
+          "pct": 35
         },
         {
           "agent": "Brimstone",
@@ -192,7 +192,7 @@
         },
         {
           "agent": "Jett",
-          "pct": 16
+          "pct": 17
         },
         {
           "agent": "Vyse",
@@ -390,9 +390,9 @@
     },
     {
       "name": "Sunset",
-      "matches": 104,
-      "atkWin": 52,
-      "defWin": 48,
+      "matches": 105,
+      "atkWin": 51,
+      "defWin": 49,
       "picks": [
         {
           "agent": "Omen",
@@ -412,11 +412,11 @@
         },
         {
           "agent": "Sova",
-          "pct": 67
+          "pct": 68
         },
         {
           "agent": "Phoenix",
-          "pct": 37
+          "pct": 36
         },
         {
           "agent": "Viper",
@@ -480,7 +480,7 @@
         },
         {
           "agent": "Breach",
-          "pct": 2
+          "pct": 3
         },
         {
           "agent": "Kayo",
@@ -518,7 +518,7 @@
     },
     {
       "name": "Summit",
-      "matches": 89,
+      "matches": 90,
       "atkWin": 53,
       "defWin": 47,
       "picks": [
@@ -532,7 +532,7 @@
         },
         {
           "agent": "Chamber",
-          "pct": 83
+          "pct": 82
         },
         {
           "agent": "Fade",
@@ -600,7 +600,7 @@
         },
         {
           "agent": "Harbor",
-          "pct": 10
+          "pct": 9
         },
         {
           "agent": "Iso",
@@ -646,13 +646,13 @@
     },
     {
       "name": "Corrode",
-      "matches": 70,
+      "matches": 72,
       "atkWin": 55,
       "defWin": 45,
       "picks": [
         {
           "agent": "Omen",
-          "pct": 84
+          "pct": 85
         },
         {
           "agent": "Neon",
@@ -660,7 +660,7 @@
         },
         {
           "agent": "Chamber",
-          "pct": 35
+          "pct": 34
         },
         {
           "agent": "Fade",
@@ -672,7 +672,7 @@
         },
         {
           "agent": "Phoenix",
-          "pct": 23
+          "pct": 22
         },
         {
           "agent": "Viper",
@@ -708,7 +708,7 @@
         },
         {
           "agent": "Vyse",
-          "pct": 31
+          "pct": 32
         },
         {
           "agent": "Skye",
@@ -774,21 +774,21 @@
     },
     {
       "name": "Abyss",
-      "matches": 51,
+      "matches": 52,
       "atkWin": 53,
       "defWin": 47,
       "picks": [
         {
           "agent": "Omen",
-          "pct": 37
+          "pct": 38
         },
         {
           "agent": "Neon",
-          "pct": 21
+          "pct": 20
         },
         {
           "agent": "Chamber",
-          "pct": 47
+          "pct": 46
         },
         {
           "agent": "Fade",
@@ -800,7 +800,7 @@
         },
         {
           "agent": "Phoenix",
-          "pct": 15
+          "pct": 14
         },
         {
           "agent": "Viper",
@@ -820,7 +820,7 @@
         },
         {
           "agent": "Waylay",
-          "pct": 52
+          "pct": 53
         },
         {
           "agent": "Cypher",
@@ -836,7 +836,7 @@
         },
         {
           "agent": "Vyse",
-          "pct": 14
+          "pct": 13
         },
         {
           "agent": "Skye",
@@ -844,7 +844,7 @@
         },
         {
           "agent": "Yoru",
-          "pct": 33
+          "pct": 34
         },
         {
           "agent": "Clove",
@@ -856,7 +856,7 @@
         },
         {
           "agent": "Harbor",
-          "pct": 35
+          "pct": 37
         },
         {
           "agent": "Iso",
@@ -901,6 +901,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-11-16T10:12:49.055Z",
+  "syncedAt": "2026-11-17T11:15:07.757Z",
   "source": "vlr.gg"
 }
