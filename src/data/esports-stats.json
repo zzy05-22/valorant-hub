@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-18T10:47:34.693Z",
+  "syncedAt": "2026-11-19T10:47:55.115Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -31,20 +31,6 @@
       "assists": 63
     },
     {
-      "name": "KHaaLiD",
-      "team": "STS",
-      "maps": 6,
-      "rounds": 102,
-      "rating": 1.56,
-      "acs": 277,
-      "kd": 2.06,
-      "kast": "90%",
-      "adr": 183.2,
-      "kills": 103,
-      "deaths": 50,
-      "assists": 50
-    },
-    {
       "name": "yukine",
       "team": "",
       "maps": 6,
@@ -57,20 +43,6 @@
       "kills": 139,
       "deaths": 84,
       "assists": 47
-    },
-    {
-      "name": "DarkSaga",
-      "team": "",
-      "maps": 8,
-      "rounds": 148,
-      "rating": 1.53,
-      "acs": 320,
-      "kd": 1.86,
-      "kast": "74%",
-      "adr": 202.9,
-      "kills": 171,
-      "deaths": 92,
-      "assists": 33
     },
     {
       "name": "j1ngle",
@@ -129,20 +101,6 @@
       "assists": 29
     },
     {
-      "name": "Sulaiman",
-      "team": "",
-      "maps": 8,
-      "rounds": 146,
-      "rating": 1.49,
-      "acs": 272,
-      "kd": 1.84,
-      "kast": "75%",
-      "adr": 186.5,
-      "kills": 149,
-      "deaths": 81,
-      "assists": 42
-    },
-    {
       "name": "4Z4Z1",
       "team": "Akid",
       "maps": 6,
@@ -155,20 +113,6 @@
       "kills": 104,
       "deaths": 55,
       "assists": 17
-    },
-    {
-      "name": "Chaza",
-      "team": "VRC",
-      "maps": 8,
-      "rounds": 158,
-      "rating": 1.48,
-      "acs": 282,
-      "kd": 1.76,
-      "kast": "78%",
-      "adr": 188.9,
-      "kills": 164,
-      "deaths": 93,
-      "assists": 33
     },
     {
       "name": "MonOkson",
@@ -225,6 +169,20 @@
       "kills": 187,
       "deaths": 120,
       "assists": 76
+    },
+    {
+      "name": "Baransel",
+      "team": "",
+      "maps": 5,
+      "rounds": 118,
+      "rating": 1.45,
+      "acs": 311,
+      "kd": 1.55,
+      "kast": "71%",
+      "adr": 191.9,
+      "kills": 129,
+      "deaths": 83,
+      "assists": 23
     },
     {
       "name": "caiobaz",
@@ -294,20 +252,6 @@
       "adr": 191,
       "kills": 221,
       "deaths": 131,
-      "assists": 65
-    },
-    {
-      "name": "Izuki",
-      "team": "",
-      "maps": 16,
-      "rounds": 323,
-      "rating": 1.43,
-      "acs": 303,
-      "kd": 1.65,
-      "kast": "74%",
-      "adr": 195,
-      "kills": 357,
-      "deaths": 217,
       "assists": 65
     },
     {
@@ -395,6 +339,20 @@
       "assists": 42
     },
     {
+      "name": "d3mur",
+      "team": "R8",
+      "maps": 17,
+      "rounds": 321,
+      "rating": 1.42,
+      "acs": 299,
+      "kd": 1.54,
+      "kast": "79%",
+      "adr": 189.9,
+      "kills": 341,
+      "deaths": 221,
+      "assists": 114
+    },
+    {
       "name": "chqse",
       "team": "",
       "maps": 9,
@@ -407,6 +365,20 @@
       "kills": 160,
       "deaths": 98,
       "assists": 48
+    },
+    {
+      "name": "Chaza",
+      "team": "GMX",
+      "maps": 10,
+      "rounds": 198,
+      "rating": 1.42,
+      "acs": 264,
+      "kd": 1.66,
+      "kast": "78%",
+      "adr": 177.5,
+      "kills": 193,
+      "deaths": 116,
+      "assists": 42
     },
     {
       "name": "Mora",
@@ -563,6 +535,20 @@
       "assists": 25
     },
     {
+      "name": "akame",
+      "team": "Lour",
+      "maps": 11,
+      "rounds": 205,
+      "rating": 1.41,
+      "acs": 274,
+      "kd": 1.58,
+      "kast": "73%",
+      "adr": 178,
+      "kills": 205,
+      "deaths": 130,
+      "assists": 55
+    },
+    {
       "name": "Snop",
       "team": "",
       "maps": 5,
@@ -606,7 +592,7 @@
     },
     {
       "name": "koalanoob",
-      "team": "",
+      "team": "AQ",
       "maps": 12,
       "rounds": 200,
       "rating": 1.4,
@@ -633,18 +619,18 @@
       "assists": 94
     },
     {
-      "name": "d3mur",
-      "team": "R8",
-      "maps": 15,
-      "rounds": 278,
+      "name": "bandz",
+      "team": "",
+      "maps": 21,
+      "rounds": 394,
       "rating": 1.4,
-      "acs": 293,
-      "kd": 1.51,
-      "kast": "80%",
-      "adr": 187.5,
-      "kills": 289,
-      "deaths": 191,
-      "assists": 100
+      "acs": 296,
+      "kd": 1.55,
+      "kast": "77%",
+      "adr": 194.7,
+      "kills": 418,
+      "deaths": 270,
+      "assists": 106
     },
     {
       "name": "unity",
@@ -731,20 +717,6 @@
       "assists": 22
     },
     {
-      "name": "akame",
-      "team": "Lour",
-      "maps": 9,
-      "rounds": 172,
-      "rating": 1.39,
-      "acs": 276,
-      "kd": 1.5,
-      "kast": "71%",
-      "adr": 179.8,
-      "kills": 171,
-      "deaths": 114,
-      "assists": 45
-    },
-    {
       "name": "Kipins",
       "team": "",
       "maps": 12,
@@ -771,6 +743,20 @@
       "kills": 94,
       "deaths": 59,
       "assists": 51
+    },
+    {
+      "name": "DarkSaga",
+      "team": "",
+      "maps": 10,
+      "rounds": 193,
+      "rating": 1.39,
+      "acs": 289,
+      "kd": 1.64,
+      "kast": "73%",
+      "adr": 183.9,
+      "kills": 203,
+      "deaths": 124,
+      "assists": 35
     },
     {
       "name": "lula",
@@ -857,32 +843,32 @@
       "assists": 59
     },
     {
-      "name": "b1squw1",
-      "team": "Lour",
-      "maps": 7,
-      "rounds": 134,
+      "name": "Sulaiman",
+      "team": "",
+      "maps": 10,
+      "rounds": 177,
       "rating": 1.38,
-      "acs": 247,
-      "kd": 1.53,
-      "kast": "76%",
-      "adr": 159,
-      "kills": 124,
-      "deaths": 81,
-      "assists": 35
+      "acs": 263,
+      "kd": 1.57,
+      "kast": "72%",
+      "adr": 179.9,
+      "kills": 171,
+      "deaths": 109,
+      "assists": 48
     },
     {
-      "name": "bandz",
-      "team": "",
-      "maps": 23,
-      "rounds": 434,
+      "name": "tcoy",
+      "team": "SADE",
+      "maps": 9,
+      "rounds": 193,
       "rating": 1.38,
-      "acs": 295,
-      "kd": 1.51,
-      "kast": "77%",
-      "adr": 193,
-      "kills": 456,
-      "deaths": 301,
-      "assists": 124
+      "acs": 239,
+      "kd": 1.48,
+      "kast": "78%",
+      "adr": 154.7,
+      "kills": 167,
+      "deaths": 113,
+      "assists": 66
     },
     {
       "name": "Sana",
@@ -911,6 +897,20 @@
       "kills": 129,
       "deaths": 77,
       "assists": 16
+    },
+    {
+      "name": "Zeask",
+      "team": "delu",
+      "maps": 14,
+      "rounds": 230,
+      "rating": 1.37,
+      "acs": 268,
+      "kd": 1.8,
+      "kast": "81%",
+      "adr": 170.1,
+      "kills": 229,
+      "deaths": 127,
+      "assists": 57
     },
     {
       "name": "azrex",
@@ -969,18 +969,18 @@
       "assists": 57
     },
     {
-      "name": "tcoy",
-      "team": "SADE",
-      "maps": 7,
-      "rounds": 159,
+      "name": "hAwksinho",
+      "team": "STS",
+      "maps": 15,
+      "rounds": 289,
       "rating": 1.37,
-      "acs": 243,
-      "kd": 1.42,
-      "kast": "77%",
-      "adr": 158.8,
-      "kills": 138,
-      "deaths": 97,
-      "assists": 54
+      "acs": 290,
+      "kd": 1.61,
+      "kast": "80%",
+      "adr": 179.7,
+      "kills": 302,
+      "deaths": 188,
+      "assists": 66
     },
     {
       "name": "nurahh",
@@ -1051,6 +1051,34 @@
       "kills": 438,
       "deaths": 287,
       "assists": 199
+    },
+    {
+      "name": "Elite",
+      "team": "Lide",
+      "maps": 11,
+      "rounds": 211,
+      "rating": 1.36,
+      "acs": 230,
+      "kd": 1.61,
+      "kast": "76%",
+      "adr": 148.5,
+      "kills": 175,
+      "deaths": 109,
+      "assists": 60
+    },
+    {
+      "name": "Yassien",
+      "team": "GMX",
+      "maps": 12,
+      "rounds": 229,
+      "rating": 1.36,
+      "acs": 249,
+      "kd": 1.54,
+      "kast": "79%",
+      "adr": 170.9,
+      "kills": 200,
+      "deaths": 130,
+      "assists": 85
     },
     {
       "name": "gurbby",
@@ -1263,20 +1291,6 @@
       "assists": 85
     },
     {
-      "name": "k9lyos",
-      "team": "Reme",
-      "maps": 11,
-      "rounds": 214,
-      "rating": 1.35,
-      "acs": 238,
-      "kd": 1.5,
-      "kast": "81%",
-      "adr": 161.4,
-      "kills": 181,
-      "deaths": 121,
-      "assists": 106
-    },
-    {
       "name": "leadssj",
       "team": "SHI",
       "maps": 10,
@@ -1289,20 +1303,6 @@
       "kills": 155,
       "deaths": 88,
       "assists": 59
-    },
-    {
-      "name": "neqa",
-      "team": "DP",
-      "maps": 9,
-      "rounds": 180,
-      "rating": 1.35,
-      "acs": 280,
-      "kd": 1.5,
-      "kast": "71%",
-      "adr": 183.8,
-      "kills": 181,
-      "deaths": 121,
-      "assists": 46
     },
     {
       "name": "ASHEN1",
