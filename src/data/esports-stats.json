@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-23T11:22:41.388Z",
+  "syncedAt": "2026-11-24T12:58:16.833Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -59,20 +59,6 @@
       "assists": 47
     },
     {
-      "name": "azys",
-      "team": "GDL",
-      "maps": 6,
-      "rounds": 104,
-      "rating": 1.54,
-      "acs": 292,
-      "kd": 2.06,
-      "kast": "91%",
-      "adr": 191.4,
-      "kills": 109,
-      "deaths": 53,
-      "assists": 34
-    },
-    {
       "name": "j1ngle",
       "team": "",
       "maps": 5,
@@ -99,6 +85,20 @@
       "kills": 96,
       "deaths": 48,
       "assists": 67
+    },
+    {
+      "name": "azys",
+      "team": "GODL",
+      "maps": 8,
+      "rounds": 145,
+      "rating": 1.51,
+      "acs": 286,
+      "kd": 1.95,
+      "kast": "90%",
+      "adr": 186.3,
+      "kills": 148,
+      "deaths": 76,
+      "assists": 51
     },
     {
       "name": "benjes",
@@ -271,30 +271,16 @@
     {
       "name": "keznit",
       "team": "",
-      "maps": 13,
-      "rounds": 232,
+      "maps": 15,
+      "rounds": 267,
       "rating": 1.46,
-      "acs": 258,
-      "kd": 1.78,
+      "acs": 263,
+      "kd": 1.8,
       "kast": "83%",
-      "adr": 170,
-      "kills": 219,
-      "deaths": 123,
-      "assists": 90
-    },
-    {
-      "name": "Hoax",
-      "team": "RNTX",
-      "maps": 6,
-      "rounds": 125,
-      "rating": 1.46,
-      "acs": 238,
-      "kd": 1.6,
-      "kast": "81%",
-      "adr": 153.5,
-      "kills": 109,
-      "deaths": 68,
-      "assists": 84
+      "adr": 172.1,
+      "kills": 257,
+      "deaths": 143,
+      "assists": 98
     },
     {
       "name": "Xeppaa",
@@ -340,7 +326,7 @@
     },
     {
       "name": "arcto",
-      "team": "TROO",
+      "team": "TRP",
       "maps": 8,
       "rounds": 158,
       "rating": 1.45,
@@ -393,20 +379,6 @@
       "kills": 120,
       "deaths": 93,
       "assists": 36
-    },
-    {
-      "name": "Envy2K",
-      "team": "GOC",
-      "maps": 8,
-      "rounds": 142,
-      "rating": 1.44,
-      "acs": 296,
-      "kd": 1.71,
-      "kast": "83%",
-      "adr": 185.5,
-      "kills": 149,
-      "deaths": 87,
-      "assists": 56
     },
     {
       "name": "q1ng",
@@ -677,16 +649,16 @@
     {
       "name": "koalanoob",
       "team": "AQ",
-      "maps": 18,
-      "rounds": 323,
+      "maps": 24,
+      "rounds": 450,
       "rating": 1.4,
       "acs": 280,
-      "kd": 1.59,
+      "kd": 1.46,
       "kast": "79%",
       "adr": 183.7,
-      "kills": 309,
-      "deaths": 194,
-      "assists": 103
+      "kills": 401,
+      "deaths": 275,
+      "assists": 137
     },
     {
       "name": "sickrey",
@@ -701,6 +673,20 @@
       "kills": 142,
       "deaths": 83,
       "assists": 94
+    },
+    {
+      "name": "Shyy",
+      "team": "",
+      "maps": 5,
+      "rounds": 102,
+      "rating": 1.4,
+      "acs": 259,
+      "kd": 1.79,
+      "kast": "75%",
+      "adr": 170.5,
+      "kills": 100,
+      "deaths": 56,
+      "assists": 26
     },
     {
       "name": "bandz",
@@ -1053,20 +1039,6 @@
       "assists": 16
     },
     {
-      "name": "duby",
-      "team": "TRAM",
-      "maps": 12,
-      "rounds": 226,
-      "rating": 1.37,
-      "acs": 289,
-      "kd": 1.42,
-      "kast": "81%",
-      "adr": 190.5,
-      "kills": 228,
-      "deaths": 161,
-      "assists": 98
-    },
-    {
       "name": "nurahh",
       "team": "ATNA",
       "maps": 7,
@@ -1387,6 +1359,34 @@
       "kills": 290,
       "deaths": 187,
       "assists": 71
+    },
+    {
+      "name": "Yuvi",
+      "team": "SGN",
+      "maps": 10,
+      "rounds": 208,
+      "rating": 1.35,
+      "acs": 257,
+      "kd": 1.45,
+      "kast": "80%",
+      "adr": 162.3,
+      "kills": 188,
+      "deaths": 130,
+      "assists": 83
+    },
+    {
+      "name": "krish",
+      "team": "",
+      "maps": 11,
+      "rounds": 198,
+      "rating": 1.35,
+      "acs": 235,
+      "kd": 1.64,
+      "kast": "82%",
+      "adr": 156.5,
+      "kills": 169,
+      "deaths": 103,
+      "assists": 62
     }
   ],
   "teams": [
