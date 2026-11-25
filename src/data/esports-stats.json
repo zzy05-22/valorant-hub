@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-24T12:58:16.833Z",
+  "syncedAt": "2026-11-25T11:48:14.236Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -185,20 +185,6 @@
       "assists": 93
     },
     {
-      "name": "BiggieCheese",
-      "team": "MZN",
-      "maps": 6,
-      "rounds": 104,
-      "rating": 1.47,
-      "acs": 238,
-      "kd": 1.8,
-      "kast": "83%",
-      "adr": 152.5,
-      "kills": 92,
-      "deaths": 51,
-      "assists": 47
-    },
-    {
       "name": "lily",
       "team": "",
       "maps": 6,
@@ -325,20 +311,6 @@
       "assists": 26
     },
     {
-      "name": "arcto",
-      "team": "TRP",
-      "maps": 8,
-      "rounds": 158,
-      "rating": 1.45,
-      "acs": 296,
-      "kd": 1.65,
-      "kast": "84%",
-      "adr": 190.8,
-      "kills": 162,
-      "deaths": 98,
-      "assists": 60
-    },
-    {
       "name": "Karaage",
       "team": "INS",
       "maps": 6,
@@ -463,6 +435,20 @@
       "kills": 160,
       "deaths": 98,
       "assists": 48
+    },
+    {
+      "name": "BiggieCheese",
+      "team": "MZN",
+      "maps": 8,
+      "rounds": 145,
+      "rating": 1.42,
+      "acs": 231,
+      "kd": 1.68,
+      "kast": "82%",
+      "adr": 150.8,
+      "kills": 123,
+      "deaths": 73,
+      "assists": 67
     },
     {
       "name": "Piguoispiguo",
@@ -633,20 +619,6 @@
       "assists": 102
     },
     {
-      "name": "SWERL",
-      "team": "BONK",
-      "maps": 7,
-      "rounds": 126,
-      "rating": 1.4,
-      "acs": 265,
-      "kd": 1.5,
-      "kast": "85%",
-      "adr": 174.9,
-      "kills": 114,
-      "deaths": 76,
-      "assists": 63
-    },
-    {
       "name": "koalanoob",
       "team": "AQ",
       "maps": 24,
@@ -743,20 +715,6 @@
       "kills": 111,
       "deaths": 73,
       "assists": 22
-    },
-    {
-      "name": "RESLYDE",
-      "team": "AUEC",
-      "maps": 6,
-      "rounds": 104,
-      "rating": 1.39,
-      "acs": 256,
-      "kd": 1.72,
-      "kast": "80%",
-      "adr": 158,
-      "kills": 103,
-      "deaths": 60,
-      "assists": 28
     },
     {
       "name": "YamadaTaroNO1",
@@ -1011,20 +969,6 @@
       "assists": 57
     },
     {
-      "name": "FETA",
-      "team": "AUEC",
-      "maps": 6,
-      "rounds": 104,
-      "rating": 1.37,
-      "acs": 229,
-      "kd": 1.65,
-      "kast": "82%",
-      "adr": 150.7,
-      "kills": 89,
-      "deaths": 54,
-      "assists": 40
-    },
-    {
       "name": "HoneyBunny",
       "team": "MRG",
       "maps": 6,
@@ -1151,20 +1095,6 @@
       "assists": 101
     },
     {
-      "name": "r1seN",
-      "team": "KRN",
-      "maps": 7,
-      "rounds": 124,
-      "rating": 1.36,
-      "acs": 225,
-      "kd": 1.76,
-      "kast": "85%",
-      "adr": 143.7,
-      "kills": 104,
-      "deaths": 59,
-      "assists": 53
-    },
-    {
       "name": "Drog",
       "team": "ppp",
       "maps": 9,
@@ -1177,6 +1107,20 @@
       "kills": 154,
       "deaths": 87,
       "assists": 43
+    },
+    {
+      "name": "RESLYDE",
+      "team": "AUEC",
+      "maps": 8,
+      "rounds": 145,
+      "rating": 1.36,
+      "acs": 255,
+      "kd": 1.68,
+      "kast": "81%",
+      "adr": 154.7,
+      "kills": 141,
+      "deaths": 84,
+      "assists": 36
     },
     {
       "name": "Peppe",
@@ -1347,20 +1291,6 @@
       "assists": 30
     },
     {
-      "name": "clutchz",
-      "team": "STA",
-      "maps": 16,
-      "rounds": 312,
-      "rating": 1.35,
-      "acs": 261,
-      "kd": 1.55,
-      "kast": "76%",
-      "adr": 166.8,
-      "kills": 290,
-      "deaths": 187,
-      "assists": 71
-    },
-    {
       "name": "Yuvi",
       "team": "SGN",
       "maps": 10,
@@ -1387,6 +1317,76 @@
       "kills": 169,
       "deaths": 103,
       "assists": 62
+    },
+    {
+      "name": "akame",
+      "team": "Lour",
+      "maps": 18,
+      "rounds": 375,
+      "rating": 1.35,
+      "acs": 270,
+      "kd": 1.45,
+      "kast": "73%",
+      "adr": 169.9,
+      "kills": 366,
+      "deaths": 252,
+      "assists": 89
+    },
+    {
+      "name": "leadssj",
+      "team": "SHI",
+      "maps": 10,
+      "rounds": 165,
+      "rating": 1.35,
+      "acs": 248,
+      "kd": 1.76,
+      "kast": "79%",
+      "adr": 165.4,
+      "kills": 155,
+      "deaths": 88,
+      "assists": 59
+    },
+    {
+      "name": "emeraldow",
+      "team": "",
+      "maps": 7,
+      "rounds": 150,
+      "rating": 1.35,
+      "acs": 256,
+      "kd": 1.65,
+      "kast": "76%",
+      "adr": 159.2,
+      "kills": 140,
+      "deaths": 85,
+      "assists": 25
+    },
+    {
+      "name": "Bungy",
+      "team": "UQF",
+      "maps": 6,
+      "rounds": 125,
+      "rating": 1.35,
+      "acs": 266,
+      "kd": 1.45,
+      "kast": "77%",
+      "adr": 179.8,
+      "kills": 116,
+      "deaths": 80,
+      "assists": 34
+    },
+    {
+      "name": "ASHEN1",
+      "team": "",
+      "maps": 10,
+      "rounds": 189,
+      "rating": 1.35,
+      "acs": 250,
+      "kd": 1.44,
+      "kast": "76%",
+      "adr": 162.6,
+      "kills": 174,
+      "deaths": 121,
+      "assists": 51
     }
   ],
   "teams": [
