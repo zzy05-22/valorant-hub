@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-25T11:48:14.236Z",
+  "syncedAt": "2026-11-26T11:34:08.923Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -85,20 +85,6 @@
       "kills": 96,
       "deaths": 48,
       "assists": 67
-    },
-    {
-      "name": "azys",
-      "team": "GODL",
-      "maps": 8,
-      "rounds": 145,
-      "rating": 1.51,
-      "acs": 286,
-      "kd": 1.95,
-      "kast": "90%",
-      "adr": 186.3,
-      "kills": 148,
-      "deaths": 76,
-      "assists": 51
     },
     {
       "name": "benjes",
@@ -267,6 +253,20 @@
       "kills": 257,
       "deaths": 143,
       "assists": 98
+    },
+    {
+      "name": "sickrey",
+      "team": "GX",
+      "maps": 11,
+      "rounds": 211,
+      "rating": 1.46,
+      "acs": 251,
+      "kd": 1.76,
+      "kast": "87%",
+      "adr": 165,
+      "kills": 190,
+      "deaths": 108,
+      "assists": 126
     },
     {
       "name": "Xeppaa",
@@ -633,20 +633,6 @@
       "assists": 137
     },
     {
-      "name": "sickrey",
-      "team": "GX",
-      "maps": 9,
-      "rounds": 166,
-      "rating": 1.4,
-      "acs": 235,
-      "kd": 1.71,
-      "kast": "87%",
-      "adr": 155.5,
-      "kills": 142,
-      "deaths": 83,
-      "assists": 94
-    },
-    {
       "name": "Shyy",
       "team": "",
       "maps": 5,
@@ -701,6 +687,20 @@
       "kills": 150,
       "deaths": 97,
       "assists": 45
+    },
+    {
+      "name": "Jiha",
+      "team": "",
+      "maps": 6,
+      "rounds": 117,
+      "rating": 1.39,
+      "acs": 249,
+      "kd": 1.55,
+      "kast": "79%",
+      "adr": 160.6,
+      "kills": 107,
+      "deaths": 69,
+      "assists": 38
     },
     {
       "name": "oasis",
@@ -799,6 +799,20 @@
       "kills": 291,
       "deaths": 170,
       "assists": 48
+    },
+    {
+      "name": "Mikhail",
+      "team": "",
+      "maps": 6,
+      "rounds": 110,
+      "rating": 1.38,
+      "acs": 258,
+      "kd": 1.58,
+      "kast": "84%",
+      "adr": 172.8,
+      "kills": 103,
+      "deaths": 65,
+      "assists": 31
     },
     {
       "name": "troizyyy",
@@ -1053,18 +1067,18 @@
       "assists": 59
     },
     {
-      "name": "Padisah",
-      "team": "delu",
-      "maps": 26,
-      "rounds": 463,
-      "rating": 1.36,
-      "acs": 260,
-      "kd": 1.78,
-      "kast": "82%",
-      "adr": 169.1,
-      "kills": 453,
-      "deaths": 254,
-      "assists": 107
+      "name": "silentj",
+      "team": "",
+      "maps": 7,
+      "rounds": 160,
+      "rating": 1.37,
+      "acs": 253,
+      "kd": 1.55,
+      "kast": "78%",
+      "adr": 164.6,
+      "kills": 149,
+      "deaths": 96,
+      "assists": 38
     },
     {
       "name": "skyppervz",
@@ -1265,16 +1279,16 @@
     {
       "name": "purp0",
       "team": "BAR",
-      "maps": 32,
-      "rounds": 553,
+      "maps": 34,
+      "rounds": 592,
       "rating": 1.35,
-      "acs": 238,
-      "kd": 1.83,
+      "acs": 237,
+      "kd": 1.81,
       "kast": "81%",
-      "adr": 154.5,
-      "kills": 496,
-      "deaths": 271,
-      "assists": 96
+      "adr": 154,
+      "kills": 528,
+      "deaths": 291,
+      "assists": 98
     },
     {
       "name": "Baransel",
@@ -1291,18 +1305,18 @@
       "assists": 30
     },
     {
-      "name": "Yuvi",
-      "team": "SGN",
-      "maps": 10,
-      "rounds": 208,
+      "name": "wezzy",
+      "team": "",
+      "maps": 7,
+      "rounds": 142,
       "rating": 1.35,
-      "acs": 257,
-      "kd": 1.45,
-      "kast": "80%",
-      "adr": 162.3,
-      "kills": 188,
-      "deaths": 130,
-      "assists": 83
+      "acs": 281,
+      "kd": 1.56,
+      "kast": "84%",
+      "adr": 179.6,
+      "kills": 142,
+      "deaths": 91,
+      "assists": 46
     },
     {
       "name": "krish",
@@ -1345,48 +1359,6 @@
       "kills": 155,
       "deaths": 88,
       "assists": 59
-    },
-    {
-      "name": "emeraldow",
-      "team": "",
-      "maps": 7,
-      "rounds": 150,
-      "rating": 1.35,
-      "acs": 256,
-      "kd": 1.65,
-      "kast": "76%",
-      "adr": 159.2,
-      "kills": 140,
-      "deaths": 85,
-      "assists": 25
-    },
-    {
-      "name": "Bungy",
-      "team": "UQF",
-      "maps": 6,
-      "rounds": 125,
-      "rating": 1.35,
-      "acs": 266,
-      "kd": 1.45,
-      "kast": "77%",
-      "adr": 179.8,
-      "kills": 116,
-      "deaths": 80,
-      "assists": 34
-    },
-    {
-      "name": "ASHEN1",
-      "team": "",
-      "maps": 10,
-      "rounds": 189,
-      "rating": 1.35,
-      "acs": 250,
-      "kd": 1.44,
-      "kast": "76%",
-      "adr": 162.6,
-      "kills": 174,
-      "deaths": 121,
-      "assists": 51
     }
   ],
   "teams": [
