@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-27T11:29:09.737Z",
+  "syncedAt": "2026-11-28T10:57:21.899Z",
   "source": "vlr.gg",
   "players": [
     {
@@ -101,20 +101,6 @@
       "assists": 23
     },
     {
-      "name": "treactis",
-      "team": "",
-      "maps": 6,
-      "rounds": 105,
-      "rating": 1.51,
-      "acs": 302,
-      "kd": 1.87,
-      "kast": "78%",
-      "adr": 195.7,
-      "kills": 114,
-      "deaths": 61,
-      "assists": 32
-    },
-    {
       "name": "Core",
       "team": "Cult",
       "maps": 9,
@@ -213,20 +199,6 @@
       "assists": 57
     },
     {
-      "name": "never",
-      "team": "die",
-      "maps": 8,
-      "rounds": 137,
-      "rating": 1.47,
-      "acs": 277,
-      "kd": 1.69,
-      "kast": "77%",
-      "adr": 180.4,
-      "kills": 142,
-      "deaths": 84,
-      "assists": 47
-    },
-    {
       "name": "Dep",
       "team": "RC",
       "maps": 6,
@@ -267,20 +239,6 @@
       "kills": 107,
       "deaths": 68,
       "assists": 41
-    },
-    {
-      "name": "Elle",
-      "team": "",
-      "maps": 6,
-      "rounds": 112,
-      "rating": 1.45,
-      "acs": 315,
-      "kd": 1.64,
-      "kast": "82%",
-      "adr": 199,
-      "kills": 128,
-      "deaths": 78,
-      "assists": 26
     },
     {
       "name": "Karaage",
@@ -325,6 +283,20 @@
       "assists": 36
     },
     {
+      "name": "siraphop",
+      "team": "Sala",
+      "maps": 8,
+      "rounds": 161,
+      "rating": 1.44,
+      "acs": 276,
+      "kd": 1.67,
+      "kast": "83%",
+      "adr": 173.6,
+      "kills": 157,
+      "deaths": 94,
+      "assists": 63
+    },
+    {
       "name": "q1ng",
       "team": "",
       "maps": 6,
@@ -351,6 +323,20 @@
       "kills": 221,
       "deaths": 131,
       "assists": 65
+    },
+    {
+      "name": "FIGHT",
+      "team": "Four",
+      "maps": 5,
+      "rounds": 104,
+      "rating": 1.44,
+      "acs": 318,
+      "kd": 1.59,
+      "kast": "79%",
+      "adr": 205.4,
+      "kills": 116,
+      "deaths": 73,
+      "assists": 31
     },
     {
       "name": "Vidal",
@@ -409,8 +395,22 @@
       "assists": 48
     },
     {
+      "name": "ERIMINOS",
+      "team": "YG",
+      "maps": 8,
+      "rounds": 169,
+      "rating": 1.42,
+      "acs": 260,
+      "kd": 1.61,
+      "kast": "80%",
+      "adr": 170.8,
+      "kills": 163,
+      "deaths": 101,
+      "assists": 65
+    },
+    {
       "name": "Jiha",
-      "team": "IMK",
+      "team": "FY",
       "maps": 8,
       "rounds": 168,
       "rating": 1.42,
@@ -449,6 +449,20 @@
       "kills": 122,
       "deaths": 79,
       "assists": 24
+    },
+    {
+      "name": "treactis",
+      "team": "",
+      "maps": 8,
+      "rounds": 149,
+      "rating": 1.42,
+      "acs": 288,
+      "kd": 1.6,
+      "kast": "76%",
+      "adr": 188.7,
+      "kills": 152,
+      "deaths": 95,
+      "assists": 38
     },
     {
       "name": "Yoshiii",
@@ -491,6 +505,20 @@
       "kills": 138,
       "deaths": 91,
       "assists": 77
+    },
+    {
+      "name": "ki1wsy",
+      "team": "MTV",
+      "maps": 8,
+      "rounds": 149,
+      "rating": 1.41,
+      "acs": 253,
+      "kd": 1.68,
+      "kast": "84%",
+      "adr": 163.8,
+      "kills": 141,
+      "deaths": 84,
+      "assists": 53
     },
     {
       "name": "Joak",
@@ -593,16 +621,16 @@
     {
       "name": "koalanoob",
       "team": "AQ",
-      "maps": 27,
-      "rounds": 511,
+      "maps": 31,
+      "rounds": 578,
       "rating": 1.4,
       "acs": 280,
-      "kd": 1.4,
+      "kd": 1.42,
       "kast": "79%",
       "adr": 183.7,
-      "kills": 441,
-      "deaths": 314,
-      "assists": 154
+      "kills": 524,
+      "deaths": 370,
+      "assists": 179
     },
     {
       "name": "Shyy",
@@ -617,6 +645,34 @@
       "kills": 100,
       "deaths": 56,
       "assists": 26
+    },
+    {
+      "name": "Elle",
+      "team": "",
+      "maps": 10,
+      "rounds": 203,
+      "rating": 1.4,
+      "acs": 307,
+      "kd": 1.53,
+      "kast": "80%",
+      "adr": 190.9,
+      "kills": 227,
+      "deaths": 148,
+      "assists": 42
+    },
+    {
+      "name": "Kassielsy",
+      "team": "Fran",
+      "maps": 5,
+      "rounds": 102,
+      "rating": 1.4,
+      "acs": 261,
+      "kd": 1.6,
+      "kast": "77%",
+      "adr": 160.2,
+      "kills": 101,
+      "deaths": 63,
+      "assists": 22
     },
     {
       "name": "bandz",
@@ -829,6 +885,20 @@
       "assists": 59
     },
     {
+      "name": "SDY",
+      "team": "FP",
+      "maps": 9,
+      "rounds": 167,
+      "rating": 1.38,
+      "acs": 274,
+      "kd": 1.6,
+      "kast": "74%",
+      "adr": 168.5,
+      "kills": 171,
+      "deaths": 107,
+      "assists": 25
+    },
+    {
       "name": "Sulaiman",
       "team": "",
       "maps": 10,
@@ -857,18 +927,18 @@
       "assists": 126
     },
     {
-      "name": "sickrey",
-      "team": "GX",
-      "maps": 13,
-      "rounds": 252,
+      "name": "Nexi",
+      "team": "JADE",
+      "maps": 6,
+      "rounds": 121,
       "rating": 1.37,
-      "acs": 240,
-      "kd": 1.53,
-      "kast": "85%",
-      "adr": 158.5,
-      "kills": 214,
-      "deaths": 140,
-      "assists": 149
+      "acs": 250,
+      "kd": 1.58,
+      "kast": "83%",
+      "adr": 170.1,
+      "kills": 112,
+      "deaths": 71,
+      "assists": 36
     },
     {
       "name": "StarBound",
@@ -1138,7 +1208,7 @@
     },
     {
       "name": "Imran",
-      "team": "Blue",
+      "team": "",
       "maps": 12,
       "rounds": 227,
       "rating": 1.36,
@@ -1221,6 +1291,34 @@
       "assists": 30
     },
     {
+      "name": "Sovano",
+      "team": "Vege",
+      "maps": 9,
+      "rounds": 179,
+      "rating": 1.35,
+      "acs": 293,
+      "kd": 1.48,
+      "kast": "78%",
+      "adr": 194.3,
+      "kills": 191,
+      "deaths": 129,
+      "assists": 53
+    },
+    {
+      "name": "Inf",
+      "team": "MTV",
+      "maps": 8,
+      "rounds": 149,
+      "rating": 1.35,
+      "acs": 276,
+      "kd": 1.62,
+      "kast": "81%",
+      "adr": 188,
+      "kills": 146,
+      "deaths": 90,
+      "assists": 29
+    },
+    {
       "name": "wezzy",
       "team": "",
       "maps": 7,
@@ -1275,104 +1373,6 @@
       "kills": 155,
       "deaths": 88,
       "assists": 59
-    },
-    {
-      "name": "emeraldow",
-      "team": "",
-      "maps": 7,
-      "rounds": 150,
-      "rating": 1.35,
-      "acs": 256,
-      "kd": 1.65,
-      "kast": "76%",
-      "adr": 159.2,
-      "kills": 140,
-      "deaths": 85,
-      "assists": 25
-    },
-    {
-      "name": "Bungy",
-      "team": "UQF",
-      "maps": 6,
-      "rounds": 125,
-      "rating": 1.35,
-      "acs": 266,
-      "kd": 1.45,
-      "kast": "77%",
-      "adr": 179.8,
-      "kills": 116,
-      "deaths": 80,
-      "assists": 34
-    },
-    {
-      "name": "ASHEN1",
-      "team": "",
-      "maps": 10,
-      "rounds": 189,
-      "rating": 1.35,
-      "acs": 250,
-      "kd": 1.44,
-      "kast": "76%",
-      "adr": 162.6,
-      "kills": 174,
-      "deaths": 121,
-      "assists": 51
-    },
-    {
-      "name": "X4nty",
-      "team": "",
-      "maps": 6,
-      "rounds": 111,
-      "rating": 1.35,
-      "acs": 255,
-      "kd": 1.44,
-      "kast": "78%",
-      "adr": 171,
-      "kills": 101,
-      "deaths": 70,
-      "assists": 28
-    },
-    {
-      "name": "Ceaxer",
-      "team": "",
-      "maps": 5,
-      "rounds": 122,
-      "rating": 1.35,
-      "acs": 295,
-      "kd": 1.38,
-      "kast": "73%",
-      "adr": 188.5,
-      "kills": 123,
-      "deaths": 89,
-      "assists": 40
-    },
-    {
-      "name": "Akar1i",
-      "team": "OCS",
-      "maps": 6,
-      "rounds": 113,
-      "rating": 1.35,
-      "acs": 271,
-      "kd": 1.54,
-      "kast": "74%",
-      "adr": 175.9,
-      "kills": 111,
-      "deaths": 72,
-      "assists": 20
-    },
-    {
-      "name": "misiranu",
-      "team": "",
-      "maps": 7,
-      "rounds": 114,
-      "rating": 1.35,
-      "acs": 312,
-      "kd": 1.42,
-      "kast": "75%",
-      "adr": 192.4,
-      "kills": 125,
-      "deaths": 88,
-      "assists": 37
     }
   ],
   "teams": [
